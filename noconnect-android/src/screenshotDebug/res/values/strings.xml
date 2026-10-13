@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name" translatable="false">NoConnect</string>
+	<string name="app_package" translatable="false">org.chagolchana.noconnect.android.screenshot.debug</string>
+</resources>

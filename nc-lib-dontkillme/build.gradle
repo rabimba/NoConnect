@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
-// Vendored from org.briarproject:dont-kill-me-lib:0.2.8 (Maven Central sources jar and aar). Licence: GPL-3.0.
+// Vendored from org.chagolchana:dont-kill-me-lib:0.2.8 (Maven Central sources jar and aar). Licence: GPL-3.0.
 
 android {
 	compileSdkVersion 35
@@ -18,7 +18,7 @@ android {
 	kotlinOptions {
 		jvmTarget = '1.8'
 	}
-	namespace 'org.briarproject.android.dontkillmelib'
+	namespace 'org.chagolchana.dontkillme'
 }
 
 dependencies {

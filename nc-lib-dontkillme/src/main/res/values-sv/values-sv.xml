@@ -8,7 +8,7 @@
     <string name="dnkm_help">Hjälp</string>
     <string name="dnkm_huawei_app_launch_button">Öppna batteriinställningar</string>
     <string name="dnkm_huawei_app_launch_error_toast">Kunde inte öppna batterinställningar</string>
-    <string name="dnkm_huawei_app_launch_help">Om Briar inte är inställt på ”Hantera manuellt” i skärmen ”App-start” kommer den inte att kunna köra i bakgrunden.</string>
+    <string name="dnkm_huawei_app_launch_help">Om NoConnect inte är inställt på ”Hantera manuellt” i skärmen ”App-start” kommer den inte att kunna köra i bakgrunden.</string>
     <string name="dnkm_huawei_app_launch_text">Klicka på knappen nedan, öppna skärmen ”App-start” och säkerställ att denna app är inställd på ”Hantera manuellt”</string>
     <string name="dnkm_huawei_protected_button">Skydda denna app</string>
     <string name="dnkm_huawei_protected_help">Om denna app inte läggs till i listan över skyddade appar kommer den inte att kunna köra i bakgrunden.</string>

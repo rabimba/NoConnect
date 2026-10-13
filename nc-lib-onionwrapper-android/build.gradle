@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 
-// Vendored from org.briarproject:onionwrapper-android:0.1.7 (Maven Central sources jar and aar). Licence: GPL-3.0.
+// Vendored from org.chagolchana:onionwrapper-android:0.1.7 (Maven Central sources jar and aar). Licence: GPL-3.0.
 
 android {
 	compileSdkVersion 35
@@ -15,7 +15,7 @@ android {
 		sourceCompatibility JavaVersion.VERSION_1_8
 		targetCompatibility JavaVersion.VERSION_1_8
 	}
-	namespace 'org.briarproject.onionwrapper'
+	namespace 'org.chagolchana.onionwrapper'
 }
 
 dependencies {

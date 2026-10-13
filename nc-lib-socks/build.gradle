@@ -2,7 +2,7 @@ apply plugin: 'java-library'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-// Vendored from org.briarproject:socks-socket:0.1 (Maven Central sources jar). Licence: Apache-2.0.
+// Vendored from org.chagolchana:socks-socket:0.1 (Maven Central sources jar). Licence: Apache-2.0.
 
 dependencies {
 	implementation project(':nc-lib-nullsafety')

@@ -2,14 +2,14 @@
 set -e
 
 PROJECTS=(
-    'bramble-api'
-    'bramble-core'
-    'bramble-android'
-    'bramble-java'
-    'briar-api'
-    'briar-core'
-    'briar-android'
-    'briar-headless'
+    'nc-api'
+    'nc-core'
+    'nc-android'
+    'nc-java'
+    'noconnect-api'
+    'noconnect-core'
+    'noconnect-android'
+    'noconnect-headless'
 )
 
 # clear witness files to prevent errors when upgrading dependencies

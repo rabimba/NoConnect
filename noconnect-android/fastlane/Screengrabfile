@@ -1,0 +1,7 @@
+app_package_name "org.chagolchana.noconnect.android.screenshot.debug"
+locales ['en-US']
+app_apk_path "build/outputs/apk/screenshot/debug/noconnect-android-screenshot-debug.apk"
+tests_apk_path "build/outputs/apk/androidTest/screenshot/debug/noconnect-android-screenshot-debug-androidTest.apk"
+test_instrumentation_runner "org.chagolchana.noconnect.android.NoConnectTestRunner"
+reinstall_app = true
+exit_on_test_failure = true

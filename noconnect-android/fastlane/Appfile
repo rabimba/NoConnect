@@ -1,0 +1,2 @@
+json_key_file(ENV["NOCONNECT_GOOGLE_PLAY_JSON_KEY_FILE"])
+package_name("org.chagolchana.noconnect.android")

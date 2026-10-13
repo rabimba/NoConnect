@@ -1,0 +1,11 @@
+NoConnect ist eine Messaging-App, die für Aktivisten, Journalisten und alle anderen entwickelt wurde, die eine sichere, einfache und robuste Möglichkeit zur Kommunikation benötigen. Im Gegensatz zu herkömmlichen Messaging-Apps verlässt sich NoConnect nicht auf einen zentralen Server - Nachrichten werden direkt zwischen den Geräten der Benutzer synchronisiert. Wenn das Internet nicht funktioniert, kann NoConnect über Bluetooth, WLAN oder Speicherkarten synchronisieren und so den Informationsaustausch in Krisenzeiten aufrechterhalten. Wenn das Internet verfügbar ist, kann NoConnect über das Tor-Netzwerk synchronisieren und Nutzer sowie ihre Kontakte vor Überwachung schützen.
+
+Die App bietet private Nachrichten, Gruppen und Foren sowie Blogs. Unterstützung für das Tor-Netzwerk ist in die App eingebaut. Alles, was du in NoConnect tust, wird nur auf deinem Gerät gespeichert, es sei denn, du entscheidest dich, es mit anderen Nutzern zu teilen.
+
+Es gibt keine Werbung und kein Tracking. Der Quellcode der App ist vollständig offen und für jeden zur Inspektion zugänglich und wurde bereits professionell überprüft. Alle Versionen von NoConnect sind reproduzierbar, was es möglich macht, zu überprüfen, dass der veröffentlichte Quellcode genau mit der hier veröffentlichten App übereinstimmt. Die Entwicklung erfolgt durch ein kleines gemeinnütziges Team.
+
+Datenschutzrichtlinien: https://github.com/rabimba/noconnect
+
+Benutzeranleitung: https://github.com/rabimba/noconnect
+
+Quellcode: https://github.com/rabimba/noconnect

@@ -8,7 +8,7 @@
     <string name="dnkm_help">Ajuda</string>
     <string name="dnkm_huawei_app_launch_button">Abrir Configurações de Bateria</string>
     <string name="dnkm_huawei_app_launch_error_toast">Não pôde abrir configurações de bateria</string>
-    <string name="dnkm_huawei_app_launch_help">Se o Briar não estiver definido como \"Gerenciar manualmente\" na tela de \"Lançamento de apps\", ele não poderá ser executado em segundo plano.</string>
+    <string name="dnkm_huawei_app_launch_help">Se o NoConnect não estiver definido como \"Gerenciar manualmente\" na tela de \"Lançamento de apps\", ele não poderá ser executado em segundo plano.</string>
     <string name="dnkm_huawei_app_launch_text">Por favor, toque no botão abaixo, abra a tela do \"Lançador de apps\", e certifique que esse app está definido para \"Gerenciar manualmente\". </string>
     <string name="dnkm_huawei_protected_button">Proteger esse app</string>
     <string name="dnkm_huawei_protected_help">Se esse app não for adicionado à lista de apps protegidos, ele não poderá ser executado em segundo plano.</string>

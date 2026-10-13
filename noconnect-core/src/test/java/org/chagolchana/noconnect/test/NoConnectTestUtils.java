@@ -1,0 +1,60 @@
+package org.chagolchana.noconnect.test;
+
+import org.chagolchana.chagol.api.crypto.CryptoComponent;
+import org.chagolchana.chagol.api.crypto.KeyPair;
+import org.chagolchana.chagol.api.db.DbException;
+import org.chagolchana.chagol.api.identity.Author;
+import org.chagolchana.chagol.api.identity.AuthorFactory;
+import org.chagolchana.chagol.api.identity.LocalAuthor;
+import org.chagolchana.chagol.api.sync.GroupId;
+import org.chagolchana.chagol.util.Base32;
+import org.chagolchana.noconnect.api.client.MessageTracker;
+import org.chagolchana.noconnect.api.client.MessageTracker.GroupCount;
+
+import java.util.Locale;
+
+import static java.lang.System.arraycopy;
+import static org.chagolchana.chagol.api.contact.HandshakeLinkConstants.FORMAT_VERSION;
+import static org.chagolchana.chagol.api.contact.HandshakeLinkConstants.RAW_LINK_BYTES;
+import static org.chagolchana.chagol.api.identity.AuthorConstants.MAX_AUTHOR_NAME_LENGTH;
+import static org.chagolchana.chagol.util.StringUtils.getRandomString;
+import static org.junit.Assert.assertEquals;
+
+public class NoConnectTestUtils {
+
+	public static void assertGroupCount(MessageTracker tracker, GroupId g,
+			long msgCount, long unreadCount, long latestMsgTime)
+			throws DbException {
+		GroupCount groupCount = tracker.getGroupCount(g);
+		assertEquals(msgCount, groupCount.getMsgCount());
+		assertEquals(unreadCount, groupCount.getUnreadCount());
+		assertEquals(latestMsgTime, groupCount.getLatestMsgTime());
+	}
+
+	public static void assertGroupCount(MessageTracker tracker, GroupId g,
+			long msgCount, long unreadCount) throws DbException {
+		GroupCount c1 = tracker.getGroupCount(g);
+		assertEquals(msgCount, c1.getMsgCount());
+		assertEquals(unreadCount, c1.getUnreadCount());
+	}
+
+	public static Author getRealAuthor(AuthorFactory authorFactory) {
+		String name = getRandomString(MAX_AUTHOR_NAME_LENGTH);
+		return authorFactory.createLocalAuthor(name);
+	}
+
+	public static LocalAuthor getRealLocalAuthor(AuthorFactory authorFactory) {
+		String name = getRandomString(MAX_AUTHOR_NAME_LENGTH);
+		return authorFactory.createLocalAuthor(name);
+	}
+
+	public static String getRealHandshakeLink(CryptoComponent cryptoComponent) {
+		KeyPair keyPair = cryptoComponent.generateAgreementKeyPair();
+		byte[] linkBytes = new byte[RAW_LINK_BYTES];
+		byte[] publicKey = keyPair.getPublic().getEncoded();
+		linkBytes[0] = FORMAT_VERSION;
+		arraycopy(publicKey, 0, linkBytes, 1, RAW_LINK_BYTES - 1);
+		return ("noconnect://" + Base32.encode(linkBytes)).toLowerCase(Locale.US);
+	}
+
+}
