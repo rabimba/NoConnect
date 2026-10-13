@@ -39,6 +39,21 @@ public class TestFeatureFlagModule {
 			public boolean shouldEnableBlogsInCore() {
 				return true;
 			}
+
+			@Override
+			public boolean shouldEnableHybridPqKeyAgreement() {
+				return false;
+			}
+
+			@Override
+			public boolean shouldEnableGroupSenderKeys() {
+				return false;
+			}
+
+			@Override
+			public boolean shouldEnableSealedEnvelopeRelay() {
+				return false;
+			}
 		};
 	}
 }

@@ -122,5 +122,8 @@ internal class HeadlessModule(private val appDir: File) {
         override fun shouldEnablePrivateGroupsInCore() = false
         override fun shouldEnableForumsInCore() = true
         override fun shouldEnableBlogsInCore() = true
+        override fun shouldEnableHybridPqKeyAgreement() = false
+        override fun shouldEnableGroupSenderKeys() = false
+        override fun shouldEnableSealedEnvelopeRelay() = false
     }
 }
