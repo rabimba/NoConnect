@@ -28,7 +28,7 @@ Roadmap: `docs/architecture/2026-10-12-architecture-review-and-roadmap.md` (opti
 | protocol strings `org.briarproject.bramble.*` / `.briar.*` | `org.chagolchana.chagol.*` / `.noconnect.*` |
 | URI scheme `briar://` | `noconnect://` |
 | user-visible "Briar" | "NoConnect" |
-| applicationId `org.briarproject.briar.android` | `org.chagolchana.noconnect` |
+| applicationId `org.briarproject.briar.android` | `org.chagolchana.noconnect.android` |
 
 Not carried over: `briar-mailbox` submodule and `mailbox-integration-tests` (the Mailbox *client* in `nc-core` stays).
 

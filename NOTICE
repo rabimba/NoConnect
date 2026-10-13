@@ -6,30 +6,49 @@ the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
 version. See the LICENSE file for the full text.
 
-NoConnect is a modified version of Briar (https://briarproject.org), which is
-Copyright (C) The Briar Project and licensed under the GNU General Public
-License version 3. The NoConnect modules map to Briar's as follows:
+NoConnect is a modified version of Briar (https://briarproject.org),
+Copyright (C) The Briar Project, licensed under the GNU General Public License
+version 3. The code base is a snapshot of Briar release 1.5.21 (commit
+aea0e4a6c149e5aeaf1ef603792cd073314cf701), with these modules mapped:
 
-  nc-api, nc-core, nc-android, nc-j2se              <- Briar "bramble" modules
-  noconnect-api, noconnect-core, noconnect-android  <- Briar "briar" modules
+  nc-api, nc-core, nc-android, nc-java                  <- bramble-api/core/android/java
+  noconnect-api, noconnect-core, noconnect-android,     <- briar-api/core/android/headless
+  noconnect-headless
 
-Modifications include renaming of packages, classes, resources and protocol
-identifiers, removal of the build expiry lock, and other changes recorded in
-the git history of this repository.
+Modifications include renaming of modules, packages, classes, resources,
+strings and protocol identifiers (tools/rename-upstream.py), a new logo,
+removal of RSS feeds and of crash-report upload, and the other changes
+recorded in this repository's git history.
 
-Third-party code included in this repository:
+Libraries vendored from their published source releases on Maven Central and
+renamed (original artifacts and licences):
 
-- Signal Android (org.thoughtcrime.securesms), Copyright (C) Open Whisper
-  Systems, GNU General Public License version 3.
-  See noconnect-android/src/main/java/org/thoughtcrime/securesms/LICENSE.
+  nc-lib-nullsafety            org.briarproject:null-safety:0.1           Apache License 2.0
+  nc-lib-socks                 org.briarproject:socks-socket:0.1          Apache License 2.0
+  nc-lib-jtorctl               org.briarproject:jtorctl:0.5               BSD 3-Clause
+                               (Copyright 2005 Nick Mathewson, Roger Dingledine)
+  nc-lib-onionwrapper-core     org.briarproject:onionwrapper-core:0.1.7   GPL 3.0
+  nc-lib-onionwrapper-java     org.briarproject:onionwrapper-java:0.1.7   GPL 3.0
+  nc-lib-onionwrapper-android  org.briarproject:onionwrapper-android:0.1.7 GPL 3.0
+  nc-lib-dontkillme            org.briarproject:dont-kill-me-lib:0.2.8    GPL 3.0
+
+Prebuilt binaries used unmodified as Maven dependencies:
+
+  org.briarproject:tor-android, tor-linux, tor-macos, tor-windows   Tor (BSD 3-Clause)
+  org.briarproject:lyrebird-*                                       lyrebird (BSD 3-Clause)
+
+Third-party source code included in noconnect-android:
+
+- info.guardianproject.trustedintents, GNU LGPL 2.1
+  (see noconnect-android/src/main/java/info/guardianproject/LICENSE.txt)
 - Android Identicons (im.delight.android.identicons), Copyright 2014
-  www.delight.im, Apache License 2.0.
+  www.delight.im, Apache License 2.0
 - ArticleMovementMethod, Copyright (C) 2006 The Android Open Source Project,
-  Apache License 2.0.
-- PreferenceDividerDecoration, from
-  https://github.com/consp1racy/android-support-preference, Apache License 2.0.
-- Blake2sDigest, based on the Bouncy Castle BLAKE2b implementation, MIT-style
-  Bouncy Castle licence (see file header).
-- Patched builds of bluecove, jSSC, jnotify, jtorctl, weupnp and Tor; the
-  patches are in the patches/ directory and each library keeps its original
-  licence.
+  Apache License 2.0
+- ViewModelFactory, Copyright (C) 2017 The Android Open Source Project,
+  Apache License 2.0
+- PullDownLayout, Copyright (c) 2015 XiNGRZ, MIT License
+- LiveDataTestUtil and LiveEventTestUtil (tests), Copyright 2019 Google LLC,
+  Apache License 2.0
+
+Each file keeps its original copyright header.
