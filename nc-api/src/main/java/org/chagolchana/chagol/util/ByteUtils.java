@@ -93,4 +93,15 @@ public class ByteUtils {
 		if (dest >= 1 << bits) throw new AssertionError();
 		return dest;
 	}
+
+	/**
+	 * Compares two arrays in time that depends only on their lengths, not
+	 * their contents. Use for MACs and other secret-derived values.
+	 */
+	public static boolean constantTimeEquals(byte[] a, byte[] b) {
+		if (a.length != b.length) return false;
+		int diff = 0;
+		for (int i = 0; i < a.length; i++) diff |= a[i] ^ b[i];
+		return diff == 0;
+	}
 }

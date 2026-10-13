@@ -17,6 +17,7 @@ import java.util.Arrays;
 import static org.chagolchana.chagol.api.keyagreement.KeyAgreementConstants.MASTER_KEY_LABEL;
 import static org.chagolchana.chagol.api.keyagreement.KeyAgreementConstants.PROTOCOL_VERSION;
 import static org.chagolchana.chagol.api.keyagreement.KeyAgreementConstants.SHARED_SECRET_LABEL;
+import static org.chagolchana.chagol.util.ByteUtils.constantTimeEquals;
 
 /**
  * Implementation of the BQP protocol.
@@ -176,7 +177,7 @@ class KeyAgreementProtocol {
 				payloadEncoder.encode(ourPayload),
 				theirPublicKey, ourKeyPair,
 				alice, !alice);
-		if (!Arrays.equals(expected, confirm))
+		if (!constantTimeEquals(expected, confirm))
 			throw new AbortException();
 	}
 

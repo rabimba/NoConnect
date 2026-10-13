@@ -6,7 +6,10 @@ import org.junit.Test;
 
 import static org.chagolchana.chagol.util.ByteUtils.MAX_16_BIT_UNSIGNED;
 import static org.chagolchana.chagol.util.ByteUtils.MAX_32_BIT_UNSIGNED;
+import static org.chagolchana.chagol.util.ByteUtils.constantTimeEquals;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 public class ByteUtilsTest extends ChagolTestCase {
@@ -207,5 +210,18 @@ public class ByteUtilsTest extends ChagolTestCase {
 			assertEquals(i, ByteUtils.readUint(b, 16));
 			assertEquals(i >> 1, ByteUtils.readUint(b, 15));
 		}
+	}
+
+	@Test
+	public void testConstantTimeEquals() {
+		assertTrue(constantTimeEquals(new byte[0], new byte[0]));
+		assertTrue(constantTimeEquals(new byte[] {1, 2, 3},
+				new byte[] {1, 2, 3}));
+		assertFalse(constantTimeEquals(new byte[] {1, 2, 3},
+				new byte[] {1, 2, 4}));
+		assertFalse(constantTimeEquals(new byte[] {(byte) 0x80},
+				new byte[] {0}));
+		assertFalse(constantTimeEquals(new byte[] {1, 2},
+				new byte[] {1, 2, 3}));
 	}
 }
