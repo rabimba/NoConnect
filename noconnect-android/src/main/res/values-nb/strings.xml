@@ -701,9 +701,6 @@
   <string name="dev_report_device_features">Enhetsfunksjonaliteter</string>
   <string name="send_report">Send kræsjrapport</string>
   <string name="close">Lukk</string>
-  <string name="dev_report_sending">Sender tilbakemelding...</string>
-  <string name="dev_report_sent">Tilbakemelding sendt</string>
-  <string name="dev_report_saved">Kræsjrapport lagret. Den vil bli sendt neste gang du logger inn i NoConnect.</string>
   <string name="dev_report_error">Feil: Rapportsendingen mislyktes</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Logger ut av NoConnect…</string>

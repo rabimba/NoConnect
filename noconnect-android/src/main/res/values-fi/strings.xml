@@ -427,7 +427,6 @@
   <string name="could_not_load_report_data">Ilmoituksen tietojen lataaminen epäonnistui.</string>
   <string name="send_report">Lähetä ilmoitus</string>
   <string name="close">Sulje</string>
-  <string name="dev_report_saved">Ilmoitus tallennettu. Sen lähetys tapahtuu seuraavan kerran kun kirjaudut sisään NoConnectiin.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Kirjaudutaan ulos NoConnectista...</string>
   <!--Screen Filters & Tapjacking-->

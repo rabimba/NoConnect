@@ -539,7 +539,6 @@
   <string name="include_debug_report_feedback">Вкучи анонимни податоци за овој уред</string>
   <string name="send_report">Испрати извештај</string>
   <string name="close">Затвори</string>
-  <string name="dev_report_saved">Извештајот е зачуван. Ќе биде испратен следниот пат кога ќе се вклучите на NoConnect.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Одјавување од NoConnect</string>
   <!--Screen Filters & Tapjacking-->

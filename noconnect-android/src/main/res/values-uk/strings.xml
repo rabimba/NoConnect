@@ -749,9 +749,6 @@
   <string name="dev_report_device_features">Можливості пристрою</string>
   <string name="send_report">Надіслати звіт</string>
   <string name="close">Закрити</string>
-  <string name="dev_report_sending">Надсилання відгуку...</string>
-  <string name="dev_report_sent">Відгук надіслано</string>
-  <string name="dev_report_saved">Звіт збережено. Його буде надіслано наступного разу, як ви увійдете до NoConnect.</string>
   <string name="dev_report_error">Помилка: не вдалося надіслати звіт</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Відбувається вихід з NoConnect…</string>

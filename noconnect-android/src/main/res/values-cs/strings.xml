@@ -752,9 +752,6 @@
   <string name="dev_report_device_features">Vlastnosti zařízení</string>
   <string name="send_report">Odeslat hlášení</string>
   <string name="close">Zavřít</string>
-  <string name="dev_report_sending">Odesílání zpětné vazby...</string>
-  <string name="dev_report_sent">Zpětná vazba odeslána</string>
-  <string name="dev_report_saved">Hlášení uloženo. Odesláno bude při příštím přihlášení do NoConnect.</string>
   <string name="dev_report_error">Chyba: Odesílání hlášení selhalo</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Odhlásit se z NoConnect...</string>

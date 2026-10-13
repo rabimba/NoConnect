@@ -552,9 +552,6 @@
   <string name="dev_report_device_features">Apparaatfeatures</string>
   <string name="send_report">Verstuur rapport</string>
   <string name="close">Sluit</string>
-  <string name="dev_report_sending">Verstuur Feedback...</string>
-  <string name="dev_report_sent">Feedback is verzonden</string>
-  <string name="dev_report_saved">Rapport is opgeslagen. Het zal worden verstuurd als je de volgende keer inlogt op NoConnect </string>
   <string name="dev_report_error">Fout: Verzenden van rapport is gefaald</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Uitloggen bij NoConnect…</string>

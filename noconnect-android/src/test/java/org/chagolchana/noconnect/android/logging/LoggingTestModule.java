@@ -1,6 +1,5 @@
 package org.chagolchana.noconnect.android.logging;
 
-import org.chagolchana.chagol.api.crypto.PublicKey;
 import org.chagolchana.chagol.api.reporting.DevConfig;
 import org.chagolchana.nullsafety.NotNullByDefault;
 
@@ -25,22 +24,6 @@ class LoggingTestModule {
 	DevConfig provideDevConfig() {
 		@NotNullByDefault
 		DevConfig devConfig = new DevConfig() {
-			@Override
-			public PublicKey getDevPublicKey() {
-				throw new UnsupportedOperationException();
-
-			}
-
-			@Override
-			public String getDevOnionAddress() {
-				throw new UnsupportedOperationException();
-			}
-
-			@Override
-			public File getReportDir() {
-				throw new UnsupportedOperationException();
-			}
-
 			@Override
 			public File getLogcatFile() {
 				return logFile;

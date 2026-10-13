@@ -737,9 +737,6 @@ copies des messages que vous envoyez.
   <string name="dev_report_device_features">Caractéristiques de l’appareil</string>
   <string name="send_report">Envoyer le rapport</string>
   <string name="close">Fermer</string>
-  <string name="dev_report_sending">Envoi de la rétroaction…</string>
-  <string name="dev_report_sent">La rétroaction a été envoyée avec succès</string>
-  <string name="dev_report_saved">Le rapport a été enregistré. Il sera envoyé lors de votre prochaine connexion à NoConnect.</string>
   <string name="dev_report_error">Erreur : échec d’envoi du rapport</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Déconnexion de NoConnect…</string>

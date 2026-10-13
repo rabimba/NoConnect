@@ -707,9 +707,6 @@
   <string name="dev_report_device_features">端末の機能</string>
   <string name="send_report">レポートを送信</string>
   <string name="close">閉じる</string>
-  <string name="dev_report_sending">フィードバックを送信中…</string>
-  <string name="dev_report_sent">フィードバックを送信しました</string>
-  <string name="dev_report_saved">レポートを保存しました。 次回、NoConnectにログインしたときに送信されます。</string>
   <string name="dev_report_error">エラー：レポート送信に失敗</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnectからサインアウト中…</string>

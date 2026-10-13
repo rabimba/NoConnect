@@ -727,9 +727,6 @@
   <string name="dev_report_device_features">ডিভাইসের বৈশিষ্ট্য</string>
   <string name="send_report">প্রতিবেদন প্রেরণ করুন</string>
   <string name="close">বন্ধ</string>
-  <string name="dev_report_sending">প্রতিক্রিয়া পাঠানো হচ্ছে...</string>
-  <string name="dev_report_sent">ফিডব্যাক পাঠানো হয়েছে</string>
-  <string name="dev_report_saved">রিপোর্ট সংরক্ষিত। পরবর্তী বার আপনি NoConnect লগ ইন পাঠানো হবে।</string>
   <string name="dev_report_error">সমস্যা: রিপোর্ট পাঠানো যায়নি</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect থেকে সাইন-আউট করা হচ্ছে...</string>

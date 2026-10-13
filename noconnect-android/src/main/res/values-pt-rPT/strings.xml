@@ -739,9 +739,6 @@ O teu contacto também pode alterar esta configuração para ambos.</string>
   <string name="dev_report_device_features">Funcionalidades do dispositivo</string>
   <string name="send_report">Enviar relatório</string>
   <string name="close">Fechar</string>
-  <string name="dev_report_sending">A enviar o comentário…</string>
-  <string name="dev_report_sent">Comentário enviado</string>
-  <string name="dev_report_saved">Relatório guardado. Ele será enviado na próxima vez que iniciares a sessão no NoConnect.</string>
   <string name="dev_report_error">Erro: o envio do relatório falhou</string>
   <!--Sign Out-->
   <string name="progress_title_logout">A terminar a sessão do NoConnect…</string>

@@ -726,9 +726,6 @@
   <string name="dev_report_device_features">Geräteeigenschaften</string>
   <string name="send_report">Bericht senden</string>
   <string name="close">Schließen</string>
-  <string name="dev_report_sending">Rückmeldung wird gesendet…</string>
-  <string name="dev_report_sent">Feedback gesendet</string>
-  <string name="dev_report_saved">Der Bericht wurde gespeichert. Er wird verschickt, wenn du dich das nächste Mal bei NoConnect anmeldest.</string>
   <string name="dev_report_error">Fehler: Senden des Reports fehlgeschlagen</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Von NoConnect abmelden…</string>

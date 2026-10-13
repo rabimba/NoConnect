@@ -726,9 +726,6 @@
   <string name="dev_report_device_features">Aygıt özellikleri</string>
   <string name="send_report">Bildirimi gönder</string>
   <string name="close">Kapat</string>
-  <string name="dev_report_sending">Geri bildirim gönderiliyor…</string>
-  <string name="dev_report_sent">Geri bildirim gönderildi</string>
-  <string name="dev_report_saved">Bildirim kaydedildi. NoConnect oturumunu bir sonraki açışınızda gönderilecek.</string>
   <string name="dev_report_error">Hata: Bildirim gönderilemedi</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect oturumu kapatılıyor...</string>

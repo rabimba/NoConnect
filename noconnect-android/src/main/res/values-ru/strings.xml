@@ -752,9 +752,6 @@
   <string name="dev_report_device_features">Характеристики устройства</string>
   <string name="send_report">Отправить отчет</string>
   <string name="close">Закрыть</string>
-  <string name="dev_report_sending">Отправка отзыва...</string>
-  <string name="dev_report_sent">Отзыв отправлен</string>
-  <string name="dev_report_saved">Отчет сохранен. Он будет отправлен при следующем входе в NoConnect.</string>
   <string name="dev_report_error">Ошибка: не удалось отправить отчет</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Выход из NoConnect…</string>

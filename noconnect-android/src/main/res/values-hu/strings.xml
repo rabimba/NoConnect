@@ -716,9 +716,6 @@ Vigyázat: Ez végleg törli az identitásait, kapcsolatait és üzeneteit</stri
   <string name="dev_report_device_features">Eszköz szolgáltatások</string>
   <string name="send_report">Jelentés elküldése</string>
   <string name="close">Bezár</string>
-  <string name="dev_report_sending">Visszajelzés küldése...</string>
-  <string name="dev_report_sent">Visszajelzés elküldve</string>
-  <string name="dev_report_saved">A jelentés mentve. Elküldésre kerül akkor, amikor legközelebb bejelentkezik a NoConnect-ba.</string>
   <string name="dev_report_error">Hiba: Riport küldése sikertelen</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Kilépés a NoConnect-ból...</string>

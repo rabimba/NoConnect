@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
@@ -32,7 +31,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
-import static android.widget.Toast.LENGTH_SHORT;
 import static java.util.Objects.requireNonNull;
 import static java.util.logging.Logger.getLogger;
 import static org.chagolchana.noconnect.android.util.UiUtils.onSingleLinkClick;
@@ -166,12 +164,7 @@ public class ReportFormFragment extends BaseFragment {
 
 		boolean includeReport = includeDebugReport.isChecked();
 
-		// Send report (now or after next sign-in)
-		if (viewModel.sendReport(comment, email, includeReport)) {
-			// trying to send now
-			Toast.makeText(requireContext(), R.string.dev_report_sending,
-					LENGTH_SHORT).show();
-		}
+		viewModel.sendReport(comment, email, includeReport);
 	}
 
 	private void triggerPrivacyPolicy() {

@@ -504,7 +504,6 @@ contactes qu’avètz partejat aqueste flux quitaràn benlèu de recebre las mes
   <string name="include_debug_report_feedback">Ajustar de donas anonimas tocant aqueste periferic</string>
   <string name="send_report">Enviar lo rapòrt</string>
   <string name="close">Tampar</string>
-  <string name="dev_report_saved">Rapòrt salvat. Serà enviat a vòstra connexion venenta a NoConnect.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Desconnecion de NoConnect...</string>
   <!--Screen Filters & Tapjacking-->

@@ -69,6 +69,16 @@ public class CrashReportActivity extends BaseActivity
 		viewModel.getShowReport().observeEvent(this, show -> {
 			if (show) displayFragment(true);
 		});
+		viewModel.getShareReport().observeEvent(this, report -> {
+			Intent share = new Intent(Intent.ACTION_SEND);
+			share.setType("text/plain");
+			share.putExtra(Intent.EXTRA_SUBJECT,
+					getString(R.string.dev_report_share_subject));
+			share.putExtra(Intent.EXTRA_TEXT, report);
+			startActivity(Intent.createChooser(share,
+					getString(R.string.send_report)));
+			exit();
+		});
 		viewModel.getCloseReport().observeEvent(this, res -> {
 			if (res != 0) {
 				Toast.makeText(this, res, LENGTH_LONG).show();

@@ -739,9 +739,6 @@
   <string name="dev_report_device_features">Funcții dispozitiv</string>
   <string name="send_report">Trimiteți raport</string>
   <string name="close">Închideți</string>
-  <string name="dev_report_sending">Se trimite feedback…</string>
-  <string name="dev_report_sent">Feedback trimis</string>
-  <string name="dev_report_saved">Raport salvat. Va fi trimis data viitoare când vă conectați la NoConnect.</string>
   <string name="dev_report_error">Eroare: trimiterea raportului a eșuat</string>
   <!--Sign Out-->
   <string name="progress_title_logout">În curs de deconectare din NoConnect...</string>

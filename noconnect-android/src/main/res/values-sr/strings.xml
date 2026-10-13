@@ -451,7 +451,6 @@ Dotaknite + ikonu da uvezete kanal</string>
   <string name="could_not_load_report_data">Nije bilo moguće učitati podatke izvještaja</string>
   <string name="send_report">Pošalji izvještaj</string>
   <string name="close">Zatvori</string>
-  <string name="dev_report_saved">Izvještaj sačuvan. Biće poslat slijedeći put kada se ulogujete u NoConnect.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Isključujete se iz NoConnecta...</string>
   <!--Screen Filters & Tapjacking-->

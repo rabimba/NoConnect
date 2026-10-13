@@ -576,9 +576,6 @@
   <string name="dev_report_device_features">מאפייני מכשיר</string>
   <string name="send_report">שלח דוח</string>
   <string name="close">סגירה</string>
-  <string name="dev_report_sending">שולח משוב…</string>
-  <string name="dev_report_sent">משוב נשלח</string>
-  <string name="dev_report_saved">הדוח נשמר. הוא יישלח בפעם הבאה שתתחבר אל NoConnect.</string>
   <string name="dev_report_error">שגיאה: שליחת דוח נכשלה</string>
   <!--Sign Out-->
   <string name="progress_title_logout">יוצא מ־NoConnect…</string>

@@ -712,9 +712,6 @@
   <string name="dev_report_device_features">စက်ပစ္စည်း အင်္ဂါရပ်များ</string>
   <string name="send_report">တိုင်ကြားစာ ပေးပို့မည်</string>
   <string name="close">ပိတ်မည်</string>
-  <string name="dev_report_sending">အကြံပြုချက်ပို့နေပါသည်…</string>
-  <string name="dev_report_sent">တုံ့ပြန်ချက် ပေးပို့ပြီး</string>
-  <string name="dev_report_saved">တိုင်ကြားစာ သိမ်းဆည်းပြီး။ နောက်တစ်ကြိမ် သင် NoConnect ထဲသို့ လော့အင်ဝင်လျှင် ပေးပို့လိုက်ပါမည်။</string>
   <string name="dev_report_error">ပျက်ကွက်မှု - တိုင်ကြားစာ ပေးပို့ခြင်း မအောင်မြင်ပါ</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect မှ အကောင့်ထွက်နေသည်…</string>

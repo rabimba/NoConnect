@@ -747,9 +747,6 @@ Brak dostępu do aparatu. Spróbuj ponownie, może po ponownym uruchomieniu urz�
   <string name="dev_report_device_features">Funkcje urządzenia</string>
   <string name="send_report">Wyślij raport</string>
   <string name="close">Zamknij</string>
-  <string name="dev_report_sending">Wysyłanie opinii...</string>
-  <string name="dev_report_sent">Wysłano opinię</string>
-  <string name="dev_report_saved">Raport zapisany. Zostanie wysłany następnym razem kiedy zalogujesz się do NoConnect.</string>
   <string name="dev_report_error">Błąd: Nie powiodło się wysłanie raportu</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Wylogowywanie z NoConnect...</string>

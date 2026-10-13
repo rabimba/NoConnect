@@ -521,8 +521,6 @@ Umepoteza nenosiri.</string>
   <string name="include_debug_report_feedback">Jumuisha data isiyojulikana kuhusu kifaa hiki</string>
   <string name="send_report">Tuma repoti </string>
   <string name="close">Funga</string>
-  <string name="dev_report_sending">Kutuma mrejesho...</string>
-  <string name="dev_report_saved">Ripoti imehifadhiwa. Itatumwa wakati ujao ukiingia kwenye NoConnect.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Kuondoka Kwenye NoConnect...</string>
   <!--Screen Filters & Tapjacking-->

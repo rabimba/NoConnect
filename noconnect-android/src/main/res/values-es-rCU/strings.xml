@@ -840,9 +840,6 @@ Si cambias este ajuste, se aplicará a tus nuevos mensajes inmediatamente, y a l
   <string name="dev_report_device_features">Características del dispositivo</string>
   <string name="send_report">Enviar informe</string>
   <string name="close">Cerrar</string>
-  <string name="dev_report_sending">Enviando comentarios</string>
-  <string name="dev_report_sent">Comentarios enviados</string>
-  <string name="dev_report_saved">Informe guardado. Se enviará la próxima vez que inicies sesión en NoConnect.</string>
   <string name="dev_report_error">Error: Error al enviar el informe</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Saliendo de NoConnect…</string>

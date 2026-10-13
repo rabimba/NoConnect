@@ -778,9 +778,6 @@
   <string name="dev_report_device_features">مميزات الجهاز</string>
   <string name="send_report">ارسال التقرير</string>
   <string name="close">إغلاق</string>
-  <string name="dev_report_sending">ارسال التعليقات</string>
-  <string name="dev_report_sent">أرسلت ملاحظات</string>
-  <string name="dev_report_saved">تم حفظ التقرير. سيتم إرساله عند تسجيل الدخول إلى NoConnect (براير) في المرة القادمة.</string>
   <string name="dev_report_error">خطأ: فشل إرسال التقرير</string>
   <!--Sign Out-->
   <string name="progress_title_logout">تسجيل الخروج من NoConnect (براير)...</string>

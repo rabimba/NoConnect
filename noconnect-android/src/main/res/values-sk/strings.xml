@@ -753,9 +753,6 @@
   <string name="dev_report_device_features">Funkcie zariadenia</string>
   <string name="send_report">Odoslať hlásenie</string>
   <string name="close">Zavrieť</string>
-  <string name="dev_report_sending">Odosielanie spätnej väzby...</string>
-  <string name="dev_report_sent">Spätná väzba odoslaná</string>
-  <string name="dev_report_saved">Hlásenie bolo uložené. Odošle sa pri ďalšom prihlásení do aplikácie NoConnect.</string>
   <string name="dev_report_error">Chyba: Odoslanie hlásenia zlyhalo</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Odhlasovanie z NoConnect...</string>

@@ -506,7 +506,6 @@
   <string name="include_debug_report_feedback">Gehitu gailu honi buruzko datu anonimoak</string>
   <string name="send_report">Bidali txostena</string>
   <string name="close">Itxi</string>
-  <string name="dev_report_saved">Txostena gordeta. NoConnect-en saioa hasten duzun hurrengoan bidaliko da.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect saioa amaitzen...</string>
   <!--Screen Filters & Tapjacking-->

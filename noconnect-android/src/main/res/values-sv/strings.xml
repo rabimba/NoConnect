@@ -705,9 +705,6 @@ Vänlige installera NoConnect på en nyare enhet.</string>
   <string name="dev_report_device_features">Enhetsfunktioner</string>
   <string name="send_report">Skicka rapport</string>
   <string name="close">Stäng</string>
-  <string name="dev_report_sending">Skickar återkoppling...</string>
-  <string name="dev_report_sent">Återkoppling skickad</string>
-  <string name="dev_report_saved">Rapporten har sparats. Den kommer skickas nästa gång du loggar in i NoConnect.</string>
   <string name="dev_report_error">Fel: Sändning av rapporten misslyckades</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Loggar ur NoConnect...</string>

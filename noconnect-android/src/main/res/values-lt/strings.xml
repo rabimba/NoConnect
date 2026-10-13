@@ -752,9 +752,6 @@
   <string name="dev_report_device_features">Įrenginio ypatybės</string>
   <string name="send_report">Siųsti ataskaitą</string>
   <string name="close">Užverti</string>
-  <string name="dev_report_sending">Siunčiamas atsiliepimas…</string>
-  <string name="dev_report_sent">Atsiliepimas išsiųstas</string>
-  <string name="dev_report_saved">Ataskaita įrašyta. Ji bus išsiųsta, kai kitą kartą prisijungsite prie NoConnect.</string>
   <string name="dev_report_error">Klaida: Nepavyko išsiųsti ataskaitos</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Atsijungiama iš NoConnect…</string>

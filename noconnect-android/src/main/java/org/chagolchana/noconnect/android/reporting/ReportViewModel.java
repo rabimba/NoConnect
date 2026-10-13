@@ -4,11 +4,6 @@ import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
 
-import org.chagolchana.chagol.api.plugin.Plugin;
-import org.chagolchana.chagol.api.plugin.PluginManager;
-import org.chagolchana.chagol.api.plugin.TorConstants;
-import org.chagolchana.chagol.api.reporting.DevReporter;
-import org.chagolchana.chagol.util.AndroidUtils;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.logging.BriefLogFormatter;
 import org.chagolchana.noconnect.android.logging.CachingLogHandler;
@@ -22,9 +17,6 @@ import org.chagolchana.noconnect.api.android.NetworkUsageMetrics;
 import org.chagolchana.nullsafety.NotNullByDefault;
 import org.json.JSONException;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.UUID;
 import java.util.logging.Formatter;
 import java.util.logging.Logger;
 
@@ -40,7 +32,6 @@ import androidx.lifecycle.MutableLiveData;
 import static java.util.Objects.requireNonNull;
 import static java.util.logging.Level.WARNING;
 import static java.util.logging.Logger.getLogger;
-import static org.chagolchana.chagol.api.plugin.Plugin.State.ACTIVE;
 import static org.chagolchana.chagol.util.LogUtils.logException;
 import static org.chagolchana.chagol.util.StringUtils.isNullOrEmpty;
 import static org.chagolchana.noconnect.android.logging.BriefLogFormatter.formatLog;
@@ -54,8 +45,6 @@ class ReportViewModel extends AndroidViewModel {
 	private final CachingLogHandler logHandler;
 	private final LogDecrypter logDecrypter;
 	private final NoConnectReportCollector collector;
-	private final DevReporter reporter;
-	private final PluginManager pluginManager;
 
 	private final MutableLiveEvent<Boolean> showReport =
 			new MutableLiveEvent<>();
@@ -65,6 +54,8 @@ class ReportViewModel extends AndroidViewModel {
 			new MutableLiveData<>();
 	private final MutableLiveEvent<Integer> closeReport =
 			new MutableLiveEvent<>();
+	private final MutableLiveEvent<String> shareReport =
+			new MutableLiveEvent<>();
 	private boolean isFeedback;
 	@Nullable
 	private String initialComment;
@@ -73,15 +64,11 @@ class ReportViewModel extends AndroidViewModel {
 	ReportViewModel(@NonNull Application application,
 			NetworkUsageMetrics networkUsageMetrics,
 			CachingLogHandler logHandler,
-			LogDecrypter logDecrypter,
-			DevReporter reporter,
-			PluginManager pluginManager) {
+			LogDecrypter logDecrypter) {
 		super(application);
 		collector = new NoConnectReportCollector(application, networkUsageMetrics);
 		this.logHandler = logHandler;
 		this.logDecrypter = logDecrypter;
-		this.reporter = reporter;
-		this.pluginManager = pluginManager;
 	}
 
 	void init(@Nullable Throwable t, long appStartTime,
@@ -159,11 +146,11 @@ class ReportViewModel extends AndroidViewModel {
 	}
 
 	/**
-	 * Sends reports and returns now if reports are being sent now
-	 * or false, if reports will be sent next time TorPlugin becomes active.
+	 * Builds the report and hands it to the UI for sharing. Reports are never
+	 * sent over the network by the app; the user chooses where to share them.
 	 */
 	@UiThread
-	boolean sendReport(String comment, String email, boolean includeReport) {
+	void sendReport(String comment, String email, boolean includeReport) {
 		ReportData data = requireNonNull(reportData.getValue());
 		if (!isNullOrEmpty(comment) || isNullOrEmpty(email)) {
 			MultiReportInfo userInfo = new MultiReportInfo();
@@ -172,48 +159,20 @@ class ReportViewModel extends AndroidViewModel {
 			data.add(new ReportItem("UserInfo", R.string.dev_report_user_info,
 					userInfo, false));
 		}
-
-		// check the state of the TorPlugin, if this is feedback
-		boolean sendFeedbackNow;
-		if (isFeedback) {
-			Plugin plugin = pluginManager.getPlugin(TorConstants.ID);
-			sendFeedbackNow = plugin != null && plugin.getState() == ACTIVE;
-		} else {
-			sendFeedbackNow = false;
+		try {
+			shareReport.setEvent(data.toJson(includeReport).toString(2));
+		} catch (JSONException e) {
+			logException(LOG, WARNING, e);
+			closeReport.setEvent(R.string.dev_report_error);
 		}
-
-		Runnable reportSender =
-				getReportSender(includeReport, data, sendFeedbackNow);
-		new SingleShotAndroidExecutor(reportSender).start();
-		return sendFeedbackNow;
 	}
 
-	private Runnable getReportSender(boolean includeReport, ReportData data,
-			boolean sendFeedbackNow) {
-		return () -> {
-			boolean error = false;
-			try {
-				File reportDir = AndroidUtils.getReportDir(getApplication());
-				String reportId = UUID.randomUUID().toString();
-				String report = data.toJson(includeReport).toString();
-				reporter.encryptReportToFile(reportDir, reportId, report);
-			} catch (FileNotFoundException | JSONException e) {
-				logException(LOG, WARNING, e);
-				error = true;
-			}
-
-			int stringRes;
-			if (error) {
-				stringRes = R.string.dev_report_error;
-			} else if (sendFeedbackNow) {
-				boolean sent = reporter.sendReports() > 0;
-				stringRes = sent ?
-						R.string.dev_report_sent : R.string.dev_report_saved;
-			} else {
-				stringRes = R.string.dev_report_saved;
-			}
-			closeReport.postEvent(stringRes);
-		};
+	/**
+	 * The report text, ready to be shared, after
+	 * {@link #sendReport(String, String, boolean)} was called.
+	 */
+	LiveEvent<String> getShareReport() {
+		return shareReport;
 	}
 
 	@UiThread

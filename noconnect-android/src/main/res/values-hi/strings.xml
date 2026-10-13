@@ -487,7 +487,6 @@
   <string name="include_debug_report_feedback">इस डिवाइस के बारे में अनाम डेटा शामिल करें</string>
   <string name="send_report">रिपोर्ट भेजो</string>
   <string name="close">बंद करे</string>
-  <string name="dev_report_saved">रिपोर्ट सहेजी गई अगली बार जब आप NoConnect  में प्रवेश करेंगे तो उसे भेजा जाएगा।</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect  से साइन आउट हो रहा है ...</string>
   <!--Screen Filters & Tapjacking-->

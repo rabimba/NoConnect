@@ -646,9 +646,6 @@
   <string name="dev_report_device_features">Eiginleikar tækis</string>
   <string name="send_report">Senda skýrslu</string>
   <string name="close">Loka</string>
-  <string name="dev_report_sending">Sendi umsögn…</string>
-  <string name="dev_report_sent">Umsögn send</string>
-  <string name="dev_report_saved">Skýrsla vistuð. Hún verður send næst þegar þú skráir þig inn í NoConnect.</string>
   <string name="dev_report_error">Villa: Sending skýrslu mistókst</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Skrái út úr NoConnect…</string>

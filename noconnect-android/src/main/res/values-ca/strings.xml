@@ -727,9 +727,6 @@ Així que l\'actualitzi li veureu una icona diferent .</string>
   <string name="dev_report_device_features">Característiques del dispositiu</string>
   <string name="send_report">Envia l\'informe</string>
   <string name="close">Tanca</string>
-  <string name="dev_report_sending">S\'està enviant els comentaris...</string>
-  <string name="dev_report_sent">Comentaris enviats</string>
-  <string name="dev_report_saved">S\'ha desat l\'informe. Se us enviarà la propera vegada que inicieu sessió a NoConnect.</string>
   <string name="dev_report_error">Error: no s\'ha pogut enviar l\'informe</string>
   <!--Sign Out-->
   <string name="progress_title_logout">S\'està tancant la sessió de NoConnect...</string>

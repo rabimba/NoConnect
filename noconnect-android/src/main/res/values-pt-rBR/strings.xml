@@ -739,9 +739,6 @@
   <string name="dev_report_device_features">Características do dispositivo</string>
   <string name="send_report">Enviar relatório </string>
   <string name="close">Fechar</string>
-  <string name="dev_report_sending">Enviando feedback...</string>
-  <string name="dev_report_sent">Feedback enviado</string>
-  <string name="dev_report_saved">Relatório salvo. Ele será enviado na próxima vez em que você entrar no NoConnect.</string>
   <string name="dev_report_error">Erro: falha no envio do relatório</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Saindo do NoConnect…</string>

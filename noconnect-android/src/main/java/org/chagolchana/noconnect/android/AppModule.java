@@ -8,10 +8,7 @@ import android.os.StrictMode;
 import com.vanniktech.emoji.RecentEmoji;
 
 import org.chagolchana.chagol.api.FeatureFlags;
-import org.chagolchana.chagol.api.FormatException;
-import org.chagolchana.chagol.api.crypto.CryptoComponent;
 import org.chagolchana.chagol.api.crypto.KeyStrengthener;
-import org.chagolchana.chagol.api.crypto.PublicKey;
 import org.chagolchana.chagol.api.db.DatabaseConfig;
 import org.chagolchana.chagol.api.event.EventBus;
 import org.chagolchana.chagol.api.lifecycle.LifecycleManager;
@@ -32,7 +29,6 @@ import org.chagolchana.chagol.plugin.file.MailboxPluginFactory;
 import org.chagolchana.chagol.plugin.tcp.AndroidLanTcpPluginFactory;
 import org.chagolchana.chagol.plugin.tor.AndroidTorPluginFactory;
 import org.chagolchana.chagol.util.AndroidUtils;
-import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.android.account.DozeHelperModule;
 import org.chagolchana.noconnect.android.account.LockManagerImpl;
 import org.chagolchana.noconnect.android.account.SetupModule;
@@ -64,7 +60,6 @@ import org.chagolchana.noconnect.api.test.TestAvatarCreator;
 import org.chagolchana.nullsafety.NotNullByDefault;
 
 import java.io.File;
-import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -83,8 +78,6 @@ import static java.util.Collections.singletonList;
 import static java.util.Collections.singletonMap;
 import static org.chagolchana.chagol.api.plugin.TorConstants.DEFAULT_CONTROL_PORT;
 import static org.chagolchana.chagol.api.plugin.TorConstants.DEFAULT_SOCKS_PORT;
-import static org.chagolchana.chagol.api.reporting.ReportingConstants.DEV_ONION_ADDRESS;
-import static org.chagolchana.chagol.api.reporting.ReportingConstants.DEV_PUBLIC_KEY_HEX;
 import static org.chagolchana.noconnect.android.TestingConstants.IS_DEBUG_BUILD;
 
 @Module(includes = {
@@ -233,35 +226,10 @@ public class AppModule {
 
 	@Provides
 	@Singleton
-	DevConfig provideDevConfig(Application app, CryptoComponent crypto) {
+	DevConfig provideDevConfig(Application app) {
 		@NotNullByDefault
-		DevConfig devConfig = new DevConfig() {
-
-			@Override
-			public PublicKey getDevPublicKey() {
-				try {
-					return crypto.getMessageKeyParser().parsePublicKey(
-							StringUtils.fromHexString(DEV_PUBLIC_KEY_HEX));
-				} catch (GeneralSecurityException | FormatException e) {
-					throw new RuntimeException(e);
-				}
-			}
-
-			@Override
-			public String getDevOnionAddress() {
-				return DEV_ONION_ADDRESS;
-			}
-
-			@Override
-			public File getReportDir() {
-				return AndroidUtils.getReportDir(app.getApplicationContext());
-			}
-
-			@Override
-			public File getLogcatFile() {
-				return AndroidUtils.getLogcatFile(app.getApplicationContext());
-			}
-		};
+		DevConfig devConfig = () ->
+				AndroidUtils.getLogcatFile(app.getApplicationContext());
 		return devConfig;
 	}
 

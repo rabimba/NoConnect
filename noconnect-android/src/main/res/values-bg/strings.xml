@@ -718,9 +718,6 @@
   <string name="dev_report_device_features">Характеристики</string>
   <string name="send_report">Изпращане на доклад</string>
   <string name="close">Затваряне</string>
-  <string name="dev_report_sending">Изпращане на доклад…</string>
-  <string name="dev_report_sent">Обратната връзка е изпратена</string>
-  <string name="dev_report_saved">Докладът е запазен. Ще бъде изпратен при следващото влизане в NoConnect.</string>
   <string name="dev_report_error">Грешка при изпращане на доклад</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Отписване от NoConnect…</string>

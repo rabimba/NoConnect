@@ -753,9 +753,6 @@
   <string name="dev_report_device_features">ویژگی‌های دستگاه</string>
   <string name="send_report">ارسال گزارش</string>
   <string name="close">بستن</string>
-  <string name="dev_report_sending">در حال فرستادن نظر...</string>
-  <string name="dev_report_sent">بازخورد ارسال شد</string>
-  <string name="dev_report_saved">گزارش ذخیره شد. دفعه بعدی که وارد NoConnect (برایر) شدید فرستاده خواهد شد.</string>
   <string name="dev_report_error">خطا در ارسال گزارش</string>
   <!--Sign Out-->
   <string name="progress_title_logout">خروج از NoConnect (برایر)...</string>

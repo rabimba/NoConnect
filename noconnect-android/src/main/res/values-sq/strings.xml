@@ -726,9 +726,6 @@ Këtë rregullim mund ta ndryshojë edhe kontakti juaj, për të dy ju.</string>
   <string name="dev_report_device_features">Veçori Pajisjeje</string>
   <string name="send_report">Dërgoje njoftimin</string>
   <string name="close">Mbylle</string>
-  <string name="dev_report_sending">Po dërgohen përshtypjet…</string>
-  <string name="dev_report_sent">Përshtypjet u dërguan</string>
-  <string name="dev_report_saved">Njoftimi u ruajt. Do të dërgohet herën tjetër që do të hyni në NoConnect.</string>
   <string name="dev_report_error">Gabim: Dërgimi i raportit dështoi</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Po dilet nga NoConnect-i…</string>

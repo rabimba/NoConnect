@@ -452,7 +452,6 @@
   <string name="include_debug_report_feedback">Bu cihaz haqqında anonim məlumatları əlavə edin</string>
   <string name="send_report">Hesabat göndər</string>
   <string name="close">Bağla</string>
-  <string name="dev_report_saved">Hesabat saxlandı. NoConnect-a növbəti dəfə daxil olduqda göndəriləcək.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">NoConnect-dan çıxış... </string>
   <!--Screen Filters & Tapjacking-->

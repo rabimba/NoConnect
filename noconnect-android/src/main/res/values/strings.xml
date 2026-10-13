@@ -749,7 +749,7 @@
 	<string name="crash_report_title">NoConnect Crash Report</string>
 	<string name="nc_crashed">Sorry, NoConnect has crashed</string>
 	<string name="not_your_fault">This is not your fault.</string>
-	<string name="please_send_report">Please help us build a better NoConnect by sending us a crash report.</string>
+	<string name="please_send_report">Please help us build a better NoConnect by sharing a crash report with the developers, for example by attaching it to an issue on the project page.</string>
 	<string name="report_is_encrypted">We promise that the report is encrypted and sent securely.</string>
 	<string name="feedback_title">Feedback</string>
 	<string name="describe_crash">Describe what happened (optional)</string>
@@ -770,12 +770,10 @@
 	<string name="dev_report_build_config">Build configuration</string>
 	<string name="dev_report_logcat">App log</string>
 	<string name="dev_report_device_features">Device Features</string>
-	<string name="send_report">Send report</string>
+	<string name="send_report">Share report</string>
+	<string name="dev_report_share_subject">NoConnect report</string>
 	<string name="close">Close</string>
-	<string name="dev_report_sending">Sending feedback…</string>
-	<string name="dev_report_sent">Feedback sent</string>
-	<string name="dev_report_saved">Report saved. It will be sent the next time you log into NoConnect.</string>
-	<string name="dev_report_error">Error: Sending report failed</string>
+	<string name="dev_report_error">Error: Could not create the report</string>
 
 	<!-- Sign Out -->
 	<string name="progress_title_logout">Signing out of NoConnect…</string>

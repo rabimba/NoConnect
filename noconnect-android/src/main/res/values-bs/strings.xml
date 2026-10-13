@@ -440,7 +440,6 @@
   <string name="include_debug_report_feedback">Uključite anonimne podatke o ovom uređaju</string>
   <string name="send_report">Pošalji izvještaj</string>
   <string name="close">Zatvori</string>
-  <string name="dev_report_saved">Izvještaj je sačuvan. Biće poslat slijedeći put kada se ulogujete u NoConnect.</string>
   <!--Sign Out-->
   <string name="progress_title_logout">Odjavite se iz NoConnecta...</string>
   <!--Screen Filters & Tapjacking-->

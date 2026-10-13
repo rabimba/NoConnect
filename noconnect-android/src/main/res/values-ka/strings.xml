@@ -699,9 +699,6 @@
   <string name="dev_report_device_features">მოწყობილობის მახასიათებლები</string>
   <string name="send_report">ანგარიშის გაგზავნა</string>
   <string name="close">დახურვა</string>
-  <string name="dev_report_sending">იგზავნება გამოხმაურება…</string>
-  <string name="dev_report_sent">გამოხმაურება გაგზავნილია</string>
-  <string name="dev_report_saved">ანგარიში შენახულია. გაიგზავნება მომდევნო ჯერზე NoConnect-ის ანგარიშზე შესვლისას.</string>
   <string name="dev_report_error">შეცდომა: ანგარიშის გაგზავნა ვერ მოხერხდა</string>
   <!--Sign Out-->
   <string name="progress_title_logout">გამოდის NoConnect-იდან…</string>
