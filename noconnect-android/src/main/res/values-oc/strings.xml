@@ -389,9 +389,6 @@ Volètz suprimir vòstre compte e ne crear un nòu ?\n
   <string name="blogs_sharing_declined_toast">Invitacion declinada</string>
   <string name="sharing_status_blog">Qual que siá seguidor d’un blòg pòt lo partejar amb sos contactes. Partejatz lo blòg amb los contactes seguents. I a benlèu mai de monde qu’o seguen que vesètz pas.</string>
   <!--RSS Feeds-->
-levadas de vòstre aparelh mas pas dels aparelhs del monde.\n\nTotes los 
-contactes qu’avètz partejat aqueste flux quitaràn benlèu de recebre las mesas
- a jorn.</string>
   <!--Settings Profile Picture-->
   <!--Settings Display-->
   <string name="pref_language_title">Lenga &amp; region</string>

@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools">
   <!--Setup-->
-  <string name="setup_title">به NoConnect (برایر) خوش آمدید</string>
+  <string name="setup_title">به NoConnect (NoConnect) خوش آمدید</string>
   <string name="setup_name_explanation">نام مستعار شما کنار هر مطلبی که پست کنید قرار خواهد گرفت. بعد از ایجاد حساب کاربری امکان تغییر آن وجود ندارد.</string>
   <string name="setup_next">بعدی</string>
   <string name="setup_password_intro">یک گذرواژه انتخاب کنید</string>
-  <string name="setup_password_explanation">حساب کاربری NoConnect (برایر) شما به صورت رمزگذاری شده روی دستگاه شما به جای حافظه ابری ذخیره شده است. اگر گذرواژه خود را فراموش کنید یا NoConnect (برایر) را پاک کنید، راهی برای بازیابی حساب کاربری شما وجود نخواهد داشت.
+  <string name="setup_password_explanation">حساب کاربری NoConnect (NoConnect) شما به صورت رمزگذاری شده روی دستگاه شما به جای حافظه ابری ذخیره شده است. اگر گذرواژه خود را فراموش کنید یا NoConnect (NoConnect) را پاک کنید، راهی برای بازیابی حساب کاربری شما وجود نخواهد داشت.
 
 یک گذرواژه طولانی انتخاب کنید که حدس آن سخت باشد، مثل چهار عبارت تصادفی یا ده لغت تصادفی با اعداد و نماد ها.</string>
-  <string name="dnkm_doze_intro">برای دریافت پیام، NoConnect (برایر) نیاز دارد تا در پس زمینه اتصال داشته باشد.</string>
-  <string name="dnkm_doze_explanation">برای دریافت پیام، NoConnect (برایر) نیاز دارد تا در پس زمینه اتصال داشته باشد. لطفا بهینه سازی باتری را غیر فعال کنید تا NoConnect (برایر) بتواند به اتصال خود ادامه دهد.</string>
+  <string name="dnkm_doze_intro">برای دریافت پیام، NoConnect (NoConnect) نیاز دارد تا در پس زمینه اتصال داشته باشد.</string>
+  <string name="dnkm_doze_explanation">برای دریافت پیام، NoConnect (NoConnect) نیاز دارد تا در پس زمینه اتصال داشته باشد. لطفا بهینه سازی باتری را غیر فعال کنید تا NoConnect (NoConnect) بتواند به اتصال خود ادامه دهد.</string>
   <string name="choose_nickname">نام مستعار خود را انتخاب کنید</string>
   <string name="choose_password">گذرواژه خود را انتخاب کنید</string>
   <string name="confirm_password">گذرواژه خود را تایید کنید</string>
@@ -19,15 +19,15 @@
   <string name="create_account_button">ایجاد حساب کاربری</string>
   <string name="more_info">اطلاعات بیشتر</string>
   <string name="don_t_ask_again">دیگر نپرس</string>
-  <string name="dnkm_huawei_protected_text">لطفا روی دکمه زیر کلیک کنید و مطمئن شوید که از NoConnect (برایر) در صفحه \"برنامه های محافظت شده\" محافظت می شود.</string>
-  <string name="dnkm_huawei_protected_button">حفاظت از NoConnect (برایر)</string>
-  <string name="dnkm_huawei_protected_help">اگر NoConnect (برایر) به فهرست برنامه های محافظت شده اضافه نشده، نمی تواند در پس زمینه مشغول به کار باشد.</string>
-  <string name="dnkm_huawei_app_launch_text">لطفا روی دکمه زیر زده، صفحه‌ی \"راه اندازی برنامه\" را باز کرده و از این که برایر (NoConnect) بر روی \"مدیریت دستی\" تنظیم شده باشد، اطمینان حاصل کنید.</string>
-  <string name="dnkm_huawei_app_launch_help">اگر در صفحه \"راه اندازی برنامه\"، برایر (NoConnect) بر روی گزینه \"مدیریت دستی\" تنظیم نشده باشد، برنامه قادر به فعالیت در پس‌زمینه نخواهد بود.</string>
-  <string name="dnkm_xiaomi_text">برای اجرا در پس‌زمینه، لازم است برایر (NoConnect) در لیست اپ‌های اخیر قفل شود.</string>
-  <string name="dnkm_xiaomi_button">حفاظت از NoConnect (برایر)</string>
-  <string name="dnkm_xiaomi_help">اگر برایر (NoConnect) در لیست اپ‌های اخیر قفل نشود، قادر با اجرا در پس‌زمینه نخواهد بود.</string>
-  <string name="dnkm_xiaomi_dialog_body_old">1. لیست اپ‌های اخیر (یا app switcher) را باز کنید\n\n2. عکس اپ برایر (NoConnect) را پایین کشیده تا آیکون قفل نمایش یابد\n\n3. اگر قفل بسته نیست، روی آن بزنید تا قفل شود</string>
+  <string name="dnkm_huawei_protected_text">لطفا روی دکمه زیر کلیک کنید و مطمئن شوید که از NoConnect (NoConnect) در صفحه \"برنامه های محافظت شده\" محافظت می شود.</string>
+  <string name="dnkm_huawei_protected_button">حفاظت از NoConnect (NoConnect)</string>
+  <string name="dnkm_huawei_protected_help">اگر NoConnect (NoConnect) به فهرست برنامه های محافظت شده اضافه نشده، نمی تواند در پس زمینه مشغول به کار باشد.</string>
+  <string name="dnkm_huawei_app_launch_text">لطفا روی دکمه زیر زده، صفحه‌ی \"راه اندازی برنامه\" را باز کرده و از این که NoConnect (NoConnect) بر روی \"مدیریت دستی\" تنظیم شده باشد، اطمینان حاصل کنید.</string>
+  <string name="dnkm_huawei_app_launch_help">اگر در صفحه \"راه اندازی برنامه\"، NoConnect (NoConnect) بر روی گزینه \"مدیریت دستی\" تنظیم نشده باشد، برنامه قادر به فعالیت در پس‌زمینه نخواهد بود.</string>
+  <string name="dnkm_xiaomi_text">برای اجرا در پس‌زمینه، لازم است NoConnect (NoConnect) در لیست اپ‌های اخیر قفل شود.</string>
+  <string name="dnkm_xiaomi_button">حفاظت از NoConnect (NoConnect)</string>
+  <string name="dnkm_xiaomi_help">اگر NoConnect (NoConnect) در لیست اپ‌های اخیر قفل نشود، قادر با اجرا در پس‌زمینه نخواهد بود.</string>
+  <string name="dnkm_xiaomi_dialog_body_old">1. لیست اپ‌های اخیر (یا app switcher) را باز کنید\n\n2. عکس اپ NoConnect (NoConnect) را پایین کشیده تا آیکون قفل نمایش یابد\n\n3. اگر قفل بسته نیست، روی آن بزنید تا قفل شود</string>
   <string name="dnkm_xiaomi_dialog_body_new">1. فهرست برنامه‌های اخیر را باز کنید (که به آن app switcher نیز گفته می‌شود)\n\n2. اگر NoConnect تصویر کوچکی از یک قفل در کنار نام خود دارد، دیگر لازم نیست کاری انجام دهید\n\n3. اگر قفلی وجود ندارد، تصویر NoConnect را فشار داده و نگه دارید تا دکمه قفل ظاهر شود، سپس روی آن ضربه بزنید.</string>
   <string name="dnkm_xiaomi_lock_apps_text">لطفا روی دکمه زیر ضربه بزنید تا تنظیمات امنیتی باز شود. روی \"Boost speed\" ضربه بزنید، سپس روی \"Lock apps\" ضربه بزنید و مطمئن شوید که NoConnect روی \"Locked\" تنظیم شده است.</string>
   <string name="dnkm_xiaomi_lock_apps_help">اگر NoConnect در صفحه \"Lock apps\" روی \"Locked\" تنظیم نشود، نمی‌تواند در پس‌زمینه اجرا شود.</string>
@@ -40,18 +40,18 @@
   <string name="sign_in_button">ورود</string>
   <string name="forgotten_password">رمزعبور خود را فراموش کرده‌اید؟</string>
   <string name="dialog_title_lost_password">گذرواژه گمشده</string>
-  <string name="dialog_message_lost_password">حساب کاربری NoConnect (برایر) شما به صورت رمزنگاری شده روی سیستم شما به جای حافظه ابری ذخیره شده است برای همین ما نمی توانیم گذرواژه شما را به صورت مجدد تنظیم کنیم. آیا مایل هستید تا حساب کاربری شما را پاک کنیم و دوباره از ابتدا شروع کنیم؟
+  <string name="dialog_message_lost_password">حساب کاربری NoConnect (NoConnect) شما به صورت رمزنگاری شده روی سیستم شما به جای حافظه ابری ذخیره شده است برای همین ما نمی توانیم گذرواژه شما را به صورت مجدد تنظیم کنیم. آیا مایل هستید تا حساب کاربری شما را پاک کنیم و دوباره از ابتدا شروع کنیم؟
 
 اخطار: هویت های شما، مخاطبان شما و پیام های شما برای همیشه از بین خواهند رفت.</string>
-  <string name="startup_failed_activity_title">خطا در شروع NoConnect (برایر)</string>
+  <string name="startup_failed_activity_title">خطا در شروع NoConnect (NoConnect)</string>
   <string name="startup_failed_clock_error">NoConnect به دلیل این که ساعت دستگاه شما غلط است، اجرا نشد.\n\n لطفا ساعت دستگاه خود را تنظیم کرده و دوباره تلاش کنید.</string>
   <string name="startup_failed_db_error">NoConnect قادر به باز کردن پایگاه داده حاوی حساب کاربری، مخاطبین و پیام‌های شما نشد.\n\n لطفا برنامه را به آخرین نسخه ارتقا داده، و یا هنگام وارد کردن رمز عبور، با انتخاب گزینه «رمز خود را فراموش کرده‌ام» حساب جدیدی ایجاد کنید.</string>
   <string name="startup_failed_data_too_old_error">حساب کاربری شما با نسخه قدیمی این برنامه ساخته شده و در این نسخه قابل باز شدن نیست.\n\n شما یا باید نسخه قبلی را دوباره نصب کنید و یا هنگام وارد کردن رمز عبور، با انتخاب «رمز خود را فراموش کرده‌ام» حساب جدیدی ایجاد کنید.</string>
   <string name="startup_failed_data_too_new_error">حساب کاربری شما با نسخه جدیدتر این برنامه ساخته شده و در این نسخه قابل باز شدن نیست.\n\n لطفا به آخرین نسخه ارتقا داده و دوباره امتحان کنید.</string>
   <string name="startup_failed_service_error">NoConnect قادر به آغاز اجزای مورد نیاز نیست.\n\n لطفا به آخرین نسخه برنامه ارتقا داده و دوباره امتحان کنید.</string>
   <plurals name="expiry_warning">
-    <item quantity="one">این یک نسخه آزمایشی از NoConnect (برایر) می باشد. حساب کاربری شما در %d روز آینده به پایان می رسد و امکان تمدید آن وجود نخواهد داشت.</item>
-    <item quantity="other">این یک نسخه آزمایشی از NoConnect (برایر) می باشد. حساب کاربری شما در %d روز آینده به پایان می رسد و امکان تمدید آن وجود نخواهد داشت.</item>
+    <item quantity="one">این یک نسخه آزمایشی از NoConnect (NoConnect) می باشد. حساب کاربری شما در %d روز آینده به پایان می رسد و امکان تمدید آن وجود نخواهد داشت.</item>
+    <item quantity="other">این یک نسخه آزمایشی از NoConnect (NoConnect) می باشد. حساب کاربری شما در %d روز آینده به پایان می رسد و امکان تمدید آن وجود نخواهد داشت.</item>
   </plurals>
   <string name="expiry_date_reached">این نرم افزار منقضی شده است.
 
@@ -76,7 +76,7 @@
   <string name="lock_button">قفل کردن برنامه</string>
   <string name="settings_button">تنظیمات</string>
   <string name="sign_out_button">خروج</string>
-  <string name="transports_onboarding_text">برای کنترل چگونگی اتصال NoConnect (برایر) به مخاطبین خود، اینجا را لمس کنید.</string>
+  <string name="transports_onboarding_text">برای کنترل چگونگی اتصال NoConnect (NoConnect) به مخاطبین خود، اینجا را لمس کنید.</string>
   <!--Transports: Tor-->
   <string name="transport_tor">اینترنت</string>
   <string name="tor_device_status_online_wifi">تلفن شما از طریق Wi-Fi به اینترنت دسترسی دارد.</string>
@@ -107,12 +107,12 @@
   <string name="bt_plugin_status_inactive">NoConnect نمی تواند به بلوتوث وصل شود</string>
   <string name="bt_plugin_status_disabled">NoConnect طوری پیکربندی شده که از بلوتوث استفاده نکند</string>
   <!--Notifications-->
-  <string name="reminder_notification_title">از NoConnect (برایر) خارج شد</string>
+  <string name="reminder_notification_title">از NoConnect (NoConnect) خارج شد</string>
   <string name="reminder_notification_text">برای وارد شدن دوباره ضربه بزنید.</string>
-  <string name="reminder_notification_channel_title">یادآور ورود NoConnect (برایر)</string>
+  <string name="reminder_notification_channel_title">یادآور ورود NoConnect (NoConnect)</string>
   <string name="reminder_notification_dismiss">رد کردن</string>
-  <string name="ongoing_notification_title">وارد NoConnect (برایر) شد</string>
-  <string name="ongoing_notification_text">برای باز کردن NoConnect (برایر) کلیک کنید.</string>
+  <string name="ongoing_notification_title">وارد NoConnect (NoConnect) شد</string>
+  <string name="ongoing_notification_text">برای باز کردن NoConnect (NoConnect) کلیک کنید.</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">%dپیام خصوصی جدید</item>
     <item quantity="other">%dپیام خصوصی جدید</item>
@@ -223,7 +223,7 @@
   <string name="save_image_success">تصویر ذخیره شد</string>
   <string name="save_image_error">تصویر ذخیره نشد</string>
   <string name="dialog_title_no_image_support">تصاویر در دسترس نمی باشند</string>
-  <string name="dialog_message_no_image_support">NoConnect (برایر) مخاطب شما هنوز از پیوست‌ های تصویری پشتیبانی نمی‌کند. هنگامی که آنها ارتقا دادند یک آیکون متفاوت خواهید دید.</string>
+  <string name="dialog_message_no_image_support">NoConnect (NoConnect) مخاطب شما هنوز از پیوست‌ های تصویری پشتیبانی نمی‌کند. هنگامی که آنها ارتقا دادند یک آیکون متفاوت خواهید دید.</string>
   <string name="dialog_title_image_support">شما هم اکنون می‌توانید به این مخاطب تصاویر ارسال کنید</string>
   <string name="dialog_message_image_support">برای پیوست کردن تصاویر به روی آیکون ضربه بزنید.</string>
   <string name="messaging_too_many_attachments_toast">فقط %d تصویر آغازین ارسال خواهند شد</string>
@@ -267,7 +267,7 @@
   <string name="add_contact_choose_a_nickname">یک نام مستعار وارد کنید</string>
   <string name="nickname_intro">به مخاطب خود یک نام مستعار بدهید. فقط شما قادر به دیدن آن می باشید.</string>
   <string name="your_link">برای افزودن مخاطب این پیوند را به او بدهید</string>
-  <string name="link_clip_label">پیوند NoConnect (برایر)</string>
+  <string name="link_clip_label">پیوند NoConnect (NoConnect)</string>
   <string name="link_copied_toast">پیوند کپی شد</string>
   <string name="adding_contact_error">یک خطا هنگام افزودن مخاطب رخ داد.</string>
   <string name="pending_contact_requests_snackbar">درخواست های مخاطب معلق وجود دارند</string>
@@ -282,7 +282,7 @@
   <string name="own_link_error">به جای پیوند خود، پیوند مخاطب را وارد کنید</string>
   <string name="nickname_missing">لطفا یک نام مستعار وارد کنید</string>
   <string name="invalid_link">پیوند نامعتبر</string>
-  <string name="unsupported_link">این پیوند از یک نسخه جدیدتر NoConnect (برایر) آمده است. لطفا به آخرین نسخه ارتقا دهید و دوباره امتحان کنید.</string>
+  <string name="unsupported_link">این پیوند از یک نسخه جدیدتر NoConnect (NoConnect) آمده است. لطفا به آخرین نسخه ارتقا دهید و دوباره امتحان کنید.</string>
   <string name="intent_own_link">شما پیوند خود را باز کردید. پیوند مخاطبی که میخواهید اضافه کنید را استفاده کنید!</string>
   <string name="missing_link">لطفا یک پیوند وارد کنید</string>
   <!--This is a numeral indicating the first step in a series of screens-->
@@ -507,12 +507,6 @@
   <string name="blogs_sharing_declined_toast">دعوت نامه رد شد</string>
   <string name="sharing_status_blog">هرکسی که به اشتراک یک بلاگ در بیاید می تواند آن را با مخاطبان خود به اشتراک بگذارد. شما این بلاگ را با مخاطبان زیر به اشتراک میگذارید. ممکن است مشترکان دیگری هم باشند که شما نتوانید آن ها را ببینید.</string>
   <!--RSS Feeds-->
-
-پست ها از دستگاه شما پاک خواهند شد اما روی دستگاه سایر افراد باقی خواهند ماند
-
-هر مخاطبی که با آن این خوراک را به اشتراک گذاشته اید ممکن است دیگر آپدیت دریافت نکند.</string>
-
-برای وارد کردن خوراک روی آیکون + ضربه بزنید</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">برای تغییر تصویر نمایه خود اینجا را لمس کنید.</string>
   <string name="dialog_confirm_profile_picture_title">تغییر تصویر نمایه</string>
@@ -520,7 +514,7 @@
   <string name="change_profile_picture_failed_message">تاسفیم اما هنگام بروزرسانی تصویر نمایه شما مشکلی رخ داد.</string>
   <!--Settings Display-->
   <string name="pref_language_title">زبان و منطقه</string>
-  <string name="pref_language_changed">این تنظیمات زمانی که NoConnect (برایر) را ری استارت کنید تاثیر خود را می گذارند. لطفا خارج شوید و NoConnect (برایر) را دوباره راه اندازی کنید.</string>
+  <string name="pref_language_changed">این تنظیمات زمانی که NoConnect (NoConnect) را ری استارت کنید تاثیر خود را می گذارند. لطفا خارج شوید و NoConnect (NoConnect) را دوباره راه اندازی کنید.</string>
   <string name="pref_language_default">پیش فرض سیستم</string>
   <string name="display_settings_title">نمایش</string>
   <string name="pref_theme_title">قالب</string>
@@ -546,11 +540,11 @@
   <!--Settings Security and Panic-->
   <string name="security_settings_title">امنیت</string>
   <string name="pref_lock_title">قفل برنامه</string>
-  <string name="pref_lock_summary">استفاده از قفل صفحه دستگاه به منظور محافظت از NoConnect (برایر) در هنگام استفاده از آن</string>
+  <string name="pref_lock_summary">استفاده از قفل صفحه دستگاه به منظور محافظت از NoConnect (NoConnect) در هنگام استفاده از آن</string>
   <string name="pref_lock_disabled_summary">برای استفاده از این ویژگی، قفل صفحه را برای دستگاه خود برپا کنید</string>
   <string name="pref_lock_timeout_title">اتمام وقت عدم فعالیت قفل صفحه</string>
   <!--The %s placeholder is replaced with the following time spans, e.g. 5 Minutes, 1 Hour-->
-  <string name="pref_lock_timeout_summary">زمانی که از NoConnect (برایر) استفاده نمی شود، به صورت خودکار بعد از %s آن را قفل کن</string>
+  <string name="pref_lock_timeout_summary">زمانی که از NoConnect (NoConnect) استفاده نمی شود، به صورت خودکار بعد از %s آن را قفل کن</string>
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
   <string name="pref_lock_timeout_1">1 دقیقه</string>
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
@@ -562,7 +556,7 @@
   <!--Will be shown in a list of lock times. Should fit into the %s of "automatically lock it after %s"-->
   <string name="pref_lock_timeout_60">۱ ساعت</string>
   <string name="pref_lock_timeout_never">هرگز</string>
-  <string name="pref_lock_timeout_never_summary">هیچوقت NoConnect (برایر) را به صورت خودکار قفل نکن</string>
+  <string name="pref_lock_timeout_never_summary">هیچوقت NoConnect (NoConnect) را به صورت خودکار قفل نکن</string>
   <string name="change_password">تغییر گذرواژه</string>
   <string name="current_password">گذرواژه فعلی</string>
   <string name="choose_new_password">گذرواژه جدید</string>
@@ -570,7 +564,7 @@
   <string name="password_changed">گذرواژه تغییر کرده است</string>
   <string name="panic_setting">نصب دکمه هراس</string>
   <string name="panic_setting_title">دکمه هراس</string>
-  <string name="panic_setting_hint">تنظیم نحوه واکنش NoConnect (برایر) هنگام فعال سازی دکمه هراس</string>
+  <string name="panic_setting_hint">تنظیم نحوه واکنش NoConnect (NoConnect) هنگام فعال سازی دکمه هراس</string>
   <string name="panic_app_setting_title">برنامه دکمه هراس</string>
   <string name="unknown_app">یک برنامه ناشناخته</string>
   <string name="panic_app_setting_summary">هیچ برنامه ای تنظیم نشده است</string>
@@ -579,9 +573,9 @@
   <string name="dialog_message_connect_panic_app">آیا مطمئن هستید که میخواهید به %1$s اجازه دهید تا باعث عملیات مخرب دکمه هراس بشود؟</string>
   <string name="panic_setting_destructive_action">فعالیت های مخرب</string>
   <string name="panic_setting_signout_title">خروج</string>
-  <string name="panic_setting_signout_summary">در صورت کلیک بر روی کلید هراس از NoConnect (برایر) خارج شو</string>
+  <string name="panic_setting_signout_summary">در صورت کلیک بر روی کلید هراس از NoConnect (NoConnect) خارج شو</string>
   <string name="purge_setting_title">حذف حساب کاربری</string>
-  <string name="purge_setting_summary">در صورت فشار دادن دکمه هراس حساب کاربری NoConnect (برایر) شما حذف خواهد شد. اخطار: این باعث حذف دائمی تمام هویت ها، مخاطبان و پیام های شما خواهد شد</string>
+  <string name="purge_setting_summary">در صورت فشار دادن دکمه هراس حساب کاربری NoConnect (NoConnect) شما حذف خواهد شد. اخطار: این باعث حذف دائمی تمام هویت ها، مخاطبان و پیام های شما خواهد شد</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">نوتیفیکیشن ها</string>
   <string name="notify_sign_in_title">به من یاد آوری کن تا دوباره وارد شوم</string>
@@ -712,10 +706,10 @@
   <string name="link_warning_text">این می‌تواند برای شناسایی شما مورد استفاده قرار بگیرد. قبل از باز کردن این پیوند به قابل اطمینان بودن شخصی که آن را برای شما ارسال کرده فکر کنید و بعد برای احتیاط آن را با مرورگر تور باز کنید.</string>
   <string name="link_warning_open_link">باز کردن پیوند</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">گزارش خطای NoConnect (برایر)</string>
+  <string name="crash_report_title">گزارش خطای NoConnect (NoConnect)</string>
   <string name="nc_crashed">متاسفانه NoConnect از کار افتاد</string>
   <string name="not_your_fault">این تقصیر شما نیست.</string>
-  <string name="please_send_report">لطفا با فرستادن گزارش خطا به ما کمک کنید تا NoConnect (برایر) را بهتر کنیم.</string>
+  <string name="please_send_report">لطفا با فرستادن گزارش خطا به ما کمک کنید تا NoConnect (NoConnect) را بهتر کنیم.</string>
   <string name="report_is_encrypted">به شما اطمینان می دهیم که گزارش شما رمزنگاری شده و به صورت امن فرستاده می شود.</string>
   <string name="feedback_title">بازخورد</string>
   <string name="describe_crash">توضیح دهید چه اتفاقی افتاد (اختیاری)</string>
@@ -740,37 +734,37 @@
   <string name="close">بستن</string>
   <string name="dev_report_error">خطا در ارسال گزارش</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">خروج از NoConnect (برایر)...</string>
+  <string name="progress_title_logout">خروج از NoConnect (NoConnect)...</string>
   <!--Screen Filters & Tapjacking-->
   <string name="screen_filter_title">قرارگیری روی صفحه شناسایی شد</string>
-  <string name="screen_filter_body">برنامه ای دیگری روی NoConnect (برایر) قرار گرفته است. برای حفاظت از امنیت شما، NoConnect (برایر) پاسخگو به لمس های صفحه نمایش تا زمانی که برنامه دیگری بالای آن قرار دارد نخواهد بود.
+  <string name="screen_filter_body">برنامه ای دیگری روی NoConnect (NoConnect) قرار گرفته است. برای حفاظت از امنیت شما، NoConnect (NoConnect) پاسخگو به لمس های صفحه نمایش تا زمانی که برنامه دیگری بالای آن قرار دارد نخواهد بود.
 
-این برنامه ها ممکن است روی NoConnect (برایر) قرار گرفته باشند:
+این برنامه ها ممکن است روی NoConnect (NoConnect) قرار گرفته باشند:
 
 %1$s</string>
-  <string name="screen_filter_body_api_30">برنامه دیگری بر روی برنامه NoConnect (برایر) قرار دارد. برای محافظت از امنیت شما، NoConnect (برایر) هنگامی که برنامه دیگری روی آن باز است، به لمس پاسخ نخواهد داد. \n\nبرای یافتن برنامه مذکور، برنامه‌های زیر را بررسی کنید.</string>
-  <string name="screen_filter_allow">به این برنامه ها اجازه بده تا روی NoConnect (برایر) قرار بگیرند</string>
+  <string name="screen_filter_body_api_30">برنامه دیگری بر روی برنامه NoConnect (NoConnect) قرار دارد. برای محافظت از امنیت شما، NoConnect (NoConnect) هنگامی که برنامه دیگری روی آن باز است، به لمس پاسخ نخواهد داد. \n\nبرای یافتن برنامه مذکور، برنامه‌های زیر را بررسی کنید.</string>
+  <string name="screen_filter_allow">به این برنامه ها اجازه بده تا روی NoConnect (NoConnect) قرار بگیرند</string>
   <string name="screen_filter_review_apps">بررسی برنامه‌ها</string>
   <!--Permission Requests-->
   <string name="permission_camera_title">دسترسی به دوربین</string>
   <string name="permission_camera_request_body">برای اسکن کردن کد کیوآر دسترسی به دوربین لازم است.</string>
   <string name="permission_location_title">اجازه موقعیت</string>
   <string name="permission_nearby_devices_title">مجوز دستگاه‌های نزدیک</string>
-  <string name="permission_location_request_body">برای پیدا کردن دستگاه‌های بلوتوث، NoConnect (برایر) نیاز به اجازه دسترسی به موقعیت شما دارد.
+  <string name="permission_location_request_body">برای پیدا کردن دستگاه‌های بلوتوث، NoConnect (NoConnect) نیاز به اجازه دسترسی به موقعیت شما دارد.
 
-NoConnect  (برایر) موقعیت شما را ذخیره نمی‌کند و آن را با کسی به اشتراک نمی‌گذارد.</string>
+NoConnect  (NoConnect) موقعیت شما را ذخیره نمی‌کند و آن را با کسی به اشتراک نمی‌گذارد.</string>
   <string name="permission_camera_location_title">دوربین و موقعیت</string>
-  <string name="permission_camera_location_request_body">برای اسکن کد کیوآر، NoConnect (برایر) نیاز به دسترسی به دوربین دارد.
+  <string name="permission_camera_location_request_body">برای اسکن کد کیوآر، NoConnect (NoConnect) نیاز به دسترسی به دوربین دارد.
 
-برای پیدا کردن دستگاه‌های بلوتوث، NoConnect (برایر) نیاز به اجازه دسترسی به موقعیت شما دارد.
+برای پیدا کردن دستگاه‌های بلوتوث، NoConnect (NoConnect) نیاز به اجازه دسترسی به موقعیت شما دارد.
 
-NoConnect (برایر) موقعیت شما را ذخیره نمی‌کند و آن را با کسی به اشتراک نمی‌گذارد.</string>
+NoConnect (NoConnect) موقعیت شما را ذخیره نمی‌کند و آن را با کسی به اشتراک نمی‌گذارد.</string>
   <string name="permission_camera_bluetooth_title">دوربین و دستگاه‌های نزدیک</string>
   <string name="permission_camera_bluetooth_request_body">برای اسکن کد QR، NoConnect نیاز به دسترسی به دوربین دارد.\n\n NoConnect برای یافتن دستگاه‌های بلوتوث و اتصال به دستگاه‌های اطراف به مجوز نیاز دارد.</string>
   <string name="permission_camera_denied_body">شما دسترسی به دوربین را رد کرده اید، اما افزودن مخاطب نیاز به دوربین دارد.
 
 لطفا اجازه دسترسی را بدهید.</string>
-  <string name="permission_location_denied_body">شما دسترسی به موقعیت خود را نداده‌اید اما NoConnect (برایر) برای یافتن دستگاه‌های بلوتوث نیاز به این دسترسی دارد.\n\nلطفا این دسترسی را فراهم کنید.</string>
+  <string name="permission_location_denied_body">شما دسترسی به موقعیت خود را نداده‌اید اما NoConnect (NoConnect) برای یافتن دستگاه‌های بلوتوث نیاز به این دسترسی دارد.\n\nلطفا این دسترسی را فراهم کنید.</string>
   <string name="permission_location_setting_title">تنظیمات مکان‌یابی</string>
   <string name="permission_location_setting_body">تنظیمات مکانی دستگاه شما باید روشن شود تا بتوانید سایر دستگاه‌ها را از طریق بلوتوث بیابید. برای ادامه لطفا مکان‌یابی خود را فعال کنید. شما می‌توانید بعدا آن رو دوباره غیرفعال کنید.</string>
   <string name="permission_location_setting_hotspot_body">برای ایجاد هات‌اسپات Wi-Fi باید تنظیم مکان دستگاه شما روشن باشد. لطفا مکان را برای ادامه فعال کنید. بعدا می‌توانید دوباره آن را غیرفعال کنید.</string>
@@ -781,14 +775,14 @@ NoConnect (برایر) موقعیت شما را ذخیره نمی‌کند و آ
   <string name="qr_code">کد کیوآر</string>
   <string name="show_qr_code_fullscreen">نمایش کد کیوآر به صورت فول اسکرین</string>
   <!--App Locking-->
-  <string name="lock_unlock">باز کردن قفل NoConnect (برایر)</string>
-  <string name="lock_unlock_verbose">پین، الگو یا گذرواژه دستگاه خود را برای باز کردن قفل NoConnect (برایر) وارد کنید</string>
+  <string name="lock_unlock">باز کردن قفل NoConnect (NoConnect)</string>
+  <string name="lock_unlock_verbose">پین، الگو یا گذرواژه دستگاه خود را برای باز کردن قفل NoConnect (NoConnect) وارد کنید</string>
   <string name="lock_unlock_fingerprint_description">برای ادامه سنسور اثر انگشت را با انگشت ثبت شده تان لمس کنید</string>
   <string name="lock_unlock_password">استفاده از گذرواژه</string>
-  <string name="lock_is_locked">NoConnect (برایر) قفل می باشد</string>
+  <string name="lock_is_locked">NoConnect (NoConnect) قفل می باشد</string>
   <string name="lock_tap_to_unlock">برای آنلاک کردن کلیک کنید</string>
   <!--Connections Screen-->
-  <string name="transports_help_text">NoConnect (برایر) می‌تواند از طریق اینترنت، Wi-Fi و یا بلوتوث به مخاطبین شما متصل گردد.\n\nارتباط با اینترنت از طریق شبکه‌ی تور صورت می‌پذیرد.\n\nاگر دسترسی به مخاطب شما از روش‌های مختلفی ممکن باشد، NoConnect (برایر) به صورت موازی از آن‌ها استفاده خواهد کرد.</string>
+  <string name="transports_help_text">NoConnect (NoConnect) می‌تواند از طریق اینترنت، Wi-Fi و یا بلوتوث به مخاطبین شما متصل گردد.\n\nارتباط با اینترنت از طریق شبکه‌ی تور صورت می‌پذیرد.\n\nاگر دسترسی به مخاطب شما از روش‌های مختلفی ممکن باشد، NoConnect (NoConnect) به صورت موازی از آن‌ها استفاده خواهد کرد.</string>
   <!--Share app offline-->
   <string name="hotspot_title">این برنامه را به صورت آفلاین به اشتراک بگذارید</string>
   <string name="hotspot_intro">این برنامه را بدو ارتباط با اینترنت و فقط با Wi-Fi تلفن خود با فردی در نزدیکی خود به اشتراک بگذارید.
@@ -886,7 +880,7 @@ NoConnect (برایر) موقعیت شما را ذخیره نمی‌کند و آ
   <!--This is a message to be used in screenshots. Please use the same translation for Bob!-->
   <string name="screenshot_message_1">هی باب!</string>
   <!--This is a message to be used in screenshots. Please use the same translation for Alice!-->
-  <string name="screenshot_message_2">هی آلیس! ممنون از اینکه درباره NoConnect (برایر) به من گفتی!</string>
+  <string name="screenshot_message_2">هی آلیس! ممنون از اینکه درباره NoConnect (NoConnect) به من گفتی!</string>
   <!--This is a message to be used in screenshots.-->
   <string name="screenshot_message_3">خواهش میکنم، امیدوارم ازش خوشت بیاد 😀</string>
 </resources>

@@ -336,12 +336,6 @@ Kontakti kojima ste podijelili ovaj blog će možda prestati da dobijaju novosti
   <string name="blogs_sharing_declined_toast">Poziv odbijen</string>
   <string name="sharing_status_blog">Ko god se potpiše za ovaj blog može da ga podijeli sa svojim kontaktima. Vi dijelite blog sa slijedećim kontaktima. Moguće je da ima još potpisnika koje nemožete da vidite.</string>
   <!--RSS Feeds-->
-
-Postovi će biti uklonjeni sa vašeg uređaja ali ne is uređaja drugih ljudi.
-
-Kontakti kojima ste podijelili ovaj blog će možda prestati da dobijaju novosti.</string>
-
-Dotaknite + ikonu da uvezete kanal</string>
   <!--Settings Display-->
   <string name="pref_language_title">Jezik i regija</string>
   <string name="pref_language_changed">Ovo podešavanje će stupiti na snagu kada restartujete NoConnect. Molim vas da se odjavite i restartujete NoConnect.</string>
