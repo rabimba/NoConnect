@@ -125,5 +125,6 @@ internal class HeadlessModule(private val appDir: File) {
         override fun shouldEnableHybridPqKeyAgreement() = false
         override fun shouldEnableGroupSenderKeys() = false
         override fun shouldEnableSealedEnvelopeRelay() = false
+        override fun shouldEnableBleTransport() = false
     }
 }

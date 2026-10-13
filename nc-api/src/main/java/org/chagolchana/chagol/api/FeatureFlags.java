@@ -40,4 +40,10 @@ public interface FeatureFlags {
 	 * contacts.
 	 */
 	boolean shouldEnableSealedEnvelopeRelay();
+
+	/**
+	 * Bluetooth LE discovery and L2CAP transport. Not yet tested on real
+	 * devices, so enabled only in debug builds.
+	 */
+	boolean shouldEnableBleTransport();
 }

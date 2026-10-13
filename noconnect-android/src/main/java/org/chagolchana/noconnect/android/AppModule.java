@@ -13,6 +13,7 @@ import org.chagolchana.chagol.api.db.DatabaseConfig;
 import org.chagolchana.chagol.api.event.EventBus;
 import org.chagolchana.chagol.api.lifecycle.LifecycleManager;
 import org.chagolchana.chagol.api.mailbox.MailboxDirectory;
+import org.chagolchana.chagol.api.plugin.BleConstants;
 import org.chagolchana.chagol.api.plugin.BluetoothConstants;
 import org.chagolchana.chagol.api.plugin.LanTcpConstants;
 import org.chagolchana.chagol.api.plugin.PluginConfig;
@@ -23,6 +24,7 @@ import org.chagolchana.chagol.api.plugin.TransportId;
 import org.chagolchana.chagol.api.plugin.duplex.DuplexPluginFactory;
 import org.chagolchana.chagol.api.plugin.simplex.SimplexPluginFactory;
 import org.chagolchana.chagol.api.reporting.DevConfig;
+import org.chagolchana.chagol.plugin.ble.AndroidBlePluginFactory;
 import org.chagolchana.chagol.plugin.bluetooth.AndroidBluetoothPluginFactory;
 import org.chagolchana.chagol.plugin.file.AndroidRemovableDrivePluginFactory;
 import org.chagolchana.chagol.plugin.file.MailboxPluginFactory;
@@ -62,6 +64,7 @@ import org.chagolchana.nullsafety.NotNullByDefault;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -75,7 +78,6 @@ import static android.content.Context.MODE_PRIVATE;
 import static android.os.Build.VERSION.SDK_INT;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
-import static java.util.Collections.singletonMap;
 import static org.chagolchana.chagol.api.plugin.TorConstants.DEFAULT_CONTROL_PORT;
 import static org.chagolchana.chagol.api.plugin.TorConstants.DEFAULT_SOCKS_PORT;
 import static org.chagolchana.noconnect.android.TestingConstants.IS_DEBUG_BUILD;
@@ -190,6 +192,7 @@ public class AppModule {
 	@Provides
 	@Singleton
 	PluginConfig providePluginConfig(AndroidBluetoothPluginFactory bluetooth,
+			AndroidBlePluginFactory ble,
 			AndroidTorPluginFactory tor, AndroidLanTcpPluginFactory lan,
 			AndroidRemovableDrivePluginFactory drive,
 			MailboxPluginFactory mailbox, FeatureFlags featureFlags) {
@@ -198,6 +201,9 @@ public class AppModule {
 
 			@Override
 			public Collection<DuplexPluginFactory> getDuplexFactories() {
+				if (featureFlags.shouldEnableBleTransport()) {
+					return asList(bluetooth, ble, tor, lan);
+				}
 				return asList(bluetooth, tor, lan);
 			}
 
@@ -216,9 +222,12 @@ public class AppModule {
 
 			@Override
 			public Map<TransportId, List<TransportId>> getTransportPreferences() {
-				// Prefer LAN to Bluetooth
-				return singletonMap(BluetoothConstants.ID,
+				// Prefer LAN to Bluetooth Classic and to Bluetooth LE
+				Map<TransportId, List<TransportId>> prefs = new HashMap<>();
+				prefs.put(BluetoothConstants.ID,
 						singletonList(LanTcpConstants.ID));
+				prefs.put(BleConstants.ID, singletonList(LanTcpConstants.ID));
+				return prefs;
 			}
 		};
 		return pluginConfig;
@@ -348,6 +357,11 @@ public class AppModule {
 			@Override
 			public boolean shouldEnableSealedEnvelopeRelay() {
 				return false;
+			}
+
+			@Override
+			public boolean shouldEnableBleTransport() {
+				return IS_DEBUG_BUILD;
 			}
 		};
 	}

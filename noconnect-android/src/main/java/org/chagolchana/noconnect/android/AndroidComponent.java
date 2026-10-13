@@ -27,6 +27,9 @@ import org.chagolchana.chagol.api.plugin.PluginManager;
 import org.chagolchana.chagol.api.settings.SettingsManager;
 import org.chagolchana.chagol.api.system.AndroidExecutor;
 import org.chagolchana.chagol.api.system.Clock;
+import org.chagolchana.chagol.api.properties.TransportPropertyManager;
+import org.chagolchana.chagol.api.identity.AuthorFactory;
+import org.chagolchana.chagol.api.crypto.CryptoComponent;
 import org.chagolchana.chagol.mailbox.ModularMailboxModule;
 import org.chagolchana.chagol.plugin.file.RemovableDriveModule;
 import org.chagolchana.chagol.system.ClockModule;
@@ -183,6 +186,12 @@ public interface AndroidComponent
 
 
 	Clock clock();
+
+	CryptoComponent cryptoComponent();
+
+	AuthorFactory authorFactory();
+
+	TransportPropertyManager transportPropertyManager();
 
 	TestDataCreator testDataCreator();
 

@@ -54,6 +54,11 @@ public class TestFeatureFlagModule {
 			public boolean shouldEnableSealedEnvelopeRelay() {
 				return false;
 			}
+
+			@Override
+			public boolean shouldEnableBleTransport() {
+				return false;
+			}
 		};
 	}
 }
