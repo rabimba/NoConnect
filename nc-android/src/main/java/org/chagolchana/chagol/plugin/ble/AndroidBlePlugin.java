@@ -27,9 +27,13 @@ import android.os.ParcelUuid;
 
 import org.chagolchana.chagol.api.FormatException;
 import org.chagolchana.chagol.api.Pair;
+import org.chagolchana.chagol.api.contact.event.ContactRemovedEvent;
 import org.chagolchana.chagol.api.crypto.CryptoComponent;
 import org.chagolchana.chagol.api.crypto.SecretKey;
 import org.chagolchana.chagol.api.data.BdfList;
+import org.chagolchana.chagol.api.event.Event;
+import org.chagolchana.chagol.api.event.EventBus;
+import org.chagolchana.chagol.api.event.EventListener;
 import org.chagolchana.chagol.api.keyagreement.KeyAgreementListener;
 import org.chagolchana.chagol.api.plugin.ConnectionHandler;
 import org.chagolchana.chagol.api.plugin.PluginCallback;
@@ -39,8 +43,11 @@ import org.chagolchana.chagol.api.plugin.duplex.DuplexTransportConnection;
 import org.chagolchana.chagol.api.properties.TransportProperties;
 import org.chagolchana.chagol.api.rendezvous.KeyMaterialSource;
 import org.chagolchana.chagol.api.rendezvous.RendezvousEndpoint;
+import org.chagolchana.chagol.api.settings.Settings;
+import org.chagolchana.chagol.api.settings.event.SettingsUpdatedEvent;
 import org.chagolchana.chagol.api.system.Clock;
 import org.chagolchana.chagol.api.io.TimeoutMonitor;
+import org.chagolchana.chagol.plugin.ble.BleSightingManager.Sighting;
 import org.chagolchana.dontkillme.wakelock.AndroidWakeLockManager;
 import org.chagolchana.nullsafety.MethodsNotNullByDefault;
 import org.chagolchana.nullsafety.ParametersNotNullByDefault;
@@ -48,10 +55,7 @@ import org.chagolchana.nullsafety.ParametersNotNullByDefault;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Collection;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executor;
 import java.util.logging.Logger;
 
@@ -70,11 +74,15 @@ import static android.os.Build.VERSION.SDK_INT;
 import static java.util.logging.Level.INFO;
 import static java.util.logging.Level.WARNING;
 import static java.util.logging.Logger.getLogger;
+import static org.chagolchana.chagol.api.plugin.BleConstants.DEFAULT_PREF_PLUGIN_ENABLE;
 import static org.chagolchana.chagol.api.plugin.BleConstants.ID;
 import static org.chagolchana.chagol.api.plugin.BleConstants.PROP_SECRET;
 import static org.chagolchana.chagol.api.plugin.BleConstants.SECRET_BYTES;
 import static org.chagolchana.chagol.api.plugin.BleConstants.SERVICE_UUID;
+import static org.chagolchana.chagol.api.plugin.Plugin.PREF_PLUGIN_ENABLE;
+import static org.chagolchana.chagol.api.plugin.Plugin.REASON_USER;
 import static org.chagolchana.chagol.api.plugin.Plugin.State.ACTIVE;
+import static org.chagolchana.chagol.api.plugin.Plugin.State.DISABLED;
 import static org.chagolchana.chagol.api.plugin.Plugin.State.INACTIVE;
 import static org.chagolchana.chagol.api.plugin.Plugin.State.STARTING_STOPPING;
 import static org.chagolchana.chagol.plugin.ble.BleRendezvousTokens.EPOCH_MS;
@@ -93,14 +101,12 @@ import static org.chagolchana.chagol.util.StringUtils.toHexString;
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
 @SuppressLint("MissingPermission") // Checked in hasPermissions()
-class AndroidBlePlugin implements DuplexPlugin {
+class AndroidBlePlugin implements DuplexPlugin, EventListener {
 
 	private static final Logger LOG =
 			getLogger(AndroidBlePlugin.class.getName());
 
 	private static final int POLLING_INTERVAL_MS = 60 * 1000;
-	// Forget sightings older than this
-	private static final long SIGHTING_EXPIRY_MS = 2 * EPOCH_MS;
 
 	private static final ParcelUuid SERVICE =
 			new ParcelUuid(UUID.fromString(SERVICE_UUID));
@@ -111,14 +117,13 @@ class AndroidBlePlugin implements DuplexPlugin {
 	private final TimeoutMonitor timeoutMonitor;
 	private final SecureRandom secureRandom;
 	private final Clock clock;
+	private final EventBus eventBus;
 	private final PluginCallback callback;
 	private final BleRendezvousTokens tokens;
+	private final BleSightingManager<BluetoothDevice> sightingManager;
 	private final long maxLatency;
 	private final int maxIdleTime;
 	private final Handler handler = new Handler(Looper.getMainLooper());
-
-	// Token (hex) -> where it was seen
-	private final Map<String, Sighting> sightings = new ConcurrentHashMap<>();
 
 	private final Object lock = new Object();
 	@GuardedBy("lock")
@@ -135,18 +140,20 @@ class AndroidBlePlugin implements DuplexPlugin {
 	AndroidBlePlugin(Application app, Executor ioExecutor,
 			AndroidWakeLockManager wakeLockManager,
 			TimeoutMonitor timeoutMonitor, SecureRandom secureRandom,
-			Clock clock, CryptoComponent crypto, PluginCallback callback,
-			long maxLatency, int maxIdleTime) {
+			Clock clock, CryptoComponent crypto, EventBus eventBus,
+			PluginCallback callback, long maxLatency, int maxIdleTime) {
 		this.app = app;
 		this.ioExecutor = ioExecutor;
 		this.wakeLockManager = wakeLockManager;
 		this.timeoutMonitor = timeoutMonitor;
 		this.secureRandom = secureRandom;
 		this.clock = clock;
+		this.eventBus = eventBus;
 		this.callback = callback;
 		this.maxLatency = maxLatency;
 		this.maxIdleTime = maxIdleTime;
 		tokens = new BleRendezvousTokens(crypto);
+		sightingManager = new BleSightingManager<>(clock, tokens);
 	}
 
 	@Override
@@ -171,9 +178,14 @@ class AndroidBlePlugin implements DuplexPlugin {
 			started = true;
 			localSecret = loadOrCreateSecret();
 		}
+		eventBus.addListener(this);
 		app.registerReceiver(adapterReceiver,
 				new IntentFilter(ACTION_STATE_CHANGED));
-		bringUpIfPossible();
+		if (!isEnabledByUser()) {
+			setState(DISABLED);
+		} else {
+			bringUpIfPossible();
+		}
 	}
 
 	@Override
@@ -182,6 +194,7 @@ class AndroidBlePlugin implements DuplexPlugin {
 			if (!started) return;
 			started = false;
 		}
+		eventBus.removeListener(this);
 		try {
 			app.unregisterReceiver(adapterReceiver);
 		} catch (IllegalArgumentException e) {
@@ -192,13 +205,26 @@ class AndroidBlePlugin implements DuplexPlugin {
 	}
 
 	@Override
+	public void eventOccurred(Event e) {
+		if (e instanceof ContactRemovedEvent) {
+			LOG.info("Contact removed, rotating BLE rendezvous secret");
+			ioExecutor.execute(this::rotateSecret);
+		} else if (e instanceof SettingsUpdatedEvent) {
+			SettingsUpdatedEvent s = (SettingsUpdatedEvent) e;
+			if (s.getNamespace().equals(ID.getString())) {
+				ioExecutor.execute(this::onSettingsUpdated);
+			}
+		}
+	}
+
+	@Override
 	public State getState() {
 		return state;
 	}
 
 	@Override
 	public int getReasonsDisabled() {
-		return 0;
+		return isEnabledByUser() ? 0 : REASON_USER;
 	}
 
 	@Override
@@ -217,7 +243,7 @@ class AndroidBlePlugin implements DuplexPlugin {
 		// Permissions may have been granted since we last tried
 		if (state != ACTIVE) bringUpIfPossible();
 		if (state != ACTIVE) return;
-		pruneSightings();
+		sightingManager.pruneSightings();
 		for (Pair<TransportProperties, ConnectionHandler> p : properties) {
 			if (findNearby(p.getFirst()) == null) continue;
 			ioExecutor.execute(() -> {
@@ -231,11 +257,11 @@ class AndroidBlePlugin implements DuplexPlugin {
 	@Nullable
 	public DuplexTransportConnection createConnection(TransportProperties p) {
 		if (state != ACTIVE || SDK_INT < 29) return null;
-		Sighting s = findNearby(p);
+		Sighting<BluetoothDevice> s = findNearby(p);
 		if (s == null) return null;
 		try {
 			BluetoothSocket socket =
-					s.device.createInsecureL2capChannel(s.psm);
+					s.getDevice().createInsecureL2capChannel(s.getPsm());
 			socket.connect();
 			LOG.info("Connected over BLE L2CAP");
 			return new BleTransportConnection(this, wakeLockManager,
@@ -282,32 +308,8 @@ class AndroidBlePlugin implements DuplexPlugin {
 	 * current, previous or next epoch, or null if they haven't been seen.
 	 */
 	@Nullable
-	private Sighting findNearby(TransportProperties p) {
-		String secretHex = p.get(PROP_SECRET);
-		if (secretHex == null) return null;
-		SecretKey secret;
-		try {
-			byte[] b = fromHexString(secretHex);
-			if (b.length != SECRET_BYTES) return null;
-			secret = new SecretKey(b);
-		} catch (FormatException e) {
-			return null;
-		}
-		long epoch = epochFor(clock.currentTimeMillis());
-		for (long e = epoch - 1; e <= epoch + 1; e++) {
-			Sighting s = sightings.get(toHexString(tokens.deriveToken(secret,
-					e)));
-			if (s != null) return s;
-		}
-		return null;
-	}
-
-	private void pruneSightings() {
-		long now = clock.currentTimeMillis();
-		Iterator<Sighting> it = sightings.values().iterator();
-		while (it.hasNext()) {
-			if (now - it.next().seen > SIGHTING_EXPIRY_MS) it.remove();
-		}
+	private Sighting<BluetoothDevice> findNearby(TransportProperties p) {
+		return sightingManager.findNearby(p);
 	}
 
 	private SecretKey loadOrCreateSecret() {
@@ -321,6 +323,10 @@ class AndroidBlePlugin implements DuplexPlugin {
 				LOG.warning("Invalid stored BLE secret, creating a new one");
 			}
 		}
+		return generateAndStoreSecret();
+	}
+
+	private SecretKey generateAndStoreSecret() {
 		byte[] b = new byte[SECRET_BYTES];
 		secureRandom.nextBytes(b);
 		TransportProperties p = new TransportProperties();
@@ -329,9 +335,36 @@ class AndroidBlePlugin implements DuplexPlugin {
 		return new SecretKey(b);
 	}
 
+	private void rotateSecret() {
+		synchronized (lock) {
+			if (!started) return;
+			localSecret = generateAndStoreSecret();
+			if (up && serverSocket != null) {
+				BluetoothAdapter adapter = getAdapter();
+				if (adapter != null) {
+					try {
+						BluetoothLeAdvertiser advertiser =
+								adapter.getBluetoothLeAdvertiser();
+						if (advertiser != null) {
+							advertiser.stopAdvertising(advertiseCallback);
+						}
+						startAdvertising(adapter, serverSocket.getPsm());
+					} catch (IllegalStateException | SecurityException e) {
+						logException(LOG, WARNING, e);
+					}
+					scheduleTokenRotation();
+				}
+			}
+		}
+	}
+
 	private void bringUpIfPossible() {
 		synchronized (lock) {
 			if (!started || up) return;
+			if (!isEnabledByUser()) {
+				setState(DISABLED);
+				return;
+			}
 			BluetoothAdapter adapter = getAdapter();
 			if (SDK_INT < 29 || adapter == null || !adapter.isEnabled()
 					|| !hasPermissions()) {
@@ -356,6 +389,23 @@ class AndroidBlePlugin implements DuplexPlugin {
 				setState(INACTIVE);
 			}
 		}
+	}
+
+	private void onSettingsUpdated() {
+		synchronized (lock) {
+			if (!started) return;
+			if (isEnabledByUser()) {
+				bringUpIfPossible();
+			} else {
+				tearDown();
+				setState(DISABLED);
+			}
+		}
+	}
+
+	private boolean isEnabledByUser() {
+		return callback.getSettings().getBoolean(PREF_PLUGIN_ENABLE,
+				DEFAULT_PREF_PLUGIN_ENABLE);
 	}
 
 	private void tearDown() {
@@ -390,7 +440,7 @@ class AndroidBlePlugin implements DuplexPlugin {
 			}
 			serverSocket = null;
 		}
-		sightings.clear();
+		sightingManager.clear();
 		up = false;
 	}
 
@@ -544,10 +594,9 @@ class AndroidBlePlugin implements DuplexPlugin {
 			BleAdvertisementData data = BleAdvertisementData.decode(
 					record.getServiceData(SERVICE));
 			if (data == null) return;
-			Sighting previous = sightings.put(toHexString(data.getToken()),
-					new Sighting(result.getDevice(), data.getPsm(),
-							clock.currentTimeMillis()));
-			if (previous == null && LOG.isLoggable(INFO)) {
+			sightingManager.addSighting(data.getToken(), result.getDevice(),
+					data.getPsm());
+			if (LOG.isLoggable(INFO)) {
 				LOG.info("Saw BLE token, PSM " + data.getPsm());
 			}
 		}
@@ -559,17 +608,4 @@ class AndroidBlePlugin implements DuplexPlugin {
 			}
 		}
 	};
-
-	private static class Sighting {
-
-		private final BluetoothDevice device;
-		private final int psm;
-		private final long seen;
-
-		private Sighting(BluetoothDevice device, int psm, long seen) {
-			this.device = device;
-			this.psm = psm;
-			this.seen = seen;
-		}
-	}
 }

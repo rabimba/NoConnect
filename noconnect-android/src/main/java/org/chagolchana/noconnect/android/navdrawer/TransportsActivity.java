@@ -12,7 +12,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.chagolchana.chagol.api.FeatureFlags;
 import org.chagolchana.chagol.api.network.NetworkStatus;
+import org.chagolchana.chagol.api.plugin.BleConstants;
 import org.chagolchana.chagol.api.plugin.BluetoothConstants;
 import org.chagolchana.chagol.api.plugin.LanTcpConstants;
 import org.chagolchana.chagol.api.plugin.Plugin.State;
@@ -66,11 +68,15 @@ public class TransportsActivity extends NoConnectActivity {
 
 	@Inject
 	ViewModelProvider.Factory viewModelFactory;
+	@Inject
+	FeatureFlags featureFlags;
 
-	private final List<Transport> transports = new ArrayList<>(3);
+	private final List<Transport> transports = new ArrayList<>(4);
 
 	private PluginViewModel viewModel;
 	private BaseAdapter transportsAdapter;
+	@Nullable
+	private TransportId pendingTransportId = null;
 
 	@RequiresApi(31)
 	private final ActivityResultLauncher<String[]> requestPermissionLauncher =
@@ -104,7 +110,7 @@ public class TransportsActivity extends NoConnectActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		} else if (item.getItemId() == R.id.action_help) {
 			String text = getString(R.string.transports_help_text);
@@ -206,6 +212,19 @@ public class TransportsActivity extends NoConnectActivity {
 				R.string.bt_plugin_status_inactive);
 		transports.add(bt);
 
+		if (featureFlags.shouldEnableBleTransport()) {
+			Transport ble = createTransport(BleConstants.ID,
+					R.drawable.transport_bt, R.string.transport_ble,
+					R.string.ble_setting, 0, R.string.bt_device_status_off,
+					R.string.ble_plugin_status_inactive);
+			transports.add(ble);
+
+			viewModel.getBluetoothTurnedOn().observe(this, on -> {
+				updateBtResources(ble, on);
+				transportsAdapter.notifyDataSetChanged();
+			});
+		}
+
 		viewModel.getNetworkStatus().observe(this, status -> {
 			updateTorResources(tor, status);
 			updateWifiResources(wifi, status);
@@ -219,8 +238,10 @@ public class TransportsActivity extends NoConnectActivity {
 	}
 
 	private void onClicked(TransportId transportId, boolean enable) {
-		if (transportId.equals(BluetoothConstants.ID) && enable
+		if ((transportId.equals(BluetoothConstants.ID) ||
+				transportId.equals(BleConstants.ID)) && enable
 				&& SDK_INT >= 31 && !areBluetoothPermissionsGranted(this)) {
+			pendingTransportId = transportId;
 			if (shouldShowRequestPermissionRationale(BLUETOOTH_CONNECT)) {
 				showRationale(this, R.string.permission_bluetooth_title,
 						R.string.permission_bluetooth_body,
@@ -286,6 +307,8 @@ public class TransportsActivity extends NoConnectActivity {
 			return getWifiPluginStatus(state);
 		} else if (id.equals(BluetoothConstants.ID)) {
 			return getBtPluginStatus(state);
+		} else if (id.equals(BleConstants.ID)) {
+			return getBlePluginStatus(state);
 		} else throw new AssertionError();
 	}
 
@@ -327,6 +350,14 @@ public class TransportsActivity extends NoConnectActivity {
 		else return R.string.bt_plugin_status_inactive;
 	}
 
+	@StringRes
+	private int getBlePluginStatus(State state) {
+		if (state == ENABLING) return R.string.ble_plugin_status_enabling;
+		else if (state == ACTIVE) return R.string.ble_plugin_status_active;
+		else if (state == DISABLED) return R.string.ble_plugin_status_disabled;
+		else return R.string.ble_plugin_status_inactive;
+	}
+
 	private Transport createTransport(TransportId id,
 			@DrawableRes int iconDrawable, @StringRes int title,
 			@StringRes int switchLabel, @StringRes int summary,
@@ -354,7 +385,9 @@ public class TransportsActivity extends NoConnectActivity {
 	@RequiresApi(31)
 	private void handleBtPermissionResult(Map<String, Boolean> grantedMap) {
 		if (wasGrantedBluetoothPermissions(this, grantedMap)) {
-			viewModel.enableTransport(BluetoothConstants.ID, true);
+			TransportId id = pendingTransportId != null ? pendingTransportId
+					: BluetoothConstants.ID;
+			viewModel.enableTransport(id, true);
 		} else {
 			// update adapter to reflect the "off" toggle state after denying
 			transportsAdapter.notifyDataSetChanged();
@@ -362,6 +395,7 @@ public class TransportsActivity extends NoConnectActivity {
 					R.string.permission_bluetooth_title,
 					R.string.permission_bluetooth_denied_body);
 		}
+		pendingTransportId = null;
 	}
 
 	private static class Transport {

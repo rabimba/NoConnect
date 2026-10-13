@@ -47,6 +47,7 @@ import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
@@ -194,6 +195,41 @@ public class NavDrawerActivity extends NoConnectActivity implements
 			// do not call this again when there's existing state
 			onNewIntent(getIntent());
 		}
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						if (drawerLayout.isDrawerOpen(START)) {
+							drawerLayout.closeDrawer(START);
+						} else {
+							FragmentManager fm = getSupportFragmentManager();
+							if (fm.findFragmentByTag(SignOutFragment.TAG) != null) {
+								finish();
+							} else if (fm.getBackStackEntryCount() == 0 &&
+									fm.findFragmentByTag(ContactListFragment.TAG) == null) {
+								// don't start fragments in the wrong part of lifecycle (#1904)
+								if (!getLifecycle().getCurrentState().isAtLeast(STARTED)) {
+									LOG.warning("Tried to start contacts fragment in state " +
+											getLifecycle().getCurrentState().name());
+									return;
+								}
+								/*
+								 * This makes sure that the first fragment (ContactListFragment) the
+								 * user sees is the same as the last fragment the user sees before
+								 * exiting. This models the typical Google navigation behaviour such
+								 * as in Gmail/Inbox.
+								 */
+								startFragment(ContactListFragment.newInstance(),
+										R.id.nav_btn_contacts);
+							} else {
+								setEnabled(false);
+								getOnBackPressedDispatcher().onBackPressed();
+								setEnabled(true);
+							}
+						}
+					}
+				});
 	}
 
 	private void observeTransportsOnboarding() {
@@ -298,36 +334,6 @@ public class NavDrawerActivity extends NoConnectActivity implements
 			loadFragment(item.getItemId());
 			// Don't display the Settings item as checked
 			return item.getItemId() != R.id.nav_btn_settings;
-		}
-	}
-
-	@Override
-	public void onBackPressed() {
-		if (drawerLayout.isDrawerOpen(START)) {
-			drawerLayout.closeDrawer(START);
-		} else {
-			FragmentManager fm = getSupportFragmentManager();
-			if (fm.findFragmentByTag(SignOutFragment.TAG) != null) {
-				finish();
-			} else if (fm.getBackStackEntryCount() == 0 &&
-					fm.findFragmentByTag(ContactListFragment.TAG) == null) {
-				// don't start fragments in the wrong part of lifecycle (#1904)
-				if (!getLifecycle().getCurrentState().isAtLeast(STARTED)) {
-					LOG.warning("Tried to start contacts fragment in state " +
-							getLifecycle().getCurrentState().name());
-					return;
-				}
-				/*
-				 * This makes sure that the first fragment (ContactListFragment) the
-				 * user sees is the same as the last fragment the user sees before
-				 * exiting. This models the typical Google navigation behaviour such
-				 * as in Gmail/Inbox.
-				 */
-				startFragment(ContactListFragment.newInstance(),
-						R.id.nav_btn_contacts);
-			} else {
-				super.onBackPressed();
-			}
 		}
 	}
 

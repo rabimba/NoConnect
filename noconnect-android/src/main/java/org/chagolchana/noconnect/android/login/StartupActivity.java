@@ -16,6 +16,7 @@ import org.chagolchana.nullsafety.ParametersNotNullByDefault;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -66,21 +67,23 @@ public class StartupActivity extends BaseActivity implements
 			if (deleted) onAccountDeleted();
 		});
 		viewModel.getState().observe(this, this::onStateChanged);
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						// Move task and activity to the background instead of showing another
+						// password prompt.
+						// onActivityResult() won't be called in NoConnectActivity
+						moveTaskToBack(true);
+					}
+				});
 	}
 
 	@Override
 	public void onStart() {
 		super.onStart();
 		viewModel.clearSignInNotification();
-	}
-
-	@Override
-	@SuppressLint("MissingSuperCall")
-	public void onBackPressed() {
-		// Move task and activity to the background instead of showing another
-		// password prompt.
-		// onActivityResult() won't be called in NoConnectActivity
-		moveTaskToBack(true);
 	}
 
 	private void onStateChanged(State state) {

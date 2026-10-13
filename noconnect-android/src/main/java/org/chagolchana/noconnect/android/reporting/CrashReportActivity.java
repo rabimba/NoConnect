@@ -20,6 +20,7 @@ import org.chagolchana.nullsafety.ParametersNotNullByDefault;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
@@ -90,17 +91,19 @@ public class CrashReportActivity extends BaseActivity
 		setSupportActionBar(toolbar);
 
 		if (savedInstanceState == null) displayFragment(viewModel.isFeedback());
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						exit();
+					}
+				});
 	}
 
 	@Override
 	public void runOnDbThread(Runnable runnable) {
 		throw new AssertionError("deprecated!!!");
-	}
-
-	@Override
-	@SuppressLint("MissingSuperCall")
-	public void onBackPressed() {
-		exit();
 	}
 
 	private void displayFragment(boolean showReportForm) {

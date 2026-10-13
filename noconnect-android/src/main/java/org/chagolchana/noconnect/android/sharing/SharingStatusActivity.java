@@ -117,7 +117,7 @@ abstract class SharingStatusActivity extends NoConnectActivity
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle presses on the action bar items
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

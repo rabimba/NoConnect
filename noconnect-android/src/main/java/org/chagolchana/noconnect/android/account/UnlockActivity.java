@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
@@ -64,6 +65,14 @@ public class UnlockActivity extends BaseActivity {
 			findViewById(R.id.image).setVisibility(INVISIBLE);
 		}
 		keyguardShown = state != null && state.getBoolean(KEYGUARD_SHOWN);
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						moveTaskToBack(true);
+					}
+				});
 	}
 
 	@Override
@@ -111,12 +120,6 @@ public class UnlockActivity extends BaseActivity {
 		} else {
 			requestKeyguardUnlock();
 		}
-	}
-
-	@Override
-	@SuppressLint("MissingSuperCall")
-	public void onBackPressed() {
-		moveTaskToBack(true);
 	}
 
 	@RequiresApi(api = 28)

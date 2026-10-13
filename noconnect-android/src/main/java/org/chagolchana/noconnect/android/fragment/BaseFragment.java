@@ -47,7 +47,7 @@ public abstract class BaseFragment extends Fragment
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			requireActivity().onBackPressed();
+			requireActivity().getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

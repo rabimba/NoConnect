@@ -400,7 +400,7 @@ public class ConversationActivity extends NoConnectActivity
 		// contactId gets set before in onCreate()
 		int itemId = item.getItemId();
 		if (itemId == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		} else if (itemId == R.id.action_introduction) {
 			Intent intent = new Intent(this, IntroductionActivity.class);

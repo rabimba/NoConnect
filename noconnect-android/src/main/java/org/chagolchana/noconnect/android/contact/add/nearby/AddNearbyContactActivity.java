@@ -27,6 +27,7 @@ import java.util.logging.Logger;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
@@ -83,6 +84,25 @@ public class AddNearbyContactActivity extends NoConnectActivity
 				.setTitle(R.string.add_contact_title);
 		viewModel.getState()
 				.observe(this, this::onAddContactStateChanged);
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						if (viewModel.getState().getValue() instanceof Failed) {
+							// Re-create this activity when going back in failed state.
+							// This will also re-create the ViewModel, so we start fresh.
+							Intent i = new Intent(AddNearbyContactActivity.this,
+									AddNearbyContactActivity.class);
+							i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+							startActivity(i);
+						} else {
+							setEnabled(false);
+							getOnBackPressedDispatcher().onBackPressed();
+							setEnabled(true);
+						}
+					}
+				});
 	}
 
 	private void onBluetoothDiscoverableResult(boolean discoverable) {
@@ -98,23 +118,10 @@ public class AddNearbyContactActivity extends NoConnectActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onBackPressed() {
-		if (viewModel.getState().getValue() instanceof Failed) {
-			// Re-create this activity when going back in failed state.
-			// This will also re-create the ViewModel, so we start fresh.
-			Intent i = new Intent(this, AddNearbyContactActivity.class);
-			i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(i);
-		} else {
-			super.onBackPressed();
-		}
 	}
 
 	private void requestBluetoothDiscoverable() {

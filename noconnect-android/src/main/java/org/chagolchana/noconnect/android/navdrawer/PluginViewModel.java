@@ -17,6 +17,7 @@ import org.chagolchana.chagol.api.lifecycle.LifecycleManager;
 import org.chagolchana.chagol.api.network.NetworkManager;
 import org.chagolchana.chagol.api.network.NetworkStatus;
 import org.chagolchana.chagol.api.network.event.NetworkStatusEvent;
+import org.chagolchana.chagol.api.plugin.BleConstants;
 import org.chagolchana.chagol.api.plugin.BluetoothConstants;
 import org.chagolchana.chagol.api.plugin.LanTcpConstants;
 import org.chagolchana.chagol.api.plugin.Plugin;
@@ -70,12 +71,16 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 			new MutableLiveData<>();
 	private final MutableLiveData<State> btPluginState =
 			new MutableLiveData<>();
+	private final MutableLiveData<State> blePluginState =
+			new MutableLiveData<>();
 
 	private final MutableLiveData<Boolean> torEnabledSetting =
 			new MutableLiveData<>(false);
 	private final MutableLiveData<Boolean> wifiEnabledSetting =
 			new MutableLiveData<>(false);
 	private final MutableLiveData<Boolean> btEnabledSetting =
+			new MutableLiveData<>(false);
+	private final MutableLiveData<Boolean> bleEnabledSetting =
 			new MutableLiveData<>(false);
 
 	private final MutableLiveData<NetworkStatus> networkStatus =
@@ -103,6 +108,7 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 		torPluginState.setValue(getTransportState(TorConstants.ID));
 		wifiPluginState.setValue(getTransportState(LanTcpConstants.ID));
 		btPluginState.setValue(getTransportState(BluetoothConstants.ID));
+		blePluginState.setValue(getTransportState(BleConstants.ID));
 		initialiseBluetoothState();
 		loadSettings();
 	}
@@ -133,6 +139,11 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 				boolean enable = s.getSettings().getBoolean(PREF_PLUGIN_ENABLE,
 						BluetoothConstants.DEFAULT_PREF_PLUGIN_ENABLE);
 				btEnabledSetting.setValue(enable);
+			} else if (s.getNamespace().equals(
+					BleConstants.ID.getString())) {
+				boolean enable = s.getSettings().getBoolean(PREF_PLUGIN_ENABLE,
+						BleConstants.DEFAULT_PREF_PLUGIN_ENABLE);
+				bleEnabledSetting.setValue(enable);
 			}
 		} else if (e instanceof TransportStateEvent) {
 			TransportStateEvent t = (TransportStateEvent) e;
@@ -156,6 +167,7 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 		if (id.equals(TorConstants.ID)) return torEnabledSetting;
 		else if (id.equals(LanTcpConstants.ID)) return wifiEnabledSetting;
 		else if (id.equals(BluetoothConstants.ID)) return btEnabledSetting;
+		else if (id.equals(BleConstants.ID)) return bleEnabledSetting;
 		else throw new IllegalArgumentException();
 	}
 
@@ -196,6 +208,9 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 				boolean bt = isPluginEnabled(BluetoothConstants.ID,
 						BluetoothConstants.DEFAULT_PREF_PLUGIN_ENABLE);
 				btEnabledSetting.postValue(bt);
+				boolean ble = isPluginEnabled(BleConstants.ID,
+						BleConstants.DEFAULT_PREF_PLUGIN_ENABLE);
+				bleEnabledSetting.postValue(ble);
 			} catch (DbException e) {
 				handleException(e);
 			}
@@ -218,6 +233,7 @@ public class PluginViewModel extends DbViewModel implements EventListener {
 		if (id.equals(TorConstants.ID)) return torPluginState;
 		else if (id.equals(LanTcpConstants.ID)) return wifiPluginState;
 		else if (id.equals(BluetoothConstants.ID)) return btPluginState;
+		else if (id.equals(BleConstants.ID)) return blePluginState;
 		else return null;
 	}
 

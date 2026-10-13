@@ -96,7 +96,7 @@ public class RevealContactsActivity extends ContactSelectorActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		} else if (item.getItemId() == R.id.action_group_reveal_onboarding) {
 			showOnboardingDialog();

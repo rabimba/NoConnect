@@ -16,10 +16,10 @@ Contacts who are near each other should find each other and sync without:
 - Scanners recompute each contact's expected token from that contact's synced secret, allowing one epoch of clock difference either side, and connect only to contacts they have seen recently.
 - Advertising restarts at each epoch boundary, so the token and (on most devices) the random BLE address rotate together.
 
-**Trade-offs and open items:**
+**Trade-offs and properties:**
 - One token per device scales to any number of contacts.
-- Observers can't link tokens across epochs. Contacts, including former ones, can recognise you while they still know your secret. **To do:** rotate the secret when a contact is removed.
-- An earlier draft derived tokens from per-contact transport tag keys. That would hide you even from removed contacts, but needs one advertisement per contact and access to keys from the plugin layer.
+- Observers can't link tokens across epochs. When a contact is removed, `AndroidBlePlugin` rotates the rendezvous secret immediately and advertises a fresh token; the new secret is synced only to remaining contacts, preventing removed contacts from recognising future tokens.
+- An earlier draft derived tokens from per-contact transport tag keys. That would hide you even from removed contacts without re-advertising, but needs one advertisement per contact and access to keys from the plugin layer.
 - The new contact's secret arrives only after the first sync over some transport, or via contact exchange. Contact exchange already sends local transport properties, so the secret is included once BLE is enabled on both sides.
 
 ## Transport

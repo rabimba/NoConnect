@@ -28,6 +28,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.CallSuper;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
@@ -109,6 +110,22 @@ public abstract class ThreadListActivity<I extends ThreadItem, A extends ThreadI
 		viewModel.getGroupRemoved().observe(this, removed -> {
 			if (removed) supportFinishAfterTransition();
 		});
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						if (adapter.getHighlightedItem() != null) {
+							textInput.clearText();
+							getViewModel().setReplyId(null);
+							updateTextInput();
+						} else {
+							setEnabled(false);
+							getOnBackPressedDispatcher().onBackPressed();
+							setEnabled(true);
+						}
+					}
+				});
 	}
 
 	@CallSuper
@@ -134,17 +151,6 @@ public abstract class ThreadListActivity<I extends ThreadItem, A extends ThreadI
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onBackPressed() {
-		if (adapter.getHighlightedItem() != null) {
-			textInput.clearText();
-			getViewModel().setReplyId(null);
-			updateTextInput();
-		} else {
-			super.onBackPressed();
-		}
 	}
 
 	@Override

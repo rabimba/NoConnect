@@ -32,6 +32,7 @@ import org.chagolchana.nullsafety.ParametersNotNullByDefault;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -107,27 +108,32 @@ public class MailboxActivity extends NoConnectActivity {
 				onUnPaired(true);
 			}
 		}
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						MailboxState s = viewModel.getPairingState().getLastValue();
+						if (s instanceof Pairing) {
+							// don't go back in the flow if we are already pairing
+							// with the mailbox. We provide a try-again button instead.
+							supportFinishAfterTransition();
+						} else {
+							setEnabled(false);
+							getOnBackPressedDispatcher().onBackPressed();
+							setEnabled(true);
+						}
+					}
+				});
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onBackPressed() {
-		MailboxState s = viewModel.getPairingState().getLastValue();
-		if (s instanceof Pairing) {
-			// don't go back in the flow if we are already pairing
-			// with the mailbox. We provide a try-again button instead.
-			supportFinishAfterTransition();
-		} else {
-			super.onBackPressed();
-		}
 	}
 
 	private void onNotSetup() {

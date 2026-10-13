@@ -32,6 +32,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog.Builder;
@@ -141,6 +142,17 @@ public class ImageActivity extends NoConnectActivity
 
 		viewModel.getOnImageClicked().observeEvent(this, this::onImageClicked);
 		window.getDecorView().setSystemUiVisibility(UI_FLAGS_DEFAULT);
+
+		getOnBackPressedDispatcher().addCallback(this,
+				new OnBackPressedCallback(true) {
+					@Override
+					public void handleOnBackPressed() {
+						showStatusBarBeforeFinishing();
+						setEnabled(false);
+						getOnBackPressedDispatcher().onBackPressed();
+						setEnabled(true);
+					}
+				});
 	}
 
 	@Override
@@ -152,7 +164,7 @@ public class ImageActivity extends NoConnectActivity
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		if (item.getItemId() == android.R.id.home) {
-			onBackPressed();
+			getOnBackPressedDispatcher().onBackPressed();
 			return true;
 		} else if (item.getItemId() == R.id.action_save_image) {
 			showSaveImageDialog();
@@ -191,12 +203,6 @@ public class ImageActivity extends NoConnectActivity
 	public void onPullComplete() {
 		showStatusBarBeforeFinishing();
 		supportFinishAfterTransition();
-	}
-
-	@Override
-	public void onBackPressed() {
-		showStatusBarBeforeFinishing();
-		super.onBackPressed();
 	}
 
 	private void onImageClicked(@Nullable Boolean clicked) {

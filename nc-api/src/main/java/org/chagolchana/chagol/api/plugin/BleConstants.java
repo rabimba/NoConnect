@@ -22,4 +22,6 @@ public interface BleConstants {
 	String PROP_SECRET = "secret";
 
 	int SECRET_BYTES = 32;
+
+	boolean DEFAULT_PREF_PLUGIN_ENABLE = false;
 }

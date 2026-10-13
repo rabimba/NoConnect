@@ -56,6 +56,14 @@ M4 Features:
 M5 Bluetooth LE (debug builds only):
 - `nc-android/.../plugin/ble/AndroidBlePlugin` with factory and connection classes; `BleRendezvousTokens` and `BleAdvertisementData` in `nc-core`.
 - **Verified on two Android 16 emulators:** discovery, L2CAP connection, BTP contact recognition, and a private message delivered over BLE.
+- **BLE device-less follow-ups completed:**
+  - Rendezvous secret rotation on `ContactRemovedEvent`: when a contact is removed, `AndroidBlePlugin` rotates its secret, advertises a fresh token, and syncs the new secret only to remaining contacts.
+  - Sighting and matching logic extracted into `BleSightingManager<T>` in `nc-core` and unit-tested (`BleSightingManagerTest`).
+  - BLE card added to `TransportsActivity`, `PluginViewModel` and string resources.
+  - Nearby-devices permissions requested when enabling BLE from `TransportsActivity`.
+- **Predictive back completed:**
+  - Migrated `onBackPressed()` overrides and call sites to AndroidX `OnBackPressedDispatcher` and `OnBackPressedCallback`.
+  - Enabled `android:enableOnBackInvokedCallback="true"` in `AndroidManifest.xml`.
 
 M6 Experimental (all off):
 - Three feature flags, off everywhere.
@@ -71,23 +79,17 @@ Test status at the last full run: 2,263 unit tests, 233 skipped, 37 failing. All
 1. **BLE on real phones.** Requires two physical Android 10+ phones from different manufacturers.
    - Measure discovery latency, battery use per hour, and behaviour under Doze and manufacturer battery killers.
    - Then decide whether to turn on `shouldEnableBleTransport()` in release builds (`AppModule`).
-2. **BLE follow-ups that need no devices:**
-   - Rotate the BLE rendezvous secret when a contact is removed (`docs/design/ble-discovery.md`, open items).
-   - Unit-test `AndroidBlePlugin` logic, for example by extracting the sighting and matching logic into a plain-Java class.
-   - Add BLE to the Transports screen (`navdrawer/TransportsActivity`) so users can see and toggle it.
-   - Request the Nearby-devices permissions when BLE is enabled, not only during "add contact nearby".
-3. **Predictive back.** Migrate the roughly 20 `onBackPressed()` overrides to `OnBackPressedDispatcher`, then remove `android:enableOnBackInvokedCallback="false"` from the manifest.
-4. **Translations.** These strings exist in English only: `update_*`, `check_in_*`, `update_reminder`, `dev_report_share_subject`. Set up a NoConnect Transifex or Weblate project; the slug is in `noconnect-android/.tx/config`.
-5. **Hybrid PQ in BQP** (flag off). Follow `docs/design/experimental-crypto-and-relay.md` §1: new BQP version, encapsulation after the X25519 exchange, transcript-bound KDF. A Tamarin model and an external audit are needed before enabling it.
-6. **Group sender keys** (§2), then the **sealed-envelope relay** (§3). The relay needs a threat-model review and a simulation in The ONE or ns-3 first.
-7. **Deferred infrastructure:**
+2. **Translations.** These strings exist in English only: `update_*`, `check_in_*`, `update_reminder`, `dev_report_share_subject`, `transport_ble`, `ble_*`. Set up a NoConnect Transifex or Weblate project; the slug is in `noconnect-android/.tx/config`.
+3. **Hybrid PQ in BQP** (flag off). Follow `docs/design/experimental-crypto-and-relay.md` §1: new BQP version, encapsulation after the X25519 exchange, transcript-bound KDF. A Tamarin model and an external audit are needed before enabling it.
+4. **Group sender keys** (§2), then the **sealed-envelope relay** (§3). The relay needs a threat-model review and a simulation in The ONE or ns-3 first.
+5. **Deferred infrastructure:**
    - Replace witness pins with Gradle `verification-metadata.xml`. This needs a network that can download all Tor binaries, so do it in CI.
    - Zeroise secrets in memory (low priority).
-8. **Distribution:**
+6. **Distribution:**
    - Register as a verified Android developer.
    - Set up F-Droid reproducible builds.
    - Decide whether a Google Play build should drop `REQUEST_INSTALL_PACKAGES` (install update from file).
-9. **Before merging to master:** open a PR from `rebase/upstream-1.5.21`. Let CI run, which is the first full build including `noconnect-headless`. Review the debug-only harness and confirm it isn't in release APKs (`src/debug` only).
+7. **Before merging to master:** open a PR from `rebase/upstream-1.5.21`. Let CI run, which is the first full build including `noconnect-headless`. Review the debug-only harness and confirm it isn't in release APKs (`src/debug` only).
 
 ## 5. This machine: build quirks
 
