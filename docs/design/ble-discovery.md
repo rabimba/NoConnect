@@ -1,6 +1,6 @@
 # BLE discovery and transport: design
 
-Status: token derivation implemented (`nc-core/.../plugin/ble/BleRendezvousTokens`, tested). The plugin itself is not implemented yet. Date: 2026-10-13.
+Status: **implemented, debug builds only** (`FeatureFlags.shouldEnableBleTransport()`), as `nc-android/.../plugin/ble/AndroidBlePlugin`. It is verified on two Android 16 emulators: discovery, L2CAP connection, BTP and message delivery all work. It is not yet tested on real phones. Date: 2026-10-13.
 
 ## Goal
 
@@ -9,20 +9,18 @@ Contacts who are near each other should find each other and sync without:
 - the user pressing a button
 - broadcasting anything that identifies them
 
-## Discovery: rotating rendezvous tokens
+## Discovery: rotating rendezvous tokens (as implemented)
 
-- Every 15 minutes (`EPOCH_MS`), each device advertises an 8-byte token per contact under a fixed NoConnect service UUID. 8 bytes plus a 128-bit UUID fit in a legacy 31-byte advertisement.
-- `token = MAC(label, key, epoch)[0..8)`, where `key` is the sender's **outgoing tag key for the BLE transport in the current rotation period**.
-- The receiver matches observed tokens against its **incoming** tag keys for each contact (`BleRendezvousTokens.match`). It allows one epoch of clock difference either side.
+- Each device keeps one random 32-byte **rendezvous secret** in its BLE transport properties (`BleConstants.PROP_SECRET`). Transport properties are synced only to contacts, over encrypted BTP, so only contacts know it.
+- Every 15 minutes (`EPOCH_MS`), the device advertises **one** token, `MAC(label, secret, epoch)[0..8)`, plus its L2CAP channel number. These go in service data under `BleConstants.SERVICE_UUID`, which with the flags field exactly fills a 31-byte legacy advertisement.
+- Scanners recompute each contact's expected token from that contact's synced secret, allowing one epoch of clock difference either side, and connect only to contacts they have seen recently.
+- Advertising restarts at each epoch boundary, so the token and (on most devices) the random BLE address rotate together.
 
-Why the transport keys:
-- They already exist per contact and per transport. The key manager derives them when a plugin registers a new `TransportId`, so adding the BLE transport needs no new key agreement.
-- They are directional, so Alice's advertisements match Bob's incoming keys and nothing else.
-- They rotate with forward secrecy, so a seized device doesn't reveal past tokens.
-
-Unlinkability depends on rotating the token **together with the random BLE address**. Android rotates the address roughly every 15 minutes, but not under app control. The plugin should restart advertising, which gets a new address, at each epoch boundary, so an address never spans two tokens.
-
-Advertising one token per contact doesn't scale beyond a handful of contacts. For larger contact lists, use a Bloom filter of the current tokens in an extended advertisement (Android 8+, where the hardware supports it), or advertise a single per-device token and have contacts query it after connecting. Pick one after measuring on real devices.
+**Trade-offs and open items:**
+- One token per device scales to any number of contacts.
+- Observers can't link tokens across epochs. Contacts, including former ones, can recognise you while they still know your secret. **To do:** rotate the secret when a contact is removed.
+- An earlier draft derived tokens from per-contact transport tag keys. That would hide you even from removed contacts, but needs one advertisement per contact and access to keys from the plugin layer.
+- The new contact's secret arrives only after the first sync over some transport, or via contact exchange. Contact exchange already sends local transport properties, so the secret is included once BLE is enabled on both sides.
 
 ## Transport
 
