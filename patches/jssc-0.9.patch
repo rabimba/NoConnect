@@ -1,6 +1,6 @@
-diff -Bbur jSSC-0.9.0-Release/src/jssc/SerialPort.java jSSC-0.9.0-nc/src/jssc/SerialPort.java
+diff -Bbur jSSC-0.9.0-Release/src/jssc/SerialPort.java jSSC-0.9.0-briar/src/jssc/SerialPort.java
 --- jSSC-0.9.0-Release/src/jssc/SerialPort.java	2011-12-21 13:29:10.000000000 +0000
-+++ jSSC-0.9.0-nc/src/jssc/SerialPort.java	2012-12-06 15:07:37.786033300 +0000
++++ jSSC-0.9.0-briar/src/jssc/SerialPort.java	2012-12-06 15:07:37.786033300 +0000
 @@ -30,13 +30,13 @@
   */
  public class SerialPort {
@@ -31,9 +31,9 @@ diff -Bbur jSSC-0.9.0-Release/src/jssc/SerialPort.java jSSC-0.9.0-nc/src/jssc/Se
          
          @Override
          public void run() {
-diff -Bbur jSSC-0.9.0-Release/src/jssc/SerialPortList.java jSSC-0.9.0-nc/src/jssc/SerialPortList.java
+diff -Bbur jSSC-0.9.0-Release/src/jssc/SerialPortList.java jSSC-0.9.0-briar/src/jssc/SerialPortList.java
 --- jSSC-0.9.0-Release/src/jssc/SerialPortList.java	2011-12-21 13:30:30.000000000 +0000
-+++ jSSC-0.9.0-nc/src/jssc/SerialPortList.java	2012-12-06 14:31:50.142033801 +0000
++++ jSSC-0.9.0-briar/src/jssc/SerialPortList.java	2012-12-06 14:31:50.142033801 +0000
 @@ -97,20 +97,15 @@
       */
      private static String[] getLinuxPortNames() {
