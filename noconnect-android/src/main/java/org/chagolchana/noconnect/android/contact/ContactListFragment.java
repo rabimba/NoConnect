@@ -1,5 +1,7 @@
 package org.chagolchana.noconnect.android.contact;
 
+import androidx.appcompat.app.AlertDialog;
+import android.widget.Toast;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -32,6 +34,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import io.github.kobakei.materialfabspeeddial.FabSpeedDial;
 import io.github.kobakei.materialfabspeeddial.FabSpeedDial.OnMenuItemClickListener;
 
+import static android.widget.Toast.LENGTH_LONG;
 import static com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_INDEFINITE;
 import static org.chagolchana.noconnect.android.conversation.ConversationActivity.CONTACT_ID;
 
@@ -89,6 +92,11 @@ public class ContactListFragment extends BaseFragment
 
 		speedDial = contentView.findViewById(R.id.speedDial);
 		speedDial.addOnMenuItemClickListener(this);
+		viewModel.getCheckInSent().observeEvent(getViewLifecycleOwner(),
+				sent -> Toast.makeText(requireContext(),
+						getResources().getQuantityString(
+								R.plurals.check_in_sent, sent, sent),
+						LENGTH_LONG).show());
 
 		list = contentView.findViewById(R.id.list);
 		list.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -129,7 +137,34 @@ public class ContactListFragment extends BaseFragment
 			startActivity(intent);
 		} else if (itemId == R.id.action_add_contact_remotely) {
 			startActivity(new Intent(getContext(), AddContactActivity.class));
+		} else if (itemId == R.id.action_check_in) {
+			showCheckInDialog();
 		}
+	}
+
+	/**
+	 * Lets the user send "I'm safe" or "I need help" to all contacts.
+	 */
+	private void showCheckInDialog() {
+		String[] texts = {getString(R.string.check_in_safe_message),
+				getString(R.string.check_in_help_message)};
+		String[] choices = {getString(R.string.check_in_safe),
+				getString(R.string.check_in_help)};
+		new AlertDialog.Builder(requireContext())
+				.setTitle(R.string.check_in_title)
+				.setItems(choices, (d, which) -> confirmCheckIn(texts[which]))
+				.setNegativeButton(R.string.cancel, null)
+				.show();
+	}
+
+	private void confirmCheckIn(String text) {
+		new AlertDialog.Builder(requireContext())
+				.setTitle(R.string.check_in_confirm_title)
+				.setMessage(getString(R.string.check_in_confirm_message, text))
+				.setPositiveButton(R.string.check_in_send,
+						(d, w) -> viewModel.sendCheckIn(text))
+				.setNegativeButton(R.string.cancel, null)
+				.show();
 	}
 
 	@Override

@@ -724,6 +724,18 @@
 	<!-- Settings Actions -->
 	<string name="pref_category_actions">Actions</string>
 	<string name="share_app_link">Share download link</string>
+	<string name="check_in_title">Check in with everyone</string>
+	<string name="check_in_safe">I\'m safe</string>
+	<string name="check_in_help">I need help</string>
+	<string name="check_in_safe_message">✅ Check-in: I\'m safe.</string>
+	<string name="check_in_help_message">🆘 Check-in: I need help.</string>
+	<string name="check_in_confirm_title">Send to all contacts?</string>
+	<string name="check_in_confirm_message">\"%s\" will be sent to every contact. It reaches each of them the next time your devices can connect.</string>
+	<string name="check_in_send">Send</string>
+	<plurals name="check_in_sent">
+		<item quantity="one">Check-in queued for %d contact</item>
+		<item quantity="other">Check-in queued for %d contacts</item>
+	</plurals>
 	<string name="update_title">Install update from file</string>
 	<string name="update_summary">Update NoConnect with an app file from a contact or a USB stick</string>
 	<string name="update_confirm_title">Install update?</string>

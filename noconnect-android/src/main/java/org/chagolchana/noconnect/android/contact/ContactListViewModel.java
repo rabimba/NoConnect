@@ -13,6 +13,8 @@ import org.chagolchana.chagol.api.event.Event;
 import org.chagolchana.chagol.api.event.EventBus;
 import org.chagolchana.chagol.api.lifecycle.LifecycleManager;
 import org.chagolchana.chagol.api.system.AndroidExecutor;
+import org.chagolchana.noconnect.android.viewmodel.LiveEvent;
+import org.chagolchana.noconnect.android.viewmodel.MutableLiveEvent;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
 import org.chagolchana.noconnect.api.conversation.ConversationManager;
 import org.chagolchana.noconnect.api.identity.AuthorManager;
@@ -29,6 +31,10 @@ import androidx.lifecycle.MutableLiveData;
 class ContactListViewModel extends ContactsViewModel {
 
 	private final AndroidNotificationManager notificationManager;
+	private final CheckInSender checkInSender;
+
+	private final MutableLiveEvent<Integer> checkInSent =
+			new MutableLiveEvent<>();
 
 	private final MutableLiveData<Boolean> hasPendingContacts =
 			new MutableLiveData<>();
@@ -41,11 +47,31 @@ class ContactListViewModel extends ContactsViewModel {
 			AuthorManager authorManager,
 			ConversationManager conversationManager,
 			ConnectionRegistry connectionRegistry, EventBus eventBus,
-			AndroidNotificationManager notificationManager) {
+			AndroidNotificationManager notificationManager,
+			CheckInSender checkInSender) {
 		super(application, dbExecutor, lifecycleManager, db, androidExecutor,
 				contactManager, authorManager, conversationManager,
 				connectionRegistry, eventBus);
 		this.notificationManager = notificationManager;
+		this.checkInSender = checkInSender;
+	}
+
+	/**
+	 * Sends the given check-in text to all contacts. The number of contacts
+	 * it was sent to is posted to {@link #getCheckInSent()}.
+	 */
+	void sendCheckIn(String text) {
+		runOnDbThread(() -> {
+			try {
+				checkInSent.postEvent(checkInSender.sendToAllContacts(text));
+			} catch (DbException e) {
+				handleException(e);
+			}
+		});
+	}
+
+	LiveEvent<Integer> getCheckInSent() {
+		return checkInSent;
 	}
 
 	@Override
