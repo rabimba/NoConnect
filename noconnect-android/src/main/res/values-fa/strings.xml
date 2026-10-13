@@ -507,27 +507,12 @@
   <string name="blogs_sharing_declined_toast">دعوت نامه رد شد</string>
   <string name="sharing_status_blog">هرکسی که به اشتراک یک بلاگ در بیاید می تواند آن را با مخاطبان خود به اشتراک بگذارد. شما این بلاگ را با مخاطبان زیر به اشتراک میگذارید. ممکن است مشترکان دیگری هم باشند که شما نتوانید آن ها را ببینید.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">وارد کردن خوراک RSS</string>
-  <string name="blogs_rss_feeds_import_button">وارد کردن</string>
-  <string name="blogs_rss_feeds_import_hint">آدرس خوراک RSS را وارد کنید</string>
-  <string name="blogs_rss_feeds_import_progress">در حال وارد کردن خوراک RSS…</string>
-  <string name="blogs_rss_feeds_import_error">متاسفیم!  وارد کردن خوراک شما با خطا مواجه شده است.</string>
-  <string name="blogs_rss_feeds_import_title">وارد کردن خوراک از پرونده</string>
-  <string name="blogs_rss_feeds">خوراک های RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">وارد شده:</string>
-  <string name="blogs_rss_feeds_manage_author">نویسنده:</string>
-  <string name="blogs_rss_feeds_manage_updated">آخرین به روز رسانی:</string>
-  <string name="blogs_rss_remove_feed">حذف فید</string>
-  <string name="blogs_rss_remove_feed_dialog_message">آیا مطمئن هستید که میخواهید این خوراک را حذف کنید؟
 
 پست ها از دستگاه شما پاک خواهند شد اما روی دستگاه سایر افراد باقی خواهند ماند
 
 هر مخاطبی که با آن این خوراک را به اشتراک گذاشته اید ممکن است دیگر آپدیت دریافت نکند.</string>
-  <string name="blogs_rss_remove_feed_ok">حذف</string>
-  <string name="blogs_rss_feeds_manage_empty_state">هیچ خوراک RSS برای نمایش وجود ندارد
 
 برای وارد کردن خوراک روی آیکون + ضربه بزنید</string>
-  <string name="blogs_rss_feeds_manage_error">مشکلی با بارگذاری فیدهای شما وجود داشت. لطفا بعدا امتحان کنید.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">برای تغییر تصویر نمایه خود اینجا را لمس کنید.</string>
   <string name="dialog_confirm_profile_picture_title">تغییر تصویر نمایه</string>

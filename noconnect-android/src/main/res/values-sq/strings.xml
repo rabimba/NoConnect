@@ -485,21 +485,6 @@ dhe s’mund të hapet me këtë version.\n\nJu lutemi, përmirësojeni me versi
   <string name="blogs_sharing_declined_toast">Ftesa u hodh poshtë</string>
   <string name="sharing_status_blog">Cilido që pajtohet te një blog mund ta ndajë atë me kontaktet e veta. Këtë blog po e ndani me kontaktet vijuese. Mund të ketë edhe pajtimtarë të tjerë, të cilët s\’mund t\’i shihni.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importoni Prurje RSS</string>
-  <string name="blogs_rss_feeds_import_button">Importo</string>
-  <string name="blogs_rss_feeds_import_hint">Jepni URL-në e prurjes RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Po importohet Prurje RSS…</string>
-  <string name="blogs_rss_feeds_import_error">Na ndjeni! Pati një gabim me importimin e prurjes tuaj.</string>
-  <string name="blogs_rss_feeds_import_title">Importo prurje nga kartelë</string>
-  <string name="blogs_rss_feeds">Prurje RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Të importuara:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Përditësuar Së Fundi:</string>
-  <string name="blogs_rss_remove_feed">Hiqe Prurjen</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Jeni i sigurt se doni të hiqet kjo prurje?\n\nPostimet do të hiqen nga pajisja juaj, por jo nga pajisjet e personave të tjerë.\n\nÇfarëdo kontaktesh me të cilët e keni ndarë këtë prurje mund të reshtin së marri përditësime.</string>
-  <string name="blogs_rss_remove_feed_ok">Hiqe</string>
-  <string name="blogs_rss_feeds_manage_empty_state">S’ka prurje RSS për shfaqje\n\nPrekni ikonën + që të importohet një prurje</string>
-  <string name="blogs_rss_feeds_manage_error">Pati një problem me ngarkimin e prurjeve tuaja. Ju lutemi, riprovoni më vonë.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Që të ndryshoni foton e profilit tuaj, prekeni</string>
   <string name="dialog_confirm_profile_picture_title">Ndryshoni foto profili</string>

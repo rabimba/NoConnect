@@ -510,21 +510,6 @@
   <string name="blogs_sharing_declined_toast">Pakvietimas atmestas</string>
   <string name="sharing_status_blog">Bet kas, prenumeruojantis tinklaraštį, gali jį bendrinti su savo adresatais. Jūs bendrinate šį tinklaraštį su šiais adresatais. Taip pat gali būti ir kitų prenumeratorių, kurių nematote.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importuoti RSS kanalą</string>
-  <string name="blogs_rss_feeds_import_button">Importuoti</string>
-  <string name="blogs_rss_feeds_import_hint">Įveskite RSS kanalo URL</string>
-  <string name="blogs_rss_feeds_import_progress">Importuojamas RSS kanalas…</string>
-  <string name="blogs_rss_feeds_import_error">Atleiskite! Importuojant jūsų kanalą, įvyko klaida.</string>
-  <string name="blogs_rss_feeds_import_title">Importuoti kanalą iš failo</string>
-  <string name="blogs_rss_feeds">RSS kanalai</string>
-  <string name="blogs_rss_feeds_manage_imported">Importuota:</string>
-  <string name="blogs_rss_feeds_manage_author">Autorius:</string>
-  <string name="blogs_rss_feeds_manage_updated">Paskutinį kartą atnaujinta:</string>
-  <string name="blogs_rss_remove_feed">Šalinti kanalą</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Ar tikrai norite pašalinti šį kanalą?\n\nĮrašai bus pašalinti iš jūsų įrenginio, tačiau liks kitų žmonių įrenginiuose.\n\nBet kokie adresatai, su kuriais bendrinote šį kanalą, gali nustoti gauti atnaujinimus.</string>
-  <string name="blogs_rss_remove_feed_ok">Šalinti</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Nėra rodytinų RSS kanalų\n\nNorėdami importuoti kanalą, bakstelėkite „+“ piktogramą</string>
-  <string name="blogs_rss_feeds_manage_error">Įkeliant jūsų kanalus, atsirado problemų. Vėliau bandykite dar kartą.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Bakstelėkite norėdami pasikeisti profilio paveikslą</string>
   <string name="dialog_confirm_profile_picture_title">Keisti profilio paveikslą</string>

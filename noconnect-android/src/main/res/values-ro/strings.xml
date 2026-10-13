@@ -497,21 +497,6 @@
   <string name="blogs_sharing_declined_toast">Invitație refuzată</string>
   <string name="sharing_status_blog">Orice abonat la un blog îl poate partaja cu persoanele sale de contact. În prezent, partajați acest blog cu contactele prezentate în continuare. Pot exista și alți abonați pe care să nu îi puteți vedea.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importați flux RSS</string>
-  <string name="blogs_rss_feeds_import_button">Importați</string>
-  <string name="blogs_rss_feeds_import_hint">Introduceți adresa URL a fluxului RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Importarea RSS Feed…</string>
-  <string name="blogs_rss_feeds_import_error">Ne pare rău, dar a apărut o eroare la importarea fluxului dvs.</string>
-  <string name="blogs_rss_feeds_import_title">Importați feed din fișier</string>
-  <string name="blogs_rss_feeds">Fluxuri RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Importat:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Ultima actualizare:</string>
-  <string name="blogs_rss_remove_feed">Eliminați flux</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Sigur doriți să eliminați acest flux?\n\nPostările vor fi eliminate de pe dispozitivul dvs., dar nu și de pe dispozitivele celorlalți.\n\nS-ar putea ca persoanele de contact cu care ați partajat acest flux să nu mai primească actualizări..</string>
-  <string name="blogs_rss_remove_feed_ok">Eliminați</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Nu sunt fluxuri RSS de afișat\n\nAtingeți pictograma + pentru a importa un flux</string>
-  <string name="blogs_rss_feeds_manage_error">A apărut o eroare la încărcarea fluxurilor dvs. Încercați din nou mai târziu.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Atingeți pentru a schimba poza dvs. de profil</string>
   <string name="dialog_confirm_profile_picture_title">Modificați poza de profil</string>

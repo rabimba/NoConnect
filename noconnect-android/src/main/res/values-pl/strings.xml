@@ -506,21 +506,6 @@
   <string name="blogs_sharing_declined_toast">Zaproszenie odrzucone</string>
   <string name="sharing_status_blog">Każdy kto subskrybuje blog może go udostępnić swoim kontaktom. Udostępniasz ten blog następującym kontaktom. Mogą być tu także subskrybenci których nie możesz zobaczyć.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Zaimportuj kanał RSS</string>
-  <string name="blogs_rss_feeds_import_button">Zaimportuj</string>
-  <string name="blogs_rss_feeds_import_hint">Wprowadź adres URL do kanału RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Importowanie kanału RSS…</string>
-  <string name="blogs_rss_feeds_import_error">Przepraszamy! Wystąpił błąd podczas importowania twojego kanału RSS</string>
-  <string name="blogs_rss_feeds_import_title">Importuj kanał z pliku</string>
-  <string name="blogs_rss_feeds">Feedy RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Zaimportowane:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Ostatnio Zaktualizowane:</string>
-  <string name="blogs_rss_remove_feed">Usuń kanał RSS</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Jesteś pewny, że chcesz usunąć ten kanał RSS?\n\nPosty będą usunięte z Twojego urządzenia, ale nie z urządzeń innych ludzi.\n\nWszystkie kontakty którym udostępniłeś ten kanał mogą przestać otrzymywać jego uaktualnienia</string>
-  <string name="blogs_rss_remove_feed_ok">Usuń</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Brak RSS do wyświetlenia\n\nDotknij ikonki + aby zaimportować kanał.</string>
-  <string name="blogs_rss_feeds_manage_error">Wystąpił problem podczas ładowania twoich kanałów RSS. Proszę spróbować ponownie później.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Kliknij, aby zmienić swoje zdjęcie profilowe</string>
   <string name="dialog_confirm_profile_picture_title">Zmień zdjęcie profilowe</string>

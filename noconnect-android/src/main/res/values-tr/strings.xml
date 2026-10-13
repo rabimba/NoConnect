@@ -484,21 +484,6 @@
   <string name="blogs_sharing_declined_toast">Davet reddedildi</string>
   <string name="sharing_status_blog">Bir günlüğe abone olan herkes, günlüğü kişileriyle paylaşabilir. Bu günlüğü şu kişilerle paylaşıyorsunuz. Göremediğiniz diğer aboneler de olabilir.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS akışını içe aktar</string>
-  <string name="blogs_rss_feeds_import_button">İçe aktar</string>
-  <string name="blogs_rss_feeds_import_hint">RSS akışının adresini yazın</string>
-  <string name="blogs_rss_feeds_import_progress">RSS akışı içe aktarılıyor…</string>
-  <string name="blogs_rss_feeds_import_error">Üzgünüz! RSS akışınız içe aktarılırken bir sorun çıktı.</string>
-  <string name="blogs_rss_feeds_import_title">Akışı dosyadan içe aktar</string>
-  <string name="blogs_rss_feeds">RSS akışları</string>
-  <string name="blogs_rss_feeds_manage_imported">İçe aktarıldı:</string>
-  <string name="blogs_rss_feeds_manage_author">Yazar:</string>
-  <string name="blogs_rss_feeds_manage_updated">Son güncellenme:</string>
-  <string name="blogs_rss_remove_feed">Akışı sil</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Bu akışı silmek istediğinize emin misiniz?\n\nYazılar sizin aygıtınızdan değil, diğer insanların aygıtlarından silinir.\n\nBu akışı paylaştığınız kişilerin güncellemeleri alması durabilir.</string>
-  <string name="blogs_rss_remove_feed_ok">Sil</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Görüntülenebilecek bir RSS akışı yok\n\nBir akışı içe aktarmak için + simgesine dokunun</string>
-  <string name="blogs_rss_feeds_manage_error">Akışlarınız yüklenirken bir sorun çıktı. Lütfen bir süre sonra yeniden deneyin.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Profil görselinizi değiştirmek için dokunun</string>
   <string name="dialog_confirm_profile_picture_title">Profil görselinizi değiştirin</string>

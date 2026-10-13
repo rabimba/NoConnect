@@ -33,8 +33,6 @@ dependencyVerification {
 		'javax.servlet:javax.servlet-api:3.1.0:javax.servlet-api-3.1.0.jar:af456b2dd41c4e82cf54f3e743bc678973d9fe35bd4d3071fa05c7e5333b8482',
 		'net.bytebuddy:byte-buddy-agent:1.12.6:byte-buddy-agent-1.12.6.jar:9b29421fe4650b75fc3ed53590f914c54f932e334b3506cc00296dff73024183',
 		'net.bytebuddy:byte-buddy:1.12.6:byte-buddy-1.12.6.jar:211918dc24f0fdef4335ce8af40ef5616e15e818b962a21146397c7701eb75a7',
-		'net.java.dev.jna:jna-platform:5.13.0:jna-platform-5.13.0.jar:474d7b88f6e97009b6ec1d98c3024dd95c23187c65dabfbc35331bcac3d173dd',
-		'net.java.dev.jna:jna:5.13.0:jna-5.13.0.jar:66d4f819a062a51a1d5627bffc23fac55d1677f0e0a1feba144aabdd670a64bb',
 		'net.ltgt.gradle.incap:incap:0.2:incap-0.2.jar:b625b9806b0f1e4bc7a2e3457119488de3cd57ea20feedd513db070a573a4ffd',
 		'org.apiguardian:apiguardian-api:1.1.0:apiguardian-api-1.1.0.jar:a9aae9ff8ae3e17a2a18f79175e82b16267c246fbbd3ca9dfbbb290b08dcfdd4',
 		'org.bouncycastle:bcprov-jdk15to18:1.82:bcprov-jdk15to18-1.82.jar:9c9ccecb08a0b00bd2a74afa6567d81d61a02bba1364f24e33fa0c4c1e929821',
@@ -95,7 +93,6 @@ dependencyVerification {
 		'org.opentest4j:opentest4j:1.2.0:opentest4j-1.2.0.jar:58812de60898d976fb81ef3b62da05c6604c18fd4a249f5044282479fc286af2',
 		'org.skyscreamer:jsonassert:1.5.0:jsonassert-1.5.0.jar:a310bc79c3f4744e2b2e993702fcebaf3696fec0063643ffdc6b49a8fb03ef39',
 		'org.slf4j:slf4j-api:1.7.30:slf4j-api-1.7.30.jar:cdba07964d1bb40a0761485c6b1e8c2f8fd9eb1d19c53928ac0d7f9510105c57',
-		'org.slf4j:slf4j-api:1.7.32:slf4j-api-1.7.32.jar:3624f8474c1af46d75f98bc097d7864a323c81b3808aa43689a6e1c601c027be',
 		'org.slf4j:slf4j-simple:1.7.30:slf4j-simple-1.7.30.jar:8b9279cbff6b9f88594efae3cf02039b6995030eec023ed43928748c41670fee',
 	]
 }

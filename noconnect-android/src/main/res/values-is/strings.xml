@@ -457,19 +457,6 @@
   <string name="blogs_sharing_declined_toast">Boði hafnað</string>
   <string name="sharing_status_blog">Hver sá sem gerist áskrifandi að bloggi getur deilt því með tengiliðunum sínum. Þú ert að deila þessu bloggi með eftirfarandi tengiliðum. Það gætu einnig verið fyrir hendi áskrifendur sem þú sérð ekki.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Flytja inn RSS-streymi</string>
-  <string name="blogs_rss_feeds_import_button">Flytja inn</string>
-  <string name="blogs_rss_feeds_import_hint">Settu inn slóðina á RSS-streymið</string>
-  <string name="blogs_rss_feeds_import_error">Því miður! Það kom upp villa við að flytja inn streymið.</string>
-  <string name="blogs_rss_feeds">RSS-fréttastreymi</string>
-  <string name="blogs_rss_feeds_manage_imported">Flutt inn:</string>
-  <string name="blogs_rss_feeds_manage_author">Höfundur:</string>
-  <string name="blogs_rss_feeds_manage_updated">Síðast uppfært:</string>
-  <string name="blogs_rss_remove_feed">Fjarlægja streymi</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Ertu viss um að þú viljir fjarlægja þetta streymi?\n\nFærslur verða fjarlægðar af tækinu þínu en ekki tækjum annars fólks.\n\nAllir tengiliðir sem þú hefur deilt þessu streymi með gætu hætt að fá uppfærslur.</string>
-  <string name="blogs_rss_remove_feed_ok">Fjarlægja</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Engin RSS-streymi til að birta\n\nÝttu á + táknið til að flytja inn streymi</string>
-  <string name="blogs_rss_feeds_manage_error">Vandamál hefur komið upp með að hlaða inn streymunum þínum. Reyndu aftur síðar.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Ýttu til að skipta um auðkennismyndina þína</string>
   <string name="dialog_confirm_profile_picture_title">Skipta um auðkennismynd</string>

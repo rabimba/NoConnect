@@ -477,16 +477,6 @@
 			android:windowSoftInputMode="adjustResize|stateHidden" />
 
 		<activity
-			android:name="org.chagolchana.noconnect.android.blog.RssFeedActivity"
-			android:exported="false"
-			android:label="@string/blogs_rss_feeds"
-			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity">
-			<meta-data
-				android:name="android.support.PARENT_ACTIVITY"
-				android:value="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity" />
-		</activity>
-
-		<activity
 			android:name="org.chagolchana.noconnect.android.removabledrive.RemovableDriveActivity"
 			android:exported="false"
 			android:label="@string/removable_drive_menu_title"

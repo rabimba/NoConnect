@@ -484,21 +484,6 @@
   <string name="blogs_sharing_declined_toast">আমন্ত্রণ প্রত্যাখ্যান করা হয়েছে</string>
   <string name="sharing_status_blog">কেউ একটি ব্লগে সাবস্ক্রাইব করলে সেটি তাদের কন্টাক্টদের সঙ্গে শেয়ার করতে পারে। আপনি এই ব্লগটি নিম্নলিখিত কন্টাক্টদের সঙ্গে শেয়ার করছেন। এছাড়াও এমন সাবস্ক্রাইবার থাকতে পারে যাদের আপনি দেখতে পাচ্ছেন না।</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS ফিড আমদানি করুন</string>
-  <string name="blogs_rss_feeds_import_button">আমদানি</string>
-  <string name="blogs_rss_feeds_import_hint">RSS এর ফিড URL লিখুন</string>
-  <string name="blogs_rss_feeds_import_progress">RSS ফিড আমদানি করা হচ্ছে...</string>
-  <string name="blogs_rss_feeds_import_error">আমরা দুঃখিত! আপনার ফীডটি আমদানি করতে সমস্যা হয়েছে ।</string>
-  <string name="blogs_rss_feeds_import_title">ফাইল থেকে ফিড আমদানি করুন</string>
-  <string name="blogs_rss_feeds">RSS ফিড সমূহ</string>
-  <string name="blogs_rss_feeds_manage_imported">আমদানি:</string>
-  <string name="blogs_rss_feeds_manage_author">লেখক:</string>
-  <string name="blogs_rss_feeds_manage_updated">সর্বশেষ হালনাগাদ করা হয়েছে:</string>
-  <string name="blogs_rss_remove_feed">ফিড সরান</string>
-  <string name="blogs_rss_remove_feed_dialog_message">আপনি কি নিশ্চিত যে, আপনি এই ফিডটি মুছে ফেলতে চান? \n\nপোস্টগুলি আপনার ডিভাইস থেকে মুছে ফেলা হবে কিন্তু অন্যদের ডিভাইস থেকে নয়। \n\nযে কন্টাক্টদের আপনি এই ফিডটি শেয়ার করেছেন, তাদের আপডেট পাওয়া বন্ধ হয়ে যেতে পারে।</string>
-  <string name="blogs_rss_remove_feed_ok">অপসারণ</string>
-  <string name="blogs_rss_feeds_manage_empty_state">দেখানোর মত কোনও RSS ফিড নেই।\n\nফিড আমদানি করতে + আইকনে ট্যাপ করুন</string>
-  <string name="blogs_rss_feeds_manage_error">আপনার ফিডগুলি লোড করতে একটি সমস্যা হয়েছে। দয়া করে পরে আবার চেষ্টা করুন।</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">আপনার প্রোফাইলের ছবি পরিবর্তন করতে ট্যাপ করুন</string>
   <string name="dialog_confirm_profile_picture_title">প্রোফাইলের ছবি পরিবর্তন করুন</string>

@@ -465,21 +465,6 @@
   <string name="blogs_sharing_declined_toast">招待を辞退しました</string>
   <string name="sharing_status_blog">ブログを購読している人は誰でも、ブログを連絡先と共有できます。 このブログを次の連絡先と共有しています。 表示できない他の購読者もいる可能性があります。</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSSフィードをインポート</string>
-  <string name="blogs_rss_feeds_import_button">インポート</string>
-  <string name="blogs_rss_feeds_import_hint">RSSフィードのURLを入力してください</string>
-  <string name="blogs_rss_feeds_import_progress">RSSフィードをインポート中…</string>
-  <string name="blogs_rss_feeds_import_error">申し訳ありません！ フィードのインポート中にエラーが発生しました。</string>
-  <string name="blogs_rss_feeds_import_title">ファイルからフィードをインポート</string>
-  <string name="blogs_rss_feeds">RSSフィード</string>
-  <string name="blogs_rss_feeds_manage_imported">インポート済み：</string>
-  <string name="blogs_rss_feeds_manage_author">著者:</string>
-  <string name="blogs_rss_feeds_manage_updated">最終更新:</string>
-  <string name="blogs_rss_remove_feed">フィードを削除</string>
-  <string name="blogs_rss_remove_feed_dialog_message">このフィードを削除してもよろしいですか？\n\n投稿は端末から削除されますが、他の人の端末からは削除されません。\n\nこのフィードを共有した人は更新の受信を停止されます。</string>
-  <string name="blogs_rss_remove_feed_ok">削除</string>
-  <string name="blogs_rss_feeds_manage_empty_state">表示するRSSフィードはありません\n\n「＋」アイコンをタップしてフィードをインポートします</string>
-  <string name="blogs_rss_feeds_manage_error">フィードの読み込み中に問題が発生しました。 後でもう一度やり直してください。</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">タップしてプロフィールの画像を変更</string>
   <string name="dialog_confirm_profile_picture_title">プロフィールの画像を変更</string>

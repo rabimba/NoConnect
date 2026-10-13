@@ -438,19 +438,6 @@
   <string name="blogs_sharing_declined_toast">הזמנה סורבה</string>
   <string name="sharing_status_blog">כל אחד שנרשם כמנוי אל בלוג יכול לשתף אותו עם אנשי הקשר שלו. אתה משתף בלוג זה עם אנשי הקשר הבאים. יתכן שיש מנויים אחרים שאינך יכול לראות.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">ייבא הזנת RSS</string>
-  <string name="blogs_rss_feeds_import_button">ייבא</string>
-  <string name="blogs_rss_feeds_import_hint">הכנס את כתובת האתר של הזנת ה־RSS</string>
-  <string name="blogs_rss_feeds_import_error">אנחנו מצטערים! הייתה שגיאה ביבוא ההזנה שלך.</string>
-  <string name="blogs_rss_feeds">הזנות RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">מיובא:</string>
-  <string name="blogs_rss_feeds_manage_author">מחבר:</string>
-  <string name="blogs_rss_feeds_manage_updated">עודכן לאחרונה:</string>
-  <string name="blogs_rss_remove_feed">הסר הזנה</string>
-  <string name="blogs_rss_remove_feed_dialog_message">האם אכן ברצונך להסיר הזנה זו?\n\nרשומות יוסרו ממכשירך אבל לא ממכשירים של אנשים אחרים.\n\nאנשי קשר כלשהם ששיתפת איתם הזנה זו עלולים להפסיק לקבל עדכונים.</string>
-  <string name="blogs_rss_remove_feed_ok">הסר</string>
-  <string name="blogs_rss_feeds_manage_empty_state">אין הזנות RSS להראות\n\nהקש על הצלמית + כדי לייבא הזנה</string>
-  <string name="blogs_rss_feeds_manage_error">הייתה בעיה בטעינת ההזנות שלך. אנא נסה שוב מאוחר יותר.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">הקש כדי לשנות את תמונת הפרופיל שלך</string>
   <string name="dialog_confirm_profile_picture_title">שנה תמונת פרופיל</string>

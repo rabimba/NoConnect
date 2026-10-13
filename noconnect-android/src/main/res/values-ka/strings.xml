@@ -468,19 +468,6 @@
   <string name="blogs_sharing_declined_toast">მოწვევა უარყოფილია</string>
   <string name="sharing_status_blog">ნებისმიერი, ვინც გაწევრიანებულია ბლოგში, შეუძლია გაუზიაროს ის თავის კონტაქტებს. თქვენ უზიარებთ ამ ფორუმს შემდეგ კონტაქტებს. შეიძლება ასევე იყვნენ სხვა წევრებიც, რომლებსაც ვერ ხედავთ.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS არხის იმპორტი</string>
-  <string name="blogs_rss_feeds_import_button">იმპორტი</string>
-  <string name="blogs_rss_feeds_import_hint">შეიყვანეთ RSS არხის URL</string>
-  <string name="blogs_rss_feeds_import_error">ვწუხვართ! არხის იმპორტირებისას შეცდომა წარმოიშვა.</string>
-  <string name="blogs_rss_feeds">RSS არხები</string>
-  <string name="blogs_rss_feeds_manage_imported">იმპორტირებული:</string>
-  <string name="blogs_rss_feeds_manage_author">ავტორი:</string>
-  <string name="blogs_rss_feeds_manage_updated">ბოლო განახლება:</string>
-  <string name="blogs_rss_remove_feed">არხის ამოშლა</string>
-  <string name="blogs_rss_remove_feed_dialog_message">ნამდვილად გსურთ ამოშალოთ ეს არხი?\n\nპოსტები ამოიშლება თქვენი მოწყობილობიდან, მაგრამ დარჩება სხვა ადამიანების მოწყობილობებზე.\n\nნებისმიერ კონტაქტებს, ვისაც გაუზიარეთ ეს არხი, შესაძლოა შეუწყდეთ გაანახლებების მიღება.</string>
-  <string name="blogs_rss_remove_feed_ok">ამოშლა</string>
-  <string name="blogs_rss_feeds_manage_empty_state">საჩვენებელი RSS არხები არ არის\n\nშეეხეთ + ხატულას არხის იმპორტისთვის</string>
-  <string name="blogs_rss_feeds_manage_error">თქვენი არხების ჩატვირთვისას წარმოიშვა პრობლემა. გთხოვთ სცადოთ მოგვიანებით.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">შეეხეთ თქვენი პროფილის სურათის შესაცვლელად</string>
   <string name="dialog_confirm_profile_picture_title">პროფილის სურათის შეცვლა</string>

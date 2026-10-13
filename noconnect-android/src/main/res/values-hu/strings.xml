@@ -485,22 +485,7 @@ Kapcsolataid, akivel megosztottad ezt a blogot, lehet nem kapnak többé frissí
   <string name="blogs_sharing_declined_toast">Meghívás elutasítva</string>
   <string name="sharing_status_blog">Bárki aki feliratkozik egy blogra képes megosztani a blogot a kapcsolataival. Jelenleg megosztani készül a blogot a következő kapcsolatokkal. Lehet, hogy olyan más előfizetők is vannak, akiket nem láthat.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS feed importálása</string>
-  <string name="blogs_rss_feeds_import_button">Importálás</string>
-  <string name="blogs_rss_feeds_import_hint">Adja meg az RSS feed URL címét</string>
-  <string name="blogs_rss_feeds_import_progress">RSS feed importálása...</string>
-  <string name="blogs_rss_feeds_import_error">Elnézését kérjük! Probléma akadt a feed-je importálásával.</string>
-  <string name="blogs_rss_feeds_import_title">Hírcsatorna importálása fájlból</string>
-  <string name="blogs_rss_feeds">RSS Feed-ek</string>
-  <string name="blogs_rss_feeds_manage_imported">Importálva:</string>
-  <string name="blogs_rss_feeds_manage_author">Szerző:</string>
-  <string name="blogs_rss_feeds_manage_updated">Utolsó frissítés:</string>
-  <string name="blogs_rss_remove_feed">Feed eltávolítása</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Biztosan eltávolítja ezt a feed-et?
 \n\nA bejegyzések törlődni fognak az Ön eszközéről, de nem a többi ember eszközéről.\n\nKapcsolatai, akivel megosztotta ezt a feed-et, lehet nem kapnak többé frissítést.</string>
-  <string name="blogs_rss_remove_feed_ok">Eltávolít</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Nincs megjelenítendő</string>
-  <string name="blogs_rss_feeds_manage_error">Hiba történt a feed-jei betöltésével. Kérjük próbálja újra később.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Koppintson a profilképe cseréjéhez</string>
   <string name="dialog_confirm_profile_picture_title">Profil kép cseréje</string>

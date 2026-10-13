@@ -13,9 +13,6 @@ dependencyVerification {
 		'com.google.guava:failureaccess:1.0.2:failureaccess-1.0.2.jar:8a8f81cf9b359e3f6dfa691a1e776985c061ef2f223c9b2c80753e1b458e8064',
 		'com.google.guava:guava:33.0.0-jre:guava-33.0.0-jre.jar:f4d85c3e4d411694337cb873abea09b242b664bb013320be6105327c45991537',
 		'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava:listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:b372a037d4230aa57fbeffdef30fd6123f9c0c2db85d0aced00c91b974f33f99',
-		'com.rometools:rome-utils:1.18.0:rome-utils-1.18.0.jar:8445ad8e4539e074e8dd5865c2da8582071d593d9aef55267803c7fdcc095c19',
-		'com.rometools:rome:1.18.0:rome-1.18.0.jar:2776a17a8923e2f31a8d694cd1e265a0e03c9b67e3f9404937dac854fb60d11c',
-		'com.squareup.okhttp3:mockwebserver:4.10.0:mockwebserver-4.10.0.jar:af29da234e63159d6e0dea43bf8288eea97d71cdf1651a5ee2d6c0d0d4adbf8f',
 		'com.squareup.okhttp3:okhttp:4.12.0:okhttp-4.12.0.jar:b1050081b14bb7a3a7e55a4d3ef01b5dcfabc453b4573a4fc019767191d5f4e0',
 		'com.squareup.okio:okio-jvm:3.6.0:okio-jvm-3.6.0.jar:67543f0736fc422ae927ed0e504b98bc5e269fda0d3500579337cb713da28412',
 		'com.squareup:javapoet:1.13.0:javapoet-1.13.0.jar:4c7517e848a71b36d069d12bb3bf46a70fd4cda3105d822b0ed2e19c00b69291',
@@ -35,7 +32,6 @@ dependencyVerification {
 		'org.hamcrest:hamcrest-core:2.1:hamcrest-core-2.1.jar:e09109e54a289d88506b9bfec987ddd199f4217c9464132668351b9a4f00bee9',
 		'org.hamcrest:hamcrest-library:2.1:hamcrest-library-2.1.jar:b7e2b6895b3b679f0e47b6380fda391b225e9b78505db9d8bdde8d3cc8d52a21',
 		'org.hamcrest:hamcrest:2.1:hamcrest-2.1.jar:ba93b2e3a562322ba432f0a1b53addcc55cb188253319a020ed77f824e692050',
-		'org.jdom:jdom2:2.0.6.1:jdom2-2.0.6.1.jar:0b20f45e3a0fd8f0d12cdc5316b06776e902b1365db00118876f9175c60f302c',
 		'org.jetbrains.kotlin:kotlin-reflect:1.6.10:kotlin-reflect-1.6.10.jar:3277ac102ae17aad10a55abec75ff5696c8d109790396434b496e75087854203',
 		'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.10:kotlin-stdlib-common-1.9.10.jar:cde3341ba18a2ba262b0b7cf6c55b20c90e8d434e42c9a13e6a3f770db965a88',
 		'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.0:kotlin-stdlib-jdk7-1.9.0.jar:b7979a7aac94055f0d9f1fd3b47ce5ffe1cb6032a842ba9fbe7186f085289178',
@@ -54,6 +50,5 @@ dependencyVerification {
 		'org.objenesis:objenesis:3.0.1:objenesis-3.0.1.jar:7a8ff780b9ff48415d7c705f60030b0acaa616e7f823c98eede3b63508d4e984',
 		'org.ow2.asm:asm:7.1:asm-7.1.jar:4ab2fa2b6d2cc9ccb1eaa05ea329c407b47b13ed2915f62f8c4b8cc96258d4de',
 		'org.ow2.asm:asm:9.7:asm-9.7.jar:adf46d5e34940bdf148ecdd26a9ee8eea94496a72034ff7141066b3eea5c4e9d',
-		'org.slf4j:slf4j-api:1.7.32:slf4j-api-1.7.32.jar:3624f8474c1af46d75f98bc097d7864a323c81b3808aa43689a6e1c601c027be',
 	]
 }

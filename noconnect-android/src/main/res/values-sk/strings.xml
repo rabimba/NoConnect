@@ -510,21 +510,6 @@
   <string name="blogs_sharing_declined_toast">Pozvánka odmietnutá</string>
   <string name="sharing_status_blog">Ktokoľvek, kto sa prihlási na odber blogu, ho môže zdieľať so svojimi kontaktmi. Tento blog zdieľate s nasledujúcimi kontaktmi. Môžu existovať aj ďalší odberatelia, ktorých nevidíte.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importovať RSS kanál</string>
-  <string name="blogs_rss_feeds_import_button">Importovať</string>
-  <string name="blogs_rss_feeds_import_hint">Zadajte adresu URL RSS kanálu</string>
-  <string name="blogs_rss_feeds_import_progress">Importovanie RSS kanála...</string>
-  <string name="blogs_rss_feeds_import_error">Je nám to ľúto! Pri importovaní vášho kanála došlo k chybe.</string>
-  <string name="blogs_rss_feeds_import_title">Importovať kanál zo súboru</string>
-  <string name="blogs_rss_feeds">Kanály RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Importované:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Naposledy aktualizované:</string>
-  <string name="blogs_rss_remove_feed">Odstrániť kanál</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Ste si istí, že chcete odstrániť tento kanál?\n\nPríspevky budú odstránené z vášho zariadenia, ale nie zo zariadení iných ľudí.\n\nVšetky kontakty, s ktorými ste zdieľali tento kanál, môžu prestať dostávať aktualizácie.</string>
-  <string name="blogs_rss_remove_feed_ok">Odstrániť</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Žiadne RSS kanály na zobrazenie\n\nŤuknutím na ikonu + naimportujte kanál</string>
-  <string name="blogs_rss_feeds_manage_error">Vyskytol sa problém s načítaním vašich kanálov. Skúste to prosím neskôr.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Ťuknutím zmeníte svoj profilový obrázok</string>
   <string name="dialog_confirm_profile_picture_title">Zmeniť profilový obrázok</string>

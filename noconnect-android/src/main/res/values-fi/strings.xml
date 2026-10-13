@@ -310,18 +310,6 @@
   <string name="blogs_sharing_declined_toast">Kutsu hylätty</string>
   <string name="sharing_status_blog">Kuka tahansa joka tilaa blogin voi jakaa sen tuntemilleen käyttäjille. Olet jakamassa tämän blogin seuraaville käyttäjille. Voi myös olla muita blogin tilaajia, joita sinä et näe.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Tuo RSS syöte</string>
-  <string name="blogs_rss_feeds_import_button">Tuo</string>
-  <string name="blogs_rss_feeds_import_hint">Syötä RSS syötteen URL osoite</string>
-  <string name="blogs_rss_feeds_import_error">Pahoittelemme! Syötteen noutamisessa tapahtui virhe.</string>
-  <string name="blogs_rss_feeds_manage_imported">Tuotu:</string>
-  <string name="blogs_rss_feeds_manage_author">Tekijä:</string>
-  <string name="blogs_rss_feeds_manage_updated">Viimeksi päivitetty:</string>
-  <string name="blogs_rss_remove_feed">Poista syöte</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Oletko varma, että haluat poistaa tämän syötteen?\n\nKirjoitukset poistuvat sinun laitteelta, mutta ei muiden laitteilta.\n\nKäyttäjät joiden kanssa olet jakanut tämän syötteen eivät välttämättä saa uusia päivityksiä.</string>
-  <string name="blogs_rss_remove_feed_ok">Poista</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Ei RSS syötteitä\n\nNapauta + nappia lisätäksesi syötteen</string>
-  <string name="blogs_rss_feeds_manage_error">Syötteiden lataamisessa tapahtui virhe. Yritä myöhemmin uudelleen.</string>
   <!--Settings Display-->
   <string name="pref_language_title">Kieli &amp; alue</string>
   <string name="pref_language_changed">Tämä asetus otetaan käyttöön kun uudelleenkäynnistät NoConnectin. Kirjaudu ulos ja käynnistä NoConnect uudelleen.</string>

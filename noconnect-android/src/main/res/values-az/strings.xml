@@ -344,17 +344,6 @@
   <string name="blogs_sharing_joined_toast">Bloga abunə olundu</string>
   <string name="blogs_sharing_declined_toast">Dəvət azalıb</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS Feed idxalı</string>
-  <string name="blogs_rss_feeds_import_button">İdxal</string>
-  <string name="blogs_rss_feeds_import_hint">RSS kanalın linkini daxil edin</string>
-  <string name="blogs_rss_feeds_import_error">Üzr istəyirik! Feed-inizdə idxal bir xəta baş verdi.</string>
-  <string name="blogs_rss_feeds_manage_imported">İdxal olundu:</string>
-  <string name="blogs_rss_feeds_manage_author">Müəllif:</string>
-  <string name="blogs_rss_feeds_manage_updated">Son yeniləmə:</string>
-  <string name="blogs_rss_remove_feed">Feed\'i sil</string>
-  <string name="blogs_rss_remove_feed_ok">Sil</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Xeyr RSS əks etdirmir\n\nİdxal etmək üçün + düyməsinə toxunun</string>
-  <string name="blogs_rss_feeds_manage_error">Kanal yükləmədə bir problem var. Zəhmət olmasa bir az sonra yenə cəhd edin.</string>
   <!--Settings Profile Picture-->
   <!--Settings Display-->
   <string name="pref_language_title">Dil və region</string>

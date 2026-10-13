@@ -482,21 +482,6 @@
   <string name="blogs_sharing_declined_toast">Поканата е отказана</string>
   <string name="sharing_status_blog">Всеки абонат на блога може да го сподели с контактите си. Споделяте този блог със следните контакти. Възможно е да има и други, които не можете да видите.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Внасяне на емисия на RSS</string>
-  <string name="blogs_rss_feeds_import_button">Внасяне</string>
-  <string name="blogs_rss_feeds_import_hint">Aдрес на емисия</string>
-  <string name="blogs_rss_feeds_import_progress">Внасяне на емисия на RSS</string>
-  <string name="blogs_rss_feeds_import_error">Грешка при внасяне на емисията.</string>
-  <string name="blogs_rss_feeds_import_title">Внасяне на емисия от файл</string>
-  <string name="blogs_rss_feeds">Емисии на RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Внесена:</string>
-  <string name="blogs_rss_feeds_manage_author">Автор:</string>
-  <string name="blogs_rss_feeds_manage_updated">Последно обновяване:</string>
-  <string name="blogs_rss_remove_feed">Премахване на емисия</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Сигурни ли сте, че желаете да премахнете емисията?\n\nПубликациите ще бъдат премахнати от устройството ви, но не и от устройствата на другите хора.\n\nКонтактите, с които сте споделили тази емисия може да спрат да получават обновявания.</string>
-  <string name="blogs_rss_remove_feed_ok">Премахване</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Няма емисии на RSS\n\nДокоснете иконата с +, за да внесете емисия</string>
-  <string name="blogs_rss_feeds_manage_error">Възникна проблем при зареждането на емисиите ви. Моля, опитайте пак по-късно.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Докоснете за смяна на профилната снимка</string>
   <string name="dialog_confirm_profile_picture_title">Смяна на профилна снимка</string>

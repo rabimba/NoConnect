@@ -471,21 +471,6 @@
   <string name="blogs_sharing_declined_toast">ဖိတ်ကြားမှု ငြင်းဆိုခဲ့သည်</string>
   <string name="sharing_status_blog">ဘလော့ဂ်စီသို့ စာရင်းသွင်းထားသူသည် ၎င်းတို့၏ အဆက်အသွယ်များနှင့် မျှဝေလို့ရပါသည်။ သင်သည် အောက်ပါအဆက်အသွယ်များဖြင့် ဤဘလော့ဂ်ကို မျှဝေထားနေပါသည်။ သင်မမြင်နိုင်သော အခြား စာရင်းသွင်းထားသူများလည်း ရှိနိုင်ပါသည်။</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS သတင်းပို့စ်အလွှာ တင်သွင်းမည်</string>
-  <string name="blogs_rss_feeds_import_button">တင်သွင်းမည်</string>
-  <string name="blogs_rss_feeds_import_hint">RSS သတင်းပို့စ်အလွှာ၏ URL ရိုက်ထည့်ပေးပါ</string>
-  <string name="blogs_rss_feeds_import_progress">RSS Feed ကို ထည့်သွင်းနေသည်...</string>
-  <string name="blogs_rss_feeds_import_error">ဝမ်းနည်းပါသည်! သင့် သတင်းပို့စ်အလွှာအား တင်သွင်းရာတွင် ပျက်ကွက်မှု ဖြစ်ခဲ့ပါသည်။</string>
-  <string name="blogs_rss_feeds_import_title">ဖိုင်မှ ဖိဒ်ကို ထည့်သွင်းပါ</string>
-  <string name="blogs_rss_feeds">RSS သတင်းလွှာများ</string>
-  <string name="blogs_rss_feeds_manage_imported">တင်သွင်းထားသော</string>
-  <string name="blogs_rss_feeds_manage_author">စာရေးဆရာ -</string>
-  <string name="blogs_rss_feeds_manage_updated">နောက်ဆုံး အပ်ဒိတ်လုပ်ခဲ့ခြင်း -</string>
-  <string name="blogs_rss_remove_feed">သတင်းပို့စ်အလွှာ ဖယ်ရှားမည်</string>
-  <string name="blogs_rss_remove_feed_dialog_message">ဤသတင်းပို့စ်အလွှာကို ဖယ်ရှားချင်တာ သေချာပါသလား။ \n\n ပို့စ်များကို သင့်ကိရိယာမှ ဖယ်ရှားလိုက်မည်ဖြစ်သော်လည်း အခြားသူများ၏ကိရိယာများမှမူ ဖယ်ရှားလိုက်မည်မဟုတ်ပါ။ \n\n သင်မှ ဤသတင်းပို့စ်အလွှာကို မျှဝေထားသည့် သင့်အဆက်အသွယ်များအနေဖြင့် သတင်းအသစ်များရရှိမှု ရပ်တန့်သွားနိုင်ပါသည်။</string>
-  <string name="blogs_rss_remove_feed_ok">ဖယ်ရှားမည်</string>
-  <string name="blogs_rss_feeds_manage_empty_state">RSS သတင်းပို့စ်အလွှာများပြရန် မရှိပါ \n\n + (အပေါင်းအိုင်ကွန်) အားနှိပ်၍ သတင်းအလွှာ တင်သွင်းပါ</string>
-  <string name="blogs_rss_feeds_manage_error">သင့် သတင်းပို့စ်အလွှာကို တင်သွင်းရာတွင် အခက်အခဲတွေ့ကြုံခဲ့ပါသည်။ နောင်မှ ပြန်စမ်းကြည့်ပေးပါ။</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">နှိပ်၍ သင့် ပရိုဖိုင်းပုံ ပြောင်းလဲပါ</string>
   <string name="dialog_confirm_profile_picture_title">ပရိုဖိုင်းပုံ ပြောင်းလဲမည်</string>

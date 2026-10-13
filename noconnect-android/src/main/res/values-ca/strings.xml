@@ -485,21 +485,6 @@ Així que l\'actualitzi li veureu una icona diferent .</string>
   <string name="blogs_sharing_declined_toast">Heu refusat la invitació</string>
   <string name="sharing_status_blog">Qualsevol membre subscrit a un blog el pot compartir amb els seus contactes. Esteu compartint aquest blog amb els següents contactes. Poden haver-hi altres membres subscrits que no veieu.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Subscriure\'s al canal de notícies RSS</string>
-  <string name="blogs_rss_feeds_import_button">Subscriu-me</string>
-  <string name="blogs_rss_feeds_import_hint">Escriviu l\'URL del canal de notícies RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Important fil d\'actualitat RSS...</string>
-  <string name="blogs_rss_feeds_import_error">Ens sap greu! S\'ha produït un error en subscriure-us al vostre canal de notícies.</string>
-  <string name="blogs_rss_feeds_import_title">Importa fil d\'actualitat des d\'un fitxer</string>
-  <string name="blogs_rss_feeds">Canals RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Importat:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Darrera actualització:</string>
-  <string name="blogs_rss_remove_feed">Suprimeix la subscripció al canal de notícies</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Segur que voleu suprimir la subscripció a aquest canal de notícies?\n\nLes notícies d\'aquest canal s\'eliminaran del vostre dispositiu però no del d\'altres persones.\n\nEls contactes amb els que hàgeu compartit aquest canal poden deixar de rebre les actualitzacions.</string>
-  <string name="blogs_rss_remove_feed_ok">Suprimeix la subscripció</string>
-  <string name="blogs_rss_feeds_manage_empty_state">No hi ha cap notícia per mostrar\n\nFeu un toc sobre la icona + per subscriure-us a un canal de notícies</string>
-  <string name="blogs_rss_feeds_manage_error">S\'ha produït un problema en actualitzar els vostres canals de notícies. Torneu-ho a provar més endavant.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Feu un toc per modificar la foto del vostre perfil</string>
   <string name="dialog_confirm_profile_picture_title">Modifica la foto de perfil</string>

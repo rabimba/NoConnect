@@ -4,7 +4,6 @@ import org.chagolchana.noconnect.autodelete.AutoDeleteModule;
 import org.chagolchana.noconnect.avatar.AvatarModule;
 import org.chagolchana.noconnect.blog.BlogModule;
 import org.chagolchana.noconnect.conversation.ConversationModule;
-import org.chagolchana.noconnect.feed.FeedModule;
 import org.chagolchana.noconnect.forum.ForumModule;
 import org.chagolchana.noconnect.identity.IdentityModule;
 import org.chagolchana.noconnect.introduction.IntroductionModule;
@@ -22,8 +21,6 @@ public interface NoConnectCoreEagerSingletons {
 	void inject(BlogModule.EagerSingletons init);
 
 	void inject(ConversationModule.EagerSingletons init);
-
-	void inject(FeedModule.EagerSingletons init);
 
 	void inject(ForumModule.EagerSingletons init);
 
@@ -46,7 +43,6 @@ public interface NoConnectCoreEagerSingletons {
 			c.inject(new AvatarModule.EagerSingletons());
 			c.inject(new BlogModule.EagerSingletons());
 			c.inject(new ConversationModule.EagerSingletons());
-			c.inject(new FeedModule.EagerSingletons());
 			c.inject(new ForumModule.EagerSingletons());
 			c.inject(new GroupInvitationModule.EagerSingletons());
 			c.inject(new MessagingModule.EagerSingletons());

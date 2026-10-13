@@ -414,19 +414,6 @@
   <string name="blogs_sharing_declined_toast">Uitnodiging afgewezen</string>
   <string name="sharing_status_blog">Alle leden die lid worden van een blog kunnen deze blog delen met hun contacten. Je deelt deze blog al met de volgende contacten. Er kunnen ook andere leden zijn die je niet kan zien.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importeer RSS-feed</string>
-  <string name="blogs_rss_feeds_import_button">Importeer</string>
-  <string name="blogs_rss_feeds_import_hint">Voer de URL van de RSS-feed in</string>
-  <string name="blogs_rss_feeds_import_error">Excuses! Er trad een fout op bij het importeren van je feed.</string>
-  <string name="blogs_rss_feeds">RSS-feeds</string>
-  <string name="blogs_rss_feeds_manage_imported">Geïmporteerd:</string>
-  <string name="blogs_rss_feeds_manage_author">Auteur:</string>
-  <string name="blogs_rss_feeds_manage_updated">Laatst bijgewerkt:</string>
-  <string name="blogs_rss_remove_feed">Verwijder feed</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Weet je zeker dat je deze feed wil verwijderen?\n\nPosts zullen van je apparaat worden verwijderd maar niet van apparaten van andere mensen.\n\nContacten met wie je deze feed hebt gedeeld zullen geen updates meer ontvangen.</string>
-  <string name="blogs_rss_remove_feed_ok">Verwijderen</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Geen RSS-feeds om te tonen\n\nTik op het +-icoon om een feed te importeren</string>
-  <string name="blogs_rss_feeds_manage_error">Er was een probleem met het laden van je feeds. Probeer het alsjeblieft later nog een keer.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Tik om je profielfoto te wijzigen</string>
   <string name="dialog_confirm_profile_picture_title">Wijzig profielfoto</string>

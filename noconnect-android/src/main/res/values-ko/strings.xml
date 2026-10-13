@@ -407,18 +407,6 @@
   <string name="blogs_sharing_declined_toast">모임 초대장 거절함</string>
   <string name="sharing_status_blog">블로그는 구독한 누구나 자신의 지인과 공유할 수 있습니다. 현재 다음 연락처와 이 블로그를 공유하고 있습니다. 이외 다른 구독자가 더 있을 수 있습니다.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">RSS 피드 불러오기</string>
-  <string name="blogs_rss_feeds_import_button">가져오기</string>
-  <string name="blogs_rss_feeds_import_hint">RSS 피드 URL을 입력하세요</string>
-  <string name="blogs_rss_feeds_import_error">죄송합니다! 피드를 불러오는 과정에서 문제가 있었습니다.</string>
-  <string name="blogs_rss_feeds_manage_imported">다음을 불러왔습니다:</string>
-  <string name="blogs_rss_feeds_manage_author">작성자:</string>
-  <string name="blogs_rss_feeds_manage_updated">최종 업데이트:</string>
-  <string name="blogs_rss_remove_feed">피드 제거하기</string>
-  <string name="blogs_rss_remove_feed_dialog_message">정말로 이 피드를 제거하시겠어요?\n\n기기에서 게시물은 제거되지만 다른 사람의 기기에서는 제거되지 않습니다.\n\n이 피드를 공유하던 지인이 업데이트를 받지 못하게 될 수 있습니다. </string>
-  <string name="blogs_rss_remove_feed_ok">제거하기</string>
-  <string name="blogs_rss_feeds_manage_empty_state">보여드릴 RSS 피드가 없습니다\n\n+ 상징을 눌러 피드를 불러오세요</string>
-  <string name="blogs_rss_feeds_manage_error">피드를 불러오는 과정에서 문제가 있었습니다. 나중에 다시 시도해 주세요.</string>
   <!--Settings Profile Picture-->
   <!--Settings Display-->
   <string name="pref_language_title">Language &amp; region</string>

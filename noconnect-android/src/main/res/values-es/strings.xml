@@ -497,21 +497,6 @@
   <string name="blogs_sharing_declined_toast">La invitación ha sido rechazada</string>
   <string name="sharing_status_blog">Cualquiera que se suscriba a un blog puede compartirlo con sus contactos. Estás compartiendo este blog con contactos listados a continuación. Puede haber otros suscriptores que no puedes ver.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importar canal RSS</string>
-  <string name="blogs_rss_feeds_import_button">Importar</string>
-  <string name="blogs_rss_feeds_import_hint">Introduce la URL del canal RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Importando Fuente RSS</string>
-  <string name="blogs_rss_feeds_import_error">¡Lo sentimos! Hubo un error importando tu canal.</string>
-  <string name="blogs_rss_feeds_import_title">Importar fuente de archivo</string>
-  <string name="blogs_rss_feeds">Canales RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Importado:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Última actualización:</string>
-  <string name="blogs_rss_remove_feed">Eliminar canal RSS</string>
-  <string name="blogs_rss_remove_feed_dialog_message">¿Estás seguro de que quieres quitar este canal RSS?\n\nLos mensajes se eliminarán de tu dispositivo, pero no de los dispositivos de otras personas.\n\nEs posible que los contactos con los que hayas compartido este canal dejen de recibir actualizaciones.</string>
-  <string name="blogs_rss_remove_feed_ok">Eliminar</string>
-  <string name="blogs_rss_feeds_manage_empty_state">No hay canales RSS que mostrar\n\nGolpea el icono + para importar uno</string>
-  <string name="blogs_rss_feeds_manage_error">Hubo un problema cargando tus canales RSS. Por favor, prueba más tarde.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Pulsar para cambiar la imagen de tu perfil</string>
   <string name="dialog_confirm_profile_picture_title">Cambiar imagen de perfil</string>

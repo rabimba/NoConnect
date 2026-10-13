@@ -469,19 +469,6 @@
   <string name="blogs_sharing_declined_toast">Invitasjon avslått</string>
   <string name="sharing_status_blog">Enhver som abonnerer på bloggen kan dele den med sine kontakter. Du deler denne bloggen med følgende kontakter. Det kan også være andre abonnementer du ikke kan se.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importer RSS-strøm</string>
-  <string name="blogs_rss_feeds_import_button">Importer</string>
-  <string name="blogs_rss_feeds_import_hint">Skriv inn nettadresse for RSS-strøm</string>
-  <string name="blogs_rss_feeds_import_error">Vi beklager! Feil under importering av strøm.</string>
-  <string name="blogs_rss_feeds">RSS-feed\'er</string>
-  <string name="blogs_rss_feeds_manage_imported">Importert:</string>
-  <string name="blogs_rss_feeds_manage_author">Forfatter:</string>
-  <string name="blogs_rss_feeds_manage_updated">Sist oppdatert:</string>
-  <string name="blogs_rss_remove_feed">Fjern strøm</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Er du sikker på at du ønsker å fjerne denne feed\'en?\n\nInnlegg kommer til å bli fjernet fra din enhet, men ikke fra andre personers enheter.\n\nEnhver kontakt som du har delt denne feed\'en med kan komme til å slutte å motta oppdateringer.</string>
-  <string name="blogs_rss_remove_feed_ok">Fjern</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Ingen RSS-feed\'er å vise\n\nTrykk på «+»-ikonet for å importere en feed.</string>
-  <string name="blogs_rss_feeds_manage_error">Feil ved lasting av dine strømmer. Prøv igjen senere.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Trykk for å endre ditt profilbilde</string>
   <string name="dialog_confirm_profile_picture_title">Bytte profilbilde</string>

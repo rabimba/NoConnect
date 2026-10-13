@@ -497,21 +497,6 @@
   <string name="blogs_sharing_declined_toast">Convite recusado</string>
   <string name="sharing_status_blog">Qualquer pessoa que se inscreva em um blog pode compartilhá-lo com seus contatos. Você está compartilhando este blog com os seguintes contatos. Também podem haver outras pessoas inscritas que você não consegue visualizar.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importar Feed RSS</string>
-  <string name="blogs_rss_feeds_import_button">Importar</string>
-  <string name="blogs_rss_feeds_import_hint">Entre a URL do feed RSS</string>
-  <string name="blogs_rss_feeds_import_progress">Importando RSS Feed...</string>
-  <string name="blogs_rss_feeds_import_error">Nós lamentamos! Houve um erro ao importar seu Feed.</string>
-  <string name="blogs_rss_feeds_import_title">Importar feed do arquivo</string>
-  <string name="blogs_rss_feeds">Feeds RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">Importado:</string>
-  <string name="blogs_rss_feeds_manage_author">Autor:</string>
-  <string name="blogs_rss_feeds_manage_updated">Última Atualização:</string>
-  <string name="blogs_rss_remove_feed">Remover Feed</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Você tem certeza que deseja remover esse feed?\n\nOs posts serão removidos do seus dispositivo, mas não dos dispositivos de outras pessoas.\n\nContatos com quem você compartilhou esse feed podem parar de receber atualizações.</string>
-  <string name="blogs_rss_remove_feed_ok">Remover</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Sem feeds RSS para exibir\n\nToque no ícone + para importar um feed</string>
-  <string name="blogs_rss_feeds_manage_error">Houve um problema ao carregar seus Feeds. Por favor tente novamente.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">Toque para mudar sua foto de perfil</string>
   <string name="dialog_confirm_profile_picture_title">Mudar foto de perfil</string>

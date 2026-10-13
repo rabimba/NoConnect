@@ -6,7 +6,6 @@ import org.chagolchana.noconnect.avatar.AvatarModule;
 import org.chagolchana.noconnect.blog.BlogModule;
 import org.chagolchana.noconnect.client.NoConnectClientModule;
 import org.chagolchana.noconnect.conversation.ConversationModule;
-import org.chagolchana.noconnect.feed.FeedModule;
 import org.chagolchana.noconnect.forum.ForumModule;
 import org.chagolchana.noconnect.identity.IdentityModule;
 import org.chagolchana.noconnect.introduction.IntroductionModule;
@@ -25,7 +24,6 @@ import dagger.Module;
 		BlogModule.class,
 		NoConnectClientModule.class,
 		ConversationModule.class,
-		FeedModule.class,
 		ForumModule.class,
 		GroupInvitationModule.class,
 		IdentityModule.class,

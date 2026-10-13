@@ -13,11 +13,6 @@ import org.chagolchana.noconnect.android.blog.BlogPostFragment;
 import org.chagolchana.noconnect.android.blog.FeedFragment;
 import org.chagolchana.noconnect.android.blog.ReblogActivity;
 import org.chagolchana.noconnect.android.blog.ReblogFragment;
-import org.chagolchana.noconnect.android.blog.RssFeedActivity;
-import org.chagolchana.noconnect.android.blog.RssFeedDeleteFeedDialogFragment;
-import org.chagolchana.noconnect.android.blog.RssFeedImportFailedDialogFragment;
-import org.chagolchana.noconnect.android.blog.RssFeedImportFragment;
-import org.chagolchana.noconnect.android.blog.RssFeedManageFragment;
 import org.chagolchana.noconnect.android.blog.WriteBlogPostActivity;
 import org.chagolchana.noconnect.android.contact.ContactListFragment;
 import org.chagolchana.noconnect.android.contact.add.nearby.AddNearbyContactActivity;
@@ -167,8 +162,6 @@ public interface ActivityComponent {
 
 	void inject(IntroductionActivity activity);
 
-	void inject(RssFeedActivity activity);
-
 	void inject(StartupFailureActivity activity);
 
 	void inject(UnlockActivity activity);
@@ -238,14 +231,6 @@ public interface ActivityComponent {
 	void inject(ConfirmAvatarDialogFragment fragment);
 
 	void inject(ConversationSettingsDialog dialog);
-
-	void inject(RssFeedImportFragment fragment);
-
-	void inject(RssFeedManageFragment fragment);
-
-	void inject(RssFeedImportFailedDialogFragment fragment);
-
-	void inject(RssFeedDeleteFeedDialogFragment fragment);
 
 	void inject(ConnectViaBluetoothActivity connectViaBluetoothActivity);
 

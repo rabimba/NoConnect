@@ -469,21 +469,6 @@
   <string name="blogs_sharing_declined_toast">邀請已謝絕</string>
   <string name="sharing_status_blog">任何訂閱博客的人都可以將它分享給他的聯絡人。您正在將該博客分享給下列聯絡人。可能有您所不可見的其他訂閱者存在。</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">導入 RSS 訂閱源</string>
-  <string name="blogs_rss_feeds_import_button">導入</string>
-  <string name="blogs_rss_feeds_import_hint">輸入 RSS 訂閱源鏈接</string>
-  <string name="blogs_rss_feeds_import_progress">滙入 RSS 消息來源</string>
-  <string name="blogs_rss_feeds_import_error">抱歉！導入訂閱源時發生錯誤。</string>
-  <string name="blogs_rss_feeds_import_title">透過檔案滙入消息源</string>
-  <string name="blogs_rss_feeds">RSS 消息源</string>
-  <string name="blogs_rss_feeds_manage_imported">已導入：</string>
-  <string name="blogs_rss_feeds_manage_author">作者：</string>
-  <string name="blogs_rss_feeds_manage_updated">最後更新於：</string>
-  <string name="blogs_rss_remove_feed">刪除訂閱源</string>
-  <string name="blogs_rss_remove_feed_dialog_message">確認要刪除該訂閱源嗎？\n\n博文將從您的裝置上移除，但仍將存在於其他人的裝置。\n\n那些經過您的分享而訂閱該源的聯絡人可能不會再收到更新。</string>
-  <string name="blogs_rss_remove_feed_ok">刪除</string>
-  <string name="blogs_rss_feeds_manage_empty_state">尚無訂閱源可供顯示\n\n輕按 + 號導入訂閱源</string>
-  <string name="blogs_rss_feeds_manage_error">加載訂閱源時出錯。請稍候再試。</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">輕觸更改使用者圖像</string>
   <string name="dialog_confirm_profile_picture_title">更改使用者圖像</string>

@@ -69,7 +69,6 @@ import org.chagolchana.noconnect.api.blog.BlogPostFactory;
 import org.chagolchana.noconnect.api.blog.BlogSharingManager;
 import org.chagolchana.noconnect.api.client.MessageTracker;
 import org.chagolchana.noconnect.api.conversation.ConversationManager;
-import org.chagolchana.noconnect.api.feed.FeedManager;
 import org.chagolchana.noconnect.api.forum.ForumManager;
 import org.chagolchana.noconnect.api.forum.ForumSharingManager;
 import org.chagolchana.noconnect.api.identity.AuthorManager;
@@ -182,7 +181,6 @@ public interface AndroidComponent
 
 	AndroidExecutor androidExecutor();
 
-	FeedManager feedManager();
 
 	Clock clock();
 

@@ -537,21 +537,6 @@
   <string name="blogs_sharing_declined_toast">تم رفض الدعوة</string>
   <string name="sharing_status_blog">أي شخص أشترك في مدونة يمكنه مشاركتها مع جهات اتصاله. أنت تشارك/ين هذه المدونة مع جهات الإتصال التالية. قد يكون هناك مشتركون آخرون لا يمكن رؤيتهم.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">إستيراد تحديثات RSS</string>
-  <string name="blogs_rss_feeds_import_button">إستيراد</string>
-  <string name="blogs_rss_feeds_import_hint">ادخال رابط تحديثات RSS</string>
-  <string name="blogs_rss_feeds_import_progress">جارٍ استيراد موجز RSS...</string>
-  <string name="blogs_rss_feeds_import_error">معذرة! حدث خطأ في استيراد التحديثات.</string>
-  <string name="blogs_rss_feeds_import_title">استيراد الموجز من الملف</string>
-  <string name="blogs_rss_feeds">مواجز RSS</string>
-  <string name="blogs_rss_feeds_manage_imported">تم استيراد:</string>
-  <string name="blogs_rss_feeds_manage_author">المؤلف/ة:</string>
-  <string name="blogs_rss_feeds_manage_updated">آخر تحديث:</string>
-  <string name="blogs_rss_remove_feed">ازالة الخلاصة</string>
-  <string name="blogs_rss_remove_feed_dialog_message">هل أنت متأكد/ة من رغبتك في حذف هذه الخلاصة؟\n\nالمنشورات ستحذف من جهازك وليس من أجهزة الآخرين.\n\nأي جهة اتصال قمت/ي بمشاركة هذه الخلاصة معها قد لا تتمكن من استلام التحديثات.</string>
-  <string name="blogs_rss_remove_feed_ok">حذف</string>
-  <string name="blogs_rss_feeds_manage_empty_state">لا خلاصات RSS للعرض\n\nالرجاء لمس علامة + لإستيراد خلاصة.</string>
-  <string name="blogs_rss_feeds_manage_error">حدث خطأ في جلب خلاصاتك. الرجاء المحاولة لاحقًا.</string>
   <!--Settings Profile Picture-->
   <string name="change_profile_picture">انقر لتغيير صورة ملفك الشخصي</string>
   <string name="dialog_confirm_profile_picture_title">تغيير الصورة الشخصية</string>

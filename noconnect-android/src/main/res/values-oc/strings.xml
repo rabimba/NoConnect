@@ -389,21 +389,9 @@ Volètz suprimir vòstre compte e ne crear un nòu ?\n
   <string name="blogs_sharing_declined_toast">Invitacion declinada</string>
   <string name="sharing_status_blog">Qual que siá seguidor d’un blòg pòt lo partejar amb sos contactes. Partejatz lo blòg amb los contactes seguents. I a benlèu mai de monde qu’o seguen que vesètz pas.</string>
   <!--RSS Feeds-->
-  <string name="blogs_rss_feeds_import">Importar de fluxes RSS</string>
-  <string name="blogs_rss_feeds_import_button">Importar</string>
-  <string name="blogs_rss_feeds_import_hint">Marcar l’URL del flux RSS</string>
-  <string name="blogs_rss_feeds_import_error">Una error s’es produisida en importar lo flux</string>
-  <string name="blogs_rss_feeds_manage_imported">Importat :</string>
-  <string name="blogs_rss_feeds_manage_author">Autor :</string>
-  <string name="blogs_rss_feeds_manage_updated">Darrièra mesa a jorn :</string>
-  <string name="blogs_rss_remove_feed">Suprimir lo flux</string>
-  <string name="blogs_rss_remove_feed_dialog_message">Volètz vertadièrament levar aqueste flux ?\n\nLas publicacions seràn 
 levadas de vòstre aparelh mas pas dels aparelhs del monde.\n\nTotes los 
 contactes qu’avètz partejat aqueste flux quitaràn benlèu de recebre las mesas
  a jorn.</string>
-  <string name="blogs_rss_remove_feed_ok">Suprimir</string>
-  <string name="blogs_rss_feeds_manage_empty_state">Cap de flux RSS de far veire.\n\nTocatz l’icòna + per n’importar un</string>
-  <string name="blogs_rss_feeds_manage_error">Error en cargar vòstres fluxes. Ensajatz mai tard.</string>
   <!--Settings Profile Picture-->
   <!--Settings Display-->
   <string name="pref_language_title">Lenga &amp; region</string>
