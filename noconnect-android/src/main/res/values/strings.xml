@@ -58,6 +58,10 @@
 		<item quantity="one">This is a test version of NoConnect. Your account will expire in %d day and cannot be renewed.</item>
 		<item quantity="other">This is a test version of NoConnect. Your account will expire in %d days and cannot be renewed.</item>
 	</plurals>
+	<plurals name="update_reminder">
+		<item quantity="one">This version of NoConnect is %d month old. Get the latest version from a contact you trust (Settings › Share this app offline) or from the project page.</item>
+		<item quantity="other">This version of NoConnect is %d months old. Get the latest version from a contact you trust (Settings › Share this app offline) or from the project page.</item>
+	</plurals>
 	<string name="expiry_date_reached">This software has expired.\nThank you for testing!</string>
 	<string name="download_noconnect">To continue using NoConnect, please download the latest release.</string>
 	<string name="create_new_account">You will need to create a new account, but you can use the same nickname.</string>

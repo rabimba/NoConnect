@@ -140,6 +140,9 @@ public class NavDrawerActivity extends NoConnectActivity implements
 		if (IS_DEBUG_BUILD && !app.isInstrumentationTest()) {
 			navDrawerViewModel.showExpiryWarning()
 					.observe(this, this::showExpiryWarning);
+		} else if (!IS_DEBUG_BUILD) {
+			navDrawerViewModel.showUpdateReminder()
+					.observe(this, this::showUpdateReminder);
 		}
 		navDrawerViewModel.shouldAskForDozeWhitelisting().observe(this, ask -> {
 			if (ask) showDozeDialog(R.string.dnkm_doze_intro);
@@ -209,6 +212,8 @@ public class NavDrawerActivity extends NoConnectActivity implements
 		lockManager.checkIfLockable();
 		if (IS_DEBUG_BUILD) {
 			navDrawerViewModel.checkExpiryWarning();
+		} else {
+			navDrawerViewModel.checkUpdateReminder();
 		}
 	}
 
@@ -370,6 +375,27 @@ public class NavDrawerActivity extends NoConnectActivity implements
 	private void setLockVisible(boolean visible) {
 		MenuItem item = navigation.getMenu().findItem(R.id.nav_btn_lock);
 		if (item != null) item.setVisible(visible);
+	}
+
+	/**
+	 * Shows or hides the build-age reminder in the banner used for the debug
+	 * build expiry warning.
+	 *
+	 * @param monthsOld the build's age, or null to hide the reminder
+	 */
+	private void showUpdateReminder(@Nullable Integer monthsOld) {
+		ViewGroup banner = findViewById(R.id.expiryWarning);
+		if (monthsOld == null) {
+			banner.setVisibility(GONE);
+			return;
+		}
+		TextView text = banner.findViewById(R.id.expiryWarningText);
+		text.setText(getResources().getQuantityString(
+				R.plurals.update_reminder, monthsOld, monthsOld));
+		ImageView close = banner.findViewById(R.id.expiryWarningClose);
+		close.setOnClickListener(v ->
+				navDrawerViewModel.updateReminderDismissed());
+		banner.setVisibility(VISIBLE);
 	}
 
 	private void showExpiryWarning(boolean show) {

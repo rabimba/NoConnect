@@ -22,6 +22,7 @@ import androidx.annotation.UiThread;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import static org.chagolchana.noconnect.BuildConfig.BuildTimestamp;
 import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.logging.Level.WARNING;
 import static java.util.logging.Logger.getLogger;
@@ -38,6 +39,8 @@ public class NavDrawerViewModel extends DbViewModel {
 			getLogger(NavDrawerViewModel.class.getName());
 
 	private static final String EXPIRY_DATE_WARNING = "expiryDateWarning";
+	private static final String UPDATE_REMINDER_DISMISSED =
+			"updateReminderDismissed";
 	private static final String SHOW_TRANSPORTS_ONBOARDING =
 			"showTransportsOnboarding";
 
@@ -59,6 +62,54 @@ public class NavDrawerViewModel extends DbViewModel {
 			SettingsManager settingsManager) {
 		super(app, dbExecutor, lifecycleManager, db, androidExecutor);
 		this.settingsManager = settingsManager;
+	}
+
+	private final MutableLiveData<Integer> showUpdateReminder =
+			new MutableLiveData<>();
+
+	/**
+	 * Emits the build's age in months when the user should be reminded to
+	 * update, or null when the reminder should be hidden.
+	 */
+	LiveData<Integer> showUpdateReminder() {
+		return showUpdateReminder;
+	}
+
+	@UiThread
+	void checkUpdateReminder() {
+		runOnDbThread(() -> {
+			try {
+				Settings settings =
+						settingsManager.getSettings(SETTINGS_NAMESPACE);
+				long lastDismissed =
+						settings.getLong(UPDATE_REMINDER_DISMISSED, 0);
+				long now = System.currentTimeMillis();
+				if (BuildAgePolicy.shouldShowReminder(now, BuildTimestamp,
+						lastDismissed)) {
+					showUpdateReminder.postValue(
+							BuildAgePolicy.monthsOld(now, BuildTimestamp));
+				} else {
+					showUpdateReminder.postValue(null);
+				}
+			} catch (DbException e) {
+				handleException(e);
+			}
+		});
+	}
+
+	@UiThread
+	void updateReminderDismissed() {
+		showUpdateReminder.setValue(null);
+		runOnDbThread(() -> {
+			try {
+				Settings settings = new Settings();
+				settings.putLong(UPDATE_REMINDER_DISMISSED,
+						System.currentTimeMillis());
+				settingsManager.mergeSettings(settings, SETTINGS_NAMESPACE);
+			} catch (DbException e) {
+				handleException(e);
+			}
+		});
 	}
 
 	LiveData<Boolean> showExpiryWarning() {
