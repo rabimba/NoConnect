@@ -58,7 +58,7 @@ class ContactExchangeTaskImpl extends Thread implements ContactExchangeTask {
 			Logger.getLogger(ContactExchangeTaskImpl.class.getName());
 
 	private static final String SIGNING_LABEL_EXCHANGE =
-			"org.briarproject.briar.contact/EXCHANGE";
+			"org.chagolchana.noconnect.contact/EXCHANGE";
 
 	private final DatabaseComponent db;
 	private final AuthorFactory authorFactory;

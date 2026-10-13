@@ -10,12 +10,12 @@ import android.view.ViewGroup;
 
 import org.chagolchana.chagol.api.nullsafety.NotNullByDefault;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 
 import javax.annotation.Nullable;
 
 class ConversationAdapter
-		extends BriarAdapter<ConversationItem, ConversationItemViewHolder> {
+		extends NoConnectAdapter<ConversationItem, ConversationItemViewHolder> {
 
 	private ConversationListener listener;
 

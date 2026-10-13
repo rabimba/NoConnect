@@ -2,7 +2,7 @@ package org.chagolchana.chagol.api.plugin;
 
 public interface TorConstants {
 
-	TransportId ID = new TransportId("org.briarproject.bramble.tor");
+	TransportId ID = new TransportId("org.chagolchana.chagol.tor");
 
 	int SOCKS_PORT = 59050;
 	int CONTROL_PORT = 59051;

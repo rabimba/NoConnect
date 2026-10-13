@@ -39,7 +39,7 @@ public class LinkDialogFragment extends DialogFragment {
 
 		url = getArguments().getString("url");
 
-		setStyle(STYLE_NO_TITLE, R.style.BriarDialogTheme);
+		setStyle(STYLE_NO_TITLE, R.style.NoConnectDialogTheme);
 	}
 
 	@Override

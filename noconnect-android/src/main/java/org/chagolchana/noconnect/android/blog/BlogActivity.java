@@ -10,7 +10,7 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.fragment.BaseFragment.BaseFragmentListener;
 import org.chagolchana.noconnect.android.sharing.BlogSharingStatusActivity;
 
@@ -19,7 +19,7 @@ import javax.inject.Inject;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class BlogActivity extends BriarActivity
+public class BlogActivity extends NoConnectActivity
 		implements BaseFragmentListener {
 
 	@Inject

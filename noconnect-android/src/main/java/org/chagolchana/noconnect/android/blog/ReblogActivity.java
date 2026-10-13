@@ -8,12 +8,12 @@ import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.chagol.api.sync.MessageId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.fragment.BaseFragment.BaseFragmentListener;
 
 import static org.chagolchana.noconnect.android.blog.BasePostFragment.POST_ID;
 
-public class ReblogActivity extends BriarActivity implements
+public class ReblogActivity extends NoConnectActivity implements
 		BaseFragmentListener {
 
 	@Override

@@ -27,7 +27,7 @@
 		android:layout_toEndOf="@+id/avatarView"
 		android:layout_toRightOf="@+id/avatarView"
 		android:maxLines="2"
-		android:textColor="@color/briar_text_primary"
+		android:textColor="@color/nc_text_primary"
 		android:textSize="@dimen/text_size_medium"
 		tools:text="This is a name of a forum"/>
 
@@ -40,7 +40,7 @@
 		android:layout_toRightOf="@+id/avatarView"
 		android:paddingBottom="@dimen/listitem_horizontal_margin"
 		android:paddingTop="@dimen/margin_medium"
-		android:textColor="@color/briar_text_secondary"
+		android:textColor="@color/nc_text_secondary"
 		android:textSize="@dimen/text_size_small"
 		tools:text="1337 posts"/>
 
@@ -55,7 +55,7 @@
 		android:layout_marginRight="@dimen/listitem_horizontal_margin"
 		android:paddingBottom="@dimen/listitem_horizontal_margin"
 		android:paddingTop="@dimen/margin_medium"
-		android:textColor="@color/briar_text_secondary"
+		android:textColor="@color/nc_text_secondary"
 		android:textSize="@dimen/text_size_small"
 		tools:text="Dec 24"/>
 

@@ -16,7 +16,7 @@ public interface MessagingManager extends ConversationClient {
 	/**
 	 * The unique ID of the messaging client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.messaging");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.messaging");
 
 	/**
 	 * Stores a local private message.

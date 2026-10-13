@@ -20,7 +20,7 @@ import org.chagolchana.chagol.api.nullsafety.MethodsNotNullByDefault;
 import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
 import org.chagolchana.noconnect.android.fragment.BaseFragment.BaseFragmentListener;
 import org.chagolchana.noconnect.android.keyagreement.IntroFragment.IntroScreenSeenListener;
@@ -35,7 +35,7 @@ import static java.util.logging.Level.WARNING;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class KeyAgreementActivity extends BriarActivity implements
+public class KeyAgreementActivity extends NoConnectActivity implements
 		BaseFragmentListener, IntroScreenSeenListener, EventListener,
 		ContactExchangeListener {
 

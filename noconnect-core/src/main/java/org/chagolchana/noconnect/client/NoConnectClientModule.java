@@ -14,7 +14,7 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class BriarClientModule {
+public class NoConnectClientModule {
 
 	@Provides
 	@Singleton

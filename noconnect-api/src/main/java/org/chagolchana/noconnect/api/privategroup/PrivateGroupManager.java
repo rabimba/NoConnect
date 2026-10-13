@@ -19,7 +19,7 @@ public interface PrivateGroupManager {
 	/**
 	 * The unique ID of the private group client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.privategroup");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.privategroup");
 
 	/**
 	 * Adds a new private group and joins it.

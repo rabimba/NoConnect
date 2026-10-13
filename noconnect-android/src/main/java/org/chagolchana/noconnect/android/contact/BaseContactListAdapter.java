@@ -4,14 +4,14 @@ import android.content.Context;
 import android.view.View;
 
 import org.chagolchana.chagol.api.contact.ContactId;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 
 import javax.annotation.Nullable;
 
 import static android.support.v7.util.SortedList.INVALID_POSITION;
 
 public abstract class BaseContactListAdapter<I extends ContactItem, VH extends ContactItemViewHolder<I>>
-		extends BriarAdapter<I, VH> {
+		extends NoConnectAdapter<I, VH> {
 
 	@Nullable
 	protected final OnContactClickListener<I> listener;

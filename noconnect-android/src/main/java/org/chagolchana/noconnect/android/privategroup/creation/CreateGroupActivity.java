@@ -9,7 +9,7 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.privategroup.conversation.GroupActivity;
 
@@ -18,7 +18,7 @@ import javax.inject.Inject;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class CreateGroupActivity extends BriarActivity
+public class CreateGroupActivity extends NoConnectActivity
 		implements CreateGroupListener {
 
 	@Inject

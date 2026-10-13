@@ -25,7 +25,7 @@ public interface TransportConnectionReader {
 	 *
 	 * @param exception true if the connection is being closed because of an
 	 * exception. This may affect how resources are disposed of.
-	 * @param recognised true if the connection is definitely a Briar transport
+	 * @param recognised true if the connection is definitely a NoConnect transport
 	 * connection. This may affect how resources are disposed of.
 	 */
 	void dispose(boolean exception, boolean recognised) throws IOException;

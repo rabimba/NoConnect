@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Setup-->
-  <string name="setup_title">Configuration de Briar</string>
-  <string name="setup_explanation">Votre compte Briar est enregistré chiffré sur votre appareil et non sur le \"cloud\". Si vous désinstallez Briar ou si vous oubliez votre mot de passe, votre compte et vos données sont irrécupérables.</string>
+  <string name="setup_title">Configuration de NoConnect</string>
+  <string name="setup_explanation">Votre compte NoConnect est enregistré chiffré sur votre appareil et non sur le \"cloud\". Si vous désinstallez NoConnect ou si vous oubliez votre mot de passe, votre compte et vos données sont irrécupérables.</string>
   <string name="choose_nickname">Choisissez votre surnom</string>
   <string name="choose_password">Choisissez votre mot de passe</string>
   <string name="confirm_password">Confirmez votre mot de passe</string>
@@ -16,12 +16,12 @@
   <string name="sign_in_button">Se connecter</string>
   <string name="forgotten_password">J\'ai oublié mon mot de passe</string>
   <string name="dialog_title_lost_password">Mot de passe oublié</string>
-  <string name="dialog_message_lost_password">Votre compte Briar est enregistré chiffré sur votre appareil et non sur le \"cloud\", par conséquent, votre mot de passe ne peut être réinitialisé. Voulez-vous supprimer votre compte et démarrer à nouveau ?\n\nAttention : vos identités, contacts et messages seront définitivement perdus.</string>
-  <string name="startup_failed_notification_title">Briar n\'a pas pu démarrer</string>
-  <string name="startup_failed_notification_text">Vous devrez peut-être réinstaller Briar.</string>
-  <string name="startup_failed_activity_title">Échec de démarrage de Briar</string>
-  <string name="startup_failed_db_error">Pour une raison indéterminée, votre base de donnée Briar est corrompue et irrécupérable. Vos comptes, données et contacts sont perdus. Vous devez malheureusement réinstaller Briar et configurer un nouveau compte.</string>
-  <string name="startup_failed_service_error">Briar n\'a pas pu démarrer un module nécessaire. Réinstaller Briar résout généralement ce problème. Veuillez noter que vous perdrez votre compte et toutes les données associées puisque Briar n\'utilise pas de serveurs centralisés pour enregistrer les données.</string>
+  <string name="dialog_message_lost_password">Votre compte NoConnect est enregistré chiffré sur votre appareil et non sur le \"cloud\", par conséquent, votre mot de passe ne peut être réinitialisé. Voulez-vous supprimer votre compte et démarrer à nouveau ?\n\nAttention : vos identités, contacts et messages seront définitivement perdus.</string>
+  <string name="startup_failed_notification_title">NoConnect n\'a pas pu démarrer</string>
+  <string name="startup_failed_notification_text">Vous devrez peut-être réinstaller NoConnect.</string>
+  <string name="startup_failed_activity_title">Échec de démarrage de NoConnect</string>
+  <string name="startup_failed_db_error">Pour une raison indéterminée, votre base de donnée NoConnect est corrompue et irrécupérable. Vos comptes, données et contacts sont perdus. Vous devez malheureusement réinstaller NoConnect et configurer un nouveau compte.</string>
+  <string name="startup_failed_service_error">NoConnect n\'a pas pu démarrer un module nécessaire. Réinstaller NoConnect résout généralement ce problème. Veuillez noter que vous perdrez votre compte et toutes les données associées puisque NoConnect n\'utilise pas de serveurs centralisés pour enregistrer les données.</string>
   <string name="expiry_warning">Ce logiciel est arrivé à expiration.\nVeuillez installer une version plus récente.</string>
   <!--Navigation Drawer-->
   <string name="nav_drawer_open_description">Ouvrir le panneau de navigation</string>
@@ -37,8 +37,8 @@
   <string name="transport_bt">Bluetooth</string>
   <string name="transport_lan">Wifi</string>
   <!--Notifications-->
-  <string name="ongoing_notification_title">Connecté à Briar</string>
-  <string name="ongoing_notification_text">Toucher pour ouvrir Briar.</string>
+  <string name="ongoing_notification_title">Connecté à NoConnect</string>
+  <string name="ongoing_notification_text">Toucher pour ouvrir NoConnect.</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">Nouveau message privé.</item>
     <item quantity="other">%d Nouveaux messages privés.</item>
@@ -93,7 +93,7 @@
   <string name="enter_invitation_code">Veuillez saisir le code d\'invitation de votre contact :</string>
   <string name="searching_format">Recherche de contacts avec le code d\'invitation %06d\u2026</string>
   <string name="connection_failed">Échec de connexion</string>
-  <string name="could_not_find_contact">Briar n\'a pas trouvé de contacts à proximité</string>
+  <string name="could_not_find_contact">NoConnect n\'a pas trouvé de contacts à proximité</string>
   <string name="try_again_button">Essayer à nouveau</string>
   <string name="connected_to_contact">Connecté au contact</string>
   <string name="calculating_confirmation_code">Calcul du code de confirmation\u2026</string>
@@ -114,7 +114,7 @@
   <string name="connection_aborted_remote">Votre contact a interrompu la connexion ! Il est possible que quelqu\'un tente d\'interférer avec celle-ci</string>
   <!--Introductions-->
   <string name="introduction_onboarding_title">Introduire vos contacts</string>
-  <string name="introduction_onboarding_text">Vous pouvez introduire vos contacts les uns les autres, ils n\'ont donc pas besoin de se rencontrer pour se connecter avec Briar.</string>
+  <string name="introduction_onboarding_text">Vous pouvez introduire vos contacts les uns les autres, ils n\'ont donc pas besoin de se rencontrer pour se connecter avec NoConnect.</string>
   <string name="introduction_activity_title">Sélectionner contact </string>
   <string name="introduction_message_title">Introduire des contacts</string>
   <string name="introduction_message_hint">Ajouter un message (optionnel)</string>
@@ -300,7 +300,7 @@
   <string name="password_changed">Le mot de passe a été changé.</string>
   <string name="panic_setting">Paramètres du bouton Panique</string>
   <string name="panic_setting_title">Bouton Panique</string>
-  <string name="panic_setting_hint">Configurer Briar pour l\'utilisation de l\'application du bouton Panique</string>
+  <string name="panic_setting_hint">Configurer NoConnect pour l\'utilisation de l\'application du bouton Panique</string>
   <string name="panic_app_setting_title">Application bouton Panique</string>
   <string name="unknown_app">une application inconnue</string>
   <string name="panic_app_setting_summary">Aucune application définie</string>
@@ -308,10 +308,10 @@
   <string name="dialog_title_connect_panic_app">Confirmer l\'application Panique</string>
   <string name="dialog_message_connect_panic_app">Êtes-vous sûr de vouloir autoriser %1$s à déclencher les actions destructives du bouton Panique ?</string>
   <string name="lock_setting_title">Se déconnecter</string>
-  <string name="lock_setting_summary">Se déconnecter de Briar lorsque le bouton Panique est pressé</string>
+  <string name="lock_setting_summary">Se déconnecter de NoConnect lorsque le bouton Panique est pressé</string>
   <string name="purge_setting_title">Supprimer le compte</string>
   <string name="purge_setting_summary">Supprimer votre compte lorsqu\'un bouton Panique est pressé. Attention : ceci supprimera définitivement vos identités, contacts et messages.</string>
-  <string name="uninstall_setting_title">Désinstaller Briar</string>
+  <string name="uninstall_setting_title">Désinstaller NoConnect</string>
   <string name="uninstall_setting_summary">Ceci nécessite une confirmation manuelle en cas d\'événement de panique</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">Notifications</string>
@@ -337,10 +337,10 @@
   <string name="link_warning_text">Ceci pourrait être utilisé pour vous identifier. Évaluez la confiance que vous avez en la personne qui vous a envoyé ce lien et envisagez de l\'ouvrir avec Orfox.</string>
   <string name="link_warning_open_link">Ouvrir le lien</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">Rapport de plantage Briar</string>
-  <string name="briar_crashed">Désolé, Briar a planté.</string>
+  <string name="crash_report_title">Rapport de plantage NoConnect</string>
+  <string name="nc_crashed">Désolé, NoConnect a planté.</string>
   <string name="not_your_fault">Vous n\'y êtes pour rien.</string>
-  <string name="please_send_report">Aidez-nous à améliorer Briar en nous envoyant un rapport de plantage.</string>
+  <string name="please_send_report">Aidez-nous à améliorer NoConnect en nous envoyant un rapport de plantage.</string>
   <string name="report_is_encrypted">Nous promettons que le rapport est chiffré et envoyé en toute sécurité. </string>
   <string name="feedback_title">Commentaires</string>
   <string name="describe_crash">Décrivez ce qui s\'est produit (optionnel)</string>
@@ -351,10 +351,10 @@
   <string name="could_not_load_report_data">Impossible de charger les données du rapport.</string>
   <string name="send_report">Envoyer le rapport</string>
   <string name="close">Fermer</string>
-  <string name="dev_report_saved">Rapport enregistré. Il sera envoyé lors de votre prochaine connexion à Briar.</string>
+  <string name="dev_report_saved">Rapport enregistré. Il sera envoyé lors de votre prochaine connexion à NoConnect.</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">Déconnexion de Briar ...</string>
+  <string name="progress_title_logout">Déconnexion de NoConnect ...</string>
   <!--Screen Filters & Tapjacking-->
   <string name="screen_filter_title">Superposition d\'écran détectée</string>
-  <string name="screen_filter_body">Une autre app s\'affiche par dessus Briar. Pour protéger votre sécurité, Briar ne répond pas au toucher lorsqu\'une autre app s\'affiche par dessus.\n\nEssayer de fermer les applications suivantes lorsque vous utilisez Briar :\n\n%1$s</string>
+  <string name="screen_filter_body">Une autre app s\'affiche par dessus NoConnect. Pour protéger votre sécurité, NoConnect ne répond pas au toucher lorsqu\'une autre app s\'affiche par dessus.\n\nEssayer de fermer les applications suivantes lorsque vous utilisez NoConnect :\n\n%1$s</string>
 </resources>

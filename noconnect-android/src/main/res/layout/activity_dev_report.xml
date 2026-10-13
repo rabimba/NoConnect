@@ -65,7 +65,7 @@
 
 			<Button
 				android:id="@+id/chevron"
-				style="@style/BriarButtonFlat.Positive"
+				style="@style/NoConnectButtonFlat.Positive"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_alignParentRight="true"
@@ -124,8 +124,8 @@
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/margin_large"
 			android:gravity="center"
-			android:text="@string/briar_crashed"
-			android:textColor="@color/briar_text_secondary"
+			android:text="@string/nc_crashed"
+			android:textColor="@color/nc_text_secondary"
 			android:textSize="@dimen/text_size_large"/>
 
 		<TextView
@@ -136,7 +136,7 @@
 			android:layout_marginTop="@dimen/margin_large"
 			android:gravity="center"
 			android:text="@string/not_your_fault"
-			android:textColor="@color/briar_text_secondary"
+			android:textColor="@color/nc_text_secondary"
 			android:textSize="@dimen/text_size_large"/>
 
 		<TextView
@@ -147,7 +147,7 @@
 			android:layout_marginTop="@dimen/margin_large"
 			android:gravity="center"
 			android:text="@string/please_send_report"
-			android:textColor="@color/briar_text_secondary"
+			android:textColor="@color/nc_text_secondary"
 			android:textSize="@dimen/text_size_large"/>
 
 		<TextView
@@ -159,12 +159,12 @@
 			android:layout_marginTop="@dimen/margin_large"
 			android:gravity="center"
 			android:text="@string/report_is_encrypted"
-			android:textColor="@color/briar_text_secondary"
+			android:textColor="@color/nc_text_secondary"
 			android:textSize="@dimen/text_size_large"/>
 
 		<Button
 			android:id="@+id/declineButton"
-			style="@style/BriarButtonFlat.Negative"
+			style="@style/NoConnectButtonFlat.Negative"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignParentLeft="true"
@@ -173,7 +173,7 @@
 
 		<Button
 			android:id="@+id/acceptButton"
-			style="@style/BriarButtonFlat.Positive"
+			style="@style/NoConnectButtonFlat.Positive"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignParentRight="true"

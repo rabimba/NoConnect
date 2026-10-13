@@ -17,7 +17,7 @@ import org.chagolchana.chagol.api.db.DbException;
 import org.chagolchana.chagol.api.lifecycle.IoExecutor;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.api.feed.FeedManager;
 
 import java.io.IOException;
@@ -33,7 +33,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static java.util.logging.Level.WARNING;
 
-public class RssFeedImportActivity extends BriarActivity {
+public class RssFeedImportActivity extends NoConnectActivity {
 
 	private static final Logger LOG =
 			Logger.getLogger(RssFeedImportActivity.class.getName());
@@ -161,7 +161,7 @@ public class RssFeedImportActivity extends BriarActivity {
 				// show error dialog
 				AlertDialog.Builder builder =
 						new AlertDialog.Builder(RssFeedImportActivity.this,
-								R.style.BriarDialogTheme);
+								R.style.NoConnectDialogTheme);
 				builder.setMessage(R.string.blogs_rss_feeds_import_error);
 				builder.setNegativeButton(R.string.cancel, null);
 				builder.setPositiveButton(R.string.try_again_button,

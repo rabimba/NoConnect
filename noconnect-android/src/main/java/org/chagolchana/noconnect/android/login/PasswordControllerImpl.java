@@ -29,10 +29,10 @@ public class PasswordControllerImpl extends ConfigControllerImpl
 	protected final CryptoComponent crypto;
 
 	@Inject
-	PasswordControllerImpl(SharedPreferences briarPrefs,
+	PasswordControllerImpl(SharedPreferences noConnectPrefs,
 			DatabaseConfig databaseConfig,
 			@CryptoExecutor Executor cryptoExecutor, CryptoComponent crypto) {
-		super(briarPrefs, databaseConfig);
+		super(noConnectPrefs, databaseConfig);
 		this.cryptoExecutor = cryptoExecutor;
 		this.crypto = crypto;
 	}

@@ -6,12 +6,12 @@ import android.os.Bundle;
 import org.chagolchana.chagol.api.contact.ContactId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.fragment.BaseFragment.BaseFragmentListener;
 
 import static org.chagolchana.noconnect.android.contact.ConversationActivity.CONTACT_ID;
 
-public class IntroductionActivity extends BriarActivity
+public class IntroductionActivity extends NoConnectActivity
 		implements BaseFragmentListener {
 
 	@Override

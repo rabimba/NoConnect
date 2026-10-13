@@ -10,13 +10,13 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.privategroup.list.GroupViewHolder.OnGroupRemoveClickListener;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 
 import static android.support.v7.util.SortedList.INVALID_POSITION;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-class GroupListAdapter extends BriarAdapter<GroupItem, GroupViewHolder> {
+class GroupListAdapter extends NoConnectAdapter<GroupItem, GroupViewHolder> {
 
 	private final OnGroupRemoveClickListener listener;
 

@@ -10,7 +10,7 @@
 
 	<de.hdodenhof.circleimageview.CircleImageView
 		android:id="@+id/avatarView"
-		style="@style/BriarAvatar"
+		style="@style/NoConnectAvatar"
 		android:layout_width="@dimen/listitem_picture_size_small"
 		android:layout_height="@dimen/listitem_picture_size_small"
 		android:layout_gravity="center_vertical"
@@ -27,7 +27,7 @@
 		android:layout_marginStart="@dimen/margin_medium"
 		android:layout_weight="1"
 		android:maxLines="2"
-		android:textColor="@color/briar_text_primary"
+		android:textColor="@color/nc_text_primary"
 		android:textSize="@dimen/text_size_medium"
 		tools:text="This is a name of a contact"/>
 

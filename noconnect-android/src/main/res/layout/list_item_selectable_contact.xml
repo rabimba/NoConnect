@@ -14,7 +14,7 @@
 
 		<de.hdodenhof.circleimageview.CircleImageView
 			android:id="@+id/avatarView"
-			style="@style/BriarAvatar"
+			style="@style/NoConnectAvatar"
 			android:layout_width="@dimen/listitem_selectable_picture_size"
 			android:layout_height="@dimen/listitem_selectable_picture_size"
 			android:layout_alignParentLeft="true"
@@ -38,7 +38,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:maxLines="2"
-				android:textColor="@color/briar_text_primary"
+				android:textColor="@color/nc_text_primary"
 				android:textSize="@dimen/text_size_large"
 				tools:text="This is a name of a contact"/>
 
@@ -48,7 +48,7 @@
 				android:layout_height="wrap_content"
 				android:maxLines="2"
 				android:text="@string/forum_invitation_already_sharing"
-				android:textColor="@color/briar_text_tertiary"
+				android:textColor="@color/nc_text_tertiary"
 				android:textSize="@dimen/text_size_small"
 				tools:visibility="visible"/>
 

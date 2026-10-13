@@ -39,7 +39,7 @@ import static android.net.ConnectivityManager.TYPE_WIFI;
 import static android.net.wifi.WifiManager.WIFI_STATE_ENABLED;
 import static org.chagolchana.chagol.util.PrivacyUtils.scrubMacAddress;
 
-public class BriarReportPrimer implements ReportPrimer {
+public class NoConnectReportPrimer implements ReportPrimer {
 
 	@Override
 	public void primeReport(@NonNull Context ctx,

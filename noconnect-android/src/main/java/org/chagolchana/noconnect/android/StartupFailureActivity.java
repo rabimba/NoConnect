@@ -27,8 +27,8 @@ public class StartupFailureActivity extends BaseActivity {
 	}
 
 	private void handleIntent(Intent i) {
-		StartResult result = (StartResult) i.getSerializableExtra("briar.START_RESULT");
-		int notificationId = i.getIntExtra("briar.FAILURE_NOTIFICATION_ID", -1);
+		StartResult result = (StartResult) i.getSerializableExtra("noconnect.START_RESULT");
+		int notificationId = i.getIntExtra("noconnect.FAILURE_NOTIFICATION_ID", -1);
 
 		// cancel notification
 		if (notificationId > -1) {

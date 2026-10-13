@@ -18,7 +18,7 @@ import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.view.TextInputView;
 import org.chagolchana.noconnect.android.view.TextInputView.TextInputListener;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
@@ -36,7 +36,7 @@ import static android.view.View.VISIBLE;
 import static java.util.logging.Level.WARNING;
 import static org.chagolchana.noconnect.api.blog.BlogConstants.MAX_BLOG_POST_BODY_LENGTH;
 
-public class WriteBlogPostActivity extends BriarActivity
+public class WriteBlogPostActivity extends NoConnectActivity
 		implements OnEditorActionListener, TextInputListener {
 
 	private static final Logger LOG =

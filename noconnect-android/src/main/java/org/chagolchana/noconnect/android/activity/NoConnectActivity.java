@@ -11,7 +11,7 @@ import android.view.Gravity;
 import android.view.Window;
 
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.controller.BriarController;
+import org.chagolchana.noconnect.android.controller.NoConnectController;
 import org.chagolchana.noconnect.android.controller.DbController;
 import org.chagolchana.noconnect.android.controller.handler.ResultHandler;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
@@ -30,17 +30,17 @@ import static android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION;
 import static org.chagolchana.noconnect.android.activity.RequestCodes.REQUEST_PASSWORD;
 
 @SuppressLint("Registered")
-public abstract class BriarActivity extends BaseActivity {
+public abstract class NoConnectActivity extends BaseActivity {
 
-	public static final String KEY_STARTUP_FAILED = "briar.STARTUP_FAILED";
-	public static final String GROUP_ID = "briar.GROUP_ID";
-	public static final String GROUP_NAME = "briar.GROUP_NAME";
+	public static final String KEY_STARTUP_FAILED = "noconnect.STARTUP_FAILED";
+	public static final String GROUP_ID = "noconnect.GROUP_ID";
+	public static final String GROUP_NAME = "noconnect.GROUP_NAME";
 
 	private static final Logger LOG =
-			Logger.getLogger(BriarActivity.class.getName());
+			Logger.getLogger(NoConnectActivity.class.getName());
 
 	@Inject
-	BriarController briarController;
+	NoConnectController noConnectController;
 
 	@Deprecated
 	@Inject
@@ -50,7 +50,7 @@ public abstract class BriarActivity extends BaseActivity {
 	protected void onActivityResult(int request, int result, Intent data) {
 		super.onActivityResult(request, result, data);
 		if (request == REQUEST_PASSWORD) {
-			if (result == RESULT_OK) briarController.startAndBindService();
+			if (result == RESULT_OK) noConnectController.startAndBindService();
 			else supportFinishAfterTransition();
 		}
 	}
@@ -58,7 +58,7 @@ public abstract class BriarActivity extends BaseActivity {
 	@Override
 	public void onStart() {
 		super.onStart();
-		if (!briarController.hasEncryptionKey() && !isFinishing()) {
+		if (!noConnectController.hasEncryptionKey() && !isFinishing()) {
 			Intent i = new Intent(this, PasswordActivity.class);
 			startActivityForResult(i, REQUEST_PASSWORD);
 		}
@@ -116,10 +116,10 @@ public abstract class BriarActivity extends BaseActivity {
 	}
 
 	protected void signOut(final boolean removeFromRecentApps) {
-		if (briarController.hasEncryptionKey()) {
+		if (noConnectController.hasEncryptionKey()) {
 			// Don't use UiResultHandler because we want the result even if
 			// this activity has been destroyed
-			briarController.signOut(new ResultHandler<Void>() {
+			noConnectController.signOut(new ResultHandler<Void>() {
 				@Override
 				public void onResult(Void result) {
 					runOnUiThread(new Runnable() {

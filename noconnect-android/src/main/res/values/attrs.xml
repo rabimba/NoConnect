@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<declare-styleable name="BriarRecyclerView">
+	<declare-styleable name="NoConnectRecyclerView">
 		<attr name="scrollToEnd" format="boolean" />
 		<attr name="emptyText" format="string" />
 	</declare-styleable>

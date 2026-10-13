@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 import org.chagolchana.noconnect.api.sharing.InvitationItem;
 
 public abstract class InvitationAdapter<I extends InvitationItem, VH extends InvitationViewHolder<I>>
-		extends BriarAdapter<I, VH> {
+		extends NoConnectAdapter<I, VH> {
 
 	private final InvitationClickListener<I> listener;
 

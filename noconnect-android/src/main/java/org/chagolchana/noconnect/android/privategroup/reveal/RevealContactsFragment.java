@@ -16,7 +16,7 @@ import java.util.Collection;
 
 import javax.inject.Inject;
 
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault

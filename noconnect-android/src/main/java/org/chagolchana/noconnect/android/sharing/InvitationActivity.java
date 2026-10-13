@@ -10,11 +10,11 @@ import org.chagolchana.chagol.api.db.DbException;
 import org.chagolchana.chagol.api.nullsafety.MethodsNotNullByDefault;
 import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.controller.handler.UiExceptionHandler;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.sharing.InvitationController.InvitationListener;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.sharing.InvitationItem;
 
 import java.util.Collection;
@@ -28,14 +28,14 @@ import static org.chagolchana.noconnect.android.sharing.InvitationAdapter.Invita
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
 public abstract class InvitationActivity<I extends InvitationItem>
-		extends BriarActivity
+		extends NoConnectActivity
 		implements InvitationListener, InvitationClickListener<I> {
 
 	protected static final Logger LOG =
 			Logger.getLogger(InvitationActivity.class.getName());
 
 	private InvitationAdapter<I, ?> adapter;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 
 	@Override
 	public void onCreate(@Nullable Bundle state) {
@@ -44,7 +44,7 @@ public abstract class InvitationActivity<I extends InvitationItem>
 		setContentView(R.layout.list);
 
 		adapter = getAdapter(this, this);
-		list = (BriarRecyclerView) findViewById(R.id.list);
+		list = (NoConnectRecyclerView) findViewById(R.id.list);
 		if (list != null) {
 			list.setLayoutManager(new LinearLayoutManager(this));
 			list.setAdapter(adapter);

@@ -15,13 +15,13 @@ public class ConfigControllerImpl implements ConfigController {
 
 	private static final String PREF_DB_KEY = "key";
 
-	private final SharedPreferences briarPrefs;
+	private final SharedPreferences noConnectPrefs;
 	protected final DatabaseConfig databaseConfig;
 
 	@Inject
-	public ConfigControllerImpl(SharedPreferences briarPrefs,
+	public ConfigControllerImpl(SharedPreferences noConnectPrefs,
 			DatabaseConfig databaseConfig) {
-		this.briarPrefs = briarPrefs;
+		this.noConnectPrefs = noConnectPrefs;
 		this.databaseConfig = databaseConfig;
 
 	}
@@ -29,19 +29,19 @@ public class ConfigControllerImpl implements ConfigController {
 	@Override
 	@Nullable
 	public String getEncryptedDatabaseKey() {
-		return briarPrefs.getString(PREF_DB_KEY, null);
+		return noConnectPrefs.getString(PREF_DB_KEY, null);
 	}
 
 	@Override
 	public void storeEncryptedDatabaseKey(String hex) {
-		SharedPreferences.Editor editor = briarPrefs.edit();
+		SharedPreferences.Editor editor = noConnectPrefs.edit();
 		editor.putString(PREF_DB_KEY, hex);
 		editor.apply();
 	}
 
 	@Override
 	public void deleteAccount(Context ctx) {
-		SharedPreferences.Editor editor = briarPrefs.edit();
+		SharedPreferences.Editor editor = noConnectPrefs.edit();
 		editor.clear();
 		editor.apply();
 		AndroidUtils.deleteAppData(ctx);

@@ -45,7 +45,7 @@
 				android:contentDescription="@string/face_to_face"/>
 
 			<TextView
-				style="@style/BriarTextBody"
+				style="@style/NoConnectTextBody"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="@dimen/margin_medium"
@@ -55,7 +55,7 @@
 
 		<Button
 			android:id="@+id/continueButton"
-			style="@style/BriarButton.Default"
+			style="@style/NoConnectButton.Default"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_horizontal"

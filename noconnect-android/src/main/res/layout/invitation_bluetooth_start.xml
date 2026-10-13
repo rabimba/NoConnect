@@ -16,7 +16,7 @@
 		android:paddingTop="@dimen/margin_activity_vertical">
 
 		<TextView
-			style="@style/BriarTextBody"
+			style="@style/NoConnectTextBody"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:text="@string/your_nickname"
@@ -41,7 +41,7 @@
 			android:src="@drawable/bluetooth"/>
 
 		<TextView
-			style="@style/BriarTextBody"
+			style="@style/NoConnectTextBody"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/margin_xlarge"
@@ -49,7 +49,7 @@
 
 		<Button
 			android:id="@+id/continueButton"
-			style="@style/BriarButton.Default"
+			style="@style/NoConnectButton.Default"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center_horizontal"

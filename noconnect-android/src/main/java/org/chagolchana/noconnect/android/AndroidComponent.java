@@ -1,8 +1,8 @@
 package org.chagolchana.noconnect.android;
 
-import org.chagolchana.chagol.BrambleAndroidModule;
-import org.chagolchana.chagol.BrambleCoreEagerSingletons;
-import org.chagolchana.chagol.BrambleCoreModule;
+import org.chagolchana.chagol.ChagolAndroidModule;
+import org.chagolchana.chagol.ChagolCoreEagerSingletons;
+import org.chagolchana.chagol.ChagolCoreModule;
 import org.chagolchana.chagol.api.contact.ContactExchangeTask;
 import org.chagolchana.chagol.api.contact.ContactManager;
 import org.chagolchana.chagol.api.crypto.CryptoComponent;
@@ -23,9 +23,9 @@ import org.chagolchana.chagol.api.plugin.PluginManager;
 import org.chagolchana.chagol.api.settings.SettingsManager;
 import org.chagolchana.chagol.api.system.AndroidExecutor;
 import org.chagolchana.chagol.api.system.Clock;
-import org.chagolchana.noconnect.BriarCoreEagerSingletons;
-import org.chagolchana.noconnect.BriarCoreModule;
-import org.chagolchana.noconnect.android.reporting.BriarReportSender;
+import org.chagolchana.noconnect.NoConnectCoreEagerSingletons;
+import org.chagolchana.noconnect.NoConnectCoreModule;
+import org.chagolchana.noconnect.android.reporting.NoConnectReportSender;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
 import org.chagolchana.noconnect.api.android.ReferenceManager;
 import org.chagolchana.noconnect.api.android.ScreenFilterMonitor;
@@ -56,13 +56,13 @@ import dagger.Component;
 
 @Singleton
 @Component(modules = {
-		BrambleCoreModule.class,
-		BriarCoreModule.class,
-		BrambleAndroidModule.class,
+		ChagolCoreModule.class,
+		NoConnectCoreModule.class,
+		ChagolAndroidModule.class,
 		AppModule.class
 })
 public interface AndroidComponent
-		extends BrambleCoreEagerSingletons, BriarCoreEagerSingletons {
+		extends ChagolCoreEagerSingletons, NoConnectCoreEagerSingletons {
 
 	// Exposed objects
 	@CryptoExecutor
@@ -146,9 +146,9 @@ public interface AndroidComponent
 	@IoExecutor
 	Executor ioExecutor();
 
-	void inject(BriarService briarService);
+	void inject(NoConnectService noConnectService);
 
-	void inject(BriarReportSender briarReportSender);
+	void inject(NoConnectReportSender noConnectReportSender);
 
 	void inject(EmojiProvider emojiProvider);
 

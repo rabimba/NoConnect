@@ -27,7 +27,7 @@ import org.chagolchana.noconnect.android.privategroup.creation.CreateGroupActivi
 import org.chagolchana.noconnect.android.privategroup.invitation.GroupInvitationActivity;
 import org.chagolchana.noconnect.android.privategroup.list.GroupListController.GroupListListener;
 import org.chagolchana.noconnect.android.privategroup.list.GroupViewHolder.OnGroupRemoveClickListener;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.privategroup.GroupMessageHeader;
 
 import java.util.Collection;
@@ -53,7 +53,7 @@ public class GroupListFragment extends BaseFragment implements
 	@Inject
 	GroupListController controller;
 
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private GroupListAdapter adapter;
 	private Snackbar snackbar;
 
@@ -68,16 +68,16 @@ public class GroupListFragment extends BaseFragment implements
 		View v = inflater.inflate(R.layout.list, container, false);
 
 		adapter = new GroupListAdapter(getContext(), this);
-		list = (BriarRecyclerView) v.findViewById(R.id.list);
+		list = (NoConnectRecyclerView) v.findViewById(R.id.list);
 		list.setEmptyText(R.string.groups_list_empty);
 		list.setLayoutManager(new LinearLayoutManager(getContext()));
 		list.setAdapter(adapter);
 
 		snackbar = Snackbar.make(list, "", LENGTH_INDEFINITE);
-		snackbar.getView().setBackgroundResource(R.color.briar_primary);
+		snackbar.getView().setBackgroundResource(R.color.nc_primary);
 		snackbar.setAction(R.string.show, this);
 		snackbar.setActionTextColor(ContextCompat
-				.getColor(getContext(), R.color.briar_button_positive));
+				.getColor(getContext(), R.color.nc_button_positive));
 
 		return v;
 	}

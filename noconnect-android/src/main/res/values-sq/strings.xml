@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Setup-->
-  <string name="setup_title">Rregullimi i Briar-it</string>
-  <string name="setup_explanation">Llogaria juaj Briar depozitohet e fshehtëzuar në pajisjen tuaj, jo në re. Nëse e çinstaloni Briar-in ose harroni fjalëkalimin tuaj, nuk ka rrugë për ta rimarrë llogarinë tuaj dhe të dhënat tuaja.</string>
+  <string name="setup_title">Rregullimi i NoConnect-it</string>
+  <string name="setup_explanation">Llogaria juaj NoConnect depozitohet e fshehtëzuar në pajisjen tuaj, jo në re. Nëse e çinstaloni NoConnect-in ose harroni fjalëkalimin tuaj, nuk ka rrugë për ta rimarrë llogarinë tuaj dhe të dhënat tuaja.</string>
   <string name="choose_nickname">Zgjidhni nofkën tuaj</string>
   <string name="choose_password">Zgjidhni fjalëkalimin tuaj</string>
   <string name="confirm_password">Ripohoni fjalëkalimin tuaj</string>
@@ -16,12 +16,12 @@
   <string name="sign_in_button">Hyni</string>
   <string name="forgotten_password">Kam harruar fjalëkalimin tim</string>
   <string name="dialog_title_lost_password">U humb Fjalëkalimi</string>
-  <string name="dialog_message_lost_password">Llogaria juaj Briar depozitohet e fshehtëzuar në pajisjen tuaj, jo në re, ndaj s’mund ta ricaktojmë fjalëkalimin tuaj. Do të donit ta fshini llogarinë tuaj dhe t’ia filloni nga e para?\n\nKujdes: Identitetet, kontaktet dhe mesazhet tuaja do të humbin përgjithnjë.</string>
-  <string name="startup_failed_notification_title">Briar-i s’u nis dot</string>
-  <string name="startup_failed_notification_text">Mund të keni nevojë të ri-instaloni Briar-in.</string>
-  <string name="startup_failed_activity_title">Dështim Nisjeje i Briar-it</string>
-  <string name="startup_failed_db_error">Për ndonjë arsye, baza e të dhënave e Briar-it tuaj është aq e dëmtuar, sa s’mund të ndreqet. Llogaria juaj, të dhënat tuaja dhe krejt lidhjet tuaja me kontaktet kanë humbur. Mjerisht lypset të ri-instaloni Briar-in dhe të rregulloni një llogari të re.</string>
-  <string name="startup_failed_service_error">Briar-i s’arriti të nisë një shtojcë të domosdoshme. Ri-instalimi i Briar-it zakonisht e zgjidh këtë problem. Por, ju lutemi, kini parasysh se me të do të humbni llogarinë tuaj dhe krejt të dhënat e lidhura me të, ngaqë Briar nuk përdor shërbyes qendrorë për të depozituar në ta të dhënat tuaja.</string>
+  <string name="dialog_message_lost_password">Llogaria juaj NoConnect depozitohet e fshehtëzuar në pajisjen tuaj, jo në re, ndaj s’mund ta ricaktojmë fjalëkalimin tuaj. Do të donit ta fshini llogarinë tuaj dhe t’ia filloni nga e para?\n\nKujdes: Identitetet, kontaktet dhe mesazhet tuaja do të humbin përgjithnjë.</string>
+  <string name="startup_failed_notification_title">NoConnect-i s’u nis dot</string>
+  <string name="startup_failed_notification_text">Mund të keni nevojë të ri-instaloni NoConnect-in.</string>
+  <string name="startup_failed_activity_title">Dështim Nisjeje i NoConnect-it</string>
+  <string name="startup_failed_db_error">Për ndonjë arsye, baza e të dhënave e NoConnect-it tuaj është aq e dëmtuar, sa s’mund të ndreqet. Llogaria juaj, të dhënat tuaja dhe krejt lidhjet tuaja me kontaktet kanë humbur. Mjerisht lypset të ri-instaloni NoConnect-in dhe të rregulloni një llogari të re.</string>
+  <string name="startup_failed_service_error">NoConnect-i s’arriti të nisë një shtojcë të domosdoshme. Ri-instalimi i NoConnect-it zakonisht e zgjidh këtë problem. Por, ju lutemi, kini parasysh se me të do të humbni llogarinë tuaj dhe krejt të dhënat e lidhura me të, ngaqë NoConnect nuk përdor shërbyes qendrorë për të depozituar në ta të dhënat tuaja.</string>
   <string name="expiry_warning">Ky software ka skaduar.\nJu lutemi, instaloni një version më të ri.</string>
   <!--Navigation Drawer-->
   <string name="nav_drawer_open_description">Hap sirtarin e lëvizjeve</string>
@@ -37,8 +37,8 @@
   <string name="transport_bt">Bluetooth</string>
   <string name="transport_lan">Wi-Fi</string>
   <!--Notifications-->
-  <string name="ongoing_notification_title">Hytë në Briar</string>
-  <string name="ongoing_notification_text">Prekeni, që të hapet Briar-i</string>
+  <string name="ongoing_notification_title">Hytë në NoConnect</string>
+  <string name="ongoing_notification_text">Prekeni, që të hapet NoConnect-i</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">Mesazh i ri privat.</item>
     <item quantity="other">%d mesazhe të reja private.</item>
@@ -93,7 +93,7 @@
   <string name="enter_invitation_code">Ju lutemi, jepni kodin e ftesës së kontaktit tuaj:</string>
   <string name="searching_format">Po kërkohet për kontakt me kod ftese %06d\u2026</string>
   <string name="connection_failed">Lidhja dështoi</string>
-  <string name="could_not_find_contact">Briar-i s’e gjeti dot kontaktin tuaj këtej pari</string>
+  <string name="could_not_find_contact">NoConnect-i s’e gjeti dot kontaktin tuaj këtej pari</string>
   <string name="try_again_button">Riprovoni</string>
   <string name="connected_to_contact">U lidh me kontaktin</string>
   <string name="calculating_confirmation_code">Po përllogaritet kodi i ripohimit\u2026</string>
@@ -114,7 +114,7 @@
   <string name="connection_aborted_remote">Lidhje e ndërprerë nga kontakti juaj! Kjo mund të jetë shenjë se dikush po përpiqet të fusë hundët në lidhjen tuaj</string>
   <!--Introductions-->
   <string name="introduction_onboarding_title">Prezantoni kontaktet tuaja</string>
-  <string name="introduction_onboarding_text">Kontaktet tuaja mund t’ia prezantoni njëri-tjetrit, që kështu të mos u duhet të takohen realisht për të mundur të lidhen në Briar.</string>
+  <string name="introduction_onboarding_text">Kontaktet tuaja mund t’ia prezantoni njëri-tjetrit, që kështu të mos u duhet të takohen realisht për të mundur të lidhen në NoConnect.</string>
   <string name="introduction_activity_title">Përzgjidhni Kontakt</string>
   <string name="introduction_message_title">Prezantoni Kontakte</string>
   <string name="introduction_button">Bëje prezantimin</string>
@@ -296,7 +296,7 @@
   <string name="password_changed">Fjalëkalimi u ndryshua.</string>
   <string name="panic_setting">Rregullimi i butonit të panikut</string>
   <string name="panic_setting_title">Buton paniku</string>
-  <string name="panic_setting_hint">Formësoni si do të reagojë Briar-i kur përdorni aplikacion butoni paniku</string>
+  <string name="panic_setting_hint">Formësoni si do të reagojë NoConnect-i kur përdorni aplikacion butoni paniku</string>
   <string name="panic_app_setting_title">Aplikacion Butoni Paniku</string>
   <string name="unknown_app">aplikacion i panjohur</string>
   <string name="panic_app_setting_summary">S’është rregulluar ndonjë aplikacion</string>
@@ -304,10 +304,10 @@
   <string name="dialog_title_connect_panic_app">Ripohoni Aplikacion Paniku</string>
   <string name="dialog_message_connect_panic_app">Jeni i sigurt se doni të lejohet %1$s të prodhojë veprime shkatërruese butoni paniku?</string>
   <string name="lock_setting_title">Dilni</string>
-  <string name="lock_setting_summary">Dil nga Briar-i nëse shtypet një buton paniku</string>
+  <string name="lock_setting_summary">Dil nga NoConnect-i nëse shtypet një buton paniku</string>
   <string name="purge_setting_title">Fshi Llogarinë</string>
-  <string name="purge_setting_summary">Fshijeni llogarinë tuaj Briar, nëse shtypet një buton paniku. Kujdes: Kjo do të shkaktojë fshirjen e identiteteve, kontakteve dhe mesazheve tuaj</string>
-  <string name="uninstall_setting_title">Çinstalo Briar-in</string>
+  <string name="purge_setting_summary">Fshijeni llogarinë tuaj NoConnect, nëse shtypet një buton paniku. Kujdes: Kjo do të shkaktojë fshirjen e identiteteve, kontakteve dhe mesazheve tuaj</string>
+  <string name="uninstall_setting_title">Çinstalo NoConnect-in</string>
   <string name="uninstall_setting_summary">Kjo lyp ripohim dorazi, në rast akti paniku</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">Njoftime</string>
@@ -325,10 +325,10 @@
   <string name="link_warning_text">Kjo mund të përdoret për t’ju identifikuar. Mendohuni nëse e besoni apo jo personin që ju dërgoi këtë lidhje dhe shihni mundësinë e hapjes së sja me Orfox</string>
   <string name="link_warning_open_link">Hape Lidhjen</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">Njoftim Vithisjesh Briar</string>
-  <string name="briar_crashed">Na ndjeni, Briar-i u vithis.</string>
+  <string name="crash_report_title">Njoftim Vithisjesh NoConnect</string>
+  <string name="nc_crashed">Na ndjeni, NoConnect-i u vithis.</string>
   <string name="not_your_fault">S’është faji juaj.</string>
-  <string name="please_send_report">Ju lutemi, na ndihmoni të ndërtojmë një Briar më të mirë, duke na dërguar një njoftim vithisjeje.</string>
+  <string name="please_send_report">Ju lutemi, na ndihmoni të ndërtojmë një NoConnect më të mirë, duke na dërguar një njoftim vithisjeje.</string>
   <string name="report_is_encrypted">Premtojmë që njoftimi fshehtëzohet dhe dërgohet në mënyrë të sigurt.</string>
   <string name="feedback_title">Përshtypje</string>
   <string name="describe_crash">Përshkruani se ç’ndodhi (në daçi)</string>
@@ -339,8 +339,8 @@
   <string name="could_not_load_report_data">S’u ngarkuan dot të dhëna njoftimi.</string>
   <string name="send_report">Dërgoje njoftimin</string>
   <string name="close">Mbylle</string>
-  <string name="dev_report_saved">Njoftimi u ruajt. Do të dërgohet herën tjetër që do të hyni në Briar.</string>
+  <string name="dev_report_saved">Njoftimi u ruajt. Do të dërgohet herën tjetër që do të hyni në NoConnect.</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">Po dilet nga Briar-i…</string>
+  <string name="progress_title_logout">Po dilet nga NoConnect-i…</string>
   <!--Screen Filters & Tapjacking-->
 </resources>

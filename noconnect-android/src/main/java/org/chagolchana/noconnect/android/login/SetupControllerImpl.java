@@ -21,11 +21,11 @@ public class SetupControllerImpl extends PasswordControllerImpl
 	private final PasswordStrengthEstimator strengthEstimator;
 
 	@Inject
-	SetupControllerImpl(SharedPreferences briarPrefs,
+	SetupControllerImpl(SharedPreferences noConnectPrefs,
 			DatabaseConfig databaseConfig,
 			@CryptoExecutor Executor cryptoExecutor, CryptoComponent crypto,
 			PasswordStrengthEstimator strengthEstimator) {
-		super(briarPrefs, databaseConfig, cryptoExecutor, crypto);
+		super(noConnectPrefs, databaseConfig, cryptoExecutor, crypto);
 		this.strengthEstimator = strengthEstimator;
 	}
 

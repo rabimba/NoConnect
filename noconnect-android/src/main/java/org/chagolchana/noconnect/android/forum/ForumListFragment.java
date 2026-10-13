@@ -26,7 +26,7 @@ import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
 import org.chagolchana.noconnect.android.fragment.BaseEventFragment;
 import org.chagolchana.noconnect.android.sharing.ForumInvitationActivity;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
 import org.chagolchana.noconnect.api.client.MessageTracker.GroupCount;
 import org.chagolchana.noconnect.api.forum.Forum;
@@ -56,7 +56,7 @@ public class ForumListFragment extends BaseEventFragment implements
 	public final static String TAG = ForumListFragment.class.getName();
 	private final static Logger LOG = Logger.getLogger(TAG);
 
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private ForumListAdapter adapter;
 	private Snackbar snackbar;
 
@@ -92,16 +92,16 @@ public class ForumListFragment extends BaseEventFragment implements
 
 		adapter = new ForumListAdapter(getActivity());
 
-		list = (BriarRecyclerView) contentView.findViewById(R.id.forumList);
+		list = (NoConnectRecyclerView) contentView.findViewById(R.id.forumList);
 		list.setLayoutManager(new LinearLayoutManager(getActivity()));
 		list.setAdapter(adapter);
 		list.setEmptyText(getString(R.string.no_forums));
 
 		snackbar = Snackbar.make(list, "", LENGTH_INDEFINITE);
-		snackbar.getView().setBackgroundResource(R.color.briar_primary);
+		snackbar.getView().setBackgroundResource(R.color.nc_primary);
 		snackbar.setAction(R.string.show, this);
 		snackbar.setActionTextColor(ContextCompat
-				.getColor(getContext(), R.color.briar_button_positive));
+				.getColor(getContext(), R.color.nc_button_positive));
 
 		return contentView;
 	}

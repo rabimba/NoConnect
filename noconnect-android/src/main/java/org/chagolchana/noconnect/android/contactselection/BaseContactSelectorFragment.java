@@ -18,14 +18,14 @@ import org.chagolchana.noconnect.android.contact.BaseContactListAdapter.OnContac
 import org.chagolchana.noconnect.android.contact.ContactItemViewHolder;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.annotation.Nullable;
 
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.contactselection.ContactSelectorActivity.CONTACTS;
 import static org.chagolchana.noconnect.android.contactselection.ContactSelectorActivity.getContactsFromIds;
 import static org.chagolchana.noconnect.android.contactselection.ContactSelectorActivity.getContactsFromIntegers;
@@ -36,7 +36,7 @@ public abstract class BaseContactSelectorFragment<I extends SelectableContactIte
 		extends BaseFragment
 		implements OnContactClickListener<I> {
 
-	protected BriarRecyclerView list;
+	protected NoConnectRecyclerView list;
 	protected A adapter;
 	protected Collection<ContactId> selectedContacts = new ArrayList<>();
 	protected ContactSelectorListener listener;
@@ -67,7 +67,7 @@ public abstract class BaseContactSelectorFragment<I extends SelectableContactIte
 
 		View contentView = inflater.inflate(R.layout.list, container, false);
 
-		list = (BriarRecyclerView) contentView.findViewById(R.id.list);
+		list = (NoConnectRecyclerView) contentView.findViewById(R.id.list);
 		list.setLayoutManager(new LinearLayoutManager(getActivity()));
 		list.setEmptyText(getString(R.string.no_contacts_selector));
 		adapter = getAdapter(getContext(), this);

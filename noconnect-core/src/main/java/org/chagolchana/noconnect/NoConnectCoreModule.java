@@ -1,7 +1,7 @@
 package org.chagolchana.noconnect;
 
 import org.chagolchana.noconnect.blog.BlogModule;
-import org.chagolchana.noconnect.client.BriarClientModule;
+import org.chagolchana.noconnect.client.NoConnectClientModule;
 import org.chagolchana.noconnect.feed.DnsModule;
 import org.chagolchana.noconnect.feed.FeedModule;
 import org.chagolchana.noconnect.forum.ForumModule;
@@ -15,7 +15,7 @@ import dagger.Module;
 
 @Module(includes = {
 		BlogModule.class,
-		BriarClientModule.class,
+		NoConnectClientModule.class,
 		FeedModule.class,
 		DnsModule.class,
 		ForumModule.class,
@@ -25,9 +25,9 @@ import dagger.Module;
 		PrivateGroupModule.class,
 		SharingModule.class
 })
-public class BriarCoreModule {
+public class NoConnectCoreModule {
 
-	public static void initEagerSingletons(BriarCoreEagerSingletons c) {
+	public static void initEagerSingletons(NoConnectCoreEagerSingletons c) {
 		c.inject(new BlogModule.EagerSingletons());
 		c.inject(new FeedModule.EagerSingletons());
 		c.inject(new ForumModule.EagerSingletons());

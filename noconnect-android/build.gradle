@@ -78,7 +78,7 @@ android {
 		versionCode 15
 		versionName "0.15"
 		applicationId 'org.chagolchana.noconnect.beta'
-		resValue "string", "app_package", "org.briarproject.briar.beta"
+		resValue "string", "app_package", "org.chagolchana.noconnect.beta"
 		buildConfigField "String", "GitHash", "\"${getGitHash()}\""
 	}
 	buildTypes {

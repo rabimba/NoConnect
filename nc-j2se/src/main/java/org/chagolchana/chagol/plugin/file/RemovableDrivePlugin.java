@@ -21,7 +21,7 @@ class RemovableDrivePlugin extends FilePlugin
 		implements RemovableDriveMonitor.Callback {
 
 	static final TransportId ID =
-			new TransportId("org.briarproject.bramble.file");
+			new TransportId("org.chagolchana.chagol.file");
 
 	private static final Logger LOG =
 			Logger.getLogger(RemovableDrivePlugin.class.getName());

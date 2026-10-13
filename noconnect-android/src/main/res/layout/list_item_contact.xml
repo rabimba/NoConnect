@@ -25,7 +25,7 @@
 
 			<de.hdodenhof.circleimageview.CircleImageView
 				android:id="@+id/avatarView"
-				style="@style/BriarAvatar"
+				style="@style/NoConnectAvatar"
 				android:layout_width="@dimen/listitem_picture_size"
 				android:layout_height="@dimen/listitem_picture_size"
 				android:layout_gravity="bottom|left"
@@ -39,7 +39,7 @@
 				android:background="@drawable/bubble"
 				android:gravity="center"
 				android:minWidth="@dimen/unread_bubble_size"
-				android:textColor="@color/briar_text_primary_inverse"
+				android:textColor="@color/nc_text_primary_inverse"
 				android:textSize="@dimen/unread_bubble_text_size"
 				android:textStyle="bold"
 				tools:text="123"/>
@@ -62,7 +62,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:maxLines="2"
-				android:textColor="@color/briar_text_primary"
+				android:textColor="@color/nc_text_primary"
 				android:textSize="@dimen/text_size_medium"
 				tools:text="This is a name of a contact"/>
 
@@ -70,7 +70,7 @@
 				android:id="@+id/dateView"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:textColor="@color/briar_text_secondary"
+				android:textColor="@color/nc_text_secondary"
 				android:textSize="@dimen/text_size_small"
 				tools:text="Dec 24"/>
 

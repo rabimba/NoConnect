@@ -18,7 +18,7 @@ import org.chagolchana.noconnect.android.contact.BaseContactListAdapter.OnContac
 import org.chagolchana.noconnect.android.contact.ContactListAdapter;
 import org.chagolchana.noconnect.android.contact.ContactListItem;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.client.MessageTracker.GroupCount;
 import org.chagolchana.noconnect.api.messaging.ConversationManager;
 
@@ -36,7 +36,7 @@ public class ContactChooserFragment extends BaseFragment {
 	public static final String TAG = ContactChooserFragment.class.getName();
 	private static final Logger LOG = Logger.getLogger(TAG);
 
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private ContactListAdapter adapter;
 	private ContactId contactId;
 
@@ -81,7 +81,7 @@ public class ContactChooserFragment extends BaseFragment {
 				};
 		adapter = new ContactListAdapter(getActivity(), onContactClickListener);
 
-		list = (BriarRecyclerView) contentView.findViewById(R.id.list);
+		list = (NoConnectRecyclerView) contentView.findViewById(R.id.list);
 		list.setLayoutManager(new LinearLayoutManager(getActivity()));
 		list.setAdapter(adapter);
 		list.setEmptyText(getString(R.string.no_contacts));

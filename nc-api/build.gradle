@@ -28,7 +28,7 @@ dependencyVerification {
 	]
 }
 
-// needed to make test output available to bramble-core and briar-core
+// needed to make test output available to nc-core and noconnect-core
 configurations {
 	testOutput.extendsFrom(testCompile)
 }

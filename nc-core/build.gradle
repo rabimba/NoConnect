@@ -26,7 +26,7 @@ dependencyVerification {
 	]
 }
 
-// needed to make test output available to bramble-j2se
+// needed to make test output available to nc-j2se
 configurations {
 	testOutput.extendsFrom(testCompile)
 }

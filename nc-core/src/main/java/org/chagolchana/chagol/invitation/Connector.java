@@ -35,7 +35,7 @@ abstract class Connector extends Thread {
 	private static final Logger LOG =
 			Logger.getLogger(Connector.class.getName());
 	private static final String LABEL_PUBLIC_KEY =
-			"org.briarproject.bramble.invitation.PUBLIC_KEY";
+			"org.chagolchana.chagol.invitation.PUBLIC_KEY";
 
 	protected final CryptoComponent crypto;
 	protected final BdfReaderFactory bdfReaderFactory;

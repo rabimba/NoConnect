@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 import static android.support.v7.util.SortedList.INVALID_POSITION;
 
-public abstract class BriarAdapter<T, V extends ViewHolder>
+public abstract class NoConnectAdapter<T, V extends ViewHolder>
 		extends Adapter<V> implements VersionedAdapter {
 
 	protected final Context ctx;
@@ -20,12 +20,12 @@ public abstract class BriarAdapter<T, V extends ViewHolder>
 
 	private volatile int revision = 0;
 
-	public BriarAdapter(Context ctx, Class<T> c) {
+	public NoConnectAdapter(Context ctx, Class<T> c) {
 		this.ctx = ctx;
 		this.items = new SortedList<>(c, new SortedList.Callback<T>() {
 			@Override
 			public int compare(T item1, T item2) {
-				return BriarAdapter.this.compare(item1, item2);
+				return NoConnectAdapter.this.compare(item1, item2);
 			}
 
 			@Override
@@ -50,12 +50,12 @@ public abstract class BriarAdapter<T, V extends ViewHolder>
 
 			@Override
 			public boolean areContentsTheSame(T item1, T item2) {
-				return BriarAdapter.this.areContentsTheSame(item1, item2);
+				return NoConnectAdapter.this.areContentsTheSame(item1, item2);
 			}
 
 			@Override
 			public boolean areItemsTheSame(T item1, T item2) {
-				return BriarAdapter.this.areItemsTheSame(item1, item2);
+				return NoConnectAdapter.this.areItemsTheSame(item1, item2);
 			}
 		});
 	}

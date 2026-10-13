@@ -13,7 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import org.chagolchana.chagol.api.db.DbException;
 import org.chagolchana.noconnect.android.AndroidComponent;
-import org.chagolchana.noconnect.android.BriarApplication;
+import org.chagolchana.noconnect.android.NoConnectApplication;
 import org.chagolchana.noconnect.android.DestroyableContext;
 import org.chagolchana.noconnect.android.controller.ActivityLifecycleController;
 import org.chagolchana.noconnect.android.forum.ForumModule;
@@ -60,7 +60,7 @@ public abstract class BaseActivity extends AppCompatActivity
 		if (PREVENT_SCREENSHOTS) getWindow().addFlags(FLAG_SECURE);
 
 		AndroidComponent applicationComponent =
-				((BriarApplication) getApplication()).getApplicationComponent();
+				((NoConnectApplication) getApplication()).getApplicationComponent();
 
 		activityComponent = DaggerActivityComponent.builder()
 				.androidComponent(applicationComponent)

@@ -31,7 +31,7 @@ import static android.text.format.DateUtils.FORMAT_ABBREV_TIME;
 import static android.text.format.DateUtils.FORMAT_SHOW_DATE;
 import static android.text.format.DateUtils.MINUTE_IN_MILLIS;
 import static android.text.format.DateUtils.WEEK_IN_MILLIS;
-import static org.chagolchana.noconnect.android.BriarApplication.EXPIRY_DATE;
+import static org.chagolchana.noconnect.android.NoConnectApplication.EXPIRY_DATE;
 
 public class UiUtils {
 
@@ -84,7 +84,7 @@ public class UiUtils {
 		Spannable readMore = new SpannableString(
 				ctx.getString(R.string.read_more) + ellipsis);
 		ForegroundColorSpan fg = new ForegroundColorSpan(
-				ContextCompat.getColor(ctx, R.color.briar_text_link));
+				ContextCompat.getColor(ctx, R.color.nc_text_link));
 		readMore.setSpan(fg, 0, readMore.length(),
 				Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 		builder.append(readMore);

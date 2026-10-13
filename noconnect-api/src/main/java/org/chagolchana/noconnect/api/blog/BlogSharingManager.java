@@ -5,6 +5,6 @@ import org.chagolchana.noconnect.api.sharing.SharingManager;
 
 public interface BlogSharingManager extends SharingManager<Blog> {
 
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.blog.sharing");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.blog.sharing");
 
 }

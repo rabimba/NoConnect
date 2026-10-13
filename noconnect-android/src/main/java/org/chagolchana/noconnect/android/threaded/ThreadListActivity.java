@@ -20,14 +20,14 @@ import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.chagol.api.sync.MessageId;
 import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.controller.SharingController;
 import org.chagolchana.noconnect.android.controller.SharingController.SharingListener;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.threaded.ThreadItemAdapter.ThreadItemListener;
 import org.chagolchana.noconnect.android.threaded.ThreadListController.ThreadListDataSource;
 import org.chagolchana.noconnect.android.threaded.ThreadListController.ThreadListListener;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.android.view.TextInputView;
 import org.chagolchana.noconnect.android.view.TextInputView.TextInputListener;
 import org.chagolchana.noconnect.android.view.UnreadMessageButton;
@@ -50,7 +50,7 @@ import static org.chagolchana.noconnect.android.threaded.ThreadItemAdapter.Unrea
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
 public abstract class ThreadListActivity<G extends NamedGroup, A extends ThreadItemAdapter<I>, I extends ThreadItem, H extends PostHeader>
-		extends BriarActivity
+		extends NoConnectActivity
 		implements ThreadListListener<H>, TextInputListener, SharingListener,
 		ThreadItemListener<I>, ThreadListDataSource {
 
@@ -60,7 +60,7 @@ public abstract class ThreadListActivity<G extends NamedGroup, A extends ThreadI
 			Logger.getLogger(ThreadListActivity.class.getName());
 
 	protected A adapter;
-	protected BriarRecyclerView list;
+	protected NoConnectRecyclerView list;
 	private LinearLayoutManager layoutManager;
 	protected TextInputView textInput;
 	protected GroupId groupId;
@@ -89,7 +89,7 @@ public abstract class ThreadListActivity<G extends NamedGroup, A extends ThreadI
 
 		textInput = (TextInputView) findViewById(R.id.text_input_container);
 		textInput.setListener(this);
-		list = (BriarRecyclerView) findViewById(R.id.list);
+		list = (NoConnectRecyclerView) findViewById(R.id.list);
 		layoutManager = new LinearLayoutManager(this);
 		list.setLayoutManager(layoutManager);
 		adapter = createAdapter(layoutManager);
@@ -335,7 +335,7 @@ public abstract class ThreadListActivity<G extends NamedGroup, A extends ThreadI
 
 	protected void displaySnackbar(@StringRes int stringId) {
 		Snackbar snackbar = make(list, stringId, Snackbar.LENGTH_SHORT);
-		snackbar.getView().setBackgroundResource(R.color.briar_primary);
+		snackbar.getView().setBackgroundResource(R.color.nc_primary);
 		snackbar.show();
 	}
 

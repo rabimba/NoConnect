@@ -1,4 +1,4 @@
--keep,includedescriptorclasses class org.briarproject.** { *; }
+-keep,includedescriptorclasses class org.chagolchana.** { *; }
 
 -keep class org.h2.** { *; }
 -dontwarn org.h2.**

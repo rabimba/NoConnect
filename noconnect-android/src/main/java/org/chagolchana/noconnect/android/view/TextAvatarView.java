@@ -55,7 +55,7 @@ public class TextAvatarView extends FrameLayout {
 			badge.setBackgroundResource(R.drawable.bubble);
 			badge.setText(String.valueOf(count));
 			badge.setTextColor(ContextCompat.getColor(getContext(),
-					R.color.briar_text_primary_inverse));
+					R.color.nc_text_primary_inverse));
 			badge.setVisibility(VISIBLE);
 		} else {
 			badge.setVisibility(INVISIBLE);
@@ -67,7 +67,7 @@ public class TextAvatarView extends FrameLayout {
 			badge.setBackgroundResource(R.drawable.bubble_problem);
 			badge.setText("!");
 			badge.setTextColor(ContextCompat
-					.getColor(getContext(), R.color.briar_primary));
+					.getColor(getContext(), R.color.nc_primary));
 			badge.setVisibility(VISIBLE);
 		} else {
 			setUnreadCount(unreadCount);

@@ -11,7 +11,7 @@ import org.chagolchana.chagol.sync.SyncModule;
 import org.chagolchana.chagol.system.SystemModule;
 import org.chagolchana.chagol.transport.TransportModule;
 
-public interface BrambleCoreEagerSingletons {
+public interface ChagolCoreEagerSingletons {
 
 	void inject(ContactModule.EagerSingletons init);
 

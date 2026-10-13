@@ -19,7 +19,7 @@ import android.widget.TextView.OnEditorActionListener;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
 import org.chagolchana.noconnect.android.activity.BaseActivity;
-import org.chagolchana.noconnect.android.controller.BriarController;
+import org.chagolchana.noconnect.android.controller.NoConnectController;
 import org.chagolchana.noconnect.android.controller.handler.UiResultHandler;
 import org.chagolchana.noconnect.android.util.UiUtils;
 
@@ -38,7 +38,7 @@ public class PasswordActivity extends BaseActivity {
 	PasswordController passwordController;
 
 	@Inject
-	BriarController briarController;
+	NoConnectController noConnectController;
 
 	private Button signInButton;
 	private ProgressBar progress;
@@ -92,7 +92,7 @@ public class PasswordActivity extends BaseActivity {
 	public void onStart() {
 		super.onStart();
 		// If the user has already signed in, clean up this instance
-		if (briarController.hasEncryptionKey()) {
+		if (noConnectController.hasEncryptionKey()) {
 			setResult(RESULT_OK);
 			finish();
 		}
@@ -126,7 +126,7 @@ public class PasswordActivity extends BaseActivity {
 	public void onForgottenPasswordClick(View v) {
 		// TODO Encapsulate the dialog in a re-usable fragment
 		AlertDialog.Builder builder = new AlertDialog.Builder(this,
-				R.style.BriarDialogTheme);
+				R.style.NoConnectDialogTheme);
 		builder.setTitle(R.string.dialog_title_lost_password);
 		builder.setMessage(R.string.dialog_message_lost_password);
 		builder.setPositiveButton(R.string.cancel, null);

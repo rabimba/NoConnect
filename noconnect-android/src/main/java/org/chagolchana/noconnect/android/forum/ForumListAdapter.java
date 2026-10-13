@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 import org.chagolchana.noconnect.android.util.UiUtils;
 import org.chagolchana.noconnect.android.view.TextAvatarView;
 import org.chagolchana.noconnect.api.forum.Forum;
@@ -19,11 +19,11 @@ import org.chagolchana.noconnect.api.forum.Forum;
 import static android.support.v7.util.SortedList.INVALID_POSITION;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_NAME;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_NAME;
 
 class ForumListAdapter
-		extends BriarAdapter<ForumListItem, ForumListAdapter.ForumViewHolder> {
+		extends NoConnectAdapter<ForumListItem, ForumListAdapter.ForumViewHolder> {
 
 	ForumListAdapter(Context ctx) {
 		super(ctx, ForumListItem.class);
@@ -58,13 +58,13 @@ class ForumListAdapter
 							postCount));
 			ui.postCount.setTextColor(
 					ContextCompat
-							.getColor(ctx, R.color.briar_text_secondary));
+							.getColor(ctx, R.color.nc_text_secondary));
 		} else {
 			ui.avatar.setProblem(true);
 			ui.postCount.setText(ctx.getString(R.string.no_posts));
 			ui.postCount.setTextColor(
 					ContextCompat
-							.getColor(ctx, R.color.briar_text_tertiary));
+							.getColor(ctx, R.color.nc_text_tertiary));
 		}
 
 		// Date

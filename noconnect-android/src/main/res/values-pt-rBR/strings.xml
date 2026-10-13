@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Setup-->
-  <string name="setup_title">Configuração de Briar</string>
-  <string name="setup_explanation">Sua conta Briar é armazenada criptografada apenas no seu dispositivo, não na nuvem. Se você Desinstalar o Briar ou esquecer sua senha, não será possível recuperar sua conta e seus dados.</string>
+  <string name="setup_title">Configuração de NoConnect</string>
+  <string name="setup_explanation">Sua conta NoConnect é armazenada criptografada apenas no seu dispositivo, não na nuvem. Se você Desinstalar o NoConnect ou esquecer sua senha, não será possível recuperar sua conta e seus dados.</string>
   <string name="choose_nickname">Escolha seu apelido</string>
   <string name="choose_password">Escolha sua senha</string>
   <string name="confirm_password">Confirme sua senha</string>
@@ -16,12 +16,12 @@
   <string name="sign_in_button">Entrar</string>
   <string name="forgotten_password">Esqueci minha senha</string>
   <string name="dialog_title_lost_password">Perdeu a senha</string>
-  <string name="dialog_message_lost_password">Sua conta Briar é armazenada em seu dispositivo e criptografada, não na Nuvem, assim não podemos recuperar a senha. Você quer deletar sua conta e começar de novo?\n\nAtenção: Isso irá apagar permanentemente suas identidades, contatos e mensagens</string>
-  <string name="startup_failed_notification_title">Briar não pode iniciar</string>
-  <string name="startup_failed_notification_text">Você pode precisar reinstalar o Briar.</string>
-  <string name="startup_failed_activity_title">Inicialização do Briar falhou</string>
-  <string name="startup_failed_db_error">Por alguma razão, seus dados do Briar estão corrompidos e não podem ser reparados. Sua conta, seus dados e todas suas conexões com contatos estão perdidas. Infelizmente você terá que resintalar o Briar e criar uma nova conta.</string>
-  <string name="startup_failed_service_error">O Briar não pode iniciar devido a um plugin. Reinstalar o Briar geralmente resolve esse problema. Porém, note que ao fazer isso você perderá sua conta e todos os dados associados a ela,  já que o Briar não usa um servidor central para armazenar seus dados.</string>
+  <string name="dialog_message_lost_password">Sua conta NoConnect é armazenada em seu dispositivo e criptografada, não na Nuvem, assim não podemos recuperar a senha. Você quer deletar sua conta e começar de novo?\n\nAtenção: Isso irá apagar permanentemente suas identidades, contatos e mensagens</string>
+  <string name="startup_failed_notification_title">NoConnect não pode iniciar</string>
+  <string name="startup_failed_notification_text">Você pode precisar reinstalar o NoConnect.</string>
+  <string name="startup_failed_activity_title">Inicialização do NoConnect falhou</string>
+  <string name="startup_failed_db_error">Por alguma razão, seus dados do NoConnect estão corrompidos e não podem ser reparados. Sua conta, seus dados e todas suas conexões com contatos estão perdidas. Infelizmente você terá que resintalar o NoConnect e criar uma nova conta.</string>
+  <string name="startup_failed_service_error">O NoConnect não pode iniciar devido a um plugin. Reinstalar o NoConnect geralmente resolve esse problema. Porém, note que ao fazer isso você perderá sua conta e todos os dados associados a ela,  já que o NoConnect não usa um servidor central para armazenar seus dados.</string>
   <string name="expiry_warning">Esse programa expirou.\nPor favor instale uma versão mais recente.</string>
   <!--Navigation Drawer-->
   <string name="nav_drawer_open_description">Abrir aba de navegação</string>
@@ -37,8 +37,8 @@
   <string name="transport_bt">Bluetooth</string>
   <string name="transport_lan">Wi-fi</string>
   <!--Notifications-->
-  <string name="ongoing_notification_title">Conectado ao Briar</string>
-  <string name="ongoing_notification_text">Toque para abrir o Briar</string>
+  <string name="ongoing_notification_title">Conectado ao NoConnect</string>
+  <string name="ongoing_notification_text">Toque para abrir o NoConnect</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">Nova mensagem privada.</item>
     <item quantity="other">%d novas mensagens privadas.</item>
@@ -93,7 +93,7 @@
   <string name="enter_invitation_code">Insira o código do convite do contato:</string>
   <string name="searching_format">Procurando por contato com código de convite %06d\u2026</string>
   <string name="connection_failed">Conexão incompleta</string>
-  <string name="could_not_find_contact">Briar não conseguiu achar nenhum contato por perto</string>
+  <string name="could_not_find_contact">NoConnect não conseguiu achar nenhum contato por perto</string>
   <string name="try_again_button">Tente novamente</string>
   <string name="connected_to_contact">Conectado ao contato</string>
   <string name="calculating_confirmation_code">Calculando código de confirmação\u2026</string>
@@ -114,7 +114,7 @@
   <string name="connection_aborted_remote">Conexão interrompida pelo seu contato! Isto pode significar que algúem está tentando interferir em sua conexão</string>
   <!--Introductions-->
   <string name="introduction_onboarding_title">Apresente seus contatos</string>
-  <string name="introduction_onboarding_text">Você pode apresentar seus contatos entre si, assim eles não precisam se encontrar pessoalmente para se comunicar no Briar.</string>
+  <string name="introduction_onboarding_text">Você pode apresentar seus contatos entre si, assim eles não precisam se encontrar pessoalmente para se comunicar no NoConnect.</string>
   <string name="introduction_activity_title">Selecionar contato</string>
   <string name="introduction_message_title">Apresentar contatos</string>
   <string name="introduction_button">Fazer apresentação</string>
@@ -286,7 +286,7 @@
   <string name="password_changed">Senha alterada com sucesso.</string>
   <string name="panic_setting">Configurações do botão de pânico</string>
   <string name="panic_setting_title">Botão de pânico</string>
-  <string name="panic_setting_hint">Configurar como o Briar irá reagir quando você usar um aplicativo de botão de pânico</string>
+  <string name="panic_setting_hint">Configurar como o NoConnect irá reagir quando você usar um aplicativo de botão de pânico</string>
   <string name="panic_app_setting_title">Aplicativo de botão de pânico</string>
   <string name="unknown_app">um aplicativo desconhecido</string>
   <string name="panic_app_setting_summary">Nenhum aplicativo foi selecionado</string>
@@ -294,10 +294,10 @@
   <string name="dialog_title_connect_panic_app">Confirmar aplicativo de pânico</string>
   <string name="dialog_message_connect_panic_app">Você tem certeza que quer permitir que %1$s ative ações destrutivas do botão de pânico?</string>
   <string name="lock_setting_title">Desconectar</string>
-  <string name="lock_setting_summary">Desconectar do Briar se o botão de pânico for apertado</string>
+  <string name="lock_setting_summary">Desconectar do NoConnect se o botão de pânico for apertado</string>
   <string name="purge_setting_title">Apagar conta</string>
-  <string name="purge_setting_summary">Apagar sua conta do Briar se o botão de pânico for apertado. Atenção: isso irá apagar permanentemente suas identidades, contatos e mensagens</string>
-  <string name="uninstall_setting_title">Desinstalar o Briar</string>
+  <string name="purge_setting_summary">Apagar sua conta do NoConnect se o botão de pânico for apertado. Atenção: isso irá apagar permanentemente suas identidades, contatos e mensagens</string>
+  <string name="uninstall_setting_title">Desinstalar o NoConnect</string>
   <string name="uninstall_setting_summary">Isso requer configuração manual em um evento de pânico</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">Notificações</string>
@@ -315,10 +315,10 @@
   <string name="link_warning_text">Isso pode ser usado para identificar você. Pense se você confia a pessoa que enviou esse link ou considere abrindo o no Orfox.</string>
   <string name="link_warning_open_link">Abrir Link</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">Relatório de falhas do Briar</string>
-  <string name="briar_crashed">Briar encerrou de maneira inesperada</string>
+  <string name="crash_report_title">Relatório de falhas do NoConnect</string>
+  <string name="nc_crashed">NoConnect encerrou de maneira inesperada</string>
   <string name="not_your_fault">Isso não é sua culpa.</string>
-  <string name="please_send_report">Nós ajude a construir um Briar melhor enviando um relatório de falhas.</string>
+  <string name="please_send_report">Nós ajude a construir um NoConnect melhor enviando um relatório de falhas.</string>
   <string name="report_is_encrypted">Nós prometemos que o relatório é encriptado e enviado de forma segura.</string>
   <string name="feedback_title">Comentário</string>
   <string name="describe_crash">Descreva o que aconteceu (opcional)</string>
@@ -329,8 +329,8 @@
   <string name="could_not_load_report_data">Não foi possível carregar os dados do relatório.</string>
   <string name="send_report">Enviar relatório </string>
   <string name="close">Fechar</string>
-  <string name="dev_report_saved">Relatório salvo. Ele será enviado na próxima vez em que você entrar no Briar.</string>
+  <string name="dev_report_saved">Relatório salvo. Ele será enviado na próxima vez em que você entrar no NoConnect.</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">Saindo do Briar…</string>
+  <string name="progress_title_logout">Saindo do NoConnect…</string>
   <!--Screen Filters & Tapjacking-->
 </resources>

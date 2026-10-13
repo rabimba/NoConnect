@@ -20,8 +20,8 @@ import org.chagolchana.noconnect.android.view.TextAvatarView;
 import static android.support.v4.content.ContextCompat.getColor;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_NAME;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_NAME;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
@@ -87,7 +87,7 @@ class GroupViewHolder extends RecyclerView.ViewHolder {
 						.getQuantityString(R.plurals.messages, messageCount,
 								messageCount));
 				postCount.setTextColor(
-						getColor(ctx, R.color.briar_text_secondary));
+						getColor(ctx, R.color.nc_text_secondary));
 
 				long lastUpdate = group.getTimestamp();
 				date.setText(UiUtils.formatDate(ctx, lastUpdate));

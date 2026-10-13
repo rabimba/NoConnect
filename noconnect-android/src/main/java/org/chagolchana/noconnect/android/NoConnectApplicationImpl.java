@@ -6,11 +6,11 @@ import android.content.Context;
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;
 import org.acra.annotation.ReportsCrashes;
-import org.chagolchana.chagol.BrambleCoreModule;
-import org.chagolchana.noconnect.BriarCoreModule;
+import org.chagolchana.chagol.ChagolCoreModule;
+import org.chagolchana.noconnect.NoConnectCoreModule;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.reporting.BriarReportPrimer;
-import org.chagolchana.noconnect.android.reporting.BriarReportSenderFactory;
+import org.chagolchana.noconnect.android.reporting.NoConnectReportPrimer;
+import org.chagolchana.noconnect.android.reporting.NoConnectReportSenderFactory;
 import org.chagolchana.noconnect.android.reporting.DevReportActivity;
 
 import java.util.logging.Logger;
@@ -35,9 +35,9 @@ import static org.acra.ReportField.USER_APP_START_DATE;
 import static org.acra.ReportField.USER_CRASH_DATE;
 
 @ReportsCrashes(
-		reportPrimerClass = BriarReportPrimer.class,
+		reportPrimerClass = NoConnectReportPrimer.class,
 		logcatArguments = {"-d", "-v", "time", "*:I"},
-		reportSenderFactoryClasses = {BriarReportSenderFactory.class},
+		reportSenderFactoryClasses = {NoConnectReportSenderFactory.class},
 		mode = ReportingInteractionMode.DIALOG,
 		reportDialogClass = DevReportActivity.class,
 		resDialogOkToast = R.string.dev_report_saved,
@@ -55,11 +55,11 @@ import static org.acra.ReportField.USER_CRASH_DATE;
 				LOGCAT
 		}
 )
-public class BriarApplicationImpl extends Application
-		implements BriarApplication {
+public class NoConnectApplicationImpl extends Application
+		implements NoConnectApplication {
 
 	private static final Logger LOG =
-			Logger.getLogger(BriarApplicationImpl.class.getName());
+			Logger.getLogger(NoConnectApplicationImpl.class.getName());
 
 	private AndroidComponent applicationComponent;
 
@@ -80,8 +80,8 @@ public class BriarApplicationImpl extends Application
 
 		// We need to load the eager singletons directly after making the
 		// dependency graphs
-		BrambleCoreModule.initEagerSingletons(applicationComponent);
-		BriarCoreModule.initEagerSingletons(applicationComponent);
+		ChagolCoreModule.initEagerSingletons(applicationComponent);
+		NoConnectCoreModule.initEagerSingletons(applicationComponent);
 		AndroidEagerSingletons.initEagerSingletons(applicationComponent);
 	}
 

@@ -22,7 +22,7 @@
 		android:gravity="center" />
 
 	<Button
-		style="@style/BriarButton"
+		style="@style/NoConnectButton"
 		android:id="@+id/createForumButton"
 		android:enabled="false"
 		android:text="@string/create_forum_button" />

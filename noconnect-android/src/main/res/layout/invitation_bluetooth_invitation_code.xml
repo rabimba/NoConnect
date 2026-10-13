@@ -18,7 +18,7 @@
 
 		<TextView
 			android:id="@+id/yourCodeView"
-			style="@style/BriarTextBody"
+			style="@style/NoConnectTextBody"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/your_invitation_code"
@@ -31,14 +31,14 @@
 			android:layout_height="wrap_content"
 			android:layout_marginTop="@dimen/margin_medium"
 			android:textSize="50sp"
-			android:textColor="@color/briar_text_secondary"
+			android:textColor="@color/nc_text_secondary"
 			android:layout_below="@+id/yourCodeView"
 			android:layout_centerHorizontal="true"
 			tools:text="1337"/>
 
 		<TextView
 			android:id="@+id/waitingView"
-			style="@style/BriarTextBody"
+			style="@style/NoConnectTextBody"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/searching_format"
@@ -62,7 +62,7 @@
 
 		<TextView
 			android:id="@+id/enterCodeTextView"
-			style="@style/BriarTextBody"
+			style="@style/NoConnectTextBody"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/enter_invitation_code"
@@ -82,7 +82,7 @@
 
 		<Button
 			android:id="@+id/continueButton"
-			style="@style/BriarButton.Default"
+			style="@style/NoConnectButton.Default"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="@string/continue_button"

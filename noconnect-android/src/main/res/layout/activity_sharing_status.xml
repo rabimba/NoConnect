@@ -20,7 +20,7 @@
 
 	<View style="@style/Divider.Horizontal"/>
 
-	<org.chagolchana.noconnect.android.view.BriarRecyclerView
+	<org.chagolchana.noconnect.android.view.NoConnectRecyclerView
 		android:id="@+id/list"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"

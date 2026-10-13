@@ -13,7 +13,7 @@
 		android:layout_marginLeft="@dimen/message_bubble_margin_tail"
 		android:layout_marginRight="@dimen/message_bubble_margin_non_tail"
 		android:background="@drawable/msg_in_top"
-		android:textColor="@color/briar_text_primary"
+		android:textColor="@color/nc_text_primary"
 		android:textIsSelectable="true"
 		android:textSize="@dimen/text_size_medium"
 		tools:text="Short message"/>
@@ -31,7 +31,7 @@
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:minWidth="80dp"
-			android:textColor="@color/briar_text_secondary"
+			android:textColor="@color/nc_text_secondary"
 			android:textIsSelectable="true"
 			android:textSize="@dimen/text_size_medium"
 			android:textStyle="italic"
@@ -51,7 +51,7 @@
 
 		<Button
 			android:id="@+id/acceptButton"
-			style="@style/BriarButtonFlat.Positive"
+			style="@style/NoConnectButtonFlat.Positive"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignEnd="@+id/text"
@@ -62,7 +62,7 @@
 
 		<Button
 			android:id="@+id/declineButton"
-			style="@style/BriarButtonFlat.Negative"
+			style="@style/NoConnectButtonFlat.Negative"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignBottom="@+id/acceptButton"

@@ -9,5 +9,5 @@ import dagger.Module;
 		AndroidPluginModule.class,
 		AndroidSystemModule.class
 })
-public class BrambleAndroidModule {
+public class ChagolAndroidModule {
 }

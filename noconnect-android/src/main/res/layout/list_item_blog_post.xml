@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView
 	android:id="@+id/postLayout"
-	style="@style/BriarCard"
+	style="@style/NoConnectCard"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
@@ -55,7 +55,7 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_below="@+id/authorView"
-				android:textColor="@color/briar_text_secondary"
+				android:textColor="@color/nc_text_secondary"
 				android:textSize="@dimen/text_size_medium"
 				tools:text="This is a body text that shows the content of a blog post.\n\nThis one is not short, but it is also not too long."/>
 

@@ -19,7 +19,7 @@ public interface BlogManager {
 	/**
 	 * Unique ID of the blog client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.blog");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.blog");
 
 	/**
 	 * Adds the given {@link Blog).}

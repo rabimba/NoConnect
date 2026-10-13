@@ -27,7 +27,7 @@ import javax.inject.Inject;
 
 import static java.util.logging.Level.INFO;
 import static java.util.logging.Level.WARNING;
-import static org.chagolchana.noconnect.android.BriarApplication.EXPIRY_DATE;
+import static org.chagolchana.noconnect.android.NoConnectApplication.EXPIRY_DATE;
 import static org.chagolchana.noconnect.android.settings.SettingsFragment.SETTINGS_NAMESPACE;
 
 @MethodsNotNullByDefault

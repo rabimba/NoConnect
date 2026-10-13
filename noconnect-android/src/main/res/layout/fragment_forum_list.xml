@@ -5,11 +5,11 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
-	<org.chagolchana.noconnect.android.view.BriarRecyclerView
+	<org.chagolchana.noconnect.android.view.NoConnectRecyclerView
 		android:id="@+id/forumList"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		app:layout_behavior="org.briarproject.briar.android.view.BriarRecyclerViewBehavior"/>
+		app:layout_behavior="org.chagolchana.noconnect.android.view.NoConnectRecyclerViewBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>

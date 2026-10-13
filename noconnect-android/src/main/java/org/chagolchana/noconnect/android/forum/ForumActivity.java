@@ -155,7 +155,7 @@ public class ForumActivity extends
 			}
 		};
 		AlertDialog.Builder builder = new AlertDialog.Builder(this,
-				R.style.BriarDialogTheme);
+				R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_leave_forum));
 		builder.setMessage(getString(R.string.dialog_message_leave_forum));
 		builder.setNegativeButton(R.string.dialog_button_leave, okListener);

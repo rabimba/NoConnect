@@ -13,9 +13,9 @@ import android.view.MenuItem;
 import org.chagolchana.chagol.api.db.DbException;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.blog.RssFeedAdapter.RssFeedListener;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.feed.Feed;
 import org.chagolchana.noconnect.api.feed.FeedManager;
 
@@ -28,13 +28,13 @@ import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.support.design.widget.Snackbar.LENGTH_LONG;
 import static java.util.logging.Level.WARNING;
 
-public class RssFeedManageActivity extends BriarActivity
+public class RssFeedManageActivity extends NoConnectActivity
 		implements RssFeedListener {
 
 	private static final Logger LOG =
 			Logger.getLogger(RssFeedManageActivity.class.getName());
 
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private RssFeedAdapter adapter;
 
 	@Inject
@@ -49,7 +49,7 @@ public class RssFeedManageActivity extends BriarActivity
 
 		adapter = new RssFeedAdapter(this, this);
 
-		list = (BriarRecyclerView) findViewById(R.id.feedList);
+		list = (NoConnectRecyclerView) findViewById(R.id.feedList);
 		list.setLayoutManager(new LinearLayoutManager(this));
 		list.setAdapter(adapter);
 	}
@@ -112,7 +112,7 @@ public class RssFeedManageActivity extends BriarActivity
 					}
 				};
 		AlertDialog.Builder builder = new AlertDialog.Builder(this,
-				R.style.BriarDialogTheme);
+				R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.blogs_rss_remove_feed));
 		builder.setMessage(
 				getString(R.string.blogs_rss_remove_feed_dialog_message));

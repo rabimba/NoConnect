@@ -48,13 +48,13 @@ import org.chagolchana.chagol.api.sync.event.MessagesSentEvent;
 import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.blog.BlogActivity;
 import org.chagolchana.noconnect.android.contact.ConversationAdapter.ConversationListener;
 import org.chagolchana.noconnect.android.forum.ForumActivity;
 import org.chagolchana.noconnect.android.introduction.IntroductionActivity;
 import org.chagolchana.noconnect.android.privategroup.conversation.GroupActivity;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.android.view.TextInputView;
 import org.chagolchana.noconnect.android.view.TextInputView.TextInputListener;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
@@ -115,10 +115,10 @@ import static org.chagolchana.noconnect.api.messaging.MessagingConstants.MAX_PRI
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class ConversationActivity extends BriarActivity
+public class ConversationActivity extends NoConnectActivity
 		implements EventListener, ConversationListener, TextInputListener {
 
-	public static final String CONTACT_ID = "briar.CONTACT_ID";
+	public static final String CONTACT_ID = "noconnect.CONTACT_ID";
 
 	private static final Logger LOG =
 			Logger.getLogger(ConversationActivity.class.getName());
@@ -140,7 +140,7 @@ public class ConversationActivity extends BriarActivity
 	private CircleImageView toolbarAvatar;
 	private ImageView toolbarStatus;
 	private TextView toolbarTitle;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private TextInputView textInputView;
 
 	private final ListenableFutureTask<String> contactNameTask =
@@ -210,7 +210,7 @@ public class ConversationActivity extends BriarActivity
 		setTransitionName(toolbarStatus, getBulbTransitionName(contactId));
 
 		adapter = new ConversationAdapter(this, this);
-		list = (BriarRecyclerView) findViewById(R.id.conversationView);
+		list = (NoConnectRecyclerView) findViewById(R.id.conversationView);
 		list.setLayoutManager(new LinearLayoutManager(this));
 		list.setAdapter(adapter);
 		list.setEmptyText(getString(R.string.no_private_messages));
@@ -231,7 +231,7 @@ public class ConversationActivity extends BriarActivity
 		if (request == REQUEST_INTRODUCTION && result == RESULT_OK) {
 			Snackbar snackbar = Snackbar.make(list, R.string.introduction_sent,
 					Snackbar.LENGTH_SHORT);
-			snackbar.getView().setBackgroundResource(R.color.briar_primary);
+			snackbar.getView().setBackgroundResource(R.color.nc_primary);
 			snackbar.show();
 		}
 	}
@@ -794,7 +794,7 @@ public class ConversationActivity extends BriarActivity
 				};
 		AlertDialog.Builder builder =
 				new AlertDialog.Builder(ConversationActivity.this,
-						R.style.BriarDialogTheme);
+						R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.dialog_title_delete_contact));
 		builder.setMessage(getString(R.string.dialog_message_delete_contact));
 		builder.setNegativeButton(R.string.delete, okListener);
@@ -895,7 +895,7 @@ public class ConversationActivity extends BriarActivity
 						.setTarget(target)
 						.setPrimaryText(R.string.introduction_onboarding_title)
 						.setSecondaryText(R.string.introduction_onboarding_text)
-						.setBackgroundColourFromRes(R.color.briar_primary)
+						.setBackgroundColourFromRes(R.color.nc_primary)
 						.setIcon(R.drawable.ic_more_vert_accent)
 						.setOnHidePromptListener(listener)
 						.show();

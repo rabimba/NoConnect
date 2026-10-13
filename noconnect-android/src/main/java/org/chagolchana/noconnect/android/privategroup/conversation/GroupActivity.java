@@ -231,7 +231,7 @@ public class GroupActivity extends
 
 	private void showLeaveGroupDialog() {
 		AlertDialog.Builder builder =
-				new AlertDialog.Builder(this, R.style.BriarDialogTheme);
+				new AlertDialog.Builder(this, R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.groups_leave_dialog_title));
 		builder.setMessage(getString(R.string.groups_leave_dialog_message));
 		builder.setNegativeButton(R.string.dialog_button_leave, this);
@@ -241,7 +241,7 @@ public class GroupActivity extends
 
 	private void showDissolveGroupDialog() {
 		AlertDialog.Builder builder =
-				new AlertDialog.Builder(this, R.style.BriarDialogTheme);
+				new AlertDialog.Builder(this, R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.groups_dissolve_dialog_title));
 		builder.setMessage(getString(R.string.groups_dissolve_dialog_message));
 		builder.setNegativeButton(R.string.groups_dissolve_button, this);
@@ -276,7 +276,7 @@ public class GroupActivity extends
 	public void onGroupDissolved() {
 		setGroupEnabled(false);
 		AlertDialog.Builder builder =
-			new AlertDialog.Builder(this, R.style.BriarDialogTheme);
+			new AlertDialog.Builder(this, R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.groups_dissolved_dialog_title));
 		builder.setMessage(getString(R.string.groups_dissolved_dialog_message));
 		builder.setNeutralButton(R.string.ok, null);

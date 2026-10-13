@@ -11,10 +11,10 @@
 		android:right="@dimen/unread_bubble_padding_horizontal"/>
 
 	<solid
-		android:color="@color/briar_gold"/>
+		android:color="@color/nc_gold"/>
 
 	<stroke
-		android:color="@color/briar_primary"
+		android:color="@color/nc_primary"
 	    android:width="@dimen/avatar_border_width"/>
 
 </shape>

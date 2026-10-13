@@ -3,8 +3,8 @@ package org.chagolchana.noconnect.android.activity;
 import android.app.Activity;
 import android.content.SharedPreferences;
 
-import org.chagolchana.noconnect.android.controller.BriarController;
-import org.chagolchana.noconnect.android.controller.BriarControllerImpl;
+import org.chagolchana.noconnect.android.controller.NoConnectController;
+import org.chagolchana.noconnect.android.controller.NoConnectControllerImpl;
 import org.chagolchana.noconnect.android.controller.ConfigController;
 import org.chagolchana.noconnect.android.controller.ConfigControllerImpl;
 import org.chagolchana.noconnect.android.controller.DbController;
@@ -20,7 +20,7 @@ import dagger.Module;
 import dagger.Provides;
 
 import static android.content.Context.MODE_PRIVATE;
-import static org.chagolchana.noconnect.android.BriarService.BriarServiceConnection;
+import static org.chagolchana.noconnect.android.NoConnectService.NoConnectServiceConnection;
 
 @Module
 public class ActivityModule {
@@ -72,10 +72,10 @@ public class ActivityModule {
 
 	@ActivityScope
 	@Provides
-	protected BriarController provideBriarController(
-			BriarControllerImpl briarController) {
-		activity.addLifecycleController(briarController);
-		return briarController;
+	protected NoConnectController provideNoConnectController(
+			NoConnectControllerImpl noConnectController) {
+		activity.addLifecycleController(noConnectController);
+		return noConnectController;
 	}
 
 	@ActivityScope
@@ -94,8 +94,8 @@ public class ActivityModule {
 
 	@ActivityScope
 	@Provides
-	BriarServiceConnection provideBriarServiceConnection() {
-		return new BriarServiceConnection();
+	NoConnectServiceConnection provideNoConnectServiceConnection() {
+		return new NoConnectServiceConnection();
 	}
 
 }

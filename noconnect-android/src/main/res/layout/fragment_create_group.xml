@@ -22,7 +22,7 @@
 		android:gravity="center" />
 
 	<Button
-		style="@style/BriarButton"
+		style="@style/NoConnectButton"
 		android:id="@+id/button"
 		android:enabled="false"
 		android:text="@string/groups_create_group_button"/>

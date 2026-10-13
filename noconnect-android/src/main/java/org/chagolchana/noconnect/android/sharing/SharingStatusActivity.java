@@ -15,9 +15,9 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.plugin.ConnectionRegistry;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.contact.ContactItem;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -31,7 +31,7 @@ import static java.util.logging.Level.WARNING;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-abstract class SharingStatusActivity extends BriarActivity {
+abstract class SharingStatusActivity extends NoConnectActivity {
 
 	@Inject
 	ConnectionRegistry connectionRegistry;
@@ -40,7 +40,7 @@ abstract class SharingStatusActivity extends BriarActivity {
 			Logger.getLogger(SharingStatusActivity.class.getName());
 
 	private GroupId groupId;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private SharingStatusAdapter adapter;
 
 	@Override
@@ -54,7 +54,7 @@ abstract class SharingStatusActivity extends BriarActivity {
 		if (b == null) throw new IllegalStateException("No GroupId");
 		groupId = new GroupId(b);
 
-		list = (BriarRecyclerView) findViewById(R.id.list);
+		list = (NoConnectRecyclerView) findViewById(R.id.list);
 		adapter = new SharingStatusAdapter(this);
 		list.setLayoutManager(new LinearLayoutManager(this));
 		list.setAdapter(adapter);

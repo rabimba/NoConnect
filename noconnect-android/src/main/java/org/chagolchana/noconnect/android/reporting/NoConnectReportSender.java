@@ -18,14 +18,14 @@ import javax.inject.Inject;
 
 import static org.acra.ReportField.REPORT_ID;
 
-public class BriarReportSender implements ReportSender {
+public class NoConnectReportSender implements ReportSender {
 
 	private final AndroidComponent component;
 
 	@Inject
 	DevReporter reporter;
 
-	BriarReportSender(AndroidComponent component) {
+	NoConnectReportSender(AndroidComponent component) {
 		this.component = component;
 	}
 

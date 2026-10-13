@@ -27,7 +27,7 @@ import static android.view.View.FOCUS_DOWN;
 import static android.view.View.GONE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.blog.BasePostFragment.POST_ID;
 
 @MethodsNotNullByDefault

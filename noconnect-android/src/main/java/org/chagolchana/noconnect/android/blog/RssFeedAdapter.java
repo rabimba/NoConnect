@@ -10,14 +10,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 import org.chagolchana.noconnect.android.util.UiUtils;
 import org.chagolchana.noconnect.api.feed.Feed;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-class RssFeedAdapter extends BriarAdapter<Feed, RssFeedAdapter.FeedViewHolder> {
+class RssFeedAdapter extends NoConnectAdapter<Feed, RssFeedAdapter.FeedViewHolder> {
 
 	private final RssFeedListener listener;
 

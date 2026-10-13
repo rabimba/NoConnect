@@ -33,7 +33,7 @@
 			android:title="@string/change_password">
 
 			<intent
-				android:targetClass="org.briarproject.briar.android.login.ChangePasswordActivity"
+				android:targetClass="org.chagolchana.noconnect.android.login.ChangePasswordActivity"
 				android:targetPackage="@string/app_package"/>
 		</Preference>
 
@@ -47,7 +47,7 @@
 			android:title="@string/panic_setting">
 
 			<intent
-				android:targetClass="org.briarproject.briar.android.panic.PanicPreferencesActivity"
+				android:targetClass="org.chagolchana.noconnect.android.panic.PanicPreferencesActivity"
 				android:targetPackage="@string/app_package"/>
 
 		</Preference>

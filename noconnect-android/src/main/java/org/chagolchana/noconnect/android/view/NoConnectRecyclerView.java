@@ -21,10 +21,10 @@ import javax.annotation.Nullable;
 
 import static org.chagolchana.noconnect.android.util.UiUtils.MIN_DATE_RESOLUTION;
 
-public class BriarRecyclerView extends FrameLayout {
+public class NoConnectRecyclerView extends FrameLayout {
 
 	private static final Logger LOG =
-			Logger.getLogger(BriarRecyclerView.class.getName());
+			Logger.getLogger(NoConnectRecyclerView.class.getName());
 
 	private final Handler handler = new Handler(Looper.getMainLooper());
 
@@ -35,24 +35,24 @@ public class BriarRecyclerView extends FrameLayout {
 	private Runnable refresher = null;
 	private boolean isScrollingToEnd = false;
 
-	public BriarRecyclerView(Context context) {
+	public NoConnectRecyclerView(Context context) {
 		this(context, null, 0);
 	}
 
-	public BriarRecyclerView(Context context, @Nullable AttributeSet attrs) {
+	public NoConnectRecyclerView(Context context, @Nullable AttributeSet attrs) {
 		this(context, attrs, 0);
 	}
 
-	public BriarRecyclerView(Context context, @Nullable AttributeSet attrs,
+	public NoConnectRecyclerView(Context context, @Nullable AttributeSet attrs,
 			int defStyle) {
 		super(context, attrs, defStyle);
 
 		TypedArray attributes = context.obtainStyledAttributes(attrs,
-				R.styleable.BriarRecyclerView);
+				R.styleable.NoConnectRecyclerView);
 		isScrollingToEnd = attributes
-				.getBoolean(R.styleable.BriarRecyclerView_scrollToEnd, true);
+				.getBoolean(R.styleable.NoConnectRecyclerView_scrollToEnd, true);
 		String emtpyText =
-				attributes.getString(R.styleable.BriarRecyclerView_emptyText);
+				attributes.getString(R.styleable.NoConnectRecyclerView_emptyText);
 		if (emtpyText != null) setEmptyText(emtpyText);
 		attributes.recycle();
 	}
@@ -65,7 +65,7 @@ public class BriarRecyclerView extends FrameLayout {
 
 	private void initViews() {
 		View v = LayoutInflater.from(getContext()).inflate(
-				R.layout.briar_recycler_view, this, true);
+				R.layout.nc_recycler_view, this, true);
 
 		recyclerView = (RecyclerView) v.findViewById(R.id.recyclerView);
 		emptyView = (TextView) v.findViewById(R.id.emptyView);

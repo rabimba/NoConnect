@@ -12,9 +12,9 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 
 import java.util.Collection;
 
@@ -23,13 +23,13 @@ import javax.inject.Inject;
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class GroupMemberListActivity extends BriarActivity {
+public class GroupMemberListActivity extends NoConnectActivity {
 
 	@Inject
 	GroupMemberListController controller;
 
 	private MemberListAdapter adapter;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private GroupId groupId;
 
 	@Override
@@ -48,7 +48,7 @@ public class GroupMemberListActivity extends BriarActivity {
 		if (b == null) throw new IllegalStateException("No GroupId in intent.");
 		groupId = new GroupId(b);
 
-		list = (BriarRecyclerView) findViewById(R.id.list);
+		list = (NoConnectRecyclerView) findViewById(R.id.list);
 		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 		list.setLayoutManager(linearLayoutManager);
 		adapter = new MemberListAdapter(this);

@@ -20,7 +20,7 @@ public interface ForumManager {
 	/**
 	 * The unique ID of the forum client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.forum");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.forum");
 
 	/**
 	 * Subscribes to a forum.

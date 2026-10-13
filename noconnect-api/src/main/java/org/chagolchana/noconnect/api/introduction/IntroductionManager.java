@@ -19,7 +19,7 @@ public interface IntroductionManager extends ConversationClient {
 	/**
 	 * The unique ID of the introduction client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.introduction");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.introduction");
 
 	/**
 	 * Sends two initial introduction messages.

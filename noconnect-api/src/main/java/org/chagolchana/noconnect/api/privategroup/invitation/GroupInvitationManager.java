@@ -23,7 +23,7 @@ public interface GroupInvitationManager extends ConversationClient {
 	 * The unique ID of the private group invitation client.
 	 */
 	ClientId CLIENT_ID =
-			new ClientId("org.briarproject.briar.privategroup.invitation");
+			new ClientId("org.chagolchana.noconnect.privategroup.invitation");
 
 	/**
 	 * Sends an invitation to share the given private group with the given

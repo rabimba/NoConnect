@@ -15,7 +15,7 @@ import org.chagolchana.chagol.api.invitation.InvitationTask;
 import org.chagolchana.chagol.api.invitation.InvitationTaskFactory;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.api.android.ReferenceManager;
 
 import java.util.logging.Logger;
@@ -30,7 +30,7 @@ import static org.chagolchana.noconnect.android.invitation.ConfirmationCodeView.
 import static org.chagolchana.noconnect.android.invitation.ConfirmationCodeView.ConfirmationState.DETAILS;
 import static org.chagolchana.noconnect.android.invitation.ConfirmationCodeView.ConfirmationState.WAIT_FOR_CONTACT;
 
-public class AddContactActivity extends BriarActivity
+public class AddContactActivity extends NoConnectActivity
 		implements InvitationListener {
 
 	private static final Logger LOG =
@@ -66,18 +66,18 @@ public class AddContactActivity extends BriarActivity
 			setView(new ChooseIdentityView(this));
 		} else {
 			// Restore the activity's state
-			byte[] b = state.getByteArray("briar.LOCAL_AUTHOR_ID");
+			byte[] b = state.getByteArray("noconnect.LOCAL_AUTHOR_ID");
 			if (b != null) localAuthorId = new AuthorId(b);
-			taskHandle = state.getLong("briar.TASK_HANDLE", -1);
+			taskHandle = state.getLong("noconnect.TASK_HANDLE", -1);
 			task = referenceManager.getReference(taskHandle,
 					InvitationTask.class);
 
 			if (task == null) {
 				// No background task - we must be in an initial or final state
-				localInvitationCode = state.getInt("briar.LOCAL_CODE");
-				remoteInvitationCode = state.getInt("briar.REMOTE_CODE");
-				connectionFailed = state.getBoolean("briar.FAILED");
-				contactName = state.getString("briar.CONTACT_NAME");
+				localInvitationCode = state.getInt("noconnect.LOCAL_CODE");
+				remoteInvitationCode = state.getInt("noconnect.REMOTE_CODE");
+				connectionFailed = state.getBoolean("noconnect.FAILED");
+				contactName = state.getString("noconnect.CONTACT_NAME");
 				if (contactName != null) {
 					localCompared = remoteCompared = true;
 					localMatched = remoteMatched = true;
@@ -164,13 +164,13 @@ public class AddContactActivity extends BriarActivity
 		super.onSaveInstanceState(state);
 		if (localAuthorId != null) {
 			byte[] b = localAuthorId.getBytes();
-			state.putByteArray("briar.LOCAL_AUTHOR_ID", b);
+			state.putByteArray("noconnect.LOCAL_AUTHOR_ID", b);
 		}
-		state.putInt("briar.LOCAL_CODE", localInvitationCode);
-		state.putInt("briar.REMOTE_CODE", remoteInvitationCode);
-		state.putBoolean("briar.FAILED", connectionFailed);
-		state.putString("briar.CONTACT_NAME", contactName);
-		if (task != null) state.putLong("briar.TASK_HANDLE", taskHandle);
+		state.putInt("noconnect.LOCAL_CODE", localInvitationCode);
+		state.putInt("noconnect.REMOTE_CODE", remoteInvitationCode);
+		state.putBoolean("noconnect.FAILED", connectionFailed);
+		state.putString("noconnect.CONTACT_NAME", contactName);
+		if (task != null) state.putLong("noconnect.TASK_HANDLE", taskHandle);
 	}
 
 	@Override

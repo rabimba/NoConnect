@@ -19,18 +19,18 @@
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 	<application
-		android:name="org.chagolchana.noconnect.android.BriarApplicationImpl"
+		android:name="org.chagolchana.noconnect.android.NoConnectApplicationImpl"
 		android:allowBackup="false"
 		android:icon="@mipmap/ic_launcher_round"
 		android:label="@string/app_name"
 		android:logo="@mipmap/ic_launcher_round"
-		android:theme="@style/BriarTheme">
+		android:theme="@style/NoConnectTheme">
 
 		<service
-			android:name="org.chagolchana.noconnect.android.BriarService"
+			android:name="org.chagolchana.noconnect.android.NoConnectService"
 			android:exported="false">
 			<intent-filter>
-				<action android:name="org.briarproject.briar.android.BriarService"/>
+				<action android:name="org.chagolchana.noconnect.android.NoConnectService"/>
 			</intent-filter>
 		</service>
 
@@ -41,8 +41,8 @@
 			android:finishOnTaskLaunch="true"
 			android:label="@string/crash_report_title"
 			android:launchMode="singleInstance"
-			android:process=":briar_error_handler"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:process=":nc_error_handler"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:windowSoftInputMode="stateHidden">
 		</activity>
 
@@ -65,7 +65,7 @@
 
 		<activity
 			android:name="org.chagolchana.noconnect.android.splash.SplashScreenActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:label="@string/app_name">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
@@ -75,14 +75,14 @@
 
 		<activity
 			android:name="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 		    android:launchMode="singleTop">
 		</activity>
 
 		<activity
 			android:name="org.chagolchana.noconnect.android.contact.ConversationActivity"
 			android:label="@string/app_name"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"
 			android:windowSoftInputMode="stateHidden|adjustResize">
 			<meta-data
@@ -106,7 +106,7 @@
 			android:name="org.chagolchana.noconnect.android.privategroup.conversation.GroupActivity"
 			android:label="@string/app_name"
 			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -190,7 +190,7 @@
 			android:name="org.chagolchana.noconnect.android.forum.ForumActivity"
 			android:label="@string/app_name"
 			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:windowSoftInputMode="adjustResize|stateHidden">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
@@ -243,7 +243,7 @@
 		<activity
 			android:name="org.chagolchana.noconnect.android.blog.BlogActivity"
 			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"
-			android:theme="@style/BriarTheme.NoActionBar">
+			android:theme="@style/NoConnectTheme.NoActionBar">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
 				android:value="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity"/>
@@ -305,7 +305,7 @@
 		<activity
 			android:name="org.chagolchana.noconnect.android.keyagreement.KeyAgreementActivity"
 			android:label="@string/add_contact_title"
-			android:theme="@style/BriarTheme.NoActionBar"
+			android:theme="@style/NoConnectTheme.NoActionBar"
 			android:parentActivityName="org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity">
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"

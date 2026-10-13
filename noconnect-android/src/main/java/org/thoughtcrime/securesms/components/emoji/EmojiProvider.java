@@ -18,7 +18,7 @@ import org.chagolchana.chagol.api.nullsafety.MethodsNotNullByDefault;
 import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.system.AndroidExecutor;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.BriarApplication;
+import org.chagolchana.noconnect.android.NoConnectApplication;
 import org.thoughtcrime.securesms.components.util.FutureTaskListener;
 import org.thoughtcrime.securesms.components.util.ListenableFutureTask;
 import org.thoughtcrime.securesms.util.BitmapDecodingException;
@@ -79,8 +79,8 @@ public class EmojiProvider {
 				if (INSTANCE == null) {
 					LOG.info("Creating new instance of EmojiProvider");
 					INSTANCE = new EmojiProvider(context);
-					BriarApplication app =
-							(BriarApplication) context.getApplicationContext();
+					NoConnectApplication app =
+							(NoConnectApplication) context.getApplicationContext();
 					app.getApplicationComponent().inject(INSTANCE);
 				}
 			}

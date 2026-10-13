@@ -6,9 +6,9 @@ import android.view.MenuItem;
 
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 
-public class PanicPreferencesActivity extends BriarActivity {
+public class PanicPreferencesActivity extends NoConnectActivity {
 
 	@Override
 	public void onCreate(Bundle bundle) {

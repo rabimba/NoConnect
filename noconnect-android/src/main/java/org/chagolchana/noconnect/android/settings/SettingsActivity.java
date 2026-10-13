@@ -9,11 +9,11 @@ import org.chagolchana.chagol.api.settings.SettingsManager;
 import org.chagolchana.chagol.api.system.AndroidExecutor;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 
 import javax.inject.Inject;
 
-public class SettingsActivity extends BriarActivity {
+public class SettingsActivity extends NoConnectActivity {
 
 	@Inject
 	protected AndroidExecutor androidExecutor;

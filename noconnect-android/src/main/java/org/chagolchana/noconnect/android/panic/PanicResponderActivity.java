@@ -9,7 +9,7 @@ import android.support.v7.preference.PreferenceManager;
 
 import org.chagolchana.chagol.api.system.AndroidExecutor;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.controller.ConfigController;
 import org.iilab.IilabEngineeringRSA2048Pin;
 
@@ -27,7 +27,7 @@ import static org.chagolchana.noconnect.android.panic.PanicPreferencesFragment.K
 import static org.chagolchana.noconnect.android.panic.PanicPreferencesFragment.KEY_PURGE;
 import static org.chagolchana.noconnect.android.panic.PanicPreferencesFragment.KEY_UNINSTALL;
 
-public class PanicResponderActivity extends BriarActivity {
+public class PanicResponderActivity extends NoConnectActivity {
 
 	private static final Logger LOG =
 			Logger.getLogger(PanicResponderActivity.class.getName());

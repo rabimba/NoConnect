@@ -30,7 +30,7 @@ import static java.util.logging.Level.WARNING;
 class ModemPlugin implements DuplexPlugin, Modem.Callback {
 
 	static final TransportId ID =
-			new TransportId("org.briarproject.bramble.modem");
+			new TransportId("org.chagolchana.chagol.modem");
 
 	private static final Logger LOG =
 			Logger.getLogger(ModemPlugin.class.getName());

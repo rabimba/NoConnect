@@ -77,10 +77,10 @@ class CryptoComponentImpl implements CryptoComponent {
 	private static final byte[] B_SIG_NONCE = ascii("BOB_SIGNATURE_NONCE");
 	// Hash label for BQP public key commitment derivation
 	private static final String COMMIT =
-			"org.briarproject.bramble.COMMIT";
+			"org.chagolchana.chagol.COMMIT";
 	// Hash label for shared secret derivation
 	private static final String SHARED_SECRET =
-			"org.briarproject.bramble.SHARED_SECRET";
+			"org.chagolchana.chagol.SHARED_SECRET";
 	// KDF label for BQP confirmation key derivation
 	private static final byte[] CONFIRMATION_KEY = ascii("CONFIRMATION_KEY");
 	// KDF label for master key derivation

@@ -9,7 +9,7 @@ import org.chagolchana.noconnect.privategroup.PrivateGroupModule;
 import org.chagolchana.noconnect.privategroup.invitation.GroupInvitationModule;
 import org.chagolchana.noconnect.sharing.SharingModule;
 
-public interface BriarCoreEagerSingletons {
+public interface NoConnectCoreEagerSingletons {
 
 	void inject(BlogModule.EagerSingletons init);
 

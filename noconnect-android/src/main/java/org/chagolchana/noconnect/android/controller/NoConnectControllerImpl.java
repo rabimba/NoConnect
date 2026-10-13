@@ -6,27 +6,27 @@ import android.os.IBinder;
 import android.support.annotation.CallSuper;
 
 import org.chagolchana.chagol.api.db.DatabaseConfig;
-import org.chagolchana.noconnect.android.BriarService;
-import org.chagolchana.noconnect.android.BriarService.BriarServiceConnection;
+import org.chagolchana.noconnect.android.NoConnectService;
+import org.chagolchana.noconnect.android.NoConnectService.NoConnectServiceConnection;
 import org.chagolchana.noconnect.android.controller.handler.ResultHandler;
 
 import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
-public class BriarControllerImpl implements BriarController {
+public class NoConnectControllerImpl implements NoConnectController {
 
 	private static final Logger LOG =
-			Logger.getLogger(BriarControllerImpl.class.getName());
+			Logger.getLogger(NoConnectControllerImpl.class.getName());
 
-	private final BriarServiceConnection serviceConnection;
+	private final NoConnectServiceConnection serviceConnection;
 	private final DatabaseConfig databaseConfig;
 	private final Activity activity;
 
 	private boolean bound = false;
 
 	@Inject
-	BriarControllerImpl(BriarServiceConnection serviceConnection,
+	NoConnectControllerImpl(NoConnectServiceConnection serviceConnection,
 			DatabaseConfig databaseConfig, Activity activity) {
 		this.serviceConnection = serviceConnection;
 		this.databaseConfig = databaseConfig;
@@ -55,8 +55,8 @@ public class BriarControllerImpl implements BriarController {
 
 	@Override
 	public void startAndBindService() {
-		activity.startService(new Intent(activity, BriarService.class));
-		bound = activity.bindService(new Intent(activity, BriarService.class),
+		activity.startService(new Intent(activity, NoConnectService.class));
+		bound = activity.bindService(new Intent(activity, NoConnectService.class),
 				serviceConnection, 0);
 	}
 
@@ -73,8 +73,8 @@ public class BriarControllerImpl implements BriarController {
 				try {
 					// Wait for the service to finish starting up
 					IBinder binder = serviceConnection.waitForBinder();
-					BriarService service =
-							((BriarService.BriarBinder) binder).getService();
+					NoConnectService service =
+							((NoConnectService.NoConnectBinder) binder).getService();
 					service.waitForStartup();
 					// Shut down the service and wait for it to shut down
 					LOG.info("Shutting down service");

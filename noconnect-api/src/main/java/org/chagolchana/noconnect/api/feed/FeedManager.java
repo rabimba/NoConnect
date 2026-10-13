@@ -13,7 +13,7 @@ public interface FeedManager {
 	/**
 	 * The unique ID of the RSS feed client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.feed");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.feed");
 
 	/**
 	 * Adds an RSS feed as a new dedicated blog.

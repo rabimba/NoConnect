@@ -17,7 +17,7 @@ import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHan
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 
 @UiThread
 @MethodsNotNullByDefault

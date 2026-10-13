@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
   <!--Setup-->
-  <string name="setup_title">Briar einrichten</string>
-  <string name="setup_explanation">Dein Briar-Konto wird verschlüsselt auf Deinem Gerät gespeichert und nicht mit der \"Cloud\" synchronisiert. Wenn Du Briar deinstallierst oder Dein Passwort vergisst, können das Konto und Deine Daten nicht wiederhergestellt werden.</string>
+  <string name="setup_title">NoConnect einrichten</string>
+  <string name="setup_explanation">Dein NoConnect-Konto wird verschlüsselt auf Deinem Gerät gespeichert und nicht mit der \"Cloud\" synchronisiert. Wenn Du NoConnect deinstallierst oder Dein Passwort vergisst, können das Konto und Deine Daten nicht wiederhergestellt werden.</string>
   <string name="choose_nickname">Wähle Deinen Benutzernamen</string>
   <string name="choose_password">Wähle Dein Passwort</string>
   <string name="confirm_password">Passwort bestätigen</string>
@@ -16,13 +16,13 @@
   <string name="sign_in_button">Anmelden</string>
   <string name="forgotten_password">Ich habe mein Passwort vergessen</string>
   <string name="dialog_title_lost_password">Passwort vergessen</string>
-  <string name="dialog_message_lost_password">Dein Briar-Konto ist  verschlüsselt auf deinem Gerät gespeichert und nicht mit der \"Cloud\" synchronisiert. Deshalb können wir dein Passwort nicht zurücksetzen. Willst du dein Konto löschen und neu beginnen?\n\nAchtung: Deine bestehenden Identitäten, Kontakte und Nachrichten gehen dann für immer verloren.</string>
-  <string name="startup_failed_notification_title">Briar konnte nicht gestartet werden</string>
-  <string name="startup_failed_notification_text">Möglicherweise hilft eine Neuinstallation von Briar.</string>
-  <string name="startup_failed_activity_title">Fehler beim Starten von Briar</string>
-  <string name="startup_failed_db_error">Deine Briar-Datenbank ist korrupt. Briar-Konto, Daten und alle Verbindungen zu Kontakten können nicht mehr wiederhergestellt werden. Deinstalliere Briar und erstelle nach Installation der aktuellen Briar-Version ein neues Konto.</string>
-  <string name="startup_failed_service_error">Briar konnte ein benötigtes Plugin nicht starten. Normalerweise kann das Problem durch eine Neuinstallation von Briar gelöst werden. Eine Neuinstallation führt jedoch zum Verlust des Kontos und aller dazugehörigen Daten, da Briar deine Daten nicht auf zentralen Servern speichert</string>
-  <string name="expiry_warning">Diese Version von Briar ist nicht mehr aktuell.\nBitte installiere eine neuere Version.</string>
+  <string name="dialog_message_lost_password">Dein NoConnect-Konto ist  verschlüsselt auf deinem Gerät gespeichert und nicht mit der \"Cloud\" synchronisiert. Deshalb können wir dein Passwort nicht zurücksetzen. Willst du dein Konto löschen und neu beginnen?\n\nAchtung: Deine bestehenden Identitäten, Kontakte und Nachrichten gehen dann für immer verloren.</string>
+  <string name="startup_failed_notification_title">NoConnect konnte nicht gestartet werden</string>
+  <string name="startup_failed_notification_text">Möglicherweise hilft eine Neuinstallation von NoConnect.</string>
+  <string name="startup_failed_activity_title">Fehler beim Starten von NoConnect</string>
+  <string name="startup_failed_db_error">Deine NoConnect-Datenbank ist korrupt. NoConnect-Konto, Daten und alle Verbindungen zu Kontakten können nicht mehr wiederhergestellt werden. Deinstalliere NoConnect und erstelle nach Installation der aktuellen NoConnect-Version ein neues Konto.</string>
+  <string name="startup_failed_service_error">NoConnect konnte ein benötigtes Plugin nicht starten. Normalerweise kann das Problem durch eine Neuinstallation von NoConnect gelöst werden. Eine Neuinstallation führt jedoch zum Verlust des Kontos und aller dazugehörigen Daten, da NoConnect deine Daten nicht auf zentralen Servern speichert</string>
+  <string name="expiry_warning">Diese Version von NoConnect ist nicht mehr aktuell.\nBitte installiere eine neuere Version.</string>
   <!--Navigation Drawer-->
   <string name="nav_drawer_open_description">Navigationsleiste öffnen</string>
   <string name="nav_drawer_close_description">Navigationsleiste schliessen</string>
@@ -37,8 +37,8 @@
   <string name="transport_bt">Bluetooth</string>
   <string name="transport_lan">WLAN</string>
   <!--Notifications-->
-  <string name="ongoing_notification_title">In Briar angemeldet</string>
-  <string name="ongoing_notification_text">Berühren, um Briar zu öffnen.</string>
+  <string name="ongoing_notification_title">In NoConnect angemeldet</string>
+  <string name="ongoing_notification_text">Berühren, um NoConnect zu öffnen.</string>
   <plurals name="private_message_notification_text">
     <item quantity="one">Neue private Nachricht.</item>
     <item quantity="other">%d neue private Nachrichten.</item>
@@ -93,7 +93,7 @@
   <string name="enter_invitation_code">Bitte gib den Einladungs-Code Deines Kontakts an:</string>
   <string name="searching_format">Suche nach Kontakt mit Einladungs-Code %06d\u2026</string>
   <string name="connection_failed">Verbindung fehlgeschlagen</string>
-  <string name="could_not_find_contact">Briar kann Deinen Kontakt nicht innerhalb der Reichweite finden</string>
+  <string name="could_not_find_contact">NoConnect kann Deinen Kontakt nicht innerhalb der Reichweite finden</string>
   <string name="try_again_button">Noch einmal versuchen</string>
   <string name="connected_to_contact">Mit Kontakt verbunden</string>
   <string name="calculating_confirmation_code">Bestätigungscode wird berechnet\u2026</string>
@@ -114,7 +114,7 @@
   <string name="connection_aborted_remote">Verbindung wurde durch Deinen Kontakt abgebrochen! Möglicherweise stört jemand Deine Verbindung</string>
   <!--Introductions-->
   <string name="introduction_onboarding_title">Mache Deine Kontakte untereinander bekannt</string>
-  <string name="introduction_onboarding_text">Du kannst Deine Kontakte untereinander bekannt machen. So können sie sich über Briar verbinden, ohne sich persönlich treffen zu müssen.</string>
+  <string name="introduction_onboarding_text">Du kannst Deine Kontakte untereinander bekannt machen. So können sie sich über NoConnect verbinden, ohne sich persönlich treffen zu müssen.</string>
   <string name="introduction_activity_title">Kontakt auswählen</string>
   <string name="introduction_message_title">Kontakte untereinander bekannt machen</string>
   <string name="introduction_button">Kontaktempfehlung abgeben</string>
@@ -296,7 +296,7 @@
   <string name="password_changed">Passwort wurde geändert.</string>
   <string name="panic_setting">Panik-Button einrichten</string>
   <string name="panic_setting_title">Panik-Button</string>
-  <string name="panic_setting_hint">Lege fest, wie Briar auf eine Panik-Button-App reagiert</string>
+  <string name="panic_setting_hint">Lege fest, wie NoConnect auf eine Panik-Button-App reagiert</string>
   <string name="panic_app_setting_title">Panik-Button-App</string>
   <string name="unknown_app">eine unbekannte App</string>
   <string name="panic_app_setting_summary">Keine App eingerichtet</string>
@@ -304,10 +304,10 @@
   <string name="dialog_title_connect_panic_app">Bestätige Panik-App</string>
   <string name="dialog_message_connect_panic_app">Bist Du sicher, dass Du %1$s erlauben willst, Panik-Button-Ereignisse auszulösen? Dies kann zum Löschen von Daten führen.</string>
   <string name="lock_setting_title">Abmelden</string>
-  <string name="lock_setting_summary">Von Briar abmelden, wenn ein Panik-Button aktiviert wird</string>
+  <string name="lock_setting_summary">Von NoConnect abmelden, wenn ein Panik-Button aktiviert wird</string>
   <string name="purge_setting_title">Konto löschen</string>
-  <string name="purge_setting_summary">Briar-Konto löschen, wenn der Panik-Button gedrückt wird. Achtung: Es werden alle Identitäten, Kontakte und Nachrichten unwiderruflich gelöscht.</string>
-  <string name="uninstall_setting_title">Briar deinstallieren</string>
+  <string name="purge_setting_summary">NoConnect-Konto löschen, wenn der Panik-Button gedrückt wird. Achtung: Es werden alle Identitäten, Kontakte und Nachrichten unwiderruflich gelöscht.</string>
+  <string name="uninstall_setting_title">NoConnect deinstallieren</string>
   <string name="uninstall_setting_summary">Diese Aktion benötigt manuelle Bestätigung im Falle eines Panik-Ereignisses</string>
   <!--Settings Notifications-->
   <string name="notification_settings_title">Benachrichtigungen</string>
@@ -325,10 +325,10 @@
   <string name="link_warning_text">Dies kann zu Deiner Identifzierung benutzt werden. Überlege, ob die Person die Dir diesen Link geschickt hat, vertrauenswürdig ist und ob Du ihn nicht besser mit Orfox öffnest.</string>
   <string name="link_warning_open_link">Link öffnen</string>
   <!--Crash Reporter-->
-  <string name="crash_report_title">Briar-Absturzbericht</string>
-  <string name="briar_crashed">Es tut uns leid, Briar ist abgestürzt.</string>
+  <string name="crash_report_title">NoConnect-Absturzbericht</string>
+  <string name="nc_crashed">Es tut uns leid, NoConnect ist abgestürzt.</string>
   <string name="not_your_fault">Das ist nicht Deine Schuld.</string>
-  <string name="please_send_report">Bitte hilf uns, Briar zu verbessern, indem Du einen Absturzbericht sendest.</string>
+  <string name="please_send_report">Bitte hilf uns, NoConnect zu verbessern, indem Du einen Absturzbericht sendest.</string>
   <string name="report_is_encrypted">Wir versprechen, dass der Bericht verschlüsselt ist und über eine sichere Verbindung geschickt wird.</string>
   <string name="feedback_title">Feedback</string>
   <string name="describe_crash">Beschreibe was passiert ist (optional)</string>
@@ -339,8 +339,8 @@
   <string name="could_not_load_report_data">Konnte Daten des Berichts nicht laden</string>
   <string name="send_report">Bericht abschicken</string>
   <string name="close">Schließen</string>
-  <string name="dev_report_saved">Der Bericht wurde gespeichert. Er wird verschickt, wenn Du Dich das nächste Mal bei Briar anmeldest.</string>
+  <string name="dev_report_saved">Der Bericht wurde gespeichert. Er wird verschickt, wenn Du Dich das nächste Mal bei NoConnect anmeldest.</string>
   <!--Sign Out-->
-  <string name="progress_title_logout">Von Briar abmelden ...</string>
+  <string name="progress_title_logout">Von NoConnect abmelden ...</string>
   <!--Screen Filters & Tapjacking-->
 </resources>

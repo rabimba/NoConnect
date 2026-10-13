@@ -22,7 +22,7 @@ import org.chagolchana.noconnect.android.activity.ActivityComponent;
 import org.chagolchana.noconnect.android.blog.FeedController.FeedListener;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.blog.Blog;
 import org.chagolchana.noconnect.api.blog.BlogPostHeader;
 
@@ -35,7 +35,7 @@ import javax.inject.Inject;
 import static android.app.Activity.RESULT_OK;
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.support.design.widget.Snackbar.LENGTH_LONG;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.activity.RequestCodes.REQUEST_WRITE_BLOG_POST;
 
 @UiThread
@@ -52,7 +52,7 @@ public class FeedFragment extends BaseFragment implements
 
 	private BlogPostAdapter adapter;
 	private LinearLayoutManager layoutManager;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private Blog personalBlog = null;
 
 	public static FeedFragment newInstance() {
@@ -77,7 +77,7 @@ public class FeedFragment extends BaseFragment implements
 		adapter = new BlogPostAdapter(getActivity(), this);
 
 		layoutManager = new LinearLayoutManager(getActivity());
-		list = (BriarRecyclerView) v.findViewById(R.id.postList);
+		list = (NoConnectRecyclerView) v.findViewById(R.id.postList);
 		list.setLayoutManager(layoutManager);
 		list.setAdapter(adapter);
 		list.setEmptyText(R.string.blogs_feed_empty_state);
@@ -244,7 +244,7 @@ public class FeedFragment extends BaseFragment implements
 		boolean scroll = count > (lastVisible - firstVisible + 1);
 
 		Snackbar s = Snackbar.make(list, stringRes, LENGTH_LONG);
-		s.getView().setBackgroundResource(R.color.briar_primary);
+		s.getView().setBackgroundResource(R.color.nc_primary);
 		if (scroll) {
 			OnClickListener onClick = new OnClickListener() {
 				@Override
@@ -254,7 +254,7 @@ public class FeedFragment extends BaseFragment implements
 			};
 			s.setActionTextColor(ContextCompat
 					.getColor(getContext(),
-							R.color.briar_button_positive));
+							R.color.nc_button_positive));
 			s.setAction(R.string.blogs_blog_post_scroll_to, onClick);
 		}
 		s.show();

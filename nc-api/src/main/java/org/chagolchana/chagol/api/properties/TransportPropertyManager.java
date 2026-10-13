@@ -15,7 +15,7 @@ public interface TransportPropertyManager {
 	/**
 	 * The unique ID of the transport property client.
 	 */
-	ClientId CLIENT_ID = new ClientId("org.briarproject.briar.properties");
+	ClientId CLIENT_ID = new ClientId("org.chagolchana.noconnect.properties");
 
 	/**
 	 * Stores the given properties received while adding a contact - they will

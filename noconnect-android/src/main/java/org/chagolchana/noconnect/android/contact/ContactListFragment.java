@@ -34,7 +34,7 @@ import org.chagolchana.noconnect.android.activity.ActivityComponent;
 import org.chagolchana.noconnect.android.contact.BaseContactListAdapter.OnContactClickListener;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
 import org.chagolchana.noconnect.android.keyagreement.KeyAgreementActivity;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.android.AndroidNotificationManager;
 import org.chagolchana.noconnect.api.client.BaseMessageHeader;
 import org.chagolchana.noconnect.api.client.MessageTracker.GroupCount;
@@ -78,7 +78,7 @@ public class ContactListFragment extends BaseFragment implements EventListener {
 	AndroidNotificationManager notificationManager;
 
 	private ContactListAdapter adapter;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 
 	// Fields that are accessed from background threads must be volatile
 	@Inject
@@ -147,7 +147,7 @@ public class ContactListFragment extends BaseFragment implements EventListener {
 					}
 				};
 		adapter = new ContactListAdapter(getContext(), onContactClickListener);
-		list = (BriarRecyclerView) contentView.findViewById(R.id.list);
+		list = (NoConnectRecyclerView) contentView.findViewById(R.id.list);
 		list.setLayoutManager(new LinearLayoutManager(getContext()));
 		list.setAdapter(adapter);
 		list.setEmptyText(getString(R.string.no_contacts));

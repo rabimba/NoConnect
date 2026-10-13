@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 import javax.inject.Inject;
 
-import static org.chagolchana.noconnect.android.BriarApplication.EXPIRY_DATE;
+import static org.chagolchana.noconnect.android.NoConnectApplication.EXPIRY_DATE;
 import static org.chagolchana.noconnect.android.TestingConstants.DEFAULT_LOG_LEVEL;
 import static org.chagolchana.noconnect.android.TestingConstants.TESTING;
 

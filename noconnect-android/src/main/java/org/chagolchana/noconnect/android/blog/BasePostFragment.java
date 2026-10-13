@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.util.UiUtils.MIN_DATE_RESOLUTION;
 
 @UiThread
@@ -32,7 +32,7 @@ import static org.chagolchana.noconnect.android.util.UiUtils.MIN_DATE_RESOLUTION
 @ParametersNotNullByDefault
 abstract class BasePostFragment extends BaseFragment {
 
-	static final String POST_ID = "briar.POST_ID";
+	static final String POST_ID = "noconnect.POST_ID";
 
 	private static final Logger LOG =
 			Logger.getLogger(BasePostFragment.class.getName());

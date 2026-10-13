@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.util.BriarAdapter;
+import org.chagolchana.noconnect.android.util.NoConnectAdapter;
 
 class MemberListAdapter extends
-		BriarAdapter<MemberListItem, MemberListItemHolder> {
+		NoConnectAdapter<MemberListItem, MemberListItemHolder> {
 
 	MemberListAdapter(Context context) {
 		super(context, MemberListItem.class);

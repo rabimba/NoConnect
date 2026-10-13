@@ -29,7 +29,7 @@ public class ScreenFilterDialogFragment extends DialogFragment {
 	@Override
 	public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),
-				R.style.BriarDialogThemeNoFilter);
+				R.style.NoConnectDialogThemeNoFilter);
 		builder.setTitle(R.string.screen_filter_title);
 		ArrayList<String> apps = getArguments().getStringArrayList("apps");
 		builder.setMessage(getString(R.string.screen_filter_body,

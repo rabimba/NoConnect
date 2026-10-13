@@ -14,7 +14,7 @@
 
 		<android.support.v7.widget.Toolbar
 			android:id="@+id/toolbar"
-			style="@style/BriarToolbar"
+			style="@style/NoConnectToolbar"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content">
 
@@ -40,7 +40,7 @@
 
 	</android.support.design.widget.AppBarLayout>
 
-	<org.chagolchana.noconnect.android.view.BriarRecyclerView
+	<org.chagolchana.noconnect.android.view.NoConnectRecyclerView
 		android:id="@+id/conversationView"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"

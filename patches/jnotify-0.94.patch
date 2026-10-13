@@ -1,4 +1,4 @@
-briar-desktop/libs/jnotify-0.94.jar is built via: 
+nc-j2se/libs/jnotify-0.94.jar is built via: 
 $ wget "http://downloads.sourceforge.net/project/jnotify/jnotify/jnotify-0.94/jnotify-lib-0.94.zip?r=&ts=$(date +%s)"
 $ unzip -d jnotify-lib-0.94 jnotify-lib-0.94.zip && cd jnotify-lib-0.94
 $ unzip -d src jnotify-0.94-src.zip
@@ -7,9 +7,9 @@ $ wget -O build.properties "http://jnotify.cvs.sourceforge.net/viewvc/jnotify/jn
 $ patch -lp1 < /path/to/this/patch
 $ ant build_java # if this fails with invalid flag: -g:{lines,vars,source}, try removing the debug attributes from <javac>
 
-diff -ru jnotify-0.94/net/contentobjects/jnotify/linux/JNotify_linux.java jnotify-0.94-briar/net/contentobjects/jnotify/linux/JNotify_linux.java
+diff -ru jnotify-0.94/net/contentobjects/jnotify/linux/JNotify_linux.java jnotify-0.94-nc/net/contentobjects/jnotify/linux/JNotify_linux.java
 --- jnotify-0.94/net/contentobjects/jnotify/linux/JNotify_linux.java	2012-04-25 00:03:54.000000000 +0100
-+++ jnotify-0.94-briar/net/contentobjects/jnotify/linux/JNotify_linux.java	2014-01-30 12:31:41.959082350 +0000
++++ jnotify-0.94-nc/net/contentobjects/jnotify/linux/JNotify_linux.java	2014-01-30 12:31:41.959082350 +0000
 @@ -37,6 +37,7 @@
  package net.contentobjects.jnotify.linux;
  
@@ -27,9 +27,9 @@ diff -ru jnotify-0.94/net/contentobjects/jnotify/linux/JNotify_linux.java jnotif
  		int res = nativeInit();
  		if (res != 0)
  		{
-diff -ru jnotify-0.94/net/contentobjects/jnotify/macosx/JNotify_macosx.java jnotify-0.94-briar/net/contentobjects/jnotify/macosx/JNotify_macosx.java
+diff -ru jnotify-0.94/net/contentobjects/jnotify/macosx/JNotify_macosx.java jnotify-0.94-nc/net/contentobjects/jnotify/macosx/JNotify_macosx.java
 --- jnotify-0.94/net/contentobjects/jnotify/macosx/JNotify_macosx.java	2010-01-26 19:43:42.000000000 +0000
-+++ jnotify-0.94-briar/net/contentobjects/jnotify/macosx/JNotify_macosx.java	2014-01-30 12:31:41.959082350 +0000
++++ jnotify-0.94-nc/net/contentobjects/jnotify/macosx/JNotify_macosx.java	2014-01-30 12:31:41.959082350 +0000
 @@ -1,6 +1,7 @@
  package net.contentobjects.jnotify.macosx;
  
@@ -47,9 +47,9 @@ diff -ru jnotify-0.94/net/contentobjects/jnotify/macosx/JNotify_macosx.java jnot
  		Thread thread = new Thread("FSEvent thread") //$NON-NLS-1$
  		{
  			public void run()
-diff -ru jnotify-0.94/net/contentobjects/jnotify/Util.java jnotify-0.94-briar/net/contentobjects/jnotify/Util.java
+diff -ru jnotify-0.94/net/contentobjects/jnotify/Util.java jnotify-0.94-nc/net/contentobjects/jnotify/Util.java
 --- jnotify-0.94/net/contentobjects/jnotify/Util.java	2006-02-14 08:18:10.000000000 +0000
-+++ jnotify-0.94-briar/net/contentobjects/jnotify/Util.java	2014-01-30 12:31:41.959082350 +0000
++++ jnotify-0.94-nc/net/contentobjects/jnotify/Util.java	2014-01-30 12:31:41.959082350 +0000
 @@ -30,4 +30,26 @@
  			return "UNKNOWN";
  		}
@@ -77,9 +77,9 @@ diff -ru jnotify-0.94/net/contentobjects/jnotify/Util.java jnotify-0.94-briar/ne
 +       }
 +   }
  }
-diff -ru jnotify-0.94/net/contentobjects/jnotify/win32/JNotify_win32.java jnotify-0.94-briar/net/contentobjects/jnotify/win32/JNotify_win32.java
+diff -ru jnotify-0.94/net/contentobjects/jnotify/win32/JNotify_win32.java jnotify-0.94-nc/net/contentobjects/jnotify/win32/JNotify_win32.java
 --- jnotify-0.94/net/contentobjects/jnotify/win32/JNotify_win32.java	2012-04-25 00:04:50.000000000 +0100
-+++ jnotify-0.94-briar/net/contentobjects/jnotify/win32/JNotify_win32.java	2014-01-30 12:31:41.959082350 +0000
++++ jnotify-0.94-nc/net/contentobjects/jnotify/win32/JNotify_win32.java	2014-01-30 12:31:41.959082350 +0000
 @@ -39,28 +39,13 @@
  package net.contentobjects.jnotify.win32;
  

@@ -20,7 +20,7 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.api.forum.Forum;
 import org.chagolchana.noconnect.api.forum.ForumManager;
 
@@ -38,7 +38,7 @@ import static org.chagolchana.noconnect.api.forum.ForumConstants.MAX_FORUM_NAME_
 
 @MethodsNotNullByDefault
 @ParametersNotNullByDefault
-public class CreateForumActivity extends BriarActivity {
+public class CreateForumActivity extends NoConnectActivity {
 
 	private static final Logger LOG =
 			Logger.getLogger(CreateForumActivity.class.getName());

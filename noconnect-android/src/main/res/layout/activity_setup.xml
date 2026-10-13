@@ -90,7 +90,7 @@
 
 		<Button
 			android:id="@+id/create_account"
-			style="@style/BriarButton.Default"
+			style="@style/NoConnectButton.Default"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@+id/password_confirm_wrapper"

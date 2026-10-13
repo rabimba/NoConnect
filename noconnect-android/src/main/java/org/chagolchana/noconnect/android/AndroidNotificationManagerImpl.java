@@ -64,7 +64,7 @@ import static android.support.v4.app.NotificationCompat.CATEGORY_SOCIAL;
 import static android.support.v4.app.NotificationCompat.VISIBILITY_PRIVATE;
 import static android.support.v4.app.NotificationCompat.VISIBILITY_SECRET;
 import static java.util.logging.Level.WARNING;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.contact.ConversationActivity.CONTACT_ID;
 import static org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity.INTENT_BLOGS;
 import static org.chagolchana.noconnect.android.navdrawer.NavDrawerActivity.INTENT_CONTACTS;
@@ -87,13 +87,13 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 
 	// Content URIs to differentiate between pending intents
 	private static final String CONTACT_URI =
-			"content://org.briarproject.briar/contact";
+			"content://org.chagolchana.noconnect/contact";
 	private static final String GROUP_URI =
-			"content://org.briarproject.briar/group";
+			"content://org.chagolchana.noconnect/group";
 	private static final String FORUM_URI =
-			"content://org.briarproject.briar/forum";
+			"content://org.chagolchana.noconnect/forum";
 	private static final String BLOG_URI =
-			"content://org.briarproject.briar/blog";
+			"content://org.chagolchana.noconnect/blog";
 
 	private static final Logger LOG =
 			Logger.getLogger(AndroidNotificationManagerImpl.class.getName());
@@ -292,7 +292,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 					new NotificationCompat.Builder(appContext);
 			b.setSmallIcon(R.drawable.notification_private_message);
 			b.setColor(ContextCompat.getColor(appContext,
-					R.color.briar_primary));
+					R.color.nc_primary));
 			b.setContentTitle(appContext.getText(R.string.app_name));
 			b.setContentText(appContext.getResources().getQuantityString(
 					R.plurals.private_message_notification_text, contactTotal,
@@ -391,7 +391,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 					new NotificationCompat.Builder(appContext);
 			b.setSmallIcon(R.drawable.notification_private_group);
 			b.setColor(ContextCompat.getColor(appContext,
-					R.color.briar_primary));
+					R.color.nc_primary));
 			b.setContentTitle(appContext.getText(R.string.app_name));
 			b.setContentText(appContext.getResources().getQuantityString(
 					R.plurals.group_message_notification_text, groupTotal,
@@ -478,7 +478,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 					new NotificationCompat.Builder(appContext);
 			b.setSmallIcon(R.drawable.notification_forum);
 			b.setColor(ContextCompat.getColor(appContext,
-					R.color.briar_primary));
+					R.color.nc_primary));
 			b.setContentTitle(appContext.getText(R.string.app_name));
 			b.setContentText(appContext.getResources().getQuantityString(
 					R.plurals.forum_post_notification_text, forumTotal,
@@ -565,7 +565,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 					new NotificationCompat.Builder(appContext);
 			b.setSmallIcon(R.drawable.notification_blog);
 			b.setColor(ContextCompat.getColor(appContext,
-					R.color.briar_primary));
+					R.color.nc_primary));
 			b.setContentTitle(appContext.getText(R.string.app_name));
 			b.setContentText(appContext.getResources().getQuantityString(
 					R.plurals.blog_post_notification_text, blogTotal,
@@ -626,7 +626,7 @@ class AndroidNotificationManagerImpl implements AndroidNotificationManager,
 		NotificationCompat.Builder b =
 				new NotificationCompat.Builder(appContext);
 		b.setSmallIcon(R.drawable.notification_introduction);
-		b.setColor(ContextCompat.getColor(appContext, R.color.briar_primary));
+		b.setColor(ContextCompat.getColor(appContext, R.color.nc_primary));
 		b.setContentTitle(appContext.getText(R.string.app_name));
 		b.setContentText(appContext.getResources().getQuantityString(
 				R.plurals.introduction_notification_text, introductionTotal,

@@ -26,7 +26,7 @@ import org.chagolchana.chagol.api.plugin.TorConstants;
 import org.chagolchana.chagol.api.plugin.TransportId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.blog.FeedFragment;
 import org.chagolchana.noconnect.android.contact.ContactListFragment;
 import org.chagolchana.noconnect.android.controller.handler.UiResultHandler;
@@ -50,7 +50,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static org.chagolchana.noconnect.android.util.UiUtils.getDaysUntilExpiry;
 
-public class NavDrawerActivity extends BriarActivity implements
+public class NavDrawerActivity extends NoConnectActivity implements
 		BaseFragmentListener, TransportStateListener,
 		OnNavigationItemSelectedListener {
 
@@ -344,7 +344,7 @@ public class NavDrawerActivity extends BriarActivity implements
 				int c;
 				if (t.enabled) {
 					c = ContextCompat.getColor(NavDrawerActivity.this,
-							R.color.briar_green_light);
+							R.color.nc_green_light);
 				} else {
 					c = ContextCompat.getColor(NavDrawerActivity.this,
 							android.R.color.tertiary_text_light);

@@ -25,14 +25,14 @@ import org.chagolchana.chagol.api.nullsafety.ParametersNotNullByDefault;
 import org.chagolchana.chagol.api.sync.GroupId;
 import org.chagolchana.noconnect.R;
 import org.chagolchana.noconnect.android.activity.ActivityComponent;
-import org.chagolchana.noconnect.android.activity.BriarActivity;
+import org.chagolchana.noconnect.android.activity.NoConnectActivity;
 import org.chagolchana.noconnect.android.blog.BlogController.BlogSharingListener;
 import org.chagolchana.noconnect.android.controller.SharingController;
 import org.chagolchana.noconnect.android.controller.handler.UiResultExceptionHandler;
 import org.chagolchana.noconnect.android.fragment.BaseFragment;
 import org.chagolchana.noconnect.android.sharing.BlogSharingStatusActivity;
 import org.chagolchana.noconnect.android.sharing.ShareBlogActivity;
-import org.chagolchana.noconnect.android.view.BriarRecyclerView;
+import org.chagolchana.noconnect.android.view.NoConnectRecyclerView;
 import org.chagolchana.noconnect.api.blog.BlogPostHeader;
 
 import java.util.Collection;
@@ -43,7 +43,7 @@ import javax.inject.Inject;
 import static android.app.Activity.RESULT_OK;
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.widget.Toast.LENGTH_SHORT;
-import static org.chagolchana.noconnect.android.activity.BriarActivity.GROUP_ID;
+import static org.chagolchana.noconnect.android.activity.NoConnectActivity.GROUP_ID;
 import static org.chagolchana.noconnect.android.activity.RequestCodes.REQUEST_SHARE_BLOG;
 import static org.chagolchana.noconnect.android.activity.RequestCodes.REQUEST_WRITE_BLOG_POST;
 import static org.chagolchana.noconnect.android.controller.SharingController.SharingListener;
@@ -64,7 +64,7 @@ public class BlogFragment extends BaseFragment
 
 	private GroupId groupId;
 	private BlogPostAdapter adapter;
-	private BriarRecyclerView list;
+	private NoConnectRecyclerView list;
 	private MenuItem writeButton, deleteButton;
 	private boolean isMyBlog = false, canDeleteBlog = false;
 
@@ -92,7 +92,7 @@ public class BlogFragment extends BaseFragment
 		View v = inflater.inflate(R.layout.fragment_blog, container, false);
 
 		adapter = new BlogPostAdapter(getActivity(), this);
-		list = (BriarRecyclerView) v.findViewById(R.id.postList);
+		list = (NoConnectRecyclerView) v.findViewById(R.id.postList);
 		list.setLayoutManager(new LinearLayoutManager(getActivity()));
 		list.setAdapter(adapter);
 		list.showProgressBar();
@@ -307,7 +307,7 @@ public class BlogFragment extends BaseFragment
 
 	private void setToolbarSubTitle(int total, int online) {
 		ActionBar actionBar =
-				((BriarActivity) getActivity()).getSupportActionBar();
+				((NoConnectActivity) getActivity()).getSupportActionBar();
 		if (actionBar != null) {
 			actionBar.setSubtitle(
 					getString(R.string.shared_with, total, online));
@@ -329,7 +329,7 @@ public class BlogFragment extends BaseFragment
 	private void displaySnackbar(int stringId, boolean scroll) {
 		Snackbar snackbar =
 				Snackbar.make(list, stringId, Snackbar.LENGTH_LONG);
-		snackbar.getView().setBackgroundResource(R.color.briar_primary);
+		snackbar.getView().setBackgroundResource(R.color.nc_primary);
 		if (scroll) {
 			View.OnClickListener onClick = new View.OnClickListener() {
 				@Override
@@ -339,7 +339,7 @@ public class BlogFragment extends BaseFragment
 			};
 			snackbar.setActionTextColor(ContextCompat
 					.getColor(getContext(),
-							R.color.briar_button_positive));
+							R.color.nc_button_positive));
 			snackbar.setAction(R.string.blogs_blog_post_scroll_to, onClick);
 		}
 		snackbar.show();
@@ -354,7 +354,7 @@ public class BlogFragment extends BaseFragment
 					}
 				};
 		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(),
-				R.style.BriarDialogTheme);
+				R.style.NoConnectDialogTheme);
 		builder.setTitle(getString(R.string.blogs_remove_blog));
 		builder.setMessage(
 				getString(R.string.blogs_remove_blog_dialog_message));

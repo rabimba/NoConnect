@@ -45,9 +45,9 @@ import dagger.Module;
 		SystemModule.class,
 		TransportModule.class
 })
-public class BrambleCoreModule {
+public class ChagolCoreModule {
 
-	public static void initEagerSingletons(BrambleCoreEagerSingletons c) {
+	public static void initEagerSingletons(ChagolCoreEagerSingletons c) {
 		c.inject(new ContactModule.EagerSingletons());
 		c.inject(new CryptoModule.EagerSingletons());
 		c.inject(new DatabaseExecutorModule.EagerSingletons());

@@ -11,7 +11,7 @@ import org.chagolchana.chagol.api.settings.Settings;
 import org.chagolchana.chagol.api.settings.SettingsManager;
 import org.chagolchana.chagol.util.StringUtils;
 import org.chagolchana.noconnect.R;
-import org.chagolchana.noconnect.android.BriarApplication;
+import org.chagolchana.noconnect.android.NoConnectApplication;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -45,8 +45,8 @@ public class RecentEmojiPageModel implements EmojiPageModel {
 	Executor dbExecutor;
 
 	RecentEmojiPageModel(Context context) {
-		BriarApplication app =
-				(BriarApplication) context.getApplicationContext();
+		NoConnectApplication app =
+				(NoConnectApplication) context.getApplicationContext();
 		app.getApplicationComponent().inject(this);
 		recentlyUsed = getPersistedCache();
 	}

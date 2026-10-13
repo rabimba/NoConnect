@@ -27,7 +27,7 @@
 
 				<de.hdodenhof.circleimageview.CircleImageView
 					android:id="@+id/avatarContact1"
-					style="@style/BriarAvatar"
+					style="@style/NoConnectAvatar"
 					android:layout_width="@dimen/listitem_picture_size"
 					android:layout_height="@dimen/listitem_picture_size"
 					android:layout_marginEnd="@dimen/listitem_horizontal_margin"
@@ -42,7 +42,7 @@
 					android:layout_height="wrap_content"
 					android:layout_marginTop="@dimen/margin_small"
 					android:gravity="center"
-					android:textColor="@color/briar_text_primary"
+					android:textColor="@color/nc_text_primary"
 					android:textSize="@dimen/text_size_small"
 					tools:text="Contact 1"/>
 
@@ -63,7 +63,7 @@
 
 				<de.hdodenhof.circleimageview.CircleImageView
 					android:id="@+id/avatarContact2"
-					style="@style/BriarAvatar"
+					style="@style/NoConnectAvatar"
 					android:layout_width="@dimen/listitem_picture_size"
 					android:layout_height="@dimen/listitem_picture_size"
 					android:layout_marginEnd="@dimen/listitem_horizontal_margin"
@@ -78,7 +78,7 @@
 					android:layout_height="wrap_content"
 					android:layout_marginTop="@dimen/margin_small"
 					android:gravity="center"
-					android:textColor="@color/briar_text_primary"
+					android:textColor="@color/nc_text_primary"
 					android:textSize="@dimen/text_size_small"
 					tools:text="Contact 2"/>
 
