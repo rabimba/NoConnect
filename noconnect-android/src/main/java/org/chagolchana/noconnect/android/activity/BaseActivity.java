@@ -1,6 +1,7 @@
 package org.chagolchana.noconnect.android.activity;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,11 @@ import androidx.annotation.LayoutRes;
 import androidx.annotation.UiThread;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
@@ -90,6 +96,7 @@ public abstract class BaseActivity extends AppCompatActivity
 				.build();
 		injectActivity(activityComponent);
 		super.onCreate(state);
+		updateSystemBarAppearance();
 		if (LOG.isLoggable(INFO)) {
 			LOG.info("Creating " + getClass().getSimpleName());
 		}
@@ -248,7 +255,41 @@ public abstract class BaseActivity extends AppCompatActivity
 		wrapper.setLayoutParams(new LayoutParams(MATCH_PARENT, MATCH_PARENT));
 		wrapper.setOnTapFilteredListener(this);
 		wrapper.addView(v);
+		applyWindowInsetsAsPadding(wrapper);
 		return wrapper;
+	}
+
+	/**
+	 * Since targeting API 36 the app is always drawn edge to edge on API 35+.
+	 * Keep content clear of the system bars, display cutout and keyboard by
+	 * padding the content wrapper with whatever insets reach it (the AppCompat
+	 * action bar, if any, has already consumed the top inset).
+	 */
+	private static void applyWindowInsetsAsPadding(View wrapper) {
+		ViewCompat.setOnApplyWindowInsetsListener(wrapper, (view, insets) -> {
+			Insets bars = insets.getInsets(WindowInsetsCompat.Type.systemBars()
+					| WindowInsetsCompat.Type.displayCutout());
+			Insets ime = insets.getInsets(WindowInsetsCompat.Type.ime());
+			view.setPadding(bars.left, bars.top, bars.right,
+					Math.max(bars.bottom, ime.bottom));
+			return WindowInsetsCompat.CONSUMED;
+		});
+	}
+
+	/**
+	 * Edge to edge, the system bars are transparent over the window
+	 * background, so their icons must contrast with the theme rather than
+	 * with the (now ignored) status bar colour.
+	 */
+	private void updateSystemBarAppearance() {
+		if (SDK_INT < 35) return;
+		int nightMode = getResources().getConfiguration().uiMode
+				& Configuration.UI_MODE_NIGHT_MASK;
+		boolean light = nightMode != Configuration.UI_MODE_NIGHT_YES;
+		WindowInsetsControllerCompat controller = WindowCompat
+				.getInsetsController(getWindow(), getWindow().getDecorView());
+		controller.setAppearanceLightStatusBars(light);
+		controller.setAppearanceLightNavigationBars(light);
 	}
 
 	/*
