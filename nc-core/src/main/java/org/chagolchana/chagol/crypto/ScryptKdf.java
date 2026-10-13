@@ -62,6 +62,15 @@ class ScryptKdf implements PasswordBasedKdf {
 		return clock.currentTimeMillis() - start;
 	}
 
+	/**
+	 * Returns true if the given cost parameter is one scrypt accepts and that
+	 * fits within the memory this class would ever use. Rejecting other values
+	 * stops a tampered key file from exhausting memory.
+	 */
+	static boolean isValidCost(long cost) {
+		return cost >= 2 && cost <= MAX_COST && (cost & (cost - 1)) == 0;
+	}
+
 	@Override
 	public SecretKey deriveKey(String password, byte[] salt, int cost) {
 		long start = now();

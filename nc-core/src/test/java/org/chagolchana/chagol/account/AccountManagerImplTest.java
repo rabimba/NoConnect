@@ -133,6 +133,8 @@ public class AccountManagerImplTest extends ChagolMockTestCase {
 			oneOf(crypto).decryptWithPassword(encryptedKey, password,
 					keyStrengthener);
 			will(returnValue(key.getBytes()));
+			oneOf(crypto).isEncryptedWithLegacyKdf(encryptedKey);
+			will(returnValue(false));
 			oneOf(crypto).isEncryptedWithStrengthenedKey(encryptedKey);
 			will(returnValue(true));
 		}});
@@ -159,6 +161,8 @@ public class AccountManagerImplTest extends ChagolMockTestCase {
 			oneOf(crypto).decryptWithPassword(encryptedKey, password,
 					keyStrengthener);
 			will(returnValue(key.getBytes()));
+			oneOf(crypto).isEncryptedWithLegacyKdf(encryptedKey);
+			will(returnValue(false));
 			oneOf(crypto).isEncryptedWithStrengthenedKey(encryptedKey);
 			will(returnValue(false));
 			oneOf(crypto).encryptWithPassword(key.getBytes(), password,
@@ -317,12 +321,34 @@ public class AccountManagerImplTest extends ChagolMockTestCase {
 	}
 
 	@Test
+	public void testSignInReEncryptsKeyFromLegacyKdf() throws Exception {
+		context.checking(new Expectations() {{
+			oneOf(crypto).decryptWithPassword(encryptedKey, password,
+					keyStrengthener);
+			will(returnValue(key.getBytes()));
+			oneOf(crypto).isEncryptedWithLegacyKdf(encryptedKey);
+			will(returnValue(true));
+			oneOf(crypto).encryptWithPassword(key.getBytes(), password,
+					keyStrengthener);
+			will(returnValue(newEncryptedKey));
+		}});
+
+		storeDatabaseKey(keyFile, encryptedKeyHex);
+		storeDatabaseKey(keyBackupFile, encryptedKeyHex);
+
+		accountManager.signIn(password);
+		assertTrue(accountManager.hasDatabaseKey());
+	}
+
+	@Test
 	public void testChangePasswordReturnsTrueIfPasswordIsRight()
 			throws Exception {
 		context.checking(new Expectations() {{
 			oneOf(crypto).decryptWithPassword(encryptedKey, password,
 					keyStrengthener);
 			will(returnValue(key.getBytes()));
+			oneOf(crypto).isEncryptedWithLegacyKdf(encryptedKey);
+			will(returnValue(false));
 			oneOf(crypto).isEncryptedWithStrengthenedKey(encryptedKey);
 			will(returnValue(true));
 			oneOf(crypto).encryptWithPassword(key.getBytes(), newPassword,

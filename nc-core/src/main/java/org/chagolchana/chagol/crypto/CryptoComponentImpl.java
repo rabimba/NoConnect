@@ -41,6 +41,7 @@ import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import static java.lang.System.arraycopy;
+import static java.util.Objects.requireNonNull;
 import static java.util.logging.Level.INFO;
 import static java.util.logging.Logger.getLogger;
 import static org.chagolchana.chagol.api.crypto.CryptoConstants.KEY_TYPE_AGREEMENT;
@@ -62,13 +63,19 @@ class CryptoComponentImpl implements CryptoComponent {
 	private static final int SIGNATURE_KEY_PAIR_BITS = 256;
 	private static final int STORAGE_IV_BYTES = 24; // 196 bits
 	private static final int PBKDF_SALT_BYTES = 32; // 256 bits
+	// Legacy formats, still accepted for decryption
 	private static final byte PBKDF_FORMAT_SCRYPT = 0;
 	private static final byte PBKDF_FORMAT_SCRYPT_STRENGTHENED = 1;
+	// Current formats
+	private static final byte PBKDF_FORMAT_ARGON2ID = 2;
+	private static final byte PBKDF_FORMAT_ARGON2ID_STRENGTHENED = 3;
 	private static final byte ONION_HS_PROTOCOL_VERSION = 3;
 	private static final int ONION_CHECKSUM_BYTES = 2;
 
 	private final SecureRandom secureRandom;
 	private final PasswordBasedKdf passwordBasedKdf;
+	@Nullable
+	private final PasswordBasedKdf legacyPasswordBasedKdf;
 	private final Curve25519 curve25519;
 	private final KeyPairGenerator signatureKeyPairGenerator;
 	private final KeyParser agreementKeyParser, signatureKeyParser;
@@ -77,6 +84,18 @@ class CryptoComponentImpl implements CryptoComponent {
 	@Inject
 	CryptoComponentImpl(SecureRandomProvider secureRandomProvider,
 			PasswordBasedKdf passwordBasedKdf) {
+		this(secureRandomProvider, passwordBasedKdf, null);
+	}
+
+	/**
+	 * @param passwordBasedKdf the KDF used for new password-based encryption
+	 * (Argon2id in production)
+	 * @param legacyPasswordBasedKdf the scrypt KDF used to decrypt data in the
+	 * legacy formats, or null if not needed
+	 */
+	CryptoComponentImpl(SecureRandomProvider secureRandomProvider,
+			PasswordBasedKdf passwordBasedKdf,
+			@Nullable PasswordBasedKdf legacyPasswordBasedKdf) {
 		if (LOG.isLoggable(INFO)) {
 			SecureRandom defaultSecureRandom = new SecureRandom();
 			String name = defaultSecureRandom.getProvider().getName();
@@ -97,6 +116,7 @@ class CryptoComponentImpl implements CryptoComponent {
 		}
 		secureRandom = new SecureRandom();
 		this.passwordBasedKdf = passwordBasedKdf;
+		this.legacyPasswordBasedKdf = legacyPasswordBasedKdf;
 		curve25519 = Curve25519.getInstance("java");
 		signatureKeyPairGenerator = new KeyPairGenerator();
 		signatureKeyPairGenerator.initialize(SIGNATURE_KEY_PAIR_BITS,
@@ -366,15 +386,26 @@ class CryptoComponentImpl implements CryptoComponent {
 	@Override
 	public byte[] encryptWithPassword(byte[] input, String password,
 			@Nullable KeyStrengthener keyStrengthener) {
+		return encryptWithPassword(input, password, keyStrengthener, false);
+	}
+
+	/**
+	 * Package access for testing: with legacy = true, produces the legacy
+	 * scrypt-based format so migration can be tested.
+	 */
+	byte[] encryptWithPassword(byte[] input, String password,
+			@Nullable KeyStrengthener keyStrengthener, boolean legacy) {
+		PasswordBasedKdf kdf = legacy ? requireNonNull(legacyPasswordBasedKdf)
+				: passwordBasedKdf;
 		AuthenticatedCipher cipher = new XSalsa20Poly1305AuthenticatedCipher();
 		int macBytes = cipher.getMacBytes();
 		// Generate a random salt
 		byte[] salt = new byte[PBKDF_SALT_BYTES];
 		secureRandom.nextBytes(salt);
 		// Calibrate the KDF
-		int cost = passwordBasedKdf.chooseCostParameter();
+		int cost = kdf.chooseCostParameter();
 		// Derive the encryption key from the password
-		SecretKey key = passwordBasedKdf.deriveKey(password, salt, cost);
+		SecretKey key = kdf.deriveKey(password, salt, cost);
 		if (keyStrengthener != null) key = keyStrengthener.strengthenKey(key);
 		// Generate a random IV
 		byte[] iv = new byte[STORAGE_IV_BYTES];
@@ -386,8 +417,14 @@ class CryptoComponentImpl implements CryptoComponent {
 		byte[] output = new byte[outputLen];
 		int outputOff = 0;
 		// Format version
-		byte formatVersion = keyStrengthener == null
-				? PBKDF_FORMAT_SCRYPT : PBKDF_FORMAT_SCRYPT_STRENGTHENED;
+		byte formatVersion;
+		if (legacy) {
+			formatVersion = keyStrengthener == null
+					? PBKDF_FORMAT_SCRYPT : PBKDF_FORMAT_SCRYPT_STRENGTHENED;
+		} else {
+			formatVersion = keyStrengthener == null
+					? PBKDF_FORMAT_ARGON2ID : PBKDF_FORMAT_ARGON2ID_STRENGTHENED;
+		}
 		output[outputOff] = formatVersion;
 		outputOff++;
 		// Salt
@@ -426,10 +463,14 @@ class CryptoComponentImpl implements CryptoComponent {
 		byte formatVersion = input[inputOff];
 		inputOff++;
 		// Check whether we support this format version
-		if (formatVersion != PBKDF_FORMAT_SCRYPT &&
-				formatVersion != PBKDF_FORMAT_SCRYPT_STRENGTHENED) {
+		boolean legacy = isLegacyFormat(formatVersion);
+		if (!legacy && formatVersion != PBKDF_FORMAT_ARGON2ID &&
+				formatVersion != PBKDF_FORMAT_ARGON2ID_STRENGTHENED) {
 			throw new DecryptionException(INVALID_CIPHERTEXT);
 		}
+		PasswordBasedKdf kdf = legacy ? legacyPasswordBasedKdf
+				: passwordBasedKdf;
+		if (kdf == null) throw new DecryptionException(INVALID_CIPHERTEXT);
 		// Salt
 		byte[] salt = new byte[PBKDF_SALT_BYTES];
 		arraycopy(input, inputOff, salt, 0, salt.length);
@@ -437,16 +478,16 @@ class CryptoComponentImpl implements CryptoComponent {
 		// Cost parameter
 		long cost = ByteUtils.readUint32(input, inputOff);
 		inputOff += INT_32_BYTES;
-		if (cost < 2 || cost > Integer.MAX_VALUE) {
-			throw new DecryptionException(INVALID_CIPHERTEXT);
-		}
+		boolean validCost = legacy ? ScryptKdf.isValidCost(cost)
+				: Argon2idKdf.isValidCost(cost);
+		if (!validCost) throw new DecryptionException(INVALID_CIPHERTEXT);
 		// IV
 		byte[] iv = new byte[STORAGE_IV_BYTES];
 		arraycopy(input, inputOff, iv, 0, iv.length);
 		inputOff += iv.length;
 		// Derive the decryption key from the password
-		SecretKey key = passwordBasedKdf.deriveKey(password, salt, (int) cost);
-		if (formatVersion == PBKDF_FORMAT_SCRYPT_STRENGTHENED) {
+		SecretKey key = kdf.deriveKey(password, salt, (int) cost);
+		if (isStrengthenedFormat(formatVersion)) {
 			if (keyStrengthener == null || !keyStrengthener.isInitialised()) {
 				// Can't derive the same strengthened key
 				throw new DecryptionException(KEY_STRENGTHENER_ERROR);
@@ -472,8 +513,22 @@ class CryptoComponentImpl implements CryptoComponent {
 
 	@Override
 	public boolean isEncryptedWithStrengthenedKey(byte[] ciphertext) {
-		return ciphertext.length > 0 &&
-				ciphertext[0] == PBKDF_FORMAT_SCRYPT_STRENGTHENED;
+		return ciphertext.length > 0 && isStrengthenedFormat(ciphertext[0]);
+	}
+
+	@Override
+	public boolean isEncryptedWithLegacyKdf(byte[] ciphertext) {
+		return ciphertext.length > 0 && isLegacyFormat(ciphertext[0]);
+	}
+
+	private static boolean isLegacyFormat(byte formatVersion) {
+		return formatVersion == PBKDF_FORMAT_SCRYPT ||
+				formatVersion == PBKDF_FORMAT_SCRYPT_STRENGTHENED;
+	}
+
+	private static boolean isStrengthenedFormat(byte formatVersion) {
+		return formatVersion == PBKDF_FORMAT_SCRYPT_STRENGTHENED ||
+				formatVersion == PBKDF_FORMAT_ARGON2ID_STRENGTHENED;
 	}
 
 	@Override

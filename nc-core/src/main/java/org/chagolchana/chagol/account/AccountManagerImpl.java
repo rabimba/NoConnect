@@ -221,9 +221,12 @@ class AccountManagerImpl implements AccountManager {
 		byte[] plaintext = crypto.decryptWithPassword(ciphertext, password,
 				keyStrengthener);
 		SecretKey key = new SecretKey(plaintext);
-		// If the DB key was encrypted with a weak key and a key strengthener
-		// is now available, re-encrypt the DB key with a strengthened key
-		if (keyStrengthener != null &&
+		// Re-encrypt the DB key if it was encrypted with the legacy KDF, or
+		// with a weak key when a key strengthener is now available
+		if (crypto.isEncryptedWithLegacyKdf(ciphertext)) {
+			LOG.info("Re-encrypting database key with current KDF");
+			encryptAndStoreDatabaseKey(key, password);
+		} else if (keyStrengthener != null &&
 				!crypto.isEncryptedWithStrengthenedKey(ciphertext)) {
 			LOG.info("Re-encrypting database key with strengthened key");
 			encryptAndStoreDatabaseKey(key, password);

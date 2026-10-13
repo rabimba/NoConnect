@@ -196,6 +196,13 @@ public interface CryptoComponent {
 	boolean isEncryptedWithStrengthenedKey(byte[] ciphertext);
 
 	/**
+	 * Returns true if the given ciphertext was encrypted with the legacy
+	 * scrypt-based format rather than the current Argon2id format. The
+	 * validity of the ciphertext is not checked.
+	 */
+	boolean isEncryptedWithLegacyKdf(byte[] ciphertext);
+
+	/**
 	 * Encrypts the given plaintext to the given public key.
 	 */
 	byte[] encryptToKey(PublicKey publicKey, byte[] plaintext);

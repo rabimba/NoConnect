@@ -28,8 +28,9 @@ public class CryptoModule {
 	@Singleton
 	CryptoComponent provideCryptoComponent(
 			SecureRandomProvider secureRandomProvider,
-			ScryptKdf passwordBasedKdf) {
-		return new CryptoComponentImpl(secureRandomProvider, passwordBasedKdf);
+			Argon2idKdf passwordBasedKdf, ScryptKdf legacyPasswordBasedKdf) {
+		return new CryptoComponentImpl(secureRandomProvider, passwordBasedKdf,
+				legacyPasswordBasedKdf);
 	}
 
 	@Provides
