@@ -189,9 +189,39 @@ class AccountManagerImpl implements AccountManager {
 	public void deleteAccount() {
 		synchronized (stateChangeLock) {
 			LOG.info("Deleting account");
+			// Destroy the hardware-backed strengthening key first: without it,
+			// a copy of the encrypted DB key recovered from storage after
+			// deletion can't be decrypted, even with the password
+			KeyStrengthener keyStrengthener =
+					databaseConfig.getKeyStrengthener();
+			if (keyStrengthener != null) keyStrengthener.destroyKey();
+			overwriteFile(dbKeyFile);
+			overwriteFile(dbKeyBackupFile);
 			IoUtils.deleteFileOrDir(databaseConfig.getDatabaseKeyDirectory());
 			IoUtils.deleteFileOrDir(databaseConfig.getDatabaseDirectory());
 			databaseKey = null;
+		}
+	}
+
+	/**
+	 * Best-effort overwrite of a file with random bytes before it's deleted.
+	 * Flash storage may keep old copies, which is why the strengthening key
+	 * is destroyed as well.
+	 */
+	private void overwriteFile(File f) {
+		if (!f.isFile()) return;
+		byte[] random = new byte[(int) f.length()];
+		crypto.getSecureRandom().nextBytes(random);
+		FileOutputStream out = null;
+		try {
+			out = new FileOutputStream(f);
+			out.write(random);
+			out.flush();
+			out.getFD().sync();
+		} catch (IOException e) {
+			logException(LOG, WARNING, e);
+		} finally {
+			IoUtils.tryToClose(out, LOG, WARNING);
 		}
 	}
 

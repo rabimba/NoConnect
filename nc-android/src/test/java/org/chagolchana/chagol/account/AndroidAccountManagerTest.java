@@ -57,6 +57,8 @@ public class AndroidAccountManagerTest extends ChagolMockTestCase {
 			will(returnValue(dbDir));
 			allowing(databaseConfig).getDatabaseKeyDirectory();
 			will(returnValue(keyDir));
+			allowing(databaseConfig).getKeyStrengthener();
+			will(returnValue(null));
 			allowing(app).getApplicationContext();
 			will(returnValue(app));
 		}});

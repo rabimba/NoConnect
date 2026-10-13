@@ -20,6 +20,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.security.SecureRandom;
 
 import javax.annotation.Nullable;
 
@@ -338,6 +339,28 @@ public class AccountManagerImplTest extends ChagolMockTestCase {
 
 		accountManager.signIn(password);
 		assertTrue(accountManager.hasDatabaseKey());
+	}
+
+	@Test
+	public void testDeleteAccountDestroysStrengtheningKeyAndKeyFiles()
+			throws Exception {
+		context.checking(new Expectations() {{
+			oneOf(keyStrengthener).destroyKey();
+			allowing(crypto).getSecureRandom();
+			will(returnValue(new SecureRandom()));
+		}});
+
+		storeDatabaseKey(keyFile, encryptedKeyHex);
+		storeDatabaseKey(keyBackupFile, encryptedKeyHex);
+		assertTrue(dbDir.mkdirs());
+
+		accountManager.deleteAccount();
+
+		assertFalse(keyFile.exists());
+		assertFalse(keyBackupFile.exists());
+		assertFalse(keyDir.exists());
+		assertFalse(dbDir.exists());
+		assertFalse(accountManager.hasDatabaseKey());
 	}
 
 	@Test

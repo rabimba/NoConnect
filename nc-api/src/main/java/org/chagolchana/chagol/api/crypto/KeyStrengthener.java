@@ -20,4 +20,11 @@ public interface KeyStrengthener {
 	 * derived from the given key.
 	 */
 	SecretKey strengthenKey(SecretKey k);
+
+	/**
+	 * Permanently destroys the key used for strengthening, so keys that were
+	 * strengthened with it can no longer be derived. The next call to
+	 * {@link #strengthenKey(SecretKey)} creates a new key.
+	 */
+	void destroyKey();
 }

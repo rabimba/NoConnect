@@ -102,6 +102,21 @@ class AndroidKeyStrengthener implements KeyStrengthener {
 		}
 	}
 
+	@Override
+	public synchronized void destroyKey() {
+		storedKey = null;
+		try {
+			KeyStore ks = KeyStore.getInstance(KEY_STORE_TYPE);
+			ks.load(null);
+			ks.deleteEntry(KEY_ALIAS);
+			LOG.info("Deleted key from keystore");
+		} catch (GeneralSecurityException e) {
+			logException(LOG, WARNING, e);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
 	private synchronized void initialise() throws GeneralSecurityException {
 		// Try the parameter specs in order of preference
 		for (AlgorithmParameterSpec spec : specs) {
