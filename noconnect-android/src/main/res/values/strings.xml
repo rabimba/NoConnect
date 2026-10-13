@@ -724,6 +724,16 @@
 	<!-- Settings Actions -->
 	<string name="pref_category_actions">Actions</string>
 	<string name="share_app_link">Share download link</string>
+	<string name="update_title">Install update from file</string>
+	<string name="update_summary">Update NoConnect with an app file from a contact or a USB stick</string>
+	<string name="update_confirm_title">Install update?</string>
+	<string name="update_confirm_message">This file contains NoConnect %s, signed by the same developer as the version you have.</string>
+	<string name="update_install">Install</string>
+	<string name="update_not_an_apk">This file isn\'t an app that can be installed.</string>
+	<string name="update_wrong_app">This file contains a different app, not NoConnect.</string>
+	<string name="update_not_newer">This file contains the same or an older version of NoConnect.</string>
+	<string name="update_wrong_signer">This file is not signed by the developer of your NoConnect. Don\'t install it: it may have been tampered with.</string>
+	<string name="update_install_failed">The update could not be installed.</string>
 	<string name="share_app_link_text">Download NoConnect at %s</string>
 	<string name="send_feedback">Send feedback</string>
 

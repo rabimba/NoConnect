@@ -43,6 +43,15 @@
 				android:targetPackage="@string/app_package" />
 		</Preference>
 		<Preference
+			android:key="pref_key_install_update"
+			android:summary="@string/update_summary"
+			android:title="@string/update_title"
+			app:icon="@drawable/ic_settings_share">
+			<intent
+				android:targetClass="org.chagolchana.noconnect.android.update.InstallUpdateActivity"
+				android:targetPackage="@string/app_package" />
+		</Preference>
+		<Preference
 			android:key="pref_key_share_app_link"
 			android:title="@string/share_app_link"
 			app:icon="@drawable/ic_settings_share_link">

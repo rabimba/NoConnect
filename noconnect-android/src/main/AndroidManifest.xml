@@ -13,6 +13,8 @@
 		android:required="false" />
 
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<!-- Installing updates received from contacts (InstallUpdateActivity) -->
+	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 	<uses-permission
@@ -476,6 +478,12 @@
 			android:label="@string/add_contact_remotely_title_case"
 			android:theme="@style/NoConnectTheme"
 			android:windowSoftInputMode="adjustResize|stateHidden" />
+
+		<activity
+			android:name="org.chagolchana.noconnect.android.update.InstallUpdateActivity"
+			android:exported="false"
+			android:label="@string/update_title"
+			android:launchMode="singleTop" />
 
 		<activity
 			android:name="org.chagolchana.noconnect.android.removabledrive.RemovableDriveActivity"

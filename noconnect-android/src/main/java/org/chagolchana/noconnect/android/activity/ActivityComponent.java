@@ -34,6 +34,7 @@ import org.chagolchana.noconnect.android.forum.ForumActivity;
 import org.chagolchana.noconnect.android.forum.ForumListFragment;
 import org.chagolchana.noconnect.android.fragment.ScreenFilterDialogFragment;
 import org.chagolchana.noconnect.android.hotspot.HotspotActivity;
+import org.chagolchana.noconnect.android.update.InstallUpdateActivity;
 import org.chagolchana.noconnect.android.introduction.ContactChooserFragment;
 import org.chagolchana.noconnect.android.introduction.IntroductionActivity;
 import org.chagolchana.noconnect.android.introduction.IntroductionMessageFragment;
@@ -173,6 +174,8 @@ public interface ActivityComponent {
 	void inject(CrashReportActivity crashReportActivity);
 
 	void inject(HotspotActivity hotspotActivity);
+
+	void inject(InstallUpdateActivity installUpdateActivity);
 
 	void inject(RemovableDriveActivity activity);
 
