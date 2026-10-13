@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permitir conexones</string>
+    <string name="dnkm_doze_title">Conexones de fondu</string>
+    <string name="dnkm_got_it">Entendílo</string>
+    <string name="dnkm_help">Ayuda</string>
+</resources>

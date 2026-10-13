@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">允许连接</string>
+    <string name="dnkm_doze_explanation">请禁用电池优化，以便此应用程序可以在后台运行。</string>
+    <string name="dnkm_doze_intro">为了正常工作，这个应用程序需要在后台运行。</string>
+    <string name="dnkm_doze_title">后台连接</string>
+    <string name="dnkm_got_it">知道了</string>
+    <string name="dnkm_help">帮助</string>
+    <string name="dnkm_huawei_app_launch_button">打开电池设置</string>
+    <string name="dnkm_huawei_app_launch_error_toast">无法打开电池设置</string>
+    <string name="dnkm_huawei_app_launch_help">如果该应用程序没有在“应用程序启动”界面设置为“手动管理”，它将无法在后台运行。</string>
+    <string name="dnkm_huawei_app_launch_text">请轻按下面的按钮，打开“应用程序启动”界面，确保该应用程序设置为“手动管理”。</string>
+    <string name="dnkm_huawei_protected_button">保护这个应用</string>
+    <string name="dnkm_huawei_protected_help">如果该应用程序没有添加到受保护的应用程序列表，它将无法在后台运行。</string>
+    <string name="dnkm_huawei_protected_text">请轻按下面的按钮，并确保该应用程序在“受保护的应用程序”屏幕中受到保护。</string>
+    <string name="dnkm_warning_dozed_1">此应用无法在后台运行</string>
+    <string name="dnkm_xiaomi_button">锁定最近应用程序</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. 打开最近的应用列表(也称为应用切换器)\n\n2. 如果应用名称边上有挂锁图片，那么你无需做任何事\n\n3. 如果没有挂锁图片，按住应用图片直到挂锁按钮出现，接着轻按它</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. 打开最近的应用列表(也称为应用切换器)\n\n2. 向下滑动这个应用程序的图像，显示挂锁图标\n\n3. 如果挂锁未上锁，轻按来锁定它</string>
+    <string name="dnkm_xiaomi_help">如果这个应用程序没有锁定到最近的应用程序列表，它将无法在后台运行。</string>
+    <string name="dnkm_xiaomi_lock_apps_button">打开安全设置</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">打不开安全设置</string>
+    <string name="dnkm_xiaomi_lock_apps_help">如在“锁定应用”屏幕中此应用状态未被设为“已锁定”，它将无法在后台运行。</string>
+    <string name="dnkm_xiaomi_lock_apps_text">请轻按下方图片打开安全性设置。轻按“提高速度”，接着轻按“锁定应用”，并确保此应用状态并设为“已锁定”</string>
+    <string name="dnkm_xiaomi_text">要在后台运行，这个应用程序需要锁定到最近的应用程序列表。</string>
+</resources>

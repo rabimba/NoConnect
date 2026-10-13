@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">இணைப்புகளை அனுமதி</string>
+    <string name="dnkm_doze_title"> பின்னணி இணைப்புகள்</string>
+    <string name="dnkm_got_it">சரி</string>
+    <string name="dnkm_help">உதவி</string>
+</resources>

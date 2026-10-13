@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permitir conexións</string>
+    <string name="dnkm_doze_explanation">Desactiva as optimizacións de batería para que a app poida estar en segundo plano.</string>
+    <string name="dnkm_doze_intro">Esta app debe estar en execución en segundo plano para funcionar correctamente.</string>
+    <string name="dnkm_doze_title">Conexións en segundo plano</string>
+    <string name="dnkm_got_it">Comprendido</string>
+    <string name="dnkm_help">Axuda</string>
+    <string name="dnkm_huawei_app_launch_button">Abrir axustes da batería</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Non se puideron abrir os axustes da batería</string>
+    <string name="dnkm_huawei_app_launch_help">Se a app non está \"Xestionada manualmente\" na pantalla \"Iniciar App\", non poderá executarse en segundo plano.</string>
+    <string name="dnkm_huawei_app_launch_text">Toca no botón inferior, abre a pantalla \"Iniciar App\" e asegúrate de que esta app está posta como \"Xestionar manualmente\".</string>
+    <string name="dnkm_huawei_protected_button">Protexer esta app</string>
+    <string name="dnkm_huawei_protected_help">Se a app non está engadida á lista de apps protexidas non poderá executarse en segundo plano.</string>
+    <string name="dnkm_huawei_protected_text">Toca no botón inferior e asegúrate de que a app está protexida na pantalla \"Apps Protexidas\".</string>
+    <string name="dnkm_xiaomi_button">Fixar en apps recentes</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Abre lista de apps recentes (tamén chamado intercambiador de apps)\n\n2. Preme e mantén presa a imaxe desta app ata que o botón do cadeado aparece\n\n3. Se o cadeado non está pechado, tócao para pechalo</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Abre a lista de apps recentes (tamén chamada intercambiador de apps)\n\n2. Desprázate ata a imaxe desta app para mostrar a icona do cadeado\n\n3. Se o cadeado non está pechado, tócao para pechalo</string>
+    <string name="dnkm_xiaomi_help">Se a app non está fixada na lista de apps recentes non poderá executarse en segundo plano.</string>
+    <string name="dnkm_xiaomi_text">Para executar en segundo plano esta app precisa estar fixada na lista de apps recentes.</string>
+</resources>

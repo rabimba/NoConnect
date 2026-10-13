@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">연결 허용하기</string>
+    <string name="dnkm_doze_title">백그라운드 연결</string>
+    <string name="dnkm_got_it">알겠습니다</string>
+    <string name="dnkm_help">도움</string>
+</resources>

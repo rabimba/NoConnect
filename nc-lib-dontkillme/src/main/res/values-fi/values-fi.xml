@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Salli yhteydet</string>
+    <string name="dnkm_doze_title">Taustayhteydet</string>
+    <string name="dnkm_got_it">Selvä</string>
+    <string name="dnkm_help">Ohje</string>
+</resources>

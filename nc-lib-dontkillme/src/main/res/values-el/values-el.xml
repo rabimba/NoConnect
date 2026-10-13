@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Να Επιτρέπονται Συνδέσεις </string>
+    <string name="dnkm_doze_title">Συνδέσεις Παρασκηνίου</string>
+    <string name="dnkm_got_it">Το κατάλαβα</string>
+    <string name="dnkm_help">Βοήθεια</string>
+    <string name="dnkm_huawei_app_launch_button">Άνοιγμα Ρυθμίσεων Μπαταρίας</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Δεν ήταν δυνατό το άνοιγμα των ρυθμίσεων της μπαταρίας</string>
+</resources>

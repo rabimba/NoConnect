@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">कनेक्शन की अनुमति दें</string>
+    <string name="dnkm_doze_title">पृष्ठभूमि कनेक्शन</string>
+    <string name="dnkm_got_it">समझ गया</string>
+    <string name="dnkm_help">सहायता</string>
+</resources>

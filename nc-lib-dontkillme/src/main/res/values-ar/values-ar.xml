@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">السماح بالاتصالات</string>
+    <string name="dnkm_doze_explanation">يرجى تعطيل تحسينات البطارية حتى يمكن تشغيل هذا التطبيق في الخلفية.</string>
+    <string name="dnkm_doze_intro">للعمل بشكل صحيح، يجب تشغيل هذا التطبيق في الخلفية.</string>
+    <string name="dnkm_doze_title">الاتصالات الخلفية</string>
+    <string name="dnkm_got_it">فهمت ذلك</string>
+    <string name="dnkm_help">المساعدة</string>
+    <string name="dnkm_huawei_app_launch_button">افتح إعدادات البطارية</string>
+    <string name="dnkm_huawei_app_launch_error_toast">تعذر فتح إعدادات البطارية</string>
+    <string name="dnkm_huawei_app_launch_help">إذا لم يتم تعيين هذا التطبيق على \"الإدارة يدويًا\" في شاشة \"تشغيل التطبيق\"، فلن يتمكن من العمل في الخلفية.</string>
+    <string name="dnkm_huawei_app_launch_text">يرجى النقر على الزر أدناه، وفتح شاشة \"تشغيل التطبيق\" وتأكد من تعيين هذا التطبيق على \"الإدارة يدويًا\".</string>
+    <string name="dnkm_huawei_protected_button">احمي هذا التطبيق</string>
+    <string name="dnkm_huawei_protected_help">إذا لم تتم إضافة هذا التطبيق إلى قائمة التطبيقات المحمية، فلن يتمكن من العمل في الخلفية.</string>
+    <string name="dnkm_huawei_protected_text">يرجى النقر على الزر أدناه والتأكد من حماية هذا التطبيق في شاشة \"التطبيقات المحمية\".</string>
+    <string name="dnkm_warning_dozed_1">تعذر تشغيل هذا التطبيق في الخلفية</string>
+    <string name="dnkm_xiaomi_button">قفل للتطبيقات الحديثة</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. افتح قائمة التطبيقات الحديثة (تسمى أيضًا مبدل التطبيقات) \n\n2. إذا كان هذا التطبيق يحتوي على صورة صغيرة لقفل بجوار اسمه، فلا داعي لفعل أي شيء \n\n3. إذا لم يكن هناك قفل، فاضغط و ابقى ضاغط  على صورة هذا التطبيق حتى يظهر زر القفل، ثم انقر عليه</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. افتح قائمة التطبيقات الحديثة (تسمى أيضًا مبدل التطبيقات) n\n2\. اسحب صورة هذا التطبيق لأسفل لإظهار رمز القفل \n\n3. إذا لم يكن القفل مقفلاً، فانقر عليه لقفله</string>
+    <string name="dnkm_xiaomi_help">إذا لم يتم قفل هذا التطبيق في قائمة التطبيقات الحديثة، فلن يتمكن من العمل في الخلفية.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">افتح إعدادات الأمان</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">تعذر فتح إعدادات الأمان</string>
+    <string name="dnkm_xiaomi_lock_apps_help">إذا لم يتم تعيين هذا التطبيق على \"مقفل\" في شاشة \"قفل التطبيقات\"، فلن يتمكن من العمل في الخلفية.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">يرجى النقر فوق الزر أدناه لفتح إعدادات الأمان. انقر على \"زيادة السرعة\"، ثم انقر على \"قفل التطبيقات\"، وتأكد من ضبط هذا التطبيق على \"مغلق\".</string>
+    <string name="dnkm_xiaomi_text">للتشغيل في الخلفية، يجب قفل هذا التطبيق في قائمة التطبيقات الحديثة.</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">ချိတ်ဆက်မှုများကို ခွင့်ပြုပါ</string>
+    <string name="dnkm_doze_title">နောက်ခံ ချိတ်ဆက်မှုများ</string>
+    <string name="dnkm_got_it">ရသွားပါပြီ</string>
+    <string name="dnkm_help">အကူအညီ</string>
+    <string name="dnkm_huawei_app_launch_button">ဘတ္ထရီဆက်တင်များကို ဖွင့်ပါ</string>
+</resources>

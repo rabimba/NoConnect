@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Vendored from org.briarproject:jtorctl:0.5 (Maven Central sources jar). Licence: BSD-3-Clause.
+
+dependencies {
+
+}

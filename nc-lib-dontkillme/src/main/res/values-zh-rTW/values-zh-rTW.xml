@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">允許連接</string>
+    <string name="dnkm_doze_explanation">請取消電池優化功能，好讓軟體可以在背景中執行</string>
+    <string name="dnkm_doze_intro">為順利運作，本應用會在後台背景執行</string>
+    <string name="dnkm_doze_title">背景網絡連接</string>
+    <string name="dnkm_got_it">知道了</string>
+    <string name="dnkm_help">幫助</string>
+    <string name="dnkm_huawei_app_launch_button">打開電池設定</string>
+    <string name="dnkm_huawei_app_launch_error_toast">無法開啟電池設定</string>
+    <string name="dnkm_huawei_app_launch_help">若在啟動軟體\"畫面下無法設置\"手動管理\"模式，則此軟體無法在背景中執行。</string>
+    <string name="dnkm_huawei_app_launch_text">請輕觸下方按鍵以打開啟動軟體\"畫面，讓此軟體為\"手動管理\"模式</string>
+    <string name="dnkm_huawei_protected_button">保護本應用軟體</string>
+    <string name="dnkm_huawei_protected_help">若此軟體未被加入到保護軟體清單，它將無法在背景中執行</string>
+    <string name="dnkm_huawei_protected_text">請輕觸下方按鍵以確認\"軟體保護\"畫面中處於保護狀態</string>
+    <string name="dnkm_warning_dozed_1">本應用軟體無法在背景中執行。</string>
+    <string name="dnkm_xiaomi_button">鎖定到最近使用的應用程式清單</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. 打開最近使用的程式清單(亦稱軟體快速切換)n\n2。若此軟體旁邊出現掛鎖圖標則無須其它更動 \n\n3，若無掛鎖則輕觸軟體圖標直到現出掛鎖按鍵，點觸掛鎖進行更動。</string>
+    <string name="dnkm_xiaomi_dialog_body_old">打開最近使用的程式清單(亦稱軟體快速切換)n\n2，滑動到軟體圖像後會出現掛鎖圖標 \n\n3，若掛鎖為打開狀態，請輕觸它改變成關鎖。</string>
+    <string name="dnkm_xiaomi_help">若不被鎖定至最近使用的程式清單裏，它將無法背景中執行。</string>
+    <string name="dnkm_xiaomi_lock_apps_button">打開安全設定</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">無法打開安全設定</string>
+    <string name="dnkm_xiaomi_lock_apps_help">若此軟體在\"鎖定應用\"的畫面下未被設置\"鎖定，則無法在背景中執行。</string>
+    <string name="dnkm_xiaomi_lock_apps_text">請輕觸下方按鍵以開啟安全設定。觸點\"加速\"後再觸點\"鎖定應用軟體\"，以將其設置為鎖定狀態。</string>
+    <string name="dnkm_xiaomi_text">要能在背景中執行，它需要被鎖定到最近使用的程式清單裏</string>
+</resources>

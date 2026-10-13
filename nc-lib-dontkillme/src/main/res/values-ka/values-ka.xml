@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">კავშირების დაშვება</string>
+    <string name="dnkm_doze_explanation">გთხოვთ, გათიშოთ ბატარეის ოპტიმიზაცია, რომ შესაძლებელი იყოს ამ აპის ფონურ რეჟიმში გაშვება.</string>
+    <string name="dnkm_doze_intro">სათანადო მუშაობისთვის, ეს აპი ფონურ რეჟიმში უნდა იყოს გაშვებული.</string>
+    <string name="dnkm_doze_title">კავშირები ფონურ რეჟიმში</string>
+    <string name="dnkm_got_it">გასაგებია</string>
+    <string name="dnkm_help">დახმარება</string>
+    <string name="dnkm_huawei_app_launch_button">გახსენით ბატარეის პარამეტრები</string>
+    <string name="dnkm_huawei_app_launch_error_toast">ბატარეის პარამეტრების გახსნა ვერ მოხერხდა</string>
+    <string name="dnkm_huawei_app_launch_help">თუ ეს აპი არ არის დაყენებული „ხელით მართვაზე“ „აპების გაშვების“ ეკრანზე, ის ვერ იმუშავებს ფონურ რეჟიმში.</string>
+    <string name="dnkm_huawei_app_launch_text">შეეხეთ ღილაკს ქვემოთ, გახსენით „აპების გაშვების“ ეკრანი და დარწმუნდით, რომ ეს აპი დაყენებულია „ხელით მართვაზე“.</string>
+    <string name="dnkm_huawei_protected_button">დაიცავით ეს აპი</string>
+    <string name="dnkm_huawei_protected_help">თუ ეს აპი არ დაემატება დაცული აპების სიაში, ის ვერ გაიშვება ფონურ რეჟიმში.</string>
+    <string name="dnkm_huawei_protected_text">შეეხეთ ღილაკს ქვემოთ და დარწმუნდით, რომ ეს აპი დაცულია „დაცული აპების“ ეკრანზე.</string>
+    <string name="dnkm_warning_dozed_1">ამ აპის გაშვება ფონურ რეჟიმში შეუძლებელია</string>
+    <string name="dnkm_xiaomi_button"> ბოლო აპებში დაბლოკვა</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. გახსენით ბოლო აპების სია (ე.წ. აპების გადამრთველი)\n\n2. თუ ამ აპის სახელის გვერდით არის ბოქლომის პატარა გამოსახულება, აღარაფრის გაკეთება არ მოგიწევთ\n\n3. თუ იქ არ არის ბოქლომის ნიშანი, შეეხეთ და დააყოვნეთ აპის გამოსახულებაზე, სანამ არ გამოჩნდება ბოქლომის ღილაკი, შემდეგ შეეხეთ მას</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. გახსენით ბოლო აპების სია (ე.წ. აპების გადამრთველი)\n\n2. ჩამოუსვით ამ აპის გამოსახულებას თითი, რომ გამოჩნდეს ბოქლომის ხატულა\n\n3. თუ ბოქლომი არ არის ჩაკეტილი, შეეხეთ ჩასაკეტად</string>
+    <string name="dnkm_xiaomi_help">თუ ეს აპი არ არის დაბლოკილი ბოლო აპების სიაში, ის ვერ გაიშვება ფონურ რეჟიმში.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">გახსენით უსაფრთხოების პარამეტრები</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">უსაფრთხოების პარამეტრების გახსნა ვერ ხერხდება</string>
+    <string name="dnkm_xiaomi_lock_apps_help">თუ ეს აპი „აპების დაბლოკვის“ ეკრანზე არ არის დაყენებული „დაბლოკილზე“, ის ვერ გაიშვება ფონურ რეჟიმში.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">უსაფრთხოების პარამეტრების გასახსნელად, დააჭირეთ ღილაკს ქვემოთ. შეეხეთ „სიჩქარის გაზრდას“ და შემდეგ „აპების დაბლოკვას“, დარწმუნდით, რომ აპი „დაბლოკილზეა“ დაყენებული.</string>
+    <string name="dnkm_xiaomi_text">ფონურ რეჟიმში გასაშვებად ეს აპი უნდა დაიბლოკოს ბოლო აპების სიაში.</string>
+</resources>

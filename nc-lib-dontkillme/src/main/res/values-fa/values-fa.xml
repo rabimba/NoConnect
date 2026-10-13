@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">دادن اجازه به ارتباطات</string>
+    <string name="dnkm_doze_explanation">لطفا بهینه‌سازی باتری را غیرفعال کنید تا این برنامه بتواند در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_doze_intro">برای اینکه این برنامه به درستی کار کند، باید در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_doze_title">اتصال های پس زمینه</string>
+    <string name="dnkm_got_it">متوجه شدم</string>
+    <string name="dnkm_help">راهنما</string>
+    <string name="dnkm_huawei_app_launch_button">باز کردن تنظیمات باتری</string>
+    <string name="dnkm_huawei_app_launch_error_toast">تنظیمات باتری باز نشد</string>
+    <string name="dnkm_huawei_app_launch_help">اگر این برنامه روی \"مدیریت دستی\" در صفحه \"راه‌اندازی برنامه\" تنظیم نشده باشد، نمی‌تواند در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_huawei_app_launch_text">لطفا روی دکمه زیر ضربه بزنید، صفحه \"راه‌اندازی برنامه\" را باز کنید و مطمئن شوید که این برنامه روی \"مدیریت دستی\" تنظیم شده است.</string>
+    <string name="dnkm_huawei_protected_button">از این برنامه محافظت کنید</string>
+    <string name="dnkm_huawei_protected_help">اگر این برنامه به لیست برنامه‌های محافظت شده اضافه نشود، نمی‌تواند در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_huawei_protected_text">لطفاً روی دکمه زیر بزنید و مطمئن شوید که این برنامه در صفحه \"برنامه‌های محافظت شده\" محافظت می‌شود.</string>
+    <string name="dnkm_warning_dozed_1">این برنامه قادر به اجرا در پس‌زمینه نبود</string>
+    <string name="dnkm_xiaomi_button">در برنامه‌های اخیر قفل کنید</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. فهرست برنامه‌های اخیر را باز کنید (که به آن app switcher نیز گفته می‌شود)\n\n2. اگر این برنامه تصویر کوچکی از قفل در کنار نام خود دارد، دیگر نیازی به انجام کاری ندارید\n\n3. اگر قفلی وجود ندارد، تصویر این برنامه را فشار داده و نگه دارید تا دکمه قفل ظاهر شود، سپس روی آن ضربه بزنید.</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. فهرست برنامه‌های اخیر را باز کنید (که به آن تغییردهنده برنامه نیز گفته می‌شود)\n\n2. روی تصویر این برنامه به پایین بکشید تا نماد قفل نشان داده شود\n\n3. اگر علامت قفل بسته نیست، برای قفل کردن آن ضربه بزنید</string>
+    <string name="dnkm_xiaomi_help">اگر این برنامه در لیست برنامه‌های اخیر قفل نباشد، نمی‌تواند در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">باز کردن تنظیمات امنیتی</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">تنظیمات امنیتی باز نشد</string>
+    <string name="dnkm_xiaomi_lock_apps_help">اگر این برنامه روی \"Locked\" در صفحه \"Lock apps\" تنظیم نشده باشد، نمی‌تواند در پس‌زمینه اجرا شود.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">لطفا روی دکمه زیر ضربه بزنید تا تنظیمات امنیتی باز شود. روی \"Boost speed\" ضربه بزنید، سپس روی \"Lock apps\" ضربه بزنید و مطمئن شوید که این برنامه روی \"Locked\" تنظیم شده است.</string>
+    <string name="dnkm_xiaomi_text">برای اجرا در پس‌زمینه، این برنامه باید در لیست برنامه‌های اخیر قفل شود.</string>
+</resources>

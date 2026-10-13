@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permitir conexiones</string>
+    <string name="dnkm_doze_explanation">Por favor, desactiva las optimizaciones de la batería para que esta aplicación pueda funcionar en segundo plano.</string>
+    <string name="dnkm_doze_intro">Para que funcione correctamente, esta aplicación debe ejecutarse en segundo plano.</string>
+    <string name="dnkm_doze_title">Conexiones de segundo plano</string>
+    <string name="dnkm_got_it">Entendido</string>
+    <string name="dnkm_help">Ayuda</string>
+    <string name="dnkm_huawei_app_launch_button">Abrir Ajustes de Batería</string>
+    <string name="dnkm_huawei_app_launch_error_toast">No se pudieron abrir las configuraciones para la batería</string>
+    <string name="dnkm_huawei_app_launch_help">Si esta aplicación no está configurada como \"Gestionar manualmente\" en la pantalla de \"Inicio de la aplicación\", no podrá ejecutarse en segundo plano.</string>
+    <string name="dnkm_huawei_app_launch_text">Por favor, pulse el botón de abajo, abra la pantalla de \"Inicio de la aplicación\" y asegúrese de que esta aplicación está configurada como \"Gestionar manualmente\".</string>
+    <string name="dnkm_huawei_protected_button">Proteger esta aplicación</string>
+    <string name="dnkm_huawei_protected_help">Si esta aplicación no se añade a la lista de aplicaciones protegidas, no podrá ejecutarse en segundo plano.</string>
+    <string name="dnkm_huawei_protected_text">Por favor, pulse el botón de abajo y asegúrese de que esta aplicación está protegida en la pantalla de \"Aplicaciones protegidas\".</string>
+    <string name="dnkm_warning_dozed_1">Esta aplicación no podía ejecutarse en segundo plano</string>
+    <string name="dnkm_xiaomi_button">Bloqueo de aplicaciones recientes</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Abra la lista de aplicaciones recientes (también llamada selector de aplicaciones)\n\n2. Si esta aplicación tiene una pequeña imagen de un candado junto a su nombre, entonces no necesita hacer nada. Si no hay ningún candado, mantén pulsada la imagen de esta aplicación hasta que aparezca el botón del candado, y luego tócalo</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Abra la lista de aplicaciones recientes (también llamada selector de aplicaciones)\n\n2. Deslice el dedo hacia abajo sobre la imagen de esta aplicación para que aparezca el icono del candado. Si el candado no está bloqueado, pulse para bloquearlo</string>
+    <string name="dnkm_xiaomi_help">Si esta aplicación no está bloqueada en la lista de aplicaciones recientes, no podrá ejecutarse en segundo plano.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Abrir Ajustes de Seguridad</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">No se ha podido abrir la configuración de seguridad</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Si esta aplicación no está configurada como \"Bloqueada\" en la pantalla \"Bloquear aplicaciones\", no podrá ejecutarse en segundo plano.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Toca el botón de abajo para abrir los ajustes de seguridad. Toca \"Aumentar la velocidad\", luego toca \"Bloquear aplicaciones\" y asegúrate de que esta aplicación esté configurada como \"Bloqueada\".</string>
+    <string name="dnkm_xiaomi_text">Para que se ejecute en segundo plano, esta aplicación debe estar bloqueada en la lista de aplicaciones recientes.</string>
+</resources>

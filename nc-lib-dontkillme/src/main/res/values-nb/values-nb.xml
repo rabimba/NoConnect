@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Tillat tilkoblinger</string>
+    <string name="dnkm_doze_explanation">Vennligst skru av batterioptimaliseringer så app\'en kan kjøre i bakgrunnen.</string>
+    <string name="dnkm_doze_intro">For å fungere ordentlig, så må app\'en kjøre i bakgrunnen.</string>
+    <string name="dnkm_doze_title">Bakgrunnstilkoblinger</string>
+    <string name="dnkm_got_it">Skjønner</string>
+    <string name="dnkm_help">Hjelp</string>
+    <string name="dnkm_huawei_app_launch_button">Åpne batteriinstillinger</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Kunne ikke åpne batteriinnstillingene</string>
+    <string name="dnkm_huawei_app_launch_help">Hvis app\'en ikke er satt til «Administrer manuelt» i «Appoppstart»-skjermen, så vil den være ute av stand til å kjøre i bakgrunnen.</string>
+    <string name="dnkm_huawei_app_launch_text">Vennligst klikk på knappen under, åpne «App-åpning»-skjermen og sørg for at Briar er satt til å «Administrerere manuelt». </string>
+    <string name="dnkm_huawei_protected_button">Beskytte denne app\'en</string>
+    <string name="dnkm_huawei_protected_help">Hvis Briar ikke er lagt til i listen over beskyttede app\'er, så vil den være ute av stand til å kjøre i bakgrunnen.</string>
+    <string name="dnkm_huawei_protected_text">Vennligst trykk på knappen nedenfor for å forsikre at app\'en er beskyttet på «Beskyttede app\'er»-skjermen.</string>
+    <string name="dnkm_warning_dozed_1">Denne app\'en var ute av stand til å kjøre i bakgrunnen</string>
+    <string name="dnkm_xiaomi_button">Låse til nylige brukte app\'er</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Åpne sist bruke app\'er listen (kalles også app switcher\'en)\n\n2. Dersom app\'en har et lite bilde av en hengelås ved siden av navnet sitt, så trenger du ikke gå gjøre noe\n\n3. Dersom det ikke er noen hengelås, trykk og hold nede bilde av app\'en til hengelåsknappen kommer fram, trykk så på den</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Åpne sist brukte app\'er listen (kalles også app switcher\'en)\n\n2. Sveip ned på bildet av Briar for å vise hengelåsikonet.\n\n3. Dersom hengelåsen ikke er låst, trykk for å låse den</string>
+    <string name="dnkm_xiaomi_help">Hvis denne app\'en ikke er låst til listen over nylige brukte app\'er, så vil den være ute av stand til å kjøre i bakgrunnen.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Åpne sikkerhetsinnstillinger</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Kunne ikke åpne sikkerhetsinnstillingene</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Dersom denne app\'en er satt til «Låst» i «Låse app\'er»-skjermen, så vil den ikke være i stand til å kjøre i bakgrunnen.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Vennligst trykk på knappen under for å åpne sikkerhetsinnstillingene. Trykk på «Booste hastighet», trykk så på «Låse app\'er», sørg så for at app\'en er satt til «Låst».</string>
+    <string name="dnkm_xiaomi_text">For å kjøre i bakgrunnen, så trenger app\'en å være låst til listen over nylig brukte app\'er.</string>
+</resources>

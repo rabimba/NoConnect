@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Allow Connections</string>
+    <string name="dnkm_doze_explanation">Please disable battery optimizations so this app can run in the background.</string>
+    <string name="dnkm_doze_intro">To work properly, this app needs to run in the background.</string>
+    <string name="dnkm_doze_title">Background Connections</string>
+    <string name="dnkm_got_it">Got it</string>
+    <string name="dnkm_help">Help</string>
+    <string name="dnkm_huawei_app_launch_button">Open Battery Settings</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Could not open battery settings</string>
+    <string name="dnkm_huawei_app_launch_help">If this app is not set to \"Manage manually\" in the \"App launch\" screen, it will not be able to run in the background.</string>
+    <string name="dnkm_huawei_app_launch_text">Please tap the button below, open the \"App launch\" screen and make sure this app is set to \"Manage manually\".</string>
+    <string name="dnkm_huawei_protected_button">Protect this app</string>
+    <string name="dnkm_huawei_protected_help">If this app is not added to the protected apps list, it will be unable to run in the background.</string>
+    <string name="dnkm_huawei_protected_text">Please tap the button below and make sure this app is protected in the \"Protected Apps\" screen.</string>
+    <string name="dnkm_warning_dozed_1">This app was unable to run in the background</string>
+    <string name="dnkm_xiaomi_button">Lock to recent apps</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Open the recent apps list (also called the app switcher)\n\n2. If this app has a small image of a padlock next to its name then you don\'t need to do anything\n\n3. If there\'s no padlock, press and hold the image of this app until the padlock button appears, then tap it</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Open the recent apps list (also called the app switcher)\n\n2. Swipe down on the image of this app to show the padlock icon\n\n3. If the padlock is not locked, tap to lock it</string>
+    <string name="dnkm_xiaomi_help">If this app is not locked to the recent apps list, it will be unable to run in the background.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Open Security Settings</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Could not open security settings</string>
+    <string name="dnkm_xiaomi_lock_apps_help">If this app is not set to \"Locked\" in the \"Lock apps\" screen, it will be unable to run in the background.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Please tap the button below to open the security settings. Tap \"Boost speed\", then tap \"Lock apps\", and make sure this app is set to \"Locked\".</string>
+    <string name="dnkm_xiaomi_text">To run in the background, this app needs to be locked to the recent apps list.</string>
+</resources>

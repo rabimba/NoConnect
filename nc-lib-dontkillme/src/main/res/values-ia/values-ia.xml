@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permitter connexiones</string>
+    <string name="dnkm_doze_title">Connexiones de fundo</string>
+    <string name="dnkm_help">Adjuta</string>
+</resources>

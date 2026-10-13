@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Дозволити з\'єднання</string>
+    <string name="dnkm_doze_explanation">Щоб застосунок міг працювати в фоновому режимі, вимкніть оптимізацію батареї.</string>
+    <string name="dnkm_doze_intro">Для коректної роботи застосунку потрібен дозвіл на фоновий режим.</string>
+    <string name="dnkm_doze_title">Фонові з\'єднання</string>
+    <string name="dnkm_got_it">Зрозуміло</string>
+    <string name="dnkm_help">Довідка</string>
+    <string name="dnkm_huawei_app_launch_button">Відкрити налаштування батареї</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Не вдалося відкрити параметри батареї</string>
+    <string name="dnkm_huawei_app_launch_help">Якщо для застосунку не обрано «Керувати вручну» на екрані «Запуск застосунку», він не зможе працювати в фоновому режимі.</string>
+    <string name="dnkm_huawei_app_launch_text">Торкніть кнопку внизу, відкрийте екран «Запуск застосунку» та оберіть для цього застосунку «Керувати вручну».</string>
+    <string name="dnkm_huawei_protected_button">Захистити застосунок</string>
+    <string name="dnkm_huawei_protected_help">Якщо цього застосунку нема в переліку захищених застосунків, він не зможе працювати в фоновому режимі.</string>
+    <string name="dnkm_huawei_protected_text">Торкніть кнопку внизу й переконайтесь, що застосунок є в переліку «захищених застосунків».</string>
+    <string name="dnkm_warning_dozed_1">Цю програму не вдалося запустити у фоновому режимі</string>
+    <string name="dnkm_xiaomi_button">Закріпити в нещодавніх</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Відкрийте список нещодавніх програм (який також називається перемикачем програм)\n\n2. Якщо поруч з назвою програми є маленьке зображення замка, то вам не потрібно нічого робити\n\n3. Якщо зображення замка немає, натисніть і утримуйте зображення цієї програми, доки не з\'явиться кнопка зі зображенням замка, а потім торкніться її\n\n4.</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Відкрийте перелік нещодавніх застосунків (також називається перемикачем додатків)\n\n2. Потягніть зображення застосунку донизу до появи знака замка\n\n3. Якщо замок розімкнено, замкніть його дотиком</string>
+    <string name="dnkm_xiaomi_help">Якщо застосунок не закріплено в переліку нещодавніх застосунків, він не зможе працювати в фоновому режимі.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Відкрити Налаштування Безпеки</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Не вдалося відкрити налаштування безпеки</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Якщо на екрані \"Блокування програм\" для цієї програми не встановлено значення \"Блоковано\", вона не зможе працювати у фоновому режимі.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Натисніть кнопку нижче, щоб відкрити налаштування безпеки. Торкніться \"Збільшити швидкість\", потім \"Блокування програм\" і переконайтеся, що для цієї програми встановлено значення \"Блоковано\".</string>
+    <string name="dnkm_xiaomi_text">Щоб застосунок працював у фоновому режимі, закріпіть його в переліку нещодавніх застосунків.</string>
+</resources>

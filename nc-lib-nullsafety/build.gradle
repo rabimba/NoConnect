@@ -1,0 +1,9 @@
+apply plugin: 'java-library'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Vendored from org.briarproject:null-safety:0.1 (Maven Central sources jar). Licence: Apache-2.0.
+
+dependencies {
+	api 'com.google.code.findbugs:jsr305:3.0.2'
+}

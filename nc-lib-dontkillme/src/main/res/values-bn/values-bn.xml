@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">সংযোগসমূহের সম্মতি দিন</string>
+    <string name="dnkm_doze_title">অবজ্ঞাত সংযোগ</string>
+    <string name="dnkm_got_it">বুঝেছি</string>
+    <string name="dnkm_help">সাহায্য</string>
+</resources>

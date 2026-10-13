@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Erlaube Verbindungen</string>
+    <string name="dnkm_doze_explanation">Bitte deaktiviere die Akku-Optimierung, damit diese App im Hintergrund laufen kann.</string>
+    <string name="dnkm_doze_intro">Damit diese App richtig funktioniert, muss sie im Hintergrund laufen.</string>
+    <string name="dnkm_doze_title">Hintergrundverbindungen</string>
+    <string name="dnkm_got_it">Verstanden</string>
+    <string name="dnkm_help">Hilfe</string>
+    <string name="dnkm_huawei_app_launch_button">Akkueinstellungen öffnen</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Akkueinstellungen konnten nicht geöffnet werden</string>
+    <string name="dnkm_huawei_app_launch_help">Wenn diese App im Bereich \"App-Start\" nicht auf \"Manuell verwalten\" eingestellt ist, kann sie nicht im Hintergrund ausgeführt werden.</string>
+    <string name="dnkm_huawei_app_launch_text">Bitte tippe auf die Schaltfläche unten, öffne den Bereich \"App-Start\" und stelle sicher, dass diese App auf \"Manuell verwalten\" eingestellt ist.</string>
+    <string name="dnkm_huawei_protected_button">Diese App schützen</string>
+    <string name="dnkm_huawei_protected_help">Wenn diese App nicht zur Liste der geschützten Apps hinzugefügt wird, kann sie nicht im Hintergrund ausgeführt werden.</string>
+    <string name="dnkm_huawei_protected_text">Bitte tippe auf die Schaltfläche unten und stelle sicher, dass diese App unter \"Geschützte Apps\" angezeigt wird.</string>
+    <string name="dnkm_warning_dozed_1">Diese App konnte nicht im Hintergrund ausgeführt werden</string>
+    <string name="dnkm_xiaomi_button">Zuletzt verwendete Apps sperren</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Öffne die Liste der zuletzt verwendeten Apps (auch \'App Switcher\' genannt)\n\n2. Wenn neben dieser App ein kleines Vorhängeschloss angezeigt wird, brauchst du nichts zu tun.\n\n3. Wenn kein Vorhängeschloss vorhanden ist, halte das Bild dieser gedrückt, bis die Schaltfläche für das Vorhängeschloss erscheint, und tippe dann darauf</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Öffne die Liste der zuletzt verwendeten Apps (auch \'App Switcher\' genannt)\n\n2. Wische auf dem Bild dieser App nach unten, um das Vorhängeschlosssymbol anzuzeigen\n\n3. Wenn das Vorhängeschloss nicht gesperrt ist, tippe darauf, um es zu sperren</string>
+    <string name="dnkm_xiaomi_help">Wenn diese App nicht in der Liste der zuletzt verwendeten Apps gesperrt ist, kann sie nicht im Hintergrund ausgeführt werden.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Sicherheitseinstellungen öffnen</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Sicherheitseinstellungen konnten nicht geöffnet werden</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Wenn diese App nicht auf \" Gesperrt\" im Bereich \"Apps sperren\" gesetzt wurde, kann sie nicht im Hintergrund ausgeführt werden.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Bitte tippe auf die Schaltfläche unten, um die Sicherheitseinstellungen zu öffnen. Tippe auf \"Geschwindigkeit erhöhen\", dann auf \"Apps sperren\" und stelle sicher, dass diese App auf \"Gesperrt\" gesetzt ist.</string>
+    <string name="dnkm_xiaomi_text">Um im Hintergrund zu laufen, muss diese App in der Liste der zuletzt verwendeten Apps gesperrt werden.</string>
+</resources>

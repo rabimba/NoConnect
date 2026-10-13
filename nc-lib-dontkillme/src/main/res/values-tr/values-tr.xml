@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Bağlantılara izin ver</string>
+    <string name="dnkm_doze_explanation">Lütfen pil iyileştirmelerini kapatın. Böylece bu uygulama arka planda çalışabilir.</string>
+    <string name="dnkm_doze_intro">Bu uygulamanın düzgün çalışması için arka planda olması gerekir.</string>
+    <string name="dnkm_doze_title">Arka plan bağlantıları</string>
+    <string name="dnkm_got_it">Anladım</string>
+    <string name="dnkm_help">Yardım</string>
+    <string name="dnkm_huawei_app_launch_button">Pil ayarlarını aç</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Pil ayarları açılamadı</string>
+    <string name="dnkm_huawei_app_launch_help">Bu uygulama, \"Uygulama başlatma\" ekranında \"El ile yönet\" olarak ayarlanmamışsa, arka planda çalışamayabilir.</string>
+    <string name="dnkm_huawei_app_launch_text">Lütfen aşağıdaki düğmeye dokunun, \"Uygulama başlatma\" ekranını açın ve bu uygulamanın \"El ile yönet\" şeklinde ayarlanmış olduğundan emin olun.</string>
+    <string name="dnkm_huawei_protected_button">Bu uygulamayı koru</string>
+    <string name="dnkm_huawei_protected_help">Bu uygulama korunan uygulamalar listesine eklenmezse, arka planda çalışamayabilir.</string>
+    <string name="dnkm_huawei_protected_text">Lütfen aşağıdaki düğmeye dokunun ve bu uygulamanın \"Korunan uygulamalar\" bölümünde korunuyor olduğundan emin olun.</string>
+    <string name="dnkm_warning_dozed_1">Bu uygulama arka planda çalıştırılamadı</string>
+    <string name="dnkm_xiaomi_button">Son uygulamalara sabitle</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Son uygulamalar listesini açın (uygulama değiştirici de deniyor)\n\n2. Bu uygulamanın adının yanında bir kilit simgesi varsa bir şey yapmanız gerekmez\n\n3. Kilit simgesi yoksa, kilit düğmesi görünene kadar uygulamanın görseline basılı tutun. Ardından kilit düğmesine dokunun</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Son uygulamalar listesini açın (uygulama değiştirici de deniyor)\n\n2. Bu uygulamanın görselini kilit simgesini görene kadar aşağı kaydırın\n\n3. Kilit simgesi seçili değilse, kilitlemek için dokunun</string>
+    <string name="dnkm_xiaomi_help">Bu uygulama son uygulamalar listesinde sabitlenmezse, arka planda çalışamayabilir.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Güvenlik ayarlarını aç</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Güvenlik ayarları açılamadı</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Bu uygulama \"Uygulamaları kilitle\" ekranında \"Kilitli\" değilse, arka planda çalışamayabilir.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Güvenlik ayarlarını açmak için aşağıdaki düğmeye dokunun. \"Hızı artır\" üzerine dokunun. Ardından \"Uygulamaları kilitle\" üzerine dokunun ve bu uygulamanın \"Kilitli\" olarak ayarlandığından emin olun.</string>
+    <string name="dnkm_xiaomi_text">Bu uygulamanın arka planda çalışması için son uygulamalar listesinde sabitlenmesi gerekiyor.</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Povoliť pripojenia</string>
+    <string name="dnkm_doze_explanation">Vypnite prosím optimalizáciu batérie, aby táto aplikácia mohla bežať na pozadí.</string>
+    <string name="dnkm_doze_intro">Aby táto aplikácia správne fungovala, musí byť spustená na pozadí.</string>
+    <string name="dnkm_doze_title">Pripojenia bežiace v pozadí</string>
+    <string name="dnkm_got_it">Rozumiem</string>
+    <string name="dnkm_help">Pomoc</string>
+    <string name="dnkm_huawei_app_launch_button">Otvoriť nastavenia batérie</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Nepodarilo sa otvoriť nastavenia batérie</string>
+    <string name="dnkm_huawei_app_launch_help">Ak táto aplikácia nie je nastavená na možnosť \"Spravovať ručne\" na obrazovke \"Spustenie aplikácie\", nebude môcť byť spustená na pozadí.</string>
+    <string name="dnkm_huawei_app_launch_text">Ťuknite prosím na tlačidlo nižšie, otvorte obrazovku \"Spustenie aplikácie\" a uistite sa, že táto aplikácia je nastavená na \"Spravovať ručne\".</string>
+    <string name="dnkm_huawei_protected_button">Chrániť túto aplikáciu</string>
+    <string name="dnkm_huawei_protected_help">Ak táto aplikácia nie je pridaná do zoznamu chránených aplikácií, nebude môcť byť spustená na pozadí.</string>
+    <string name="dnkm_huawei_protected_text">Ťuknite prosím na tlačidlo nižšie a uistite sa, že je táto aplikácia chránená na obrazovke \"Chránené aplikácie\".</string>
+    <string name="dnkm_warning_dozed_1">Táto aplikácia nemohla byť spustená na pozadí</string>
+    <string name="dnkm_xiaomi_button">Uzamknúť do nedávnych aplikácií</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Otvorte zoznam posledných aplikácií (nazývaný aj prepínač aplikácií)\n\n2. Ak má táto aplikácia vedľa svojho názvu malý obrázok visiaceho zámku, nemusíte robiť nič\n\n3. Ak tam visiaci zámok nie je, stlačte a podržte obrázok tejto aplikácie, kým sa nezobrazí tlačidlo visiaceho zámku, a potom naň ťuknite</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Otvorte zoznam posledných aplikácií (nazývaný aj prepínač aplikácií)\n\n2. Potiahnite prstom nadol na obrázok tejto aplikácie, aby sa zobrazila ikona visiacej zámky\n\n3. Ak visiaca zámka nie je zamknutá, ťuknutím na ňu ju zamknite</string>
+    <string name="dnkm_xiaomi_help">Ak táto aplikácia nie je uzamknutá v zozname posledných aplikácií, nebude môcť byť spustená na pozadí.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Otvoriť nastavenia zabezpečenia</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Nepodarilo sa otvoriť nastavenia zabezpečenia</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Ak táto aplikácia nie je nastavená na možnosť \"Uzamknuté\" na obrazovke \"Uzamknuté aplikácie\", nebude môcť byť spustená na pozadí.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Ťuknutím na tlačidlo nižšie otvorte nastavenia zabezpečenia. Klepnite na položku \"Zvýšenie rýchlosti\", potom klepnite na položku \"Uzamknúť aplikácie\" a uistite sa, že táto aplikácia je nastavená na možnosť \"Uzamknuté\".</string>
+    <string name="dnkm_xiaomi_text">Ak má byť táto aplikácia spustená na pozadí, musí byť uzamknutá v zozname posledných aplikácií.</string>
+</resources>

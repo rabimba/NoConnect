@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Разрешаване на свързаност</string>
+    <string name="dnkm_doze_title">Свързаност на заден план</string>
+    <string name="dnkm_got_it">Разбрах</string>
+    <string name="dnkm_help">Помощ</string>
+    <string name="dnkm_huawei_app_launch_button">Настройки на батерия</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Настройките на батерията не могат да бъдат отворени</string>
+</resources>

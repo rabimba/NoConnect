@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Pemitir Conexões</string>
+    <string name="dnkm_doze_explanation">Por favor, desative as otimizações de bateria para que esse app possa ser executado em segundo plano.</string>
+    <string name="dnkm_doze_intro">Para funcionar direito, esse app precisa ser executado em segundo plano.</string>
+    <string name="dnkm_doze_title">Conexões em Segundo Plano</string>
+    <string name="dnkm_got_it">Entendi</string>
+    <string name="dnkm_help">Ajuda</string>
+    <string name="dnkm_huawei_app_launch_button">Abrir Configurações de Bateria</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Não pôde abrir configurações de bateria</string>
+    <string name="dnkm_huawei_app_launch_help">Se o Briar não estiver definido como \"Gerenciar manualmente\" na tela de \"Lançamento de apps\", ele não poderá ser executado em segundo plano.</string>
+    <string name="dnkm_huawei_app_launch_text">Por favor, toque no botão abaixo, abra a tela do \"Lançador de apps\", e certifique que esse app está definido para \"Gerenciar manualmente\". </string>
+    <string name="dnkm_huawei_protected_button">Proteger esse app</string>
+    <string name="dnkm_huawei_protected_help">Se esse app não for adicionado à lista de apps protegidos, ele não poderá ser executado em segundo plano.</string>
+    <string name="dnkm_huawei_protected_text">Por favor, toque no botão abaixo e certifique que esse app está protegido na tela \"Apps Protegidos\"</string>
+    <string name="dnkm_xiaomi_button">Fixar aos apps recentes</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Abra a lista de aplicativos recentes (também chamada de alternador de aplicativos)\n\n2. Pressione e segure na imagem desse app para mostrar o ícone de cadeado\n\n3. Se o cadeado não estiver trancado, toque para trancá-lo</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Abra a lista de aplicativos recentes (também chamada de alternador de aplicativos)\n\n2. Deslize para baixo na imagem desse app para mostrar o ícone de cadeado\n\n3. Se o cadeado não estiver trancado, toque para trancá-lo</string>
+    <string name="dnkm_xiaomi_help">Se esse app não estiver fixado à lista de apps recentes, ele não poderá ser executado em segundo plano.</string>
+    <string name="dnkm_xiaomi_text">Para ser executado em segundo plano, esse app deve estar fixado à lista de apps recentes.</string>
+</resources>

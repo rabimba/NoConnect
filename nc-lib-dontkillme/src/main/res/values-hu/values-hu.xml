@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Kapcsolatok engedélyezése</string>
+    <string name="dnkm_doze_title">Háttérkapcsolatok</string>
+    <string name="dnkm_got_it">Megvan</string>
+    <string name="dnkm_help">Súgó</string>
+    <string name="dnkm_huawei_app_launch_button">Az akkumulátor beállítások megnyitása</string>
+</resources>

@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+// Vendored from org.briarproject:dont-kill-me-lib:0.2.8 (Maven Central sources jar and aar). Licence: GPL-3.0.
+
+android {
+	compileSdkVersion 35
+	buildToolsVersion '35.0.0'
+
+	defaultConfig {
+		minSdkVersion 21
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+	kotlinOptions {
+		jvmTarget = '1.8'
+	}
+	namespace 'org.briarproject.android.dontkillmelib'
+}
+
+dependencies {
+	implementation project(':nc-lib-nullsafety')
+	implementation 'com.google.code.findbugs:jsr305:3.0.2'
+	implementation 'javax.inject:javax.inject:1'
+}

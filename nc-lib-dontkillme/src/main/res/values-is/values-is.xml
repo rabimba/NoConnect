@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Leyfa tengingar</string>
+    <string name="dnkm_doze_title">Bakgrunnstengingar</string>
+    <string name="dnkm_got_it">Náði því</string>
+    <string name="dnkm_help">Hjálp</string>
+    <string name="dnkm_huawei_app_launch_button">Opna rafhlöðustillingar</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Gat ekki opnað rafhlöðustillingar</string>
+</resources>

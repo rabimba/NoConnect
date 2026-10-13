@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permet connexions</string>
+    <string name="dnkm_doze_explanation">Desactiveu les optimitzacions de la bateria perquè aquesta aplicació es pugui executar en segon pla.</string>
+    <string name="dnkm_doze_intro">Per funcionar correctament, aquesta aplicació s\'ha d\'executar en segon pla.</string>
+    <string name="dnkm_doze_title">Connexions en segon pla</string>
+    <string name="dnkm_got_it">Entesos</string>
+    <string name="dnkm_help">Ajuda</string>
+    <string name="dnkm_huawei_app_launch_button">Obriu la configuració de la bateria</string>
+    <string name="dnkm_huawei_app_launch_error_toast">No s\'ha pogut obrir la configuració de la bateria</string>
+    <string name="dnkm_huawei_app_launch_help">Si aquesta aplicació no està configurada com a «Gestiona manualment» a la pantalla «Inicia l\'aplicació», no es podrà executar en segon pla.</string>
+    <string name="dnkm_huawei_app_launch_text">Toqueu el botó següent, obriu la pantalla «Inicia l\'aplicació» i assegureu-vos que aquesta aplicació estigui configurada a «Gestiona manualment».</string>
+    <string name="dnkm_huawei_protected_button">Protegeix aquesta aplicació</string>
+    <string name="dnkm_huawei_protected_help">Si aquesta aplicació no s\'afegeix a la llista d\'aplicacions protegides, no es podrà executar en segon pla.</string>
+    <string name="dnkm_huawei_protected_text">Toqueu el botó següent i assegureu-vos que aquesta aplicació estigui protegida a la pantalla «Aplicacions protegides».</string>
+    <string name="dnkm_warning_dozed_1">Aquesta aplicació no s\'ha pogut executar en segon pla</string>
+    <string name="dnkm_xiaomi_button">Bloca a aplicacions recents</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Obriu la llista d\'aplicacions recents (també anomenada commutador d\'aplicacions)\n\n2. Si aquesta aplicació té una petita imatge d\'un cadenat al costat del seu nom, no cal que feu res\n\n3. Si no hi ha cap cadenat, manteniu premuda la imatge d\'aquesta aplicació fins que aparegui el botó del cadenat i, a continuació, toqueu-lo</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Obriu la llista d\'aplicacions recents (també anomenada commutador d\'aplicacions)\n\n2. Llisqueu cap avall a la imatge d\'aquesta aplicació per mostrar la icona del cadenat\n\n3. Si el cadenat no està bloquejat, toqueu per blocar-lo</string>
+    <string name="dnkm_xiaomi_help">Si aquesta aplicació no està blocada a la llista d\'aplicacions recents, no es podrà executar en segon pla.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Obre els paràmetres de seguretat</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">No s\'ha pogut obrir la configuració de seguretat</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Si aquesta aplicació no està configurada com a «Blocada» a la pantalla «Bloca aplicacions», no es podrà executar en segon pla.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Toqueu el botó següent per obrir la configuració de seguretat. Toqueu «Augmenta la velocitat», després toqueu «Bloca aplicacions» i assegureu-vos que aquesta aplicació estigui configurada com a «Blocada».</string>
+    <string name="dnkm_xiaomi_text">Per executar-se en segon pla, aquesta aplicació ha d\'estar blocada a la llista d\'aplicacions recents.</string>
+</resources>

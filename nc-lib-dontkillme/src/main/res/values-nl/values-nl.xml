@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Sta verbindingen toe</string>
+    <string name="dnkm_doze_title">Achtergrondverbindingen</string>
+    <string name="dnkm_got_it">Begrepen</string>
+    <string name="dnkm_help">Hulp</string>
+</resources>

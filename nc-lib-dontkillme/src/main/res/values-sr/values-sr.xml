@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Dozvolite konekcije</string>
+    <string name="dnkm_doze_title">Konekcije u pozadini</string>
+    <string name="dnkm_got_it">Jasno</string>
+    <string name="dnkm_help">Помоћ</string>
+    <string name="dnkm_huawei_app_launch_button">Otvorite podešavanja baterije</string>
+</resources>

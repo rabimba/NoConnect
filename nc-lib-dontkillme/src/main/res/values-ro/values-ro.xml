@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permite conexiuni</string>
+    <string name="dnkm_doze_explanation">Vă rugăm să dezactivați optimizările pentru baterie pentru ca acest app să poată rula în fundal.</string>
+    <string name="dnkm_doze_intro">Pentru a funcționa corect, acest app trebuie să ruleze în fundal.</string>
+    <string name="dnkm_doze_title">Conexiuni în fundal</string>
+    <string name="dnkm_got_it">Am înțeles</string>
+    <string name="dnkm_help">Ajutor</string>
+    <string name="dnkm_huawei_app_launch_button">Deschide setările de baterie</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Nu se pot deschide setările de baterie.</string>
+    <string name="dnkm_huawei_app_launch_help">Dacă acest app nu este setată la \" Gestionare manuală\" în ecranul \"Lansare app\", nu va putea rula în fundal.</string>
+    <string name="dnkm_huawei_app_launch_text">Vă rugăm să atingeți butonul de mai jos, să deschideți ecranul \" Lansare app\" și să vă asigurați că acest app este setat pentru \"Gestionare manuală\".</string>
+    <string name="dnkm_huawei_protected_button">Protejați acest app</string>
+    <string name="dnkm_huawei_protected_help">Dacă acest app nu este adăugat la lista de aplicații protejate, nu va putea fi rulat în fundal.</string>
+    <string name="dnkm_huawei_protected_text">Vă rugăm să atingeți butonul de mai jos și să vă asigurați că această aplicație este protejată în ecranul \" App-uri protejate\".</string>
+    <string name="dnkm_warning_dozed_1">Aplicația nu a putut să ruleze în fundal</string>
+    <string name="dnkm_xiaomi_button">Blocare la app-uri recente</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Deschideți lista de aplicații recente (denumită și comutatorul de app-uri)\n\n2. Dacă acest app are o mică imagine a unui lacăt lângă numele ei, atunci nu trebuie să faceți nimic\n\n\n3. Dacă nu există un lacăt, țineți apăsată imaginea acestui app până când apare butonul cu lacăt, apoi atingeți-l.</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Deschideți lista de app-uri recente (denumită și comutatorul de aplicații)\n\n2. Trageți cu degetul în jos pe imaginea acestui app pentru a afișa pictograma lacătului\n\n\n3. Dacă lacătul nu este blocat, atingeți pentru a-l bloca</string>
+    <string name="dnkm_xiaomi_help">Dacă acest app nu este blocat în lista de aplicații recente, nu va putea fi rulat în fundal.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Deschide setările de securitate</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Nu s-au putut deschide setările de securitate</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Dacă această aplicație nu este setată la \" Blocat\" în ecranul \" Blocare app\", nu va putea fi rulată în fundal.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Vă rugăm să apăsați pe butonul de mai jos pentru a deschide setările de securitate. Atingeți \" Creșterea vitezei\", apoi atingeți \"Blocarea app-urilor\" și asigurați-vă că acest app este setat la \"Blocat\".</string>
+    <string name="dnkm_xiaomi_text">Pentru a funcționa în fundal, acest app trebuie să fie blocat în lista de aplicații recente.</string>
+</resources>

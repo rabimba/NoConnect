@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Дозволени поврзувања</string>
+    <string name="dnkm_doze_title">Позадински поврзувања на Интернет</string>
+    <string name="dnkm_got_it">Разбирам</string>
+    <string name="dnkm_help">Помош</string>
+</resources>

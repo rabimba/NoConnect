@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Dozvolite konekcije</string>
+    <string name="dnkm_doze_title">Konekcije u pozadinskom modu</string>
+    <string name="dnkm_got_it">Jasno</string>
+    <string name="dnkm_help">Pomoć</string>
+</resources>

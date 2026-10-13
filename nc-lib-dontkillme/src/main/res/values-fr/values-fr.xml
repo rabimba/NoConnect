@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Autoriser les connexions</string>
+    <string name="dnkm_doze_explanation">Veuillez désactiver l\'optimisation de la batterie pour que cette application puisse fonctionner en arrière-plan.</string>
+    <string name="dnkm_doze_intro">Pour fonctionner correctement, cette application nécessite de fonctionner en arrière-plan.</string>
+    <string name="dnkm_doze_title">Connexions d’arrière-plan</string>
+    <string name="dnkm_got_it">D’accord</string>
+    <string name="dnkm_help">Aide</string>
+    <string name="dnkm_huawei_app_launch_button">Ouvrez les paramètres de la pile</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Impossible d’ouvrir les paramètres de la pile</string>
+    <string name="dnkm_huawei_app_launch_help">Si cette appli n\'est pas réglée à « Manage manually » dans l\'écran « App launch », elle sera incapable de fonctionner en arrière-plan.</string>
+    <string name="dnkm_huawei_app_launch_text">Veuillez presser le bouton ci-dessous, ouvrez l\'écran « App launch » et assurez vous que cette appli est réglée à « Manage manually ».</string>
+    <string name="dnkm_huawei_protected_button">Protéger cette application</string>
+    <string name="dnkm_huawei_protected_help">Si cette application n\'est pas ajoutée à la liste des applications protégées, elle sera incapable de fonctionner en arrière-plan.</string>
+    <string name="dnkm_huawei_protected_text">Veuillez presser le bouton ci-dessous et vous assurer que l\'appli est protégée dans l\'écran « Protected Apps ».</string>
+    <string name="dnkm_warning_dozed_1">Cette appli était incapable de fonctionner en arrière plan</string>
+    <string name="dnkm_xiaomi_button">Verrouiller dans les applications récentes</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Ouvrez la liste d\'applications récentes (aussi apellée « app switcher »)\n\n2. Si cette appli a une petite image de cadenas à coté de son nom, alors vous n\'avez besoin de rien faire\n\n3. S\'il n\'y a pas de cadenas, appuyez et maintenez appuyé l\'image de cette appli jusqu\'à ce que le bouton cadenas apparaisse, alors tapotez-le.</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Ouvrez la liste d\'applications récentes (aussi apellée « app switcher »)\n\n2. Faites défiler vers le bas l\'image de cette appli pour afficher l\'icône du cadenas\n\n3. Si le cadenas n\'est pas fermé, tapoter pour le verrouiller.</string>
+    <string name="dnkm_xiaomi_help">Si cette appli n\'est pas verrouillée dans la liste d\'applis récentes, elle sera incapable de fonctionner en arrière-plan.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Ouvrir les paramètres de sécurité</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Impossible d\'ouvrir les réglages de sécurité</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Si cette application n\'est pas réglée à « Locked » dans l\'écran « Lock apps », elle sera incapable de fonctionner en arrière-plan.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Veuillez presser le bouton ci-dessous pour ouvrir les réglages de sécurité. Appuyez sur « Boost speed », puis « Lock apps », pour vous assurer que cette appli est verrouillée (« Locked »).</string>
+    <string name="dnkm_xiaomi_text">Pour fonctionner en arrière-plan, cette appli nécessite d\'être verrouillée dans la liste d\'applications récentes.</string>
+</resources>

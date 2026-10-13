@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Permetti le connessioni</string>
+    <string name="dnkm_doze_explanation">Disattiva le ottimizzazioni della batteria in modo che l\'app possa lavorare in secondo piano.</string>
+    <string name="dnkm_doze_intro">Per funzionare correttamente, questa app deve lavorare in secondo piano.</string>
+    <string name="dnkm_doze_title">Connessioni in secondo piano</string>
+    <string name="dnkm_got_it">Ho capito</string>
+    <string name="dnkm_help">Aiuto</string>
+    <string name="dnkm_huawei_app_launch_button">Apri impostazioni batteria</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Impossibile aprire le impostazioni batteria</string>
+    <string name="dnkm_huawei_app_launch_help">Se questa app non è su \"Gestisci manualmente\" nella schermata \"Esecuzione app\", non potrà funzionare in secondo piano.</string>
+    <string name="dnkm_huawei_app_launch_text">Tocca il pulsante sottostante, apri la schermata \"Esecuzione app\" e assicurati che questa app sia impostata su \"Gestisci manualmente\".</string>
+    <string name="dnkm_huawei_protected_button">Proteggi questa app</string>
+    <string name="dnkm_huawei_protected_help">Se questa app non viene aggiunta alla lista di app protette, non potrà funzionare in secondo piano.</string>
+    <string name="dnkm_huawei_protected_text">Tocca il pulsante sottostante e assicurati che l\'app sia protetta nella schermata \"App protette\".</string>
+    <string name="dnkm_warning_dozed_1">Questa app non è riuscita a funzionare in secondo piano</string>
+    <string name="dnkm_xiaomi_button">Fissa nelle app recenti</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Apri la lista di app recenti (chiamata anche app switcher)\n\n2. Se questa app ha un piccolo lucchetto accanto al nome, allora non devi fare nulla\n\n3. Se non c\'è un lucchetto, tieni premuta la schermata di questa app finché non compare l\'icona del lucchetto, poi toccala</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Apri la lista di app recenti (chiamata anche app switcher)\n\n2. Scorri fino alla schermata di questa app per mostrare l\'icona del lucchetto\n\n3. Se il lucchetto non è chiuso, toccalo per chiuderlo</string>
+    <string name="dnkm_xiaomi_help">Se l\'app non è fissata nella lista di app recenti, non potrà funzionare in secondo piano.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Apri Impostazioni di Sicurezza</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">Impossibile aprire le impostazioni di sicurezza</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Se questa app non è impostata su \"Bloccato\" nella schermata \"Blocca le app\", non riuscirà a funzionare in secondo piano.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Tocca il pulsante sottostante per aprire le impostazioni di sicurezza. Tocca \"Aumenta velocità\", poi \"Blocca le app\" e assicurati che questa app sia impostato su \"Bloccato\".</string>
+    <string name="dnkm_xiaomi_text">Per funzionare in secondo piano, l\'app deve essere fissata nella lista di app recenti.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Autorizar las connexions</string>
+    <string name="dnkm_doze_title">Connexions de rèireplan</string>
+    <string name="dnkm_got_it">Comprés</string>
+    <string name="dnkm_help">Ajuda</string>
+</resources>

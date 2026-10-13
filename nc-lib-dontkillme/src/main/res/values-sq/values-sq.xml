@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Lejo Lidhje</string>
+    <string name="dnkm_doze_explanation">Ju lutemi, çaktivizoni optimizime baterie, që ky aplikacion të mund të xhirojë në prapaskenë.</string>
+    <string name="dnkm_doze_intro">Që të funksionojë si duhet, ky aplikacion lypset të xhirojë në prapaskenë.</string>
+    <string name="dnkm_doze_title">Lidhje Në Prapaskenë</string>
+    <string name="dnkm_got_it">E mora vesh</string>
+    <string name="dnkm_help">Ndihmë</string>
+    <string name="dnkm_huawei_app_launch_button">Hapni Rregullime Baterie</string>
+    <string name="dnkm_huawei_app_launch_error_toast">S’u hapën dot rregullimet e baterisë</string>
+    <string name="dnkm_huawei_app_launch_help">Nëse për këtë aplikacion s’është caktuar “Administroje dorazi” te skena “Nisje aplikacioni”, s’do të jetë në gjendje të xhirojë në prapaskenë.</string>
+    <string name="dnkm_huawei_app_launch_text">Ju lutemi, prekni butonin më poshtë, hapni skenën “Nisje aplikacioni” dhe sigurohuni se për këtë aplikacion është caktuar “Administrojeni dorazi”.</string>
+    <string name="dnkm_huawei_protected_button">Mbroje këtë aplikacion</string>
+    <string name="dnkm_huawei_protected_help">Nëse ky aplikacion s’është i shtuar te lista e aplikacioneve të mbrojtur, s’do të jetë në gjendje të xhirojë në prapaskenë.</string>
+    <string name="dnkm_huawei_protected_text">Ju lutemi, prekni butonin më poshtë dhe sigurohuni se aplikacioni është i mbrojtur, te skena “Aplikacione të Mbrojtur”.</string>
+    <string name="dnkm_warning_dozed_1">Ky aplikacion s’qe në gjendje të xhironte në prapraskenë</string>
+    <string name="dnkm_xiaomi_button">Kyçe te aplikacione të përdorur së fundi</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Hapni listën e aplikacioneve të përdorur së fundi (e quajtur edhe këmbyes aplikacionesh)\n\n2. Nëse ky aplikacion ka një figurë dry të vogël në krah të emrit të vet, s’keni nevojë të bëni gjë\n\n3. Nëse s’ka dry, shtypni dhe mbajeni të shtypur mbi figurën e atij aplikacioni deri sa të shfaqet butoni dry, mandej prekeni</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Hapni listën e aplikacioneve përdorur së fundi (e quajtur edhe këmbyes aplikacionesh)\n\n2. Fërkojeni për poshtë te figura për këtë aplikacion, që të shfaqet ikona e drynit\n\n3. Nëse dryni s’është i kyçur, prekeni, që të kyçet</string>
+    <string name="dnkm_xiaomi_help">Nëse ky aplikacion s’është i kyçur te lista e aplikacioneve të përdorur së fundi, s’do të jetë në gjendje të xhirojë në prapaskenë.</string>
+    <string name="dnkm_xiaomi_lock_apps_button">Hapni Rregullime Sigurie</string>
+    <string name="dnkm_xiaomi_lock_apps_error_toast">S’u hapën dot rregullime sigurie</string>
+    <string name="dnkm_xiaomi_lock_apps_help">Nëse për këtë aplikacion s’është zgjedhur “I kyçur” te skena “Kyçje aplikacionesh”, s’do të jetë në gjendje të xhirojë në prapaskenë.</string>
+    <string name="dnkm_xiaomi_lock_apps_text">Ju lutemi, prekni butonin më poshtë që të hapen rregullimet e sigurisë. Prekni “Përforcim shpejtësie”, mandej prekni “Kyçje aplikacionesh” dhe sigurohuni se për atë aplikacion është zgjedhur “I kyçur”.</string>
+    <string name="dnkm_xiaomi_text">Për të xhiruar në prapaskenë, ky aplikacion lypset të jetë i kyçur te lista e aplikacioneve të përdorur së fundi.</string>
+</resources>

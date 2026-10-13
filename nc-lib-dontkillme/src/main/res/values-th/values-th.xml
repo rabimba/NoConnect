@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">อนุญาตการเชื่อมต่อ</string>
+    <string name="dnkm_doze_title">การเชื่อมต่อด้านหลัง</string>
+    <string name="dnkm_got_it">รับทราบ</string>
+    <string name="dnkm_help">ช่วยเหลือ</string>
+</resources>

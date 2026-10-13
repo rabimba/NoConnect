@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Leisti ryšius</string>
+    <string name="dnkm_doze_title">Foniniai ryšiai</string>
+    <string name="dnkm_got_it">Supratau</string>
+    <string name="dnkm_help">Pagalba</string>
+    <string name="dnkm_huawei_app_launch_button">Atverti akumuliatoriaus nustatymus</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Nepavyko atverti akumuliatoriaus nustatymų</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">התר חיבורים</string>
+    <string name="dnkm_doze_title">חיבורי רקע</string>
+    <string name="dnkm_got_it">הבנתי</string>
+    <string name="dnkm_help">עזרה</string>
+</resources>

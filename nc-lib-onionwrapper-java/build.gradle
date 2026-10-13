@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Vendored from org.briarproject:onionwrapper-java:0.1.7 (Maven Central sources jar). Licence: GPL-3.0.
+
+dependencies {
+	api project(':nc-lib-onionwrapper-core')
+	implementation 'net.java.dev.jna:jna:5.13.0'
+	implementation 'net.java.dev.jna:jna-platform:5.13.0'
+}

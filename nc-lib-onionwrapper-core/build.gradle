@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Vendored from org.briarproject:onionwrapper-core:0.1.7 (Maven Central sources jar). Licence: GPL-3.0.
+
+dependencies {
+	api project(':nc-lib-nullsafety')
+	api project(':nc-lib-jtorctl')
+	api 'com.google.code.findbugs:jsr305:3.0.2'
+	api 'javax.inject:javax.inject:1'
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Izinkan Koneksi</string>
+    <string name="dnkm_doze_title">Sambungan Belakang</string>
+    <string name="dnkm_got_it">Mengerti</string>
+    <string name="dnkm_help">Bantuan</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dnkm_doze_button">Tillåt dataanslutningar</string>
+    <string name="dnkm_doze_explanation">Inaktivera batterioptimeringar så att denna app kan köra i bakgrunden.</string>
+    <string name="dnkm_doze_intro">För att fungera ordentligt måste denna appen köra i bakgrunden.</string>
+    <string name="dnkm_doze_title">Dataanslutningar i bakgrunden</string>
+    <string name="dnkm_got_it">Förstått</string>
+    <string name="dnkm_help">Hjälp</string>
+    <string name="dnkm_huawei_app_launch_button">Öppna batteriinställningar</string>
+    <string name="dnkm_huawei_app_launch_error_toast">Kunde inte öppna batterinställningar</string>
+    <string name="dnkm_huawei_app_launch_help">Om Briar inte är inställt på ”Hantera manuellt” i skärmen ”App-start” kommer den inte att kunna köra i bakgrunden.</string>
+    <string name="dnkm_huawei_app_launch_text">Klicka på knappen nedan, öppna skärmen ”App-start” och säkerställ att denna app är inställd på ”Hantera manuellt”</string>
+    <string name="dnkm_huawei_protected_button">Skydda denna app</string>
+    <string name="dnkm_huawei_protected_help">Om denna app inte läggs till i listan över skyddade appar kommer den inte att kunna köra i bakgrunden.</string>
+    <string name="dnkm_huawei_protected_text">Tryck på knappen längre ner för att säkerställa att denna app är skyddad på skärmen \"Skyddade appar\".</string>
+    <string name="dnkm_xiaomi_button">Lås in bland senaste appar</string>
+    <string name="dnkm_xiaomi_dialog_body_new">1. Öppna listan över senaste appar (också kallade appväxlaren)\n\n2. Tryck och håll på bilden av denna app tills hänglåsikonen dyker upp\n\n3. Om hänglåsikonen inte är låst, klicka för att låsa den</string>
+    <string name="dnkm_xiaomi_dialog_body_old">1. Öppna listan över senaste appar (också kallade appväxlaren)\n\n2. Svep nedåt vid bilden av denna app för att visa hänglåsikonen\n\n3. Om hänglåsikonen inte är låst, klicka för att låsa den</string>
+    <string name="dnkm_xiaomi_help">Om denna app inte låses in i listan över senaste appar kommer det inte att kunna köra i bakgrunden.</string>
+    <string name="dnkm_xiaomi_text">För att köra i bakgrunden måste denna app låsas in i listan över senaste appar.</string>
+</resources>
