@@ -29,7 +29,7 @@ import static android.os.Build.VERSION.SDK_INT;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static androidx.core.content.ContextCompat.checkSelfPermission;
-import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.QUITE_WEAK;
+import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.QUITE_STRONG;
 import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.STRONG;
 import static org.chagolchana.noconnect.android.util.UiUtils.hideViewOnSmallScreen;
 import static org.chagolchana.noconnect.android.util.UiUtils.setError;
@@ -121,13 +121,13 @@ public class SetPasswordFragment extends SetupFragment {
 		strengthMeter.setVisibility(!password1.isEmpty() ? VISIBLE : INVISIBLE);
 		float strength = viewModel.estimatePasswordStrength(password1);
 		strengthMeter.setStrength(strength);
-		boolean strongEnough = strength >= QUITE_WEAK;
+		boolean strongEnough = strength >= QUITE_STRONG;
 
 		if (!password1.isEmpty()) {
 			if (strength >= STRONG) {
 				passwordEntryWrapper.setHelperText(
 						getString(R.string.password_strong));
-			} else if (strength >= QUITE_WEAK) {
+			} else if (strength >= QUITE_STRONG) {
 				passwordEntryWrapper.setHelperText(
 						getString(R.string.password_quite_strong));
 			} else {

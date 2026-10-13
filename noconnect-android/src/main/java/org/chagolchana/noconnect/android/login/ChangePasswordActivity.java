@@ -31,7 +31,7 @@ import static android.view.View.VISIBLE;
 import static android.widget.Toast.LENGTH_LONG;
 import static org.chagolchana.chagol.api.crypto.DecryptionResult.KEY_STRENGTHENER_ERROR;
 import static org.chagolchana.chagol.api.crypto.DecryptionResult.SUCCESS;
-import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.QUITE_WEAK;
+import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.QUITE_STRONG;
 import static org.chagolchana.chagol.api.crypto.PasswordStrengthEstimator.STRONG;
 import static org.chagolchana.noconnect.android.login.LoginUtils.createKeyStrengthenerErrorDialog;
 import static org.chagolchana.noconnect.android.util.UiUtils.hideSoftKeyboard;
@@ -129,7 +129,7 @@ public class ChangePasswordActivity extends NoConnectActivity
 			if (strength >= STRONG) {
 				newPasswordEntryWrapper.setHelperText(
 						getString(R.string.password_strong));
-			} else if (strength >= QUITE_WEAK) {
+			} else if (strength >= QUITE_STRONG) {
 				newPasswordEntryWrapper.setHelperText(
 						getString(R.string.password_quite_strong));
 			} else {
@@ -139,13 +139,13 @@ public class ChangePasswordActivity extends NoConnectActivity
 
 		setError(newPasswordEntryWrapper,
 				getString(R.string.password_too_weak),
-				!firstPassword.isEmpty() && strength < QUITE_WEAK);
+				!firstPassword.isEmpty() && strength < QUITE_STRONG);
 		setError(newPasswordConfirmationWrapper,
 				getString(R.string.passwords_do_not_match),
 				!secondPassword.isEmpty() && !passwordsMatch);
 		changePasswordButton.setEnabled(
 				!currentPassword.getText().toString().isEmpty() &&
-						passwordsMatch && strength >= QUITE_WEAK);
+						passwordsMatch && strength >= QUITE_STRONG);
 	}
 
 	@Override
