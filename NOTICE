@@ -1,0 +1,35 @@
+NoConnect
+Copyright (C) 2017-2026 NoConnect contributors
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. See the LICENSE file for the full text.
+
+NoConnect is a modified version of Briar (https://briarproject.org), which is
+Copyright (C) The Briar Project and licensed under the GNU General Public
+License version 3. The NoConnect modules map to Briar's as follows:
+
+  nc-api, nc-core, nc-android, nc-j2se              <- Briar "bramble" modules
+  noconnect-api, noconnect-core, noconnect-android  <- Briar "briar" modules
+
+Modifications include renaming of packages, classes, resources and protocol
+identifiers, removal of the build expiry lock, and other changes recorded in
+the git history of this repository.
+
+Third-party code included in this repository:
+
+- Signal Android (org.thoughtcrime.securesms), Copyright (C) Open Whisper
+  Systems, GNU General Public License version 3.
+  See noconnect-android/src/main/java/org/thoughtcrime/securesms/LICENSE.
+- Android Identicons (im.delight.android.identicons), Copyright 2014
+  www.delight.im, Apache License 2.0.
+- ArticleMovementMethod, Copyright (C) 2006 The Android Open Source Project,
+  Apache License 2.0.
+- PreferenceDividerDecoration, from
+  https://github.com/consp1racy/android-support-preference, Apache License 2.0.
+- Blake2sDigest, based on the Bouncy Castle BLAKE2b implementation, MIT-style
+  Bouncy Castle licence (see file header).
+- Patched builds of bluecove, jSSC, jnotify, jtorctl, weupnp and Tor; the
+  patches are in the patches/ directory and each library keeps its original
+  licence.

@@ -78,4 +78,7 @@ You will need Android Studio to build the project.  Clone the repository and ope
 
 
 ## License
+NoConnect is licensed under the [GNU General Public License v3](LICENSE).
+
 ### Other projects used
+NoConnect is derived from [Briar](https://briarproject.org) (GPLv3, The Briar Project). It also includes code from Signal Android (GPLv3), Android Identicons (Apache 2.0), and the Android Open Source Project (Apache 2.0). See [NOTICE](NOTICE) for details.
