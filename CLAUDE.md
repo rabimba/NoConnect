@@ -47,5 +47,7 @@ Requires JDK 17 and Android SDK platform 35 / build tools 35.0.0 (`local.propert
 
 ## Docs
 
+- `docs/HANDOFF.md`: **start here**. Current state, next steps in priority order, and this machine's build quirks.
+
 - `docs/architecture/2026-10-12-architecture-review-and-roadmap.md`: findings and roadmap.
 - `docs/superpowers/specs/2026-10-12-rebase-and-roadmap-execution.md`: the milestone plan (M1–M6) currently being executed.

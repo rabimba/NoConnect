@@ -60,7 +60,7 @@ Verify: unit tests; flags default off.
 - The external audit, F-Droid publication and developer verification are outside what code changes can do.
 - If the session runs out before M6, work stops at a committed, verified milestone boundary and the remaining milestones stay in this plan.
 
-## Status (2026-10-13)
+## Status (2026-10-13; see docs/HANDOFF.md for next steps)
 
 | Milestone | Status | Notes |
 |---|---|---|
@@ -68,7 +68,7 @@ Verify: unit tests; flags default off.
 | M2 Platform and hygiene | Done, one item deferred | SDK 36 with edge-to-edge insets and back-callback opt-out (verified on an API 36.1 emulator, light and dark); GitHub Actions CI; Android 17 local-network audit (`docs/platform/`). **Deferred:** replacing witness pins with Gradle `verification-metadata.xml` (needs the headless desktop binaries, blocked by the local proxy). |
 | M3 Security hardening | Done, one item deferred | Argon2id KDF with migration from scrypt and cost bounds; entropy-based password policy (≥45 bits); Keystore key destroyed on account deletion; constant-time confirmation check; always-on parser robustness tests. **Deferred:** zeroising secrets in memory (limited value in the JVM, invasive). |
 | M4 Product features | Done | Build-age update reminder; install update from file (signer/version checks, PackageInstaller; verified end to end on the emulator); "Check in with everyone". Contact-adding copy changes left to the UX pass. |
-| M5 Transports | Partial | BLE rendezvous-token derivation and matching, with tests and design (`docs/design/ble-discovery.md`). The BLE plugin itself isn't written; it needs real devices. LAN over hotspot/Wi-Fi Direct already worked in upstream. |
+| M5 Transports | Done on emulators, untested on phones | BLE plugin (`nc-android/.../plugin/ble`), debug builds only. Verified on two Android 16 emulators: discovery, L2CAP connection and message delivery. Real-device testing is still needed. LAN over hotspot/Wi-Fi Direct already worked in upstream. |
 | M6 Experimental (flags off) | Partial | Flags added (off everywhere); hybrid X25519+ML-KEM-768 KEM implemented and tested but not wired into BQP; sender keys and sealed-envelope relay are design and threat model only (`docs/design/experimental-crypto-and-relay.md`). |
 
 Test status at the end: 2,263 unit tests, 233 skipped, 37 failing. All failures are environmental on this machine: integration-test timeouts that also occur on pristine upstream, Robolectric runtime download and LAN socket tests blocked by the local proxy.
