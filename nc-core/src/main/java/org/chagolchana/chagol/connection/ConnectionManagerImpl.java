@@ -1,11 +1,13 @@
 package org.chagolchana.chagol.connection;
 
+import org.chagolchana.chagol.api.FeatureFlags;
 import org.chagolchana.chagol.api.connection.ConnectionManager;
 import org.chagolchana.chagol.api.connection.ConnectionRegistry;
 import org.chagolchana.chagol.api.contact.ContactExchangeManager;
 import org.chagolchana.chagol.api.contact.ContactId;
 import org.chagolchana.chagol.api.contact.HandshakeManager;
 import org.chagolchana.chagol.api.contact.PendingContactId;
+import org.chagolchana.chagol.api.crypto.CryptoComponent;
 import org.chagolchana.chagol.api.lifecycle.IoExecutor;
 import org.chagolchana.chagol.api.plugin.TransportConnectionReader;
 import org.chagolchana.chagol.api.plugin.TransportConnectionWriter;
@@ -17,6 +19,7 @@ import org.chagolchana.chagol.api.sync.SyncSessionFactory;
 import org.chagolchana.chagol.api.transport.KeyManager;
 import org.chagolchana.chagol.api.transport.StreamReaderFactory;
 import org.chagolchana.chagol.api.transport.StreamWriterFactory;
+import org.chagolchana.chagol.relay.RelayStore;
 import org.chagolchana.nullsafety.NotNullByDefault;
 
 import java.security.SecureRandom;
@@ -39,6 +42,9 @@ class ConnectionManagerImpl implements ConnectionManager {
 	private final ConnectionRegistry connectionRegistry;
 	private final TransportPropertyManager transportPropertyManager;
 	private final SecureRandom secureRandom;
+	private final CryptoComponent crypto;
+	private final RelayStore relayStore;
+	private final FeatureFlags featureFlags;
 
 	@Inject
 	ConnectionManagerImpl(@IoExecutor Executor ioExecutor,
@@ -49,7 +55,8 @@ class ConnectionManagerImpl implements ConnectionManager {
 			ContactExchangeManager contactExchangeManager,
 			ConnectionRegistry connectionRegistry,
 			TransportPropertyManager transportPropertyManager,
-			SecureRandom secureRandom) {
+			SecureRandom secureRandom, CryptoComponent crypto,
+			RelayStore relayStore, FeatureFlags featureFlags) {
 		this.ioExecutor = ioExecutor;
 		this.keyManager = keyManager;
 		this.streamReaderFactory = streamReaderFactory;
@@ -60,6 +67,9 @@ class ConnectionManagerImpl implements ConnectionManager {
 		this.connectionRegistry = connectionRegistry;
 		this.transportPropertyManager = transportPropertyManager;
 		this.secureRandom = secureRandom;
+		this.crypto = crypto;
+		this.relayStore = relayStore;
+		this.featureFlags = featureFlags;
 	}
 
 
@@ -85,7 +95,7 @@ class ConnectionManagerImpl implements ConnectionManager {
 		ioExecutor.execute(new IncomingDuplexSyncConnection(keyManager,
 				connectionRegistry, streamReaderFactory, streamWriterFactory,
 				syncSessionFactory, transportPropertyManager, ioExecutor,
-				t, d));
+				crypto, relayStore, featureFlags, t, d));
 	}
 
 	@Override

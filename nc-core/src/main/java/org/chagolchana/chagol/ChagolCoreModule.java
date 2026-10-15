@@ -19,6 +19,7 @@ import org.chagolchana.chagol.plugin.PluginModule;
 import org.chagolchana.chagol.properties.PropertiesModule;
 import org.chagolchana.chagol.qrcode.QrCodeModule;
 import org.chagolchana.chagol.record.RecordModule;
+import org.chagolchana.chagol.relay.RelayModule;
 import org.chagolchana.chagol.reliability.ReliabilityModule;
 import org.chagolchana.chagol.rendezvous.RendezvousModule;
 import org.chagolchana.chagol.settings.SettingsModule;
@@ -50,6 +51,7 @@ import dagger.Module;
 		PropertiesModule.class,
 		QrCodeModule.class,
 		RecordModule.class,
+		RelayModule.class,
 		ReliabilityModule.class,
 		RendezvousModule.class,
 		SettingsModule.class,

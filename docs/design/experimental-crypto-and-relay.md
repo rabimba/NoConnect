@@ -38,6 +38,8 @@ Date: 2026-10-13. All three features are behind `FeatureFlags` (`shouldEnableHyb
 
 ## 3. Sealed-envelope relay ("swarm")
 
+**Status:** Implemented in `nc-core/.../relay/` (`SealedEnvelope`, `RelayStore`, `NegentropyReconciler`, `StrangerSession`) and wired to incoming connection demux behind `FeatureFlags.shouldEnableSealedEnvelopeRelay()`. Fully unit-tested. Disabled by default until external audit and mobility simulations.
+
 **Goal:** deliver messages through phones that aren't the recipient's contacts, while revealing as little as possible.
 
 **Envelope:**

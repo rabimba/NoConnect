@@ -1,7 +1,9 @@
 package org.chagolchana.chagol.connection;
 
+import org.chagolchana.chagol.api.FeatureFlags;
 import org.chagolchana.chagol.api.connection.ConnectionRegistry;
 import org.chagolchana.chagol.api.contact.ContactId;
+import org.chagolchana.chagol.api.crypto.CryptoComponent;
 import org.chagolchana.chagol.api.db.DbException;
 import org.chagolchana.chagol.api.plugin.TransportId;
 import org.chagolchana.chagol.api.plugin.duplex.DuplexTransportConnection;
@@ -13,6 +15,8 @@ import org.chagolchana.chagol.api.transport.KeyManager;
 import org.chagolchana.chagol.api.transport.StreamContext;
 import org.chagolchana.chagol.api.transport.StreamReaderFactory;
 import org.chagolchana.chagol.api.transport.StreamWriterFactory;
+import org.chagolchana.chagol.relay.RelayStore;
+import org.chagolchana.chagol.relay.StrangerSession;
 import org.chagolchana.nullsafety.NotNullByDefault;
 
 import java.io.IOException;
@@ -25,17 +29,25 @@ import static org.chagolchana.chagol.util.LogUtils.logException;
 class IncomingDuplexSyncConnection extends DuplexSyncConnection
 		implements Runnable {
 
+	private final CryptoComponent crypto;
+	private final RelayStore relayStore;
+	private final FeatureFlags featureFlags;
+
 	IncomingDuplexSyncConnection(KeyManager keyManager,
 			ConnectionRegistry connectionRegistry,
 			StreamReaderFactory streamReaderFactory,
 			StreamWriterFactory streamWriterFactory,
 			SyncSessionFactory syncSessionFactory,
 			TransportPropertyManager transportPropertyManager,
-			Executor ioExecutor, TransportId transportId,
+			Executor ioExecutor, CryptoComponent crypto, RelayStore relayStore,
+			FeatureFlags featureFlags, TransportId transportId,
 			DuplexTransportConnection connection) {
 		super(keyManager, connectionRegistry, streamReaderFactory,
 				streamWriterFactory, syncSessionFactory,
 				transportPropertyManager, ioExecutor, transportId, connection);
+		this.crypto = crypto;
+		this.relayStore = relayStore;
+		this.featureFlags = featureFlags;
 	}
 
 	@Override
@@ -43,6 +55,18 @@ class IncomingDuplexSyncConnection extends DuplexSyncConnection
 		// Read and recognise the tag
 		StreamContext ctx = recogniseTag(reader, transportId);
 		if (ctx == null) {
+			if (featureFlags.shouldEnableSealedEnvelopeRelay()) {
+				LOG.info("Unrecognised tag, falling back to StrangerSession");
+				try {
+					new StrangerSession(crypto, relayStore, reader.getInputStream(),
+							writer.getOutputStream(), false).run();
+					reader.dispose(false, true);
+					writer.dispose(false);
+				} catch (IOException e) {
+					onReadError(false);
+				}
+				return;
+			}
 			LOG.info("Unrecognised tag");
 			onReadError(false);
 			return;
